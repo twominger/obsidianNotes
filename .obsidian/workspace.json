@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "企业web架构/未命名 1.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -49,7 +49,8 @@
               "title": "ansible入门"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -235,7 +236,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7cb6422a69bade9",
+  "active": "1e11cfa8bc0e13e0",
   "lastOpenFiles": [
     "企业web架构/未命名 1.md",
     "obsidianNotes",
