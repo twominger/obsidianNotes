@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "SiTemporal",
+      "SiAnsible",
+      "LiExcalidrawIcon",
+      "LiBookTemplate",
+      "RiAttachment2"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Docker": {
+    "iconName": "SiDocker",
+    "iconColor": "#df7620"
+  },
+  "ceph": {
+    "iconName": "SiCeph",
+    "iconColor": "#fb5209"
+  },
+  "k8s": {
+    "iconName": "SiKubernetes",
+    "iconColor": "#248eff"
+  },
+  "HarmonyOS": "SiHarmonyos",
+  "linux": "SiLinux",
+  "mysql": {
+    "iconName": "SiMysql",
+    "iconColor": "#1896af"
+  },
+  "OpenStack": {
+    "iconName": "SiOpenstack",
+    "iconColor": "#e13e33"
+  },
+  "100.附件": "RiAttachment2",
+  "99.模板": "LiBookTemplate",
+  "ansible": "SiAnsible",
+  "97.temp": "SiTemporal"
+}

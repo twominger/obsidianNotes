@@ -1,0 +1,268 @@
+{
+  "main": {
+    "id": "5324373015726ba8",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e1548debce44961",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7cb6422a69bade9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "企业web架构/未命名 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 1"
+            }
+          },
+          {
+            "id": "b3ac4ac75e6bb55b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "企业web架构/未命名.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名"
+            }
+          },
+          {
+            "id": "5d7139e764b55bac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ansible/ansible入门.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ansible入门"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36b49bd9a07e7aed",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f10ac9198288a37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f5c94149a43b5b6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0ec0a40ce5188904",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "959fa4dea77da5ef",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "2c59511515d7c0cf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "10.课件/OpenStack课堂笔记-田/20250216-k8s-调度-存储-deployment控制器.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "20250216-k8s-调度-存储-deployment控制器 的反向链接列表"
+            }
+          },
+          {
+            "id": "3db89f139731c62d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06.日记/2025-01-09.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2025-01-09 的出链列表"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 257.51103591918945
+  },
+  "right": {
+    "id": "527cf919fc284bc9",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b17df62e62cd6bc",
+        "type": "tabs",
+        "dimension": 72.02797202797203,
+        "children": [
+          {
+            "id": "d3c1aa65c8f43e0c",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
+          },
+          {
+            "id": "420f00e88f3d23a8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "1a8efae7abcbeb4b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3ed60c2dc09208e6",
+        "type": "tabs",
+        "dimension": 27.972027972027973,
+        "children": [
+          {
+            "id": "b6f13dc1b4d8125e",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 296.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-kanban:创建新看板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:打开快速切换": true,
+      "canvas:新建白板": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "pdf-plus:PDF++: Toggle auto-focus": true,
+      "pdf-plus:PDF++: Toggle auto-copy": true,
+      "pdf-plus:PDF++: Toggle auto-paste": true,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "a7cb6422a69bade9",
+  "lastOpenFiles": [
+    "obsidianNotes",
+    "测验/创建自定义镜像.md",
+    "企业web架构/未命名 1.md",
+    "企业web架构/未命名.md",
+    "ansible/ansible入门.md",
+    "Docker/Docker操作.md",
+    "Docker/Docker概念.md",
+    "企业web架构/未命名看板.md",
+    "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md",
+    "企业web架构/应用or业务运维.md",
+    "99.模板/01.日记模板/日记.md",
+    "97.temp/TMP.md",
+    "Docker/Docker.md",
+    "Docker/安装Docker.md",
+    "Docker/虚拟化技术概述.md",
+    "毕设/未命名 1.md",
+    "Excalidraw/Drawing 2025-03-28 20.14.48.excalidraw.md",
+    "Docker/Cgroup.md",
+    "linux/制作虚拟机模板.md",
+    "测验/ceph.md",
+    "测验/传统社交论坛的容器化改造.md",
+    "测验/k8s.md",
+    "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md",
+    "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md",
+    "linux/安装虚拟机.md",
+    "linux/yum源.md",
+    "企业web架构",
+    "Excalidraw",
+    "毕设",
+    "HarmonyOS",
+    "ansible",
+    "ceph/资料/01.Ceph原理与架构.pdf",
+    "ceph/资料/09.ceph对象存储.pdf",
+    "未命名.canvas",
+    "m.daocloud.io",
+    "Hypervisor",
+    "kvm"
+  ]
+}

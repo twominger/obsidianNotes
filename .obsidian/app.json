@@ -1,0 +1,21 @@
+{
+  "attachmentFolderPath": "100.附件",
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "newLinkFormat": "absolute",
+  "readableLineLength": false,
+  "defaultViewMode": "preview",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "foldIndent": false,
+  "showLineNumber": false,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "strictLineBreaks": true
+}

@@ -1,0 +1,22 @@
+/* 原先的段间距变量, 保持不动 */
+body {
+  --paragraph-margin-top:10px;
+  --paragraph-margin-bottom:5px;
+}
+
+
+/* 原先的具体样式规则, 很多条, 保持不动 */
+div:not(.HyperMD-header,.HyperMD-list-line).cm-line:has(.cm-hmd-frontmatter) {
+  padding-top:unset !important;
+  padding-bottom:unset !important;
+}
+
+
+/* 前面全照抄, 这里新增如下段落, 这个作用于阅读视图 */
+.markdown-preview-view p {
+  margin-top: var(--paragraph-margin-top) !important;
+  margin-bottom: var(--paragraph-margin-bottom) !important;
+}
+
+
+/* 原先的变量设置, 用于可视化调节参数, 不变 */

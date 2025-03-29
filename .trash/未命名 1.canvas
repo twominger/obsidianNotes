@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"a179c6b61bd7be67","x":-320,"y":-220,"width":300,"height":180,"type":"file","file":"周一晚/索引和主键外键.md"},
+		{"id":"c784878595b6c58d","x":80,"y":-190,"width":234,"height":120,"type":"file","file":"周一晚/NULL.md"}
+	],
+	"edges":[
+		{"id":"8a4360963c4d8b0f","fromNode":"a179c6b61bd7be67","fromSide":"right","toNode":"c784878595b6c58d","toSide":"left"}
+	]
+}

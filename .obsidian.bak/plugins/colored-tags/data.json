@@ -1,0 +1,21 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "Markdown": 1,
+    "Obsidian": 2,
+    "提示": 3,
+    "注意": 4,
+    "excalidraw": 5,
+    "日记": 6
+  },
+  "_version": 3
+}
