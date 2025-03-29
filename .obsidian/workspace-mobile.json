@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/安装Docker.md",
+                "file": "企业web架构/未命名.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "安装Docker"
+              "title": "未命名"
             }
           }
         ]
@@ -139,5 +139,9 @@
     }
   },
   "active": "52ba8f374f1f8dc7",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "企业web架构/未命名 1.md",
+    "企业web架构/未命名.md",
+    "Docker/安装Docker.md"
+  ]
 }
