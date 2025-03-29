@@ -184,8 +184,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "1e11cfa8bc0e13e0",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -206,8 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5,
-    "collapsed": true
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,9 +237,9 @@
   },
   "active": "a7cb6422a69bade9",
   "lastOpenFiles": [
+    "企业web架构/未命名 1.md",
     "obsidianNotes",
     "测验/创建自定义镜像.md",
-    "企业web架构/未命名 1.md",
     "企业web架构/未命名.md",
     "ansible/ansible入门.md",
     "Docker/Docker操作.md",
@@ -262,7 +272,6 @@
     "ceph/资料/09.ceph对象存储.pdf",
     "未命名.canvas",
     "m.daocloud.io",
-    "Hypervisor",
-    "kvm"
+    "Hypervisor"
   ]
 }
