@@ -191,8 +191,7 @@
               "title": "History"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -231,7 +230,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e11cfa8bc0e13e0",
+  "active": "d3c1aa65c8f43e0c",
   "lastOpenFiles": [
     "企业web架构/未命名.md",
     "企业web架构/未命名 1.md",
