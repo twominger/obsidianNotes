@@ -28,15 +28,14 @@
               "type": "markdown",
               "state": {
                 "file": "ansible/ansible入门.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "ansible入门"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -163,16 +162,6 @@
             }
           },
           {
-            "id": "1a8efae7abcbeb4b",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
             "id": "24dc78eef2be85d1",
             "type": "leaf",
             "state": {
@@ -222,15 +211,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d7139e764b55bac",
+  "active": "a7cb6422a69bade9",
   "lastOpenFiles": [
+    "ansible/ansible入门.md",
     "企业web架构/未命名 1.md",
     "09.输出/09.输出.md",
     "企业web架构/未命名.md",
     "新建 文本文档.txt",
     "obsidianNotes",
     "测验/创建自定义镜像.md",
-    "ansible/ansible入门.md",
     "Docker/Docker操作.md",
     "Docker/Docker概念.md",
     "企业web架构/未命名看板.md",

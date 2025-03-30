@@ -7,7 +7,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-tasks-plugin",
   "obsidian-kanban",
-  "calendar",
   "recent-files-obsidian",
   "tag-wrangler",
   "editing-toolbar",
@@ -21,5 +20,5 @@
   "obsidian-icon-folder",
   "obsidian-git",
   "floating-toc",
-  "callout-menu"
+  "callout-toggles"
 ]
