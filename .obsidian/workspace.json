@@ -35,7 +35,8 @@
               "title": "ansible入门"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -221,10 +222,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7cb6422a69bade9",
+  "active": "5d7139e764b55bac",
   "lastOpenFiles": [
-    "09.输出/09.输出.md",
     "企业web架构/未命名 1.md",
+    "09.输出/09.输出.md",
     "企业web架构/未命名.md",
     "新建 文本文档.txt",
     "obsidianNotes",
