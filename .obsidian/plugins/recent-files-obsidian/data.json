@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "09.输出",
+      "path": "09.输出/09.输出.md"
+    },
+    {
       "basename": "未命名 1",
       "path": "企业web架构/未命名 1.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20250102-openstack架构及环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
-      "basename": "Hypervisor",
-      "path": "Docker/Hypervisor.md"
     }
   ],
   "omittedPaths": [],
