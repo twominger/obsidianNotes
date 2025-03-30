@@ -172,16 +172,6 @@
             }
           },
           {
-            "id": "1e11cfa8bc0e13e0",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "24dc78eef2be85d1",
             "type": "leaf",
             "state": {
@@ -191,8 +181,7 @@
               "title": "History"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -213,7 +202,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 296.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -231,7 +221,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e11cfa8bc0e13e0",
+  "active": "a7cb6422a69bade9",
   "lastOpenFiles": [
     "09.输出/09.输出.md",
     "企业web架构/未命名 1.md",
