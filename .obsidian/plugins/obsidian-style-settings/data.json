@@ -68,5 +68,6 @@
   "floating-toc-styles@@background-blur-depth": 2,
   "floating-toc-styles@@floating-toc-response-time": 0,
   "floating-toc-styles@@focus-heading": 0.5,
-  "floating-toc-styles@@toggle-floating-toc-header-color": false
+  "floating-toc-styles@@toggle-floating-toc-header-color": false,
+  "custom-diegoeis-obsidianotion@@enable-alternative-checkboxes": true
 }

@@ -77,8 +77,7 @@
               "title": "ansible入门"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -265,17 +264,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "53b249a04240ef9e",
+  "active": "9ea131449cb164b8",
   "lastOpenFiles": [
-    "Docker/虚拟化技术概述.md",
-    "Docker/Hypervisor.md",
     "企业web架构/应用or业务运维.md",
+    "Docker/虚拟化技术概述.md",
+    "企业web架构/未命名 1.md",
+    "Docker/Hypervisor.md",
     "linux/未命名 1.md",
     "linux/未命名看板.md",
     "linux/制作虚拟机模板.md",
     "linux/ubuntu",
     "企业web架构/未命名.md",
-    "企业web架构/未命名 1.md",
     "ansible/ansible入门.md",
     "100.附件/~$Kubernetes容器编排.pptx",
     "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md",
