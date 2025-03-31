@@ -1,6 +1,7 @@
 {
   "customFileOrder": {
     "/": [
+      "GIT",
       "01.主页",
       "05.笔记",
       "08.面试",
@@ -245,6 +246,9 @@
     ],
     "Excalidraw": [
       "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
+    ],
+    "GIT": [
+      "GIT/未命名.md"
     ],
     "HarmonyOS": [
       "HarmonyOS/HarmonyOS概述.md",
