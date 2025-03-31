@@ -253,7 +253,6 @@
     "hiddenItems": {
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-kanban:创建新看板": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "switcher:打开快速切换": true,
       "canvas:新建白板": false,
@@ -263,8 +262,6 @@
       "pdf-plus:PDF++: Toggle auto-copy": true,
       "pdf-plus:PDF++: Toggle auto-paste": true,
       "obsidian-git:Open Git source control": false,
-      "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false,
       "templater-obsidian:Templater": false
     }
   },
