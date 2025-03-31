@@ -1,0 +1,271 @@
+{
+  "customFileOrder": {
+    "/": [
+      "01.主页",
+      "05.笔记",
+      "08.面试",
+      "09.输出",
+      "10.课件",
+      "11.作业",
+      "98.使用技巧",
+      "97.temp",
+      "100.附件",
+      "毕设",
+      "测验",
+      "模板",
+      "企业web架构",
+      "ansible",
+      "ceph",
+      "Docker",
+      "Excalidraw",
+      "HarmonyOS",
+      "k8s",
+      "kvm",
+      "linux",
+      "mysql",
+      "OpenStack"
+    ],
+    "01.主页": [
+      "01.主页/home.md"
+    ],
+    "05.笔记": [
+      "05.笔记/听课笔记",
+      "05.笔记/整理笔记"
+    ],
+    "05.笔记/听课笔记": [
+      "05.笔记/听课笔记/公有云",
+      "05.笔记/听课笔记/linux",
+      "05.笔记/听课笔记/MySQL",
+      "05.笔记/听课笔记/OpenStack"
+    ],
+    "05.笔记/听课笔记/公有云": [
+      "05.笔记/听课笔记/公有云/公有云.md",
+      "05.笔记/听课笔记/公有云/2.md",
+      "05.笔记/听课笔记/公有云/NAT网关.md",
+      "05.笔记/听课笔记/公有云/云专线.md",
+      "05.笔记/听课笔记/公有云/VPN.md",
+      "05.笔记/听课笔记/公有云/安全组和安全组规则概述.md",
+      "05.笔记/听课笔记/公有云/Microsoft AD.md",
+      "05.笔记/听课笔记/公有云/弹性负载均衡ELB.md",
+      "05.笔记/听课笔记/公有云/弹性伸缩AS.md",
+      "05.笔记/听课笔记/公有云/集群分类.md",
+      "05.笔记/听课笔记/公有云/Keepalived + LVS负载均衡.md",
+      "05.笔记/听课笔记/公有云/amain.md",
+      "05.笔记/听课笔记/公有云/备份 容灾 迁移.md",
+      "05.笔记/听课笔记/公有云/云备份CBR.md",
+      "05.笔记/听课笔记/公有云/快照原理.md",
+      "05.笔记/听课笔记/公有云/私有镜像.md",
+      "05.笔记/听课笔记/公有云/迁移.md",
+      "05.笔记/听课笔记/公有云/容灾.md",
+      "05.笔记/听课笔记/公有云/公有云作业.md"
+    ],
+    "05.笔记/听课笔记/linux": [
+      "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md",
+      "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md",
+      "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md",
+      "05.笔记/听课笔记/linux/04-用户管理和权限管理.md",
+      "05.笔记/听课笔记/linux/05-IO重定向和管道.md",
+      "05.笔记/听课笔记/linux/06-vim编辑器高级特性.md",
+      "05.笔记/听课笔记/linux/07-文本处理工具.md",
+      "05.笔记/听课笔记/linux/08-shell基础.md",
+      "05.笔记/听课笔记/linux/09-shell进阶和脚本实战.md",
+      "05.笔记/听课笔记/linux/10-进程管理.md",
+      "05.笔记/听课笔记/linux/11-网络管理.md",
+      "05.笔记/听课笔记/linux/12-计划任务.md",
+      "05.笔记/听课笔记/linux/13-文件查找工具.md",
+      "05.笔记/听课笔记/linux/14-网络客户端.md",
+      "05.笔记/听课笔记/linux/15-文件系统和打包压缩.md",
+      "05.笔记/听课笔记/linux/16-软件包管理.md",
+      "05.笔记/听课笔记/linux/17-磁盘管理.md",
+      "05.笔记/听课笔记/linux/18-LVM逻辑卷.md",
+      "05.笔记/听课笔记/linux/19-深入RAID技术和管理.md",
+      "05.笔记/听课笔记/linux/20-内核监控和系统服务管理及故障修复.md",
+      "05.笔记/听课笔记/linux/21-pxe批量安装和kickstart自动化安装.md",
+      "05.笔记/听课笔记/linux/22-KVM虚拟化.md",
+      "05.笔记/听课笔记/linux/23-DNS域名解析服务.md",
+      "05.笔记/听课笔记/linux/24-FTP服务.md",
+      "05.笔记/听课笔记/linux/25-存储.md",
+      "05.笔记/听课笔记/linux/26-时间管理.md",
+      "05.笔记/听课笔记/linux/27-网络.md",
+      "05.笔记/听课笔记/linux/作业11.md",
+      "05.笔记/听课笔记/linux/28-web.md",
+      "05.笔记/听课笔记/linux/29-安全.md",
+      "05.笔记/听课笔记/linux/第一阶段测验.md"
+    ],
+    "05.笔记/听课笔记/MySQL": [
+      "05.笔记/听课笔记/MySQL/01-MySQL安装.md",
+      "05.笔记/听课笔记/MySQL/02-MySQL管理.md",
+      "05.笔记/听课笔记/MySQL/03-MySQL知识点.md",
+      "05.笔记/听课笔记/MySQL/04-MySQL表数据.md",
+      "05.笔记/听课笔记/MySQL/05-杂项.md",
+      "05.笔记/听课笔记/MySQL/MySQL 服务管理.md",
+      "05.笔记/听课笔记/MySQL/key和index区别.md",
+      "05.笔记/听课笔记/MySQL/MySQL存储引擎InnoDB与Myisam的六大区别.md"
+    ],
+    "05.笔记/听课笔记/OpenStack": [
+      "05.笔记/听课笔记/OpenStack/阶段三内容.md",
+      "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md",
+      "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md",
+      "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md",
+      "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md",
+      "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
+    ],
+    "05.笔记/整理笔记": [
+      "05.笔记/整理笔记/Linux1"
+    ],
+    "05.笔记/整理笔记/Linux1": [
+      "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md",
+      "05.笔记/整理笔记/Linux1/nginx健康检查.md",
+      "05.笔记/整理笔记/Linux1/LVM.md"
+    ],
+    "08.面试": [
+      "08.面试/誉天Linux云计算架构师-面试宝典-20250108.pdf",
+      "08.面试/一期面试.md"
+    ],
+    "09.输出": [
+      "09.输出/周一晚"
+    ],
+    "09.输出/周一晚": [
+      "09.输出/周一晚/索引和主键外键.md",
+      "09.输出/周一晚/NULL.md"
+    ],
+    "10.课件": [
+      "10.课件/OpenStack课堂笔记-田"
+    ],
+    "10.课件/OpenStack课堂笔记-田": [
+      "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md",
+      "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md",
+      "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md",
+      "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md",
+      "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md",
+      "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md",
+      "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md",
+      "10.课件/OpenStack课堂笔记-田/20250111-Docker介绍与镜像管理.md",
+      "10.课件/OpenStack课堂笔记-田/20250113-Docker编排和Dockerfile.md",
+      "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md",
+      "10.课件/OpenStack课堂笔记-田/20250211-k8s对象pod1.md",
+      "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md",
+      "10.课件/OpenStack课堂笔记-田/20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度.md",
+      "10.课件/OpenStack课堂笔记-田/20250216-k8s-调度-存储-deployment控制器.md",
+      "10.课件/OpenStack课堂笔记-田/20250217-k8s对象之控制器dep-sts-dae-job.md",
+      "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md",
+      "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md",
+      "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
+    ],
+    "11.作业": [
+      "11.作业/OpenStack 及Docker 综合测试.md",
+      "11.作业/k8s关键知识点.md"
+    ],
+    "97.temp": [
+      "97.temp/TMP.md"
+    ],
+    "98.使用技巧": [
+      "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
+    ],
+    "100.附件": [
+      "100.附件/book_utf8.sql",
+      "100.附件/credentials.csv",
+      "100.附件/tigera-operator-v3.28.0.yaml",
+      "100.附件/custom-resources-v3.28.0.yaml",
+      "100.附件/components.yaml",
+      "100.附件/kubens",
+      "100.附件/Kubernetes容器编排.pptx"
+    ],
+    "毕设": [
+      "毕设/未命名.md",
+      "毕设/未命名 1.md"
+    ],
+    "测验": [
+      "测验/传统社交论坛的容器化改造.md",
+      "测验/discuz.md",
+      "测验/openstack.md",
+      "测验/k8s.md",
+      "测验/创建自定义镜像.md",
+      "测验/ceph.md"
+    ],
+    "模板": [
+      "模板/01.日记模板"
+    ],
+    "模板/01.日记模板": [
+      "模板/01.日记模板/日记.md"
+    ],
+    "企业web架构": [
+      "企业web架构/应用or业务运维.md",
+      "企业web架构/未命名.md",
+      "企业web架构/未命名 1.md"
+    ],
+    "ansible": [
+      "ansible/ansible入门.md"
+    ],
+    "ceph": [
+      "ceph/实验",
+      "ceph/资料",
+      "ceph/作业",
+      "ceph/MAN",
+      "ceph/User Management.md"
+    ],
+    "ceph/实验": [
+      "ceph/实验/使用cephadm部署ceph集群.md",
+      "ceph/实验/ceph实验.md",
+      "ceph/实验/分区作为osd部署单节点ceph集群.md",
+      "ceph/实验/rbd对接k8s.md",
+      "ceph/实验/ceph-csi.md"
+    ],
+    "ceph/资料": [
+      "ceph/资料/术语.md",
+      "ceph/资料/09.ceph对象存储.pdf",
+      "ceph/资料/10.cephfs文件系统.pdf",
+      "ceph/资料/11.自定义crush映射.pdf",
+      "ceph/资料/01.Ceph原理与架构.pdf",
+      "ceph/资料/02.Ceph安装与扩容.pdf",
+      "ceph/资料/03.ceph的存储池.pdf",
+      "ceph/资料/04.ceph的集群配置.pdf",
+      "ceph/资料/05.ceph的认证与授权.pdf",
+      "ceph/资料/06.RBD基础使用.pdf",
+      "ceph/资料/07.RBD高级特性 .pdf",
+      "ceph/资料/08.RBD镜像mirror.pdf"
+    ],
+    "ceph/作业": [
+      "ceph/作业/存储池与集群配置管理.md"
+    ],
+    "ceph/MAN": [
+      "ceph/MAN/rados.md",
+      "ceph/MAN/ceph.md"
+    ],
+    "Docker": [
+      "Docker/Docker概念.md",
+      "Docker/Docker.md",
+      "Docker/container.md",
+      "Docker/namespace.md",
+      "Docker/虚拟化技术概述.md",
+      "Docker/Hypervisor.md",
+      "Docker/Cgroup.md",
+      "Docker/安装Docker.md",
+      "Docker/Docker操作.md"
+    ],
+    "Excalidraw": [
+      "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
+    ],
+    "HarmonyOS": [
+      "HarmonyOS/HarmonyOS概述.md",
+      "HarmonyOS/HarmonyOS赋能套件.md",
+      "HarmonyOS/ArcTS基础语法.md"
+    ],
+    "k8s": [],
+    "kvm": [],
+    "linux": [
+      "linux/制作虚拟机模板.md",
+      "linux/yum源.md",
+      "linux/SELinux.md",
+      "linux/安装虚拟机.md",
+      "linux/Linux重启提示“A stop job is running for ...“.md",
+      "linux/未命名.md"
+    ],
+    "mysql": [
+      "mysql/mysql部署-源码.md"
+    ],
+    "OpenStack": [
+      "OpenStack/Hyper-V与VMware workstation冲突.md"
+    ]
+  }
+}
