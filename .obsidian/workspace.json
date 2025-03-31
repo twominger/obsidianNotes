@@ -36,13 +36,17 @@
             }
           },
           {
-            "id": "bea425d93e6cceb5",
+            "id": "e9d5902c6245dc86",
             "type": "leaf",
             "state": {
-              "type": "planner-weekly",
-              "state": {},
-              "icon": "table-2",
-              "title": "4月, 7–4月, 9"
+              "type": "markdown",
+              "state": {
+                "file": "Docker/虚拟化技术概述.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "虚拟化技术概述"
             }
           },
           {
@@ -74,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -211,16 +215,6 @@
             }
           },
           {
-            "id": "78bd524f0abf7e3f",
-            "type": "leaf",
-            "state": {
-              "type": "planner-timeline",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Timeline"
-            }
-          },
-          {
             "id": "ea8a51ccce4bef17",
             "type": "leaf",
             "state": {
@@ -231,7 +225,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -270,15 +264,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": true,
       "obsidian-git:Open Git source control": false,
       "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "b79cfb18007d9ecc",
+  "active": "976262a269fa9892",
   "lastOpenFiles": [
+    "Docker/虚拟化技术概述.md",
+    "企业web架构/应用or业务运维.md",
     "linux/未命名 1.md",
     "linux/未命名看板.md",
     "linux/制作虚拟机模板.md",
-    "企业web架构/应用or业务运维.md",
     "linux/ubuntu",
     "企业web架构/未命名.md",
     "企业web架构/未命名 1.md",
@@ -300,7 +296,6 @@
     "97.temp/TMP.md",
     "Docker/Docker.md",
     "Docker/安装Docker.md",
-    "Docker/虚拟化技术概述.md",
     "毕设/未命名 1.md",
     "Docker/Cgroup.md",
     "测验/ceph.md",
