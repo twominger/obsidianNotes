@@ -231,7 +231,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -252,7 +252,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 296.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -272,10 +273,10 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "7f5c94149a43b5b6",
+  "active": "b79cfb18007d9ecc",
   "lastOpenFiles": [
-    "linux/未命名看板.md",
     "linux/未命名 1.md",
+    "linux/未命名看板.md",
     "linux/制作虚拟机模板.md",
     "企业web架构/应用or业务运维.md",
     "linux/ubuntu",
