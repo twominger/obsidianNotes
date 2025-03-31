@@ -18,5 +18,11 @@ div:not(.HyperMD-header,.HyperMD-list-line).cm-line:has(.cm-hmd-frontmatter) {
   margin-bottom: var(--paragraph-margin-bottom) !important;
 }
 
-
+.list-bullet {
+  color: transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 /* 原先的变量设置, 用于可视化调节参数, 不变 */
