@@ -1,16 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "企业web架构/未命名.md"
-    },
-    {
-      "basename": "Drawing 2025-03-26 15.42.33.excalidraw",
-      "path": "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
-    },
-    {
       "basename": "应用or业务运维",
       "path": "企业web架构/应用or业务运维.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "企业web架构/未命名.md"
     },
     {
       "basename": "未命名 1",
@@ -19,6 +15,10 @@
     {
       "basename": "ansible入门",
       "path": "ansible/ansible入门.md"
+    },
+    {
+      "basename": "Drawing 2025-03-26 15.42.33.excalidraw",
+      "path": "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
     },
     {
       "basename": "创建自定义镜像",
