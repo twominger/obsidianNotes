@@ -4,7 +4,7 @@
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "newLinkFormat": "absolute",
-  "readableLineLength": true,
+  "readableLineLength": false,
   "defaultViewMode": "preview",
   "pdfExportSettings": {
     "includeName": true,
