@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "制作虚拟机模板",
+      "path": "linux/制作虚拟机模板.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "linux/未命名 1.md"
+    },
+    {
       "basename": "应用or业务运维",
       "path": "企业web架构/应用or业务运维.md"
     },
@@ -63,10 +71,6 @@
     {
       "basename": "Cgroup",
       "path": "Docker/Cgroup.md"
-    },
-    {
-      "basename": "制作虚拟机模板",
-      "path": "linux/制作虚拟机模板.md"
     },
     {
       "basename": "ceph",

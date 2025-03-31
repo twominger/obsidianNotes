@@ -254,6 +254,8 @@
     "k8s": [],
     "kvm": [],
     "linux": [
+      "linux/未命名 1.md",
+      "linux/ubuntu",
       "linux/制作虚拟机模板.md",
       "linux/yum源.md",
       "linux/SELinux.md",
@@ -261,6 +263,7 @@
       "linux/Linux重启提示“A stop job is running for ...“.md",
       "linux/未命名.md"
     ],
+    "linux/ubuntu": [],
     "mysql": [
       "mysql/mysql部署-源码.md"
     ],
