@@ -211,10 +211,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7cb6422a69bade9",
+  "active": "7f5c94149a43b5b6",
   "lastOpenFiles": [
-    "ansible/ansible入门.md",
     "企业web架构/未命名 1.md",
+    "企业web架构/未命名 2.md",
+    "ansible/ansible入门.md",
     "09.输出/09.输出.md",
     "企业web架构/未命名.md",
     "新建 文本文档.txt",
@@ -240,7 +241,6 @@
     "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md",
     "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md",
     "linux/安装虚拟机.md",
-    "linux/yum源.md",
     "企业web架构",
     "Excalidraw",
     "毕设",
