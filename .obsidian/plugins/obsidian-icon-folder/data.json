@@ -60,5 +60,8 @@
   "ansible": "SiAnsible",
   "97.temp": "SiTemporal",
   "模板": "LiBookTemplate",
-  "GIT": "SiGit"
+  "GIT": {
+    "iconName": "SiGit",
+    "iconColor": "#ff600a"
+  }
 }
