@@ -57,7 +57,7 @@
     "iconColor": "#e13e33"
   },
   "100.附件": "RiAttachment2",
-  "99.模板": "LiBookTemplate",
   "ansible": "SiAnsible",
-  "97.temp": "SiTemporal"
+  "97.temp": "SiTemporal",
+  "模板": "LiBookTemplate"
 }
