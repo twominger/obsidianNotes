@@ -254,8 +254,6 @@
     "k8s": [],
     "kvm": [],
     "linux": [
-      "linux/未命名看板.md",
-      "linux/未命名 1.md",
       "linux/ubuntu",
       "linux/制作虚拟机模板.md",
       "linux/yum源.md",

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/未命名 1.md",
-                "mode": "source",
+                "file": "企业web架构/应用or业务运维.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名 1"
+              "title": "应用or业务运维"
             }
           },
           {
@@ -219,8 +219,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Timeline"
             }
+          },
+          {
+            "id": "ea8a51ccce4bef17",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "3ed60c2dc09208e6",
@@ -241,8 +252,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5,
-    "collapsed": true
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -262,11 +272,11 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "b79cfb18007d9ecc",
+  "active": "7f5c94149a43b5b6",
   "lastOpenFiles": [
     "linux/未命名看板.md",
-    "linux/制作虚拟机模板.md",
     "linux/未命名 1.md",
+    "linux/制作虚拟机模板.md",
     "企业web架构/应用or业务运维.md",
     "linux/ubuntu",
     "企业web架构/未命名.md",
