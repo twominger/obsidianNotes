@@ -61,5 +61,8 @@
   "custom-diegoeis-obsidianotion@@eis-small-pinned-tabs": false,
   "custom-diegoeis-obsidianotion@@eis-with-icons": false,
   "custom-diegoeis-obsidianotion@@new-note-button-position-bottom": true,
-  "custom-diegoeis-obsidianotion@@eis-font-type": "eis-font-default"
+  "custom-diegoeis-obsidianotion@@eis-font-type": "eis-font-default",
+  "floating-toc-styles@@indicator-bar-position": 0,
+  "floating-toc-styles@@floating-toc-position": 0,
+  "floating-toc-styles@@floating-toc-line-width": 14
 }

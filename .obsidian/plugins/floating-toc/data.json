@@ -1,9 +1,9 @@
 {
   "ignoreHeaders": "",
   "ignoreTopHeader": false,
-  "positionStyle": "left",
+  "positionStyle": "right",
   "isLoadOnMobile": true,
-  "isLeft": false,
+  "isLeft": true,
   "isDefaultPin": true,
   "isTooltip": true,
   "defaultCollapsedLevel": 6,
