@@ -301,7 +301,7 @@
   "isImageAlignmentEnabled": true,
   "imageAlignment_cacheCleanupInterval": 3600000,
   "imageAlignment_cacheLocation": "plugin",
-  "isDragResizeEnabled": true,
+  "isDragResizeEnabled": false,
   "isScrollResizeEnabled": true,
   "isResizeInReadingModeEnabled": false,
   "resizeSensitivity": 0.1,
