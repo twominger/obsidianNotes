@@ -46,8 +46,14 @@
     "iconName": "SiKubernetes",
     "iconColor": "#248eff"
   },
-  "HarmonyOS": "SiHarmonyos",
-  "linux": "SiLinux",
+  "HarmonyOS": {
+    "iconName": "SiHarmonyos",
+    "iconColor": "#000000"
+  },
+  "linux": {
+    "iconName": "SiLinux",
+    "iconColor": "#000000"
+  },
   "mysql": {
     "iconName": "SiMysql",
     "iconColor": "#1896af"
@@ -57,7 +63,10 @@
     "iconColor": "#e13e33"
   },
   "100.附件": "RiAttachment2",
-  "ansible": "SiAnsible",
+  "ansible": {
+    "iconName": "SiAnsible",
+    "iconColor": "#000000"
+  },
   "97.temp": "SiTemporal",
   "模板": "LiBookTemplate",
   "GIT": {

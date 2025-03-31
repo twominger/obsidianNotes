@@ -64,10 +64,10 @@
   "custom-diegoeis-obsidianotion@@eis-font-type": "eis-font-default",
   "floating-toc-styles@@indicator-bar-position": 0,
   "floating-toc-styles@@floating-toc-position": 0,
-  "floating-toc-styles@@floating-toc-line-width": 14,
   "floating-toc-styles@@background-blur-depth": 2,
   "floating-toc-styles@@floating-toc-response-time": 0,
   "floating-toc-styles@@focus-heading": 0.5,
   "floating-toc-styles@@toggle-floating-toc-header-color": false,
-  "custom-diegoeis-obsidianotion@@enable-alternative-checkboxes": true
+  "custom-diegoeis-obsidianotion@@enable-alternative-checkboxes": true,
+  "floating-toc-styles@@floating-toc-line-width": 14
 }
