@@ -5,6 +5,22 @@
       "path": "测验/openstack.md"
     },
     {
+      "basename": "k8s",
+      "path": "测验/k8s.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
+      "basename": "ceph",
+      "path": "测验/ceph.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
       "basename": "java部署",
       "path": "SRE/java部署.md"
     },
@@ -75,22 +91,6 @@
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
       "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
-    },
-    {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "ceph",
-      "path": "测验/ceph.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "测验/k8s.md"
     },
     {
       "basename": "传统社交论坛的容器化改造",
