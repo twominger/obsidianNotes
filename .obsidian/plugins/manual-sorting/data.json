@@ -179,7 +179,7 @@
     "测验": [
       "测验/传统社交论坛的容器化改造.md",
       "测验/discuz.md",
-      "测验/openstack.md",
+      "测验/部署openstack.md",
       "测验/k8s.md",
       "测验/创建自定义镜像.md",
       "测验/ceph.md"
