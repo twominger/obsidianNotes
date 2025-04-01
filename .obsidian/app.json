@@ -17,5 +17,5 @@
   "showLineNumber": false,
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": false
 }

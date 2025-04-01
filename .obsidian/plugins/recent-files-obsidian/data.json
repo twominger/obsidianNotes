@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "20250107-openstack组件keystone",
+      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
+    },
+    {
+      "basename": "20250106-openstack组件swift及实验",
+      "path": "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md"
+    },
+    {
       "basename": "20250105-openstack组件cinder-glance-nova-heat",
       "path": "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md"
+    },
+    {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
+      "basename": "20250102-openstack架构及环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
+    },
+    {
+      "basename": "20250112-Docker容器管理及网络存储Harbor",
+      "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
+    },
+    {
+      "basename": "2015-1-9OpenStack笔记",
+      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
+    },
+    {
+      "basename": "20250109-OVN网络架构详解",
+      "path": "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md"
     },
     {
       "basename": "未命名",
@@ -101,10 +129,6 @@
       "path": "Docker/Cgroup.md"
     },
     {
-      "basename": "20250106-openstack组件swift及实验",
-      "path": "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md"
-    },
-    {
       "basename": "安装虚拟机",
       "path": "linux/安装虚拟机.md"
     },
@@ -123,10 +147,6 @@
     {
       "basename": "rabbitMQ功能、作用",
       "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
-    },
-    {
-      "basename": "2015-1-9OpenStack笔记",
-      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
     },
     {
       "basename": "阶段三内容",
@@ -179,22 +199,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
-    },
-    {
-      "basename": "20250107-openstack组件keystone",
-      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
-    },
-    {
-      "basename": "20250112-Docker容器管理及网络存储Harbor",
-      "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
-    },
-    {
-      "basename": "20250102-openstack架构及环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
     }
   ],
   "omittedPaths": [],
