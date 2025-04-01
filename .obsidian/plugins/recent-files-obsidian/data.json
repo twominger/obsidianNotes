@@ -5,6 +5,10 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md"
     },
     {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
       "basename": "问题",
       "path": "测验/问题.md"
     },
@@ -59,10 +63,6 @@
     {
       "basename": "20250105-openstack组件cinder-glance-nova-heat",
       "path": "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md"
-    },
-    {
-      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
-      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
     },
     {
       "basename": "2015-1-9OpenStack笔记",
