@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "20250111-Docker介绍与镜像管理",
+      "path": "10.课件/OpenStack课堂笔记-田/20250111-Docker介绍与镜像管理.md"
+    },
+    {
+      "basename": "20250109-OVN网络架构详解",
+      "path": "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md"
+    },
+    {
       "basename": "20250107-openstack组件keystone",
       "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "2015-1-9OpenStack笔记",
       "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
-    },
-    {
-      "basename": "20250109-OVN网络架构详解",
-      "path": "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md"
     },
     {
       "basename": "未命名",
@@ -195,10 +199,6 @@
     {
       "basename": "Hyper-V与VMware workstation冲突",
       "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
-    },
-    {
-      "basename": "ceph-csi",
-      "path": "ceph/实验/ceph-csi.md"
     }
   ],
   "omittedPaths": [],
