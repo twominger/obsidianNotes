@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
+      "basename": "20250102-openstack架构及环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
+    },
+    {
+      "basename": "2015-1-9OpenStack笔记",
+      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
+    },
+    {
+      "basename": "rabbitMQ功能、作用",
+      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
+    },
+    {
+      "basename": "消息队列中间件的横向对比",
+      "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
+    },
+    {
+      "basename": "OpenStack组件使用",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
+    },
+    {
+      "basename": "OpenStack环境搭建",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
+    },
+    {
       "basename": "20-内核监控和系统服务管理及故障修复",
       "path": "05.笔记/听课笔记/linux/20-内核监控和系统服务管理及故障修复.md"
     },
@@ -25,20 +53,8 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md"
     },
     {
-      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
-      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "20250102-openstack架构及环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
       "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
-    },
-    {
-      "basename": "2015-1-9OpenStack笔记",
-      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
     },
     {
       "basename": "未命名",
@@ -153,16 +169,8 @@
       "path": "01.主页/home.md"
     },
     {
-      "basename": "rabbitMQ功能、作用",
-      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
-    },
-    {
       "basename": "阶段三内容",
       "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
-    },
-    {
-      "basename": "OpenStack环境搭建",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
     },
     {
       "basename": "nginx健康检查",
@@ -191,14 +199,6 @@
     {
       "basename": "未命名",
       "path": "linux/未命名.md"
-    },
-    {
-      "basename": "15-文件系统和打包压缩",
-      "path": "05.笔记/听课笔记/linux/15-文件系统和打包压缩.md"
-    },
-    {
-      "basename": "mysql部署-源码",
-      "path": "mysql/mysql部署-源码.md"
     }
   ],
   "omittedPaths": [],
