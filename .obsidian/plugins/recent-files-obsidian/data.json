@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "openstack",
+      "path": "测验/openstack.md"
+    },
+    {
       "basename": "java部署",
       "path": "SRE/java部署.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "openstack",
-      "path": "测验/openstack.md"
     },
     {
       "basename": "创建自定义镜像",
