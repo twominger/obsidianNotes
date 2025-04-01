@@ -269,6 +269,7 @@
       "OpenStack/Hyper-V与VMware workstation冲突.md"
     ],
     "SRE": [
+      "SRE/java部署.md",
       "SRE/应用or业务运维.md",
       "SRE/未命名.md",
       "SRE/未命名 1.md"

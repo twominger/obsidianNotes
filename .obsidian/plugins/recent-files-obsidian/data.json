@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "java部署",
+      "path": "SRE/java部署.md"
+    },
+    {
       "basename": "未命名",
       "path": "SRE/未命名.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "01-MySQL安装",
       "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "linux/未命名.md"
     }
   ],
   "omittedPaths": [],
