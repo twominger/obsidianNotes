@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "测验/未命名.md"
+    },
+    {
       "basename": "20250210-k8s环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     },
@@ -19,10 +27,6 @@
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
     },
     {
       "basename": "部署openstack",
@@ -195,10 +199,6 @@
     {
       "basename": "LVM",
       "path": "05.笔记/整理笔记/Linux1/LVM.md"
-    },
-    {
-      "basename": "centos linux版本及区别，常用版本",
-      "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
     }
   ],
   "omittedPaths": [],
