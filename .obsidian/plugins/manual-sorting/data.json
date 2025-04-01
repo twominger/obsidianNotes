@@ -14,7 +14,7 @@
       "毕设",
       "测验",
       "模板",
-      "企业web架构",
+      "SRE",
       "ansible",
       "ceph",
       "Docker",
@@ -190,11 +190,6 @@
     "模板/01.日记模板": [
       "模板/01.日记模板/日记.md"
     ],
-    "企业web架构": [
-      "企业web架构/应用or业务运维.md",
-      "企业web架构/未命名.md",
-      "企业web架构/未命名 1.md"
-    ],
     "ansible": [
       "ansible/ansible入门.md"
     ],
@@ -272,6 +267,11 @@
     ],
     "OpenStack": [
       "OpenStack/Hyper-V与VMware workstation冲突.md"
+    ],
+    "SRE": [
+      "SRE/应用or业务运维.md",
+      "SRE/未命名.md",
+      "SRE/未命名 1.md"
     ]
   }
 }
