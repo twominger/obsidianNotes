@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
       "basename": "部署单节点ceph",
       "path": "测验/部署单节点ceph.md"
     },
     {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "k8s",
