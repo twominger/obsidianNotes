@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "20250210-k8s环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "测验/k8s.md"
+    },
+    {
       "basename": "问题",
       "path": "测验/问题.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "测验/k8s.md"
     },
     {
       "basename": "创建自定义镜像",
@@ -195,10 +199,6 @@
     {
       "basename": "centos linux版本及区别，常用版本",
       "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "毕设/未命名.md"
     }
   ],
   "omittedPaths": [],
