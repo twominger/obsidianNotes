@@ -5,6 +5,10 @@
       "path": "SRE/java部署.md"
     },
     {
+      "basename": "home",
+      "path": "01.主页/home.md"
+    },
+    {
       "basename": "20250102-openstack架构及环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
     },
@@ -167,10 +171,6 @@
     {
       "basename": "02-Linux系统命令和查询帮助",
       "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
-    },
-    {
-      "basename": "home",
-      "path": "01.主页/home.md"
     },
     {
       "basename": "阶段三内容",
