@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "ceph",
+      "path": "测验/ceph.md"
+    },
+    {
       "basename": "部署openstack",
       "path": "测验/部署openstack.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "ceph",
-      "path": "测验/ceph.md"
     },
     {
       "basename": "discuz",
