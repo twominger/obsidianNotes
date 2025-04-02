@@ -14,4 +14,48 @@ createrepo --update /centos8/zmm/
 
 ```shell
 
+#!/bin/bash
+
+# Define repository and package directory
+repodir="/centos8"
+packagedir=""
+
+# Check if one argument (package name) is passed
+if [[ "$#" -eq 1 ]]; then
+    packagedir="${repodir}/${1}"  # Set packagedir based on package name
+else
+    echo "Usage: $0 <package-name>"
+    exit 1
+fi
+
+# Clean up /tmp/repo if it exists
+if [[ -d /tmp/repo ]]; then
+    rm -rf /tmp/repo/*
+else
+    mkdir -p /tmp/repo
+fi
+
+# Download the package to /tmp/repo
+yum -y install ${1} --downloadonly --downloaddir=/tmp/repo
+
+# Check if the package directory exists, if not, create it
+if [[ -d ${packagedir} ]]; then
+    rm -rf "${packagedir}/*"  # Clean existing packages if any
+else
+    mkdir -p "${packagedir}/Packages"  # Create Packages subdirectory if it doesn't exist
+fi
+
+# Move the downloaded packages to the package directory
+mv /tmp/repo/* "${packagedir}/Packages/"
+
+# Create or update the repository
+createrepo --update ${packagedir}
+
+# Check if createrepo was successful
+if [[ $? -eq 0 ]]; then
+    echo "Repository updated successfully at ${packagedir}"
+else
+    echo "Error updating repository"
+    exit 1
+fi
 ```
