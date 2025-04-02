@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Drawing 2025-04-02 17.13.12.excalidraw",
-      "path": "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md"
+      "basename": "未命名 1",
+      "path": "测验/未命名 1.md"
     },
     {
       "basename": "未命名",
       "path": "测验/未命名.md"
+    },
+    {
+      "basename": "Drawing 2025-04-02 17.13.12.excalidraw",
+      "path": "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md"
     },
     {
       "basename": "传统社交论坛的容器化改造",
@@ -195,10 +199,6 @@
     {
       "basename": "阶段三内容",
       "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
-    },
-    {
-      "basename": "nginx健康检查",
-      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
     }
   ],
   "omittedPaths": [],
