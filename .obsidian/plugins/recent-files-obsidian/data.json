@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "部署单节点ceph",
+      "path": "测验/部署单节点ceph.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "Pasted Image 20250402174457_689",
+      "path": "100.附件/Pasted Image 20250402174457_689.png"
+    },
+    {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
     },
@@ -29,10 +49,6 @@
       "path": "测验/k8s.md"
     },
     {
-      "basename": "问题",
-      "path": "测验/问题.md"
-    },
-    {
       "basename": "20250109-OVN网络架构详解",
       "path": "10.课件/OpenStack课堂笔记-田/20250109-OVN网络架构详解.md"
     },
@@ -41,24 +57,12 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
     },
     {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "部署单节点ceph",
-      "path": "测验/部署单节点ceph.md"
-    },
-    {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
     },
     {
       "basename": "java部署",
@@ -183,18 +187,6 @@
     {
       "basename": "未命名 1",
       "path": "毕设/未命名 1.md"
-    },
-    {
-      "basename": "Cgroup",
-      "path": "Docker/Cgroup.md"
-    },
-    {
-      "basename": "安装虚拟机",
-      "path": "linux/安装虚拟机.md"
-    },
-    {
-      "basename": "yum源",
-      "path": "linux/yum源.md"
     }
   ],
   "omittedPaths": [],
