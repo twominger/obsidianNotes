@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
@@ -39,10 +43,6 @@
     {
       "basename": "Drawing 2025-04-02 17.13.12.excalidraw",
       "path": "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
     },
     {
       "basename": "20250210-k8s环境搭建",
