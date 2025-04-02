@@ -5,6 +5,10 @@
       "path": "测验/未命名.md"
     },
     {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
       "basename": "部署单节点ceph",
       "path": "测验/部署单节点ceph.md"
     },
