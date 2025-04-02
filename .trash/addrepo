@@ -1,18 +1,3 @@
-- 下载yum源增加rpm包工具
-```shell
-yum install createrepo -y
-```
-- 下载rpm包到指定目录下 如：
-```shell
-yum install nginx --downloadonly --downloaddir=/centos8/zmm/Packages/
-```
-- 每加入一个rpm包就要更新一下
-```shell
-createrepo --update /centos8/zmm/
-```
-![[100.附件/addrepo]]
-```shell
-
 #!/bin/bash
 
 # Define repository and package directory
@@ -35,7 +20,8 @@ else
 fi
 
 # Download the package to /tmp/repo
-yum -y install ${1} --downloadonly --downloaddir=/tmp/repo
+yum download --resolve --alldeps ${1} --downloaddir=/tmp/repo
+#yum -y install ${1} --downloadonly --downloaddir=/tmp/repo
 
 # Check if the package directory exists, if not, create it
 if [[ -d ${packagedir} ]]; then
@@ -57,4 +43,25 @@ else
     echo "Error updating repository"
     exit 1
 fi
-```
+
+# 输出文件
+repo_file="${repodir}/a.repo"
+
+# 清空文件内容，以防文件已存在
+> "$repo_file"
+
+# 遍历 base_dir 目录下的所有子目录
+for dir in "$repodir"/*/; do
+  # 获取子目录的目录名
+  dirname=$(basename "$dir")
+  
+  # 为每个子目录写入 repo 配置
+  echo "[$dirname]" >> "$repo_file"
+  echo "name = $dirname" >> "$repo_file"
+  echo "baseurl = file://$dir" >> "$repo_file"  # 使用 file:// 来表示本地路径
+  echo "gpgcheck = 0" >> "$repo_file"
+  echo "" >> "$repo_file"  # 添加空行分隔
+done
+
+echo "a.repo 文件已经生成在 $repo_file"
+
