@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "08-shell基础",
+      "path": "05.笔记/听课笔记/linux/08-shell基础.md"
+    },
+    {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "02-Linux系统命令和查询帮助",
       "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
-    },
-    {
-      "basename": "阶段三内容",
-      "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
     }
   ],
   "omittedPaths": [],
