@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
       "basename": "未命名",
       "path": "测验/未命名.md"
     },
@@ -67,10 +71,6 @@
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "java部署",
