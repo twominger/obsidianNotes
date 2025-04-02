@@ -5,6 +5,10 @@
       "path": "测验/部署单节点ceph.md"
     },
     {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
       "basename": "部署openstack",
       "path": "测验/部署openstack.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "创建自定义镜像",
