@@ -11,3 +11,7 @@ yum install nginx --downloadonly --downloaddir=/centos8/zmm/Packages/
 createrepo --update /centos8/zmm/
 ```
 
+
+```shell
+
+```

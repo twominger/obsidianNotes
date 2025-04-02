@@ -299,7 +299,7 @@
   "currentTheme": {
     "settings": {
       "codeblock": {
-        "lineNumbers": true,
+        "lineNumbers": false,
         "unwrapLines": false,
         "wrapLinesActive": false,
         "curvature": 5
