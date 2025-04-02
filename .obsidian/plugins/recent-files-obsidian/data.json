@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "测验/未命名.md"
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
     },
     {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
     {
-      "basename": "部署单节点ceph",
-      "path": "测验/部署单节点ceph.md"
+      "basename": "未命名",
+      "path": "测验/未命名.md"
     },
     {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
+      "basename": "部署单节点ceph",
+      "path": "测验/部署单节点ceph.md"
     },
     {
       "basename": "ceph",
@@ -31,10 +35,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
     },
     {
       "basename": "Pasted Image 20250402174457_689",
