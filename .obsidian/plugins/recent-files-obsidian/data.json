@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "存储池与集群配置管理",
+      "path": "ceph/作业/存储池与集群配置管理.md"
+    },
+    {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
+    },
+    {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "ceph-csi",
+      "path": "ceph/实验/ceph-csi.md"
+    },
+    {
       "basename": "未命名",
       "path": "测验/未命名.md"
     },
     {
       "basename": "部署openstack",
       "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "传统社交论坛的容器化改造",
@@ -31,10 +47,6 @@
     {
       "basename": "ceph",
       "path": "ceph/MAN/ceph.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "discuz",
@@ -187,14 +199,6 @@
     {
       "basename": "Docker",
       "path": "Docker/Docker.md"
-    },
-    {
-      "basename": "安装Docker",
-      "path": "Docker/安装Docker.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "毕设/未命名 1.md"
     }
   ],
   "omittedPaths": [],
