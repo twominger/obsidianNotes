@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "测验/未命名.md"
+    },
+    {
       "basename": "存储池与集群配置管理",
       "path": "ceph/作业/存储池与集群配置管理.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.md"
     },
     {
       "basename": "部署openstack",
