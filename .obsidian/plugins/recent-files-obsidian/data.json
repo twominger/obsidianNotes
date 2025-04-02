@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "前端",
+      "path": "SRE/前端.md"
+    },
+    {
+      "basename": "java部署",
+      "path": "SRE/java部署.md"
+    },
+    {
+      "basename": "应用or业务运维",
+      "path": "SRE/应用or业务运维.md"
+    },
+    {
       "basename": "未命名",
-      "path": "测验/未命名.md"
+      "path": "SRE/未命名.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "SRE/未命名 1.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
     },
     {
       "basename": "传统社交论坛的容器化改造",
@@ -85,24 +105,12 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
     },
     {
-      "basename": "java部署",
-      "path": "SRE/java部署.md"
-    },
-    {
       "basename": "home",
       "path": "01.主页/home.md"
     },
     {
       "basename": "20250102-openstack架构及环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "SRE/未命名.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "SRE/未命名 1.md"
     },
     {
       "basename": "20250105-openstack组件cinder-glance-nova-heat",
@@ -153,10 +161,6 @@
       "path": "GIT/未命名.md"
     },
     {
-      "basename": "应用or业务运维",
-      "path": "SRE/应用or业务运维.md"
-    },
-    {
       "basename": "虚拟化技术概述",
       "path": "Docker/虚拟化技术概述.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "TMP",
       "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker/Docker.md"
     }
   ],
   "omittedPaths": [],
