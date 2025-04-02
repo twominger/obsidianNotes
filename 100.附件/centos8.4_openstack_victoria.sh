@@ -2,15 +2,15 @@
 # 3 节点，8.4 minimal 安装，单网卡，NAT
 # 所有节点必须配置静态IP，必须配置网关和DNS（以防因软硬件兼容性问题导致安装过程掉网）
 # Auth: tianhairui
-# 192.168.44.100 controller
-# 192.168.44.101 compute1
-# 192.168.44.102 compute2
+# 192.168.224.100 controller
+# 192.168.224.101 compute1
+# 192.168.224.102 compute2
 
 # Conf /etc/hosts
 echo "为当前 controller 节点配置映射关系..."
-echo '192.168.44.100 controller' >> /etc/hosts
-echo '192.168.44.101 compute1' >> /etc/hosts
-echo '192.168.44.102 compute2' >> /etc/hosts
+echo '192.168.224.100 controller' >> /etc/hosts
+echo '192.168.224.101 compute1' >> /etc/hosts
+echo '192.168.224.102 compute2' >> /etc/hosts
 echo "当前 controller 节点映射关系配置完成"
 cat /etc/hosts
 
@@ -96,7 +96,7 @@ rtcsync
 keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
-allow 192.168.44.0/24
+allow 192.168.224.0/24
 local stratum 10
 EOF
 systemctl start chronyd.service
@@ -136,9 +136,9 @@ for node in "${nodes[@]}"; do
   ssh -T "$user@$node" <<EOF
   echo "在 $node 执行以下命令："
   echo "配置 $node 主机名及ip映射："
-  echo '192.168.44.100 controller' >> /etc/hosts
-  echo '192.168.44.101 compute1' >> /etc/hosts
-  echo '192.168.44.102 compute2' >> /etc/hosts
+  echo '192.168.224.100 controller' >> /etc/hosts
+  echo '192.168.224.101 compute1' >> /etc/hosts
+  echo '192.168.224.102 compute2' >> /etc/hosts
   cat /etc/hosts
 
   echo "正在关闭 $node 防火墙..."
@@ -251,7 +251,7 @@ echo "controller 正在创建应答文件..."
 packstack --gen-answer-file=/root/cloudcs.txt
 
 echo "controller 正在修改应答文件..."
-sed -i '/^CONFIG_COMPUTE_HOSTS/ s/.*/CONFIG_COMPUTE_HOSTS=192.168.44.101,192.168.44.102/' /root/cloudcs.txt
+sed -i '/^CONFIG_COMPUTE_HOSTS/ s/.*/CONFIG_COMPUTE_HOSTS=192.168.224.101,192.168.224.102/' /root/cloudcs.txt
 sed -i '/^CONFIG_KEYSTONE_ADMIN_PW/ s/.*/CONFIG_KEYSTONE_ADMIN_PW=redhat/' /root/cloudcs.txt
 sed -i 's/CONFIG_PROVISION_DEMO=y/CONFIG_PROVISION_DEMO=n/g' /root/cloudcs.txt
 sed -i 's/CONFIG_NEUTRON_OVN_BRIDGE_IFACES=/CONFIG_NEUTRON_OVN_BRIDGE_IFACES=br-ex:ens160/g' /root/cloudcs.txt
@@ -272,8 +272,8 @@ sshpass -p "$password" packstack --answer-file=/root/cloudcs.txt
 # case "$choice" in
 #     [Yy]*)
 #         echo "执行mon扩容操作..."
-#         ceph-deploy mon add ceph02 --address 192.168.44.102
-#         ceph-deploy mon add ceph03 --address 192.168.44.103
+#         ceph-deploy mon add ceph02 --address 192.168.224.102
+#         ceph-deploy mon add ceph03 --address 192.168.224.103
 #         echo "执行mgr扩容操作..."
 #         ceph-deploy mgr create ceph02 ceph03
 #         echo "正在启用dashboard服务..."
