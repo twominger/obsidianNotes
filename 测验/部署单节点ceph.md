@@ -1,6 +1,3 @@
-```shell
-
-```
 
  ```shell
 yum -y install python3
