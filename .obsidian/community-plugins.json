@@ -13,10 +13,10 @@
   "pdf-plus",
   "code-styler",
   "image-converter",
-  "obsidian-pangu",
   "obsidian-icon-folder",
   "obsidian-git",
   "floating-toc",
   "callout-toggles",
-  "manual-sorting"
+  "manual-sorting",
+  "obsidian-pangu"
 ]
