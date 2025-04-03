@@ -355,8 +355,3 @@ docker images
 # prometheus
 
 
-![[image-4.png]]
-![[image-3.png]]
-
-
-![](../100.附件/image-5.png)

@@ -5,6 +5,14 @@
       "path": "测验/everything.md"
     },
     {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
       "basename": "前端",
       "path": "SRE/前端.md"
     },
@@ -23,14 +31,6 @@
     {
       "basename": "未命名 1",
       "path": "SRE/未命名 1.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
     },
     {
       "basename": "存储池与集群配置管理",
@@ -71,10 +71,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "Pasted Image 20250402174457_689",
-      "path": "100.附件/Pasted Image 20250402174457_689.png"
     },
     {
       "basename": "局域网yum",
@@ -195,10 +191,6 @@
     {
       "basename": "日记",
       "path": "模板/01.日记模板/日记.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
     }
   ],
   "omittedPaths": [],
