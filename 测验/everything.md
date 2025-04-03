@@ -354,7 +354,9 @@ docker images
 
 # prometheus
 
-![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250403211524290.png)
+
 ![[image-4.png]]
 ![[image-3.png]]
 
+
+![](../100.附件/image-5.png)

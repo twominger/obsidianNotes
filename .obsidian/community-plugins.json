@@ -12,11 +12,11 @@
   "colored-tags",
   "pdf-plus",
   "code-styler",
-  "image-converter",
   "obsidian-icon-folder",
   "obsidian-git",
   "floating-toc",
   "callout-toggles",
   "manual-sorting",
-  "obsidian-pangu"
+  "obsidian-pangu",
+  "image-converter"
 ]
