@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "前端",
       "path": "SRE/前端.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "未命名 1",
       "path": "SRE/未命名 1.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "传统社交论坛的容器化改造",

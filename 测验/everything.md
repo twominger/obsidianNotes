@@ -5,10 +5,11 @@
 网卡最好用桥接模式
 桥接无法代理问题解决
 ![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250403024236405.png)
-运行如下命令即可：（ip为宿主机ip）
+运行如下命令即可（ip为宿主机ip）：
 ```shell
 export http_proxy=192.168.224.144:7897
 export https_proxy=192.168.224.144:7897
+# 依然无法ping通外网，但是其他一切正常，可以拉取外网镜像
 ```
 取消：
 ```shell
