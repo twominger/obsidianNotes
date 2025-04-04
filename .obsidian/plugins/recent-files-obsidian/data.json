@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "ansible入门",
+      "path": "ansible/ansible入门.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "SRE/未命名 1.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "SRE/未命名.md"
+    },
+    {
       "basename": "gitignore文件不起作用解决",
       "path": "GIT/gitignore文件不起作用解决.md"
     },
@@ -59,14 +71,6 @@
     {
       "basename": "应用or业务运维",
       "path": "SRE/应用or业务运维.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "SRE/未命名.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "SRE/未命名 1.md"
     },
     {
       "basename": "使用cephadm部署ceph集群",
@@ -191,10 +195,6 @@
     {
       "basename": "制作虚拟机模板",
       "path": "linux/制作虚拟机模板.md"
-    },
-    {
-      "basename": "ansible入门",
-      "path": "ansible/ansible入门.md"
     },
     {
       "basename": "Drawing 2025-03-26 15.42.33.excalidraw",
