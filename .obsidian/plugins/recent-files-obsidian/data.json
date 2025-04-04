@@ -1,20 +1,84 @@
 {
   "recentFiles": [
     {
-      "basename": "ansible入门",
-      "path": "ansible/ansible入门.md"
+      "basename": "未命名 1",
+      "path": "毕设/未命名 1.md"
     },
     {
-      "basename": "未命名 1",
-      "path": "SRE/未命名 1.md"
+      "basename": "未命名",
+      "path": "毕设/未命名.md"
+    },
+    {
+      "basename": "Docker操作",
+      "path": "Docker/Docker操作.md"
+    },
+    {
+      "basename": "安装Docker",
+      "path": "Docker/安装Docker.md"
+    },
+    {
+      "basename": "Cgroup",
+      "path": "Docker/Cgroup.md"
+    },
+    {
+      "basename": "Hypervisor",
+      "path": "Docker/Hypervisor.md"
+    },
+    {
+      "basename": "虚拟化技术概述",
+      "path": "Docker/虚拟化技术概述.md"
+    },
+    {
+      "basename": "namespace",
+      "path": "Docker/namespace.md"
+    },
+    {
+      "basename": "container",
+      "path": "Docker/container.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker/Docker.md"
+    },
+    {
+      "basename": "Docker概念",
+      "path": "Docker/Docker概念.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "应用or业务运维",
+      "path": "SRE/应用or业务运维.md"
+    },
+    {
+      "basename": "java部署",
+      "path": "SRE/java部署.md"
+    },
+    {
+      "basename": "前端",
+      "path": "SRE/前端.md"
+    },
+    {
+      "basename": "gitignore文件不起作用解决",
+      "path": "GIT/gitignore文件不起作用解决.md"
     },
     {
       "basename": "未命名",
       "path": "SRE/未命名.md"
     },
     {
-      "basename": "gitignore文件不起作用解决",
-      "path": "GIT/gitignore文件不起作用解决.md"
+      "basename": "未命名 1",
+      "path": "SRE/未命名 1.md"
+    },
+    {
+      "basename": "ansible入门",
+      "path": "ansible/ansible入门.md"
     },
     {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
@@ -57,22 +121,6 @@
       "path": "mysql/mysql部署-源码.md"
     },
     {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "前端",
-      "path": "SRE/前端.md"
-    },
-    {
-      "basename": "java部署",
-      "path": "SRE/java部署.md"
-    },
-    {
-      "basename": "应用or业务运维",
-      "path": "SRE/应用or业务运维.md"
-    },
-    {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
@@ -103,10 +151,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "08-shell基础",
@@ -155,50 +199,6 @@
     {
       "basename": "消息队列中间件的横向对比",
       "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
-    },
-    {
-      "basename": "OpenStack组件使用",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
-    },
-    {
-      "basename": "OpenStack环境搭建",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
-    },
-    {
-      "basename": "20-内核监控和系统服务管理及故障修复",
-      "path": "05.笔记/听课笔记/linux/20-内核监控和系统服务管理及故障修复.md"
-    },
-    {
-      "basename": "20250111-Docker介绍与镜像管理",
-      "path": "10.课件/OpenStack课堂笔记-田/20250111-Docker介绍与镜像管理.md"
-    },
-    {
-      "basename": "20250107-openstack组件keystone",
-      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
-    },
-    {
-      "basename": "20250106-openstack组件swift及实验",
-      "path": "10.课件/OpenStack课堂笔记-田/20250106-openstack组件swift及实验.md"
-    },
-    {
-      "basename": "20250112-Docker容器管理及网络存储Harbor",
-      "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
-    },
-    {
-      "basename": "虚拟化技术概述",
-      "path": "Docker/虚拟化技术概述.md"
-    },
-    {
-      "basename": "Hypervisor",
-      "path": "Docker/Hypervisor.md"
-    },
-    {
-      "basename": "制作虚拟机模板",
-      "path": "linux/制作虚拟机模板.md"
-    },
-    {
-      "basename": "Drawing 2025-03-26 15.42.33.excalidraw",
-      "path": "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
     }
   ],
   "omittedPaths": [],
