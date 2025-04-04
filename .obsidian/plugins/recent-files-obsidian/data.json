@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "存储池与集群配置管理",
+      "path": "ceph/作业/存储池与集群配置管理.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "日记",
+      "path": "模板/01.日记模板/日记.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "TMP",
+      "path": "97.temp/TMP.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
       "basename": "Hyper-V与VMware workstation冲突",
       "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
     },
@@ -11,14 +35,6 @@
     {
       "basename": "everything",
       "path": "测验/everything.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
     },
     {
       "basename": "前端",
@@ -41,10 +57,6 @@
       "path": "SRE/未命名 1.md"
     },
     {
-      "basename": "存储池与集群配置管理",
-      "path": "ceph/作业/存储池与集群配置管理.md"
-    },
-    {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
@@ -59,10 +71,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "创建自定义镜像",
@@ -191,14 +199,6 @@
     {
       "basename": "Docker概念",
       "path": "Docker/Docker概念.md"
-    },
-    {
-      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
-      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
-    },
-    {
-      "basename": "日记",
-      "path": "模板/01.日记模板/日记.md"
     }
   ],
   "omittedPaths": [],
