@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "gitignore文件不起作用解决",
+      "path": "GIT/gitignore文件不起作用解决.md"
+    },
+    {
+      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
+      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
       "basename": "存储池与集群配置管理",
       "path": "ceph/作业/存储池与集群配置管理.md"
     },
@@ -169,10 +181,6 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
     },
     {
-      "basename": "未命名",
-      "path": "GIT/未命名.md"
-    },
-    {
       "basename": "虚拟化技术概述",
       "path": "Docker/虚拟化技术概述.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Drawing 2025-03-26 15.42.33.excalidraw",
       "path": "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
-    },
-    {
-      "basename": "Docker操作",
-      "path": "Docker/Docker操作.md"
-    },
-    {
-      "basename": "Docker概念",
-      "path": "Docker/Docker概念.md"
     }
   ],
   "omittedPaths": [],
