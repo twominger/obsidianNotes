@@ -13,7 +13,7 @@
     "margin": "2",
     "downscalePercent": 100
   },
-  "foldIndent": false,
+  "foldIndent": true,
   "showLineNumber": false,
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
