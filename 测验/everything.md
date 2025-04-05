@@ -331,6 +331,7 @@ docker tag nginx 192.168.224.188/discuz/nginx:v1
 docker push 192.168.224.188/discuz/nginx:v1
 ```
 - 拉取镜像(其他主机)
+
 ```shell
 cat >/etc/docker/daemon.json <<EOF
 {
@@ -345,6 +346,10 @@ docker pull 192.168.224.188/discuz/nginx:v1
 docker images
 ```
 # k8s集群搭建
+
+```shell
+
+```
 
 # mysql部署
 

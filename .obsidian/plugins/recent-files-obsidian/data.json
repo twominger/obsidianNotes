@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "ansible使用及脚本",
       "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
     },
     {
       "basename": "深度学习模型",
@@ -47,14 +55,6 @@
     {
       "basename": "Docker概念",
       "path": "Docker/Docker概念.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "应用or业务运维",
