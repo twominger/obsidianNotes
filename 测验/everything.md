@@ -528,24 +528,193 @@ kubeadm config images pull --kubernetes-version=v1.31.7 --image-repository regis
 
 #查看镜像是否拉取成功
 docker images
+```
+以上步骤制作 k8s-img 镜像
 
+- 高可用
+```shell
+[root@master1 ~]# yum install -y keepalived haproxy 
+[root@master1 ~]# mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
+master1配置
+[root@master1 ~]# vim /etc/keepalived/keepalived.conf
 
+! Configuration File for keepalived
+global_defs {
+    router_id LVS_DEVEL
+script_user root
+    enable_script_security
+}
+vrrp_script chk_apiserver {
+    script "/etc/keepalived/check_apiserver.sh"
+    interval 5
+    weight -5
+    fall 2
+rise 1
+}
+vrrp_instance VI_1 {
+    state MASTER
+    interface ens33
+    mcast_src_ip 192.168.1.21
+    virtual_router_id 51
+    priority 102
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.1.88
+    }
+#    track_script {
+#       chk_apiserver
+#    }
+}
+master2配置
+[root@master2 ~]# vim /etc/keepalived/keepalived.conf
 
-# 准备需要的镜像
-[root@master1 ~]# kubeadm config images list --kubernetes-version=v1.31.2
-registry.k8s.io/kube-apiserver:v1.31.2
-registry.k8s.io/kube-controller-manager:v1.31.2
-registry.k8s.io/kube-scheduler:v1.31.2
-registry.k8s.io/kube-proxy:v1.31.2
-registry.k8s.io/coredns/coredns:v1.11.3
-registry.k8s.io/pause:3.10
-registry.k8s.io/etcd:3.5.15-0
+! Configuration File for keepalived
+global_defs {
+    router_id LVS_DEVEL
+script_user root
+    enable_script_security
+}
+vrrp_script chk_apiserver {
+    script "/etc/keepalived/check_apiserver.sh"
+    interval 5
+    weight -5
+    fall 2
+rise 1
+}
+vrrp_instance VI_1 {
+    state BACKUP
+    interface ens33
+    mcast_src_ip 192.168.1.22
+    virtual_router_id 51
+    priority 101
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.1.88
+    }
+#    track_script {
+#       chk_apiserver
+#    }
+}
 
-拉取需要的镜像
-[root@master1 ~]# kubeadm config images pull  --image-repository registry.aliyuncs.com/google_containers
+master3配置
+[root@master3 ~]# vim /etc/keepalived/keepalived.conf
 
+! Configuration File for keepalived
+global_defs {
+    router_id LVS_DEVEL
+script_user root
+    enable_script_security
+}
+vrrp_script chk_apiserver {
+    script "/etc/keepalived/check_apiserver.sh"
+    interval 5
+    weight -5
+    fall 2
+rise 1
+}
+vrrp_instance VI_1 {
+    state BACKUP
+    interface ens33
+    mcast_src_ip 192.168.1.23
+    virtual_router_id 51
+    priority 100
+    advert_int 2
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.1.88
+    }
+#    track_script {
+#       chk_apiserver
+#    }
+}
+三个master节点配置心跳检测脚本
+vim /etc/keepalived/check_apiserver.sh
+#!/bin/bash
+
+err=0
+for k in $(seq 1 3)
+do
+    check_code=$(pgrep haproxy)
+    if [[ $check_code == "" ]]; then
+        err=$(expr $err + 1)
+        sleep 1
+        continue
+    else
+        err=0
+        break
+    fi
+done
+
+if [[ $err != "0" ]]; then
+    echo "systemctl stop keepalived"
+    /usr/bin/systemctl stop keepalived
+    exit 1
+else
+    exit 0
+fi
+
+[root@master1 ~]# chmod +x /etc/keepalived/check_apiserver.sh
+[root@master1 ~]# systemctl restart keepalived
+
+#配置haproxy
+mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+vim /etc/haproxy/haproxy.cfg
+
+global
+  maxconn  2000
+  ulimit-n  16384
+  log  127.0.0.1 local0 err
+  stats timeout 30s
+
+defaults
+  log global
+  mode  http
+  option  httplog
+  timeout connect 5000
+  timeout client  50000
+  timeout server  50000
+  timeout http-request 15s
+  timeout http-keep-alive 15s
+
+frontend monitor-in
+  bind *:33305
+  mode http
+  option httplog
+  monitor-uri /monitor
+
+frontend k8s-master
+  bind 0.0.0.0:16443
+  bind 127.0.0.1:16443
+  mode tcp
+  option tcplog
+  tcp-request inspect-delay 5s
+  default_backend k8s-master
+
+backend k8s-master
+  mode tcp
+  option tcplog
+  option tcp-check
+  balance roundrobin
+  default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
+  server master1  192.168.1.21:6443  check
+  server master2  192.168.1.22:6443  check
+  server master3  192.168.1.23:6443  check
+  
+[root@master1 ~]# systemctl enable --now haproxy.service
 
 ```
+
 
 
 # mysql部署
