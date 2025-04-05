@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "ceph-csi",
+      "path": "ceph/实验/ceph-csi.md"
+    },
+    {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250113-Docker编排和Dockerfile",
@@ -155,10 +159,6 @@
     {
       "basename": "ceph实验",
       "path": "ceph/实验/ceph实验.md"
-    },
-    {
-      "basename": "ceph-csi",
-      "path": "ceph/实验/ceph-csi.md"
     },
     {
       "basename": "创建自定义镜像",
