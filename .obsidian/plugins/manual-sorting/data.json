@@ -180,6 +180,7 @@
       "测验/部署单节点ceph.md"
     ],
     "附件": [
+      "附件/calico.yaml",
       "附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm",
       "附件/addrepo",
       "附件/centos8.4_openstack_victoria.sh",
