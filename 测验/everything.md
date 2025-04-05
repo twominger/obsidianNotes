@@ -494,34 +494,21 @@ cat > /etc/docker/daemon.json << EOF
 }
 EOF
 
-systemctl daemon-reload && systemctl enable --now docker
+```
 
-#安装CRI-dockerd
-curl -LO https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.15/cri-dockerd_0.3.15.3-0.ubuntu-focal_amd64.deb
-
-dpkg -i cri-dockerd_0.3.15.3-0.ubuntu-focal_amd64.deb
-
-sed -ri 's@^(.*fd://).*$@\1 --pod-infra-container-image registry.aliyuncs.com/google_containers/pause:3.7@' /lib/systemd/system/cri-docker.service
-
-systemctl daemon-reload && systemctl restart cri-docker
-
-#centos操作系统cri接口
-wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd-0.3.4-3.el8.x86_64.rpm
+```shell
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.6/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
+yum -y install cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
 
 # vim /usr/lib/systemd/system/cri-docker.service
 ----
 修改第10行内容
 ExecStart=/usr/bin/cri-dockerd --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.9 --container-runtime-endpoint fd://
 ----
+sed -i 's|ExecStart=/usr/bin/cri-dockerd --container-runtime-endpoint fd://|ExecStart=/usr/bin/cri-dockerd --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.9 --container-runtime-endpoint fd://|' /usr/lib/systemd/system/cri-docker.service
 
 # systemctl start cri-docker
 # systemctl enable cri-docker
-
-```
-
-```shell
-wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.6/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
-yum -y install cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
 ```
 ![[100.附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
 
