@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "everything",
-      "path": "测验/everything.md"
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "20250210-k8s环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     },
     {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
+      "basename": "everything",
+      "path": "测验/everything.md"
     },
     {
       "basename": "discuz",

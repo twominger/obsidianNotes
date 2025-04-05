@@ -800,6 +800,8 @@ vim calico.yaml
 ```
 ![[附件/calico.yaml]]
 
+# k8s 对接 cephfs
+
 # mysql部署
 
 
