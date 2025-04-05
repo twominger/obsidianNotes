@@ -358,13 +358,27 @@ EOF
 
 ```
 ```shell
+# master01
+yum -y install chrony
+cat >/etc/chrony.conf <<EOF
+server ntp.tencent.com iburst
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+allow 192.168.224.0/24
+local stratum 10
+keyfile /etc/chrony.keys
+leapsectz right/UTC
+logdir /var/log/chrony
+EOF
+
+# master02\master03\node01\node02
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
 server master iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
-allow 192.168.224.0/24
 local stratum 10
 keyfile /etc/chrony.keys
 leapsectz right/UTC
