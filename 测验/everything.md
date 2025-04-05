@@ -522,7 +522,7 @@ yum makecache
 # yum list kubelet --showduplicates | sort -r | grep 1.31
 yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
 
-systemctl enable kubelet
+systemctl enable kubelet --now
 # kubeadm config images list --kubernetes-version=v1.31.7
 
 kubeadm config images pull --kubernetes-version=v1.31.7 --image-repository registry.aliyuncs.com/google_containers --cri-socket unix:///run/cri-dockerd.sock
