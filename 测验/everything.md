@@ -779,6 +779,9 @@ kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+
 ```
 
 # mysql部署
