@@ -506,6 +506,40 @@ systemctl enable cri-docker --now
 ```
 ![[100.附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
 
+```shell
+添加K8s阿里源
+cat >/etc/yum.repos.d/kubernetes.repo <<EOF
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes-new/core/stable/v1.31/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://mirrors.aliyun.com/kubernetes-new/core/stable/v1.31/rpm/repodata/repomd.xml.key
+EOF
+
+yum clean all
+yum makecache
+yum list kubelet --showduplicates | sort -r | grep 1.31
+yum install -y kubectl kubelet kubeadm 
+vim /etc/sysconfig/kubelet
+KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"
+准备需要的镜像
+[root@master1 ~]# kubeadm config images list --kubernetes-version=v1.31.2
+registry.k8s.io/kube-apiserver:v1.31.2
+registry.k8s.io/kube-controller-manager:v1.31.2
+registry.k8s.io/kube-scheduler:v1.31.2
+registry.k8s.io/kube-proxy:v1.31.2
+registry.k8s.io/coredns/coredns:v1.11.3
+registry.k8s.io/pause:3.10
+registry.k8s.io/etcd:3.5.15-0
+
+拉取需要的镜像
+[root@master1 ~]# kubeadm config images pull  --image-repository registry.aliyuncs.com/google_containers
+
+
+```
+
+
 # mysql部署
 
 
