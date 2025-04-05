@@ -765,6 +765,22 @@ scp -r /etc/kubernetes/pki root@master2:/etc/kubernetes/
 scp -r /etc/kubernetes/pki root@master3:/etc/kubernetes/
 ```
 
+```shell
+# master2加入集群
+cd /etc/kubernetes/pki/
+rm -rf apiserver*
+rm -rf etcd/peer.*
+rm -rf etcd/server.*
+kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
+    --discovery-token-ca-cert-hash sha256:f416dd60d79ee652b4b6185c77991066ad4178db4f26e08fcdcdc8765a0e5e2c \
+    --control-plane \
+    --cri-socket unix:///var/run/cri-dockerd.sock
+    
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
 # mysql部署
 
 
