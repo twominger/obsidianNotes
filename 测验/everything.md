@@ -671,7 +671,7 @@ systemctl restart keepalived
 
 #配置haproxy
 mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
-vim /etc/haproxy/haproxy.cfg
+cat >/etc/haproxy/haproxy.cfg <<EOF
 
 global
   maxconn  2000
@@ -712,8 +712,12 @@ backend k8s-master
   server master1  192.168.224.21:6443  check
   server master2  192.168.224.22:6443  check
   server master3  192.168.224.23:6443  check
+EOF
   
-[root@master1 ~]# systemctl enable --now haproxy.service
+systemctl enable --now haproxy.service
+
+
+
 
 ```
 
