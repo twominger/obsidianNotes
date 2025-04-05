@@ -533,9 +533,9 @@ docker images
 
 - 高可用
 ```shell
-[root@master1 ~]# yum install -y keepalived haproxy 
-[root@master1 ~]# mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
-master1配置
+yum install -y keepalived haproxy 
+mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
+# master1配置
 [root@master1 ~]# vim /etc/keepalived/keepalived.conf
 
 ! Configuration File for keepalived
