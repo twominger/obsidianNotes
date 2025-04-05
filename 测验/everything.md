@@ -519,10 +519,18 @@ EOF
 
 yum clean all
 yum makecache
-yum list kubelet --showduplicates | sort -r | grep 1.31
-yum install -y kubectl kubelet kubeadm 
+# yum list kubelet --showduplicates | sort -r | grep 1.31
+yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
 vim /etc/sysconfig/kubelet
 KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"
+
+kubeadm config images pull --kubernetes-version=v1.31.7 --image-repository registry.aliyuncs.com/google_containers --cri-socket unix:///run/cri-dockerd.sock
+
+#查看镜像是否拉取成功
+docker images
+
+
+
 准备需要的镜像
 [root@master1 ~]# kubeadm config images list --kubernetes-version=v1.31.2
 registry.k8s.io/kube-apiserver:v1.31.2
