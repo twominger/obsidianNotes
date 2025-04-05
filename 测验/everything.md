@@ -569,6 +569,7 @@ vrrp_instance VI_1 {
 #    }
 }
 EOF
+
 # master2配置
 cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
@@ -604,7 +605,7 @@ vrrp_instance VI_1 {
 }
 EOF
 
-master3配置
+# master3配置
 cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
@@ -667,6 +668,7 @@ fi
 EOF
 
 chmod +x /etc/keepalived/check_apiserver.sh
+systemctl enable keepalived
 systemctl restart keepalived
 
 #配置haproxy
@@ -716,9 +718,11 @@ EOF
   
 systemctl enable --now haproxy.service
 
+sed -i '/#.*track_script {/ s/^#//' /etc/keepalived/keepalived.conf
+sed -i '/#.*chk_apiserver/ s/^#//' /etc/keepalived/keepalived.conf
+sed -i '/#.*}/ s/^#//' /etc/keepalived/keepalived.conf
 
-
-
+systemctl restart keepalived
 ```
 
 
@@ -731,6 +735,3 @@ systemctl enable --now haproxy.service
 # discuz容器发布
 
 # prometheus
-
-
-
