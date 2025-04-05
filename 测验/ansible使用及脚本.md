@@ -1,4 +1,4 @@
-openstack ()
+osp (01\02\03)
 	harbor
 	m01
 	m02
@@ -12,10 +12,38 @@ openstack ()
 cs01
 cs02
 
-初始化脚本
+ip 规划
+
+ansible 部署
+
+
+初始化脚本 (所有主机)
 ```shell
+selinux
+firewalld
+sshd_config
 hostname
 nmcli
 http_proxy
 https_proxy
+yum
+package
 ```
+
+harbor
+```shell
+docker
+harbor
+daemon.json
+```
+k8s
+	master
+	node
+sql
+	master
+	slave
+prometheus
+
+
+discuz 容器
+	
