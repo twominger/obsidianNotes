@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "20250210-k8s环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
-    },
-    {
       "basename": "everything",
       "path": "测验/everything.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
     },
     {
       "basename": "ansible使用及脚本",
@@ -15,6 +15,10 @@
     {
       "basename": "20250113-Docker编排和Dockerfile",
       "path": "10.课件/OpenStack课堂笔记-田/20250113-Docker编排和Dockerfile.md"
+    },
+    {
+      "basename": "20250210-k8s环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     },
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
@@ -167,10 +171,6 @@
     {
       "basename": "ceph",
       "path": "ceph/MAN/ceph.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
     },
     {
       "basename": "08-shell基础",

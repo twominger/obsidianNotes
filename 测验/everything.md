@@ -348,9 +348,17 @@ docker images
 # k8s集群搭建
 
 ```shell
+cat >>/etc/hosts <<EOF
+192.168.224.21 master1
+192.168.224.22 master2
+192.168.224.23 master3
+192.168.224.24 node1
+192.168.224.25 node2
+EOF
+```
+```shell
 
 ```
-
 # mysql部署
 
 # mysql对接ceph
