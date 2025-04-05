@@ -465,7 +465,14 @@ yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 # Step 4: 开启Docker服务
 service docker start
 ```
+
+```shell
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.6/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
+```
+![[100.附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
+
 # mysql部署
+
 
 # mysql对接ceph
 
