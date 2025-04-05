@@ -800,9 +800,6 @@ vim calico.yaml
 ```
 ![[附件/calico.yaml]]
 
-
-
-
 # mysql部署
 
 
