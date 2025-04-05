@@ -639,7 +639,7 @@ vrrp_instance VI_1 {
 }
 EOF
 
-三个master节点配置心跳检测脚本
+# 三个master节点配置心跳检测脚本
 cat >/etc/keepalived/check_apiserver.sh <<EOF
 #!/bin/bash
 
@@ -666,8 +666,8 @@ else
 fi
 EOF
 
-[root@master1 ~]# chmod +x /etc/keepalived/check_apiserver.sh
-[root@master1 ~]# systemctl restart keepalived
+chmod +x /etc/keepalived/check_apiserver.sh
+systemctl restart keepalived
 
 #配置haproxy
 mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
