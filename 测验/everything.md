@@ -355,9 +355,21 @@ cat >>/etc/hosts <<EOF
 192.168.224.24 node1
 192.168.224.25 node2
 EOF
+
 ```
 ```shell
-
+yum -y install chrony
+cat >/etc/chrony.conf <<EOF
+server master iburst
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+allow 192.168.224.0/24
+local stratum 10
+keyfile /etc/chrony.keys
+leapsectz right/UTC
+logdir /var/log/chrony
+EOF
 ```
 # mysql部署
 
