@@ -430,6 +430,7 @@ cat /sys/class/dmi/id/product_uuid
 yum install -y net-tools conntrack ipvsadm ipset iptables curl sysstat libseccomp wget
 
 modprobe br_netfilter
+
 cat > /etc/sysconfig/modules/ipvs.modules << EOF
 #!/bin/bash
 modprobe -- ip_vs
@@ -443,16 +444,26 @@ chmod 755 /etc/sysconfig/modules/ipvs.modules
 bash /etc/sysconfig/modules/ipvs.modules 
 lsmod | grep -e ip_vs -e nf_conntrack
 
-ip_vs_sh               12688  0 
-ip_vs_wrr              12697  0 
-ip_vs_rr               12600  0 
-ip_vs                 145458  6 ip_vs_rr,ip_vs_sh,ip_vs_wrr
-nf_conntrack_ipv4      15053  0 
-nf_defrag_ipv4         12729  1 nf_conntrack_ipv4
-nf_conntrack          139264  2 ip_vs,nf_conntrack_ipv4
-libcrc32c              12644  3 xfs,ip_vs,nf_conntrack
+# ip_vs_sh               12688  0 
+# ip_vs_wrr              12697  0 
+# ip_vs_rr               12600  0 
+# ip_vs                 145458  6 ip_vs_rr,ip_vs_sh,ip_vs_wrr
+# nf_conntrack_ipv4      15053  0 
+# nf_defrag_ipv4         12729  1 nf_conntrack_ipv4
+# nf_conntrack          139264  2 ip_vs,nf_conntrack_ipv4
+# libcrc32c              12644  3 xfs,ip_vs,nf_conntrack
+```
 
 
+```shell
+# step 1: 安装必要的一些系统工具
+yum install -y yum-utils
+# Step 2: 添加软件源信息
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+# Step 3: 安装Docker
+yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# Step 4: 开启Docker服务
+service docker start
 ```
 # mysql部署
 
