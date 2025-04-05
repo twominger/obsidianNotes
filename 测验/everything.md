@@ -733,13 +733,13 @@ kubeadm init --control-plane-endpoint=192.168.224.88:16443 --image-repository re
 
 # To start using your cluster, you need to run the following as a regular user:
 
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+#   mkdir -p $HOME/.kube
+#   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+#   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Alternatively, if you are the root user, you can run:
 
-export KUBECONFIG=/etc/kubernetes/admin.conf
+#   export KUBECONFIG=/etc/kubernetes/admin.conf
 
 # You should now deploy a pod network to the cluster.
 # Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
@@ -756,6 +756,13 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 # kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
 #     --discovery-token-ca-cert-hash sha256:f416dd60d79ee652b4b6185c77991066ad4178db4f26e08fcdcdc8765a0e5e2c 
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+export KUBECONFIG=/etc/kubernetes/admin.conf
+scp -r /etc/kubernetes/pki root@master2:/etc/kubernetes/
+scp -r /etc/kubernetes/pki root@master3:/etc/kubernetes/
 ```
 
 # mysql部署
