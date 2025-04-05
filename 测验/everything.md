@@ -536,12 +536,12 @@ docker images
 yum install -y keepalived haproxy 
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
 # master1配置
-[root@master1 ~]# vim /etc/keepalived/keepalived.conf
+cat >/etc/keepalived/keepalived.conf <<EOF
 
 ! Configuration File for keepalived
 global_defs {
     router_id LVS_DEVEL
-script_user root
+	script_user root
     enable_script_security
 }
 vrrp_script chk_apiserver {
@@ -549,12 +549,12 @@ vrrp_script chk_apiserver {
     interval 5
     weight -5
     fall 2
-rise 1
+	rise 1
 }
 vrrp_instance VI_1 {
     state MASTER
-    interface ens33
-    mcast_src_ip 192.168.1.21
+    interface ens160
+    mcast_src_ip 192.168.224.21
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -563,19 +563,20 @@ vrrp_instance VI_1 {
         auth_pass 1111
     }
     virtual_ipaddress {
-        192.168.1.88
+        192.168.224.88
     }
 #    track_script {
 #       chk_apiserver
 #    }
 }
-master2配置
-[root@master2 ~]# vim /etc/keepalived/keepalived.conf
+EOF
+# master2配置
+vim /etc/keepalived/keepalived.conf
 
 ! Configuration File for keepalived
 global_defs {
     router_id LVS_DEVEL
-script_user root
+	script_user root
     enable_script_security
 }
 vrrp_script chk_apiserver {
@@ -583,12 +584,12 @@ vrrp_script chk_apiserver {
     interval 5
     weight -5
     fall 2
-rise 1
+	rise 1
 }
 vrrp_instance VI_1 {
     state BACKUP
-    interface ens33
-    mcast_src_ip 192.168.1.22
+    interface ens160
+    mcast_src_ip 192.168.224.22
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -597,7 +598,7 @@ vrrp_instance VI_1 {
         auth_pass 1111
     }
     virtual_ipaddress {
-        192.168.1.88
+        192.168.224.88
     }
 #    track_script {
 #       chk_apiserver
