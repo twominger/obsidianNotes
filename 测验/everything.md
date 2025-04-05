@@ -414,28 +414,46 @@ fs.nr_open=52706963
 net.ipv6.conf.all.disable_ipv6=1
 net.netfilter.nf_conntrack_max=2310720
 EOF
-[root@master1 ~]# modprobe br_netfilter
-[root@master1 ~]# lsmod |grep conntrack
-[root@master1 ~]# modprobe ip_conntrack
 
-[root@master1 ~]# sysctl -p /etc/sysctl.d/k8s_better.conf
-net.bridge.bridge-nf-call-iptables = 1
-net.bridge.bridge-nf-call-ip6tables = 1
-net.ipv4.ip_forward = 1
-vm.swappiness = 0
-vm.overcommit_memory = 1
-vm.panic_on_oom = 0
-fs.inotify.max_user_instances = 8192
-fs.inotify.max_user_watches = 1048576
-fs.file-max = 52706963
-fs.nr_open = 52706963
-net.ipv6.conf.all.disable_ipv6 = 1
-net.netfilter.nf_conntrack_max = 2310720
+modprobe br_netfilter
+modprobe ip_conntrack
+lsmod |grep conntrack
 
-[root@master1 ~]# cat /sys/class/dmi/id/product_uuid
-#确保每台服务器的uuid不一致、如果是克隆机器、修改网卡配置文件删除uuid那一行
+sysctl -p /etc/sysctl.d/k8s_better.conf
+
+
+cat /sys/class/dmi/id/product_uuid
+# 确保每台服务器的uuid不一致、如果是克隆机器、修改网卡配置文件删除uuid那一行
 ```
 
+```shell
+yum install -y net-tools conntrack ipvsadm ipset iptables curl sysstat libseccomp wget
+
+modprobe br_netfilter
+cat > /etc/sysconfig/modules/ipvs.modules << EOF
+#!/bin/bash
+modprobe -- ip_vs
+modprobe -- ip_vs_rr
+modprobe -- ip_vs_wrr
+modprobe -- ip_vs_sh
+modprobe -- nf_conntrack
+EOF
+
+chmod 755 /etc/sysconfig/modules/ipvs.modules 
+bash /etc/sysconfig/modules/ipvs.modules 
+lsmod | grep -e ip_vs -e nf_conntrack
+
+ip_vs_sh               12688  0 
+ip_vs_wrr              12697  0 
+ip_vs_rr               12600  0 
+ip_vs                 145458  6 ip_vs_rr,ip_vs_sh,ip_vs_wrr
+nf_conntrack_ipv4      15053  0 
+nf_defrag_ipv4         12729  1 nf_conntrack_ipv4
+nf_conntrack          139264  2 ip_vs,nf_conntrack_ipv4
+libcrc32c              12644  3 xfs,ip_vs,nf_conntrack
+
+
+```
 # mysql部署
 
 # mysql对接ceph
