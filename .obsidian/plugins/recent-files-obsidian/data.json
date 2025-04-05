@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "20250210-k8s环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "ansible使用及脚本",
       "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250113-Docker编排和Dockerfile",
       "path": "10.课件/OpenStack课堂笔记-田/20250113-Docker编排和Dockerfile.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
@@ -175,10 +179,6 @@
     {
       "basename": "Drawing 2025-04-02 17.13.12.excalidraw",
       "path": "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md"
-    },
-    {
-      "basename": "20250210-k8s环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     },
     {
       "basename": "k8s",
