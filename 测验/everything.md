@@ -729,6 +729,33 @@ systemctl restart keepalived
 # 在master1节点操作
 kubeadm init --control-plane-endpoint=192.168.224.88:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
 
+# Your Kubernetes control-plane has initialized successfully!
+
+# To start using your cluster, you need to run the following as a regular user:
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# Alternatively, if you are the root user, you can run:
+
+export KUBECONFIG=/etc/kubernetes/admin.conf
+
+# You should now deploy a pod network to the cluster.
+# Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+#   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+# You can now join any number of control-plane nodes by copying certificate authorities
+# and service account keys on each node and then running the following as root:
+
+# kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
+#     --discovery-token-ca-cert-hash sha256:f416dd60d79ee652b4b6185c77991066ad4178db4f26e08fcdcdc8765a0e5e2c \
+#     --control-plane 
+
+# Then you can join any number of worker nodes by running the following on each as root:
+
+# kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
+#     --discovery-token-ca-cert-hash sha256:f416dd60d79ee652b4b6185c77991066ad4178db4f26e08fcdcdc8765a0e5e2c 
 ```
 
 # mysql部署
