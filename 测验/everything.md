@@ -537,11 +537,10 @@ yum install -y keepalived haproxy
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
 # master1配置
 cat >/etc/keepalived/keepalived.conf <<EOF
-
 ! Configuration File for keepalived
 global_defs {
     router_id LVS_DEVEL
-	script_user root
+    script_user root
     enable_script_security
 }
 vrrp_script chk_apiserver {
@@ -549,7 +548,7 @@ vrrp_script chk_apiserver {
     interval 5
     weight -5
     fall 2
-	rise 1
+    rise 1
 }
 vrrp_instance VI_1 {
     state MASTER
@@ -571,12 +570,11 @@ vrrp_instance VI_1 {
 }
 EOF
 # master2配置
-vim /etc/keepalived/keepalived.conf
-
+cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
     router_id LVS_DEVEL
-	script_user root
+    script_user root
     enable_script_security
 }
 vrrp_script chk_apiserver {
@@ -584,7 +582,7 @@ vrrp_script chk_apiserver {
     interval 5
     weight -5
     fall 2
-	rise 1
+    rise 1
 }
 vrrp_instance VI_1 {
     state BACKUP
@@ -604,14 +602,14 @@ vrrp_instance VI_1 {
 #       chk_apiserver
 #    }
 }
+EOF
 
 master3配置
-[root@master3 ~]# vim /etc/keepalived/keepalived.conf
-
+cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
     router_id LVS_DEVEL
-script_user root
+    script_user root
     enable_script_security
 }
 vrrp_script chk_apiserver {
@@ -619,12 +617,12 @@ vrrp_script chk_apiserver {
     interval 5
     weight -5
     fall 2
-rise 1
+    rise 1
 }
 vrrp_instance VI_1 {
     state BACKUP
-    interface ens33
-    mcast_src_ip 192.168.1.23
+    interface ens160
+    mcast_src_ip 192.168.224.23
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -633,14 +631,16 @@ vrrp_instance VI_1 {
         auth_pass 1111
     }
     virtual_ipaddress {
-        192.168.1.88
+        192.168.224.88
     }
 #    track_script {
 #       chk_apiserver
 #    }
 }
+EOF
+
 三个master节点配置心跳检测脚本
-vim /etc/keepalived/check_apiserver.sh
+cat >/etc/keepalived/check_apiserver.sh <<EOF
 #!/bin/bash
 
 err=0
@@ -664,6 +664,7 @@ if [[ $err != "0" ]]; then
 else
     exit 0
 fi
+EOF
 
 [root@master1 ~]# chmod +x /etc/keepalived/check_apiserver.sh
 [root@master1 ~]# systemctl restart keepalived
