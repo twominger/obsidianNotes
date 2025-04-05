@@ -347,6 +347,8 @@ docker images
 ```
 # k8s集群搭建
 
+初始化
+
 ```shell
 cat >>/etc/hosts <<EOF
 192.168.224.21 master1
@@ -355,13 +357,13 @@ cat >>/etc/hosts <<EOF
 192.168.224.24 node1
 192.168.224.25 node2
 EOF
-
 ```
+
 ```shell
 # master01
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server ntp.tencent.com iburst
+server ntp.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
@@ -371,11 +373,14 @@ keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
+systemctl enable chronyd.service
+systemctl start chronyd.service
+chronyc sources
 
 # master02\master03\node01\node02
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server master iburst
+server master1 iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
@@ -384,7 +389,18 @@ keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
+systemctl enable chronyd.service
+systemctl start chronyd.service
+chronyc sources
 ```
+
+```shell
+sed -ri 's/.*swap.*/#&/g' /etc/fstab
+swapoff -a
+```
+
+
+
 # mysql部署
 
 # mysql对接ceph
