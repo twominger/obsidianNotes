@@ -7,7 +7,7 @@ nmcli connection down ens160
 nmcli connection up ens160
 ```
 
-![[100.附件/centos8.4_openstack_victoria.sh]]
+![[附件/centos8.4_openstack_victoria.sh]]
 
 ```shell
 chmod +x centos8.4_openstack_victoria.sh 

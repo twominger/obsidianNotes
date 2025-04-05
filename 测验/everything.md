@@ -504,7 +504,7 @@ sed -i 's|ExecStart=/usr/bin/cri-dockerd --container-runtime-endpoint fd://|Exec
 
 systemctl enable cri-docker --now
 ```
-![[100.附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
+![[附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
 
 ```shell
 # 添加K8s阿里源
@@ -709,9 +709,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server master1  192.168.1.21:6443  check
-  server master2  192.168.1.22:6443  check
-  server master3  192.168.1.23:6443  check
+  server master1  192.168.224.21:6443  check
+  server master2  192.168.224.22:6443  check
+  server master3  192.168.224.23:6443  check
   
 [root@master1 ~]# systemctl enable --now haproxy.service
 

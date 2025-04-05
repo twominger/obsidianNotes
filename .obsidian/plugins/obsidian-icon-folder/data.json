@@ -62,7 +62,6 @@
     "iconName": "SiOpenstack",
     "iconColor": "#e13e33"
   },
-  "100.附件": "RiAttachment2",
   "ansible": {
     "iconName": "SiAnsible",
     "iconColor": "#000000"
@@ -72,5 +71,6 @@
   "GIT": {
     "iconName": "SiGit",
     "iconColor": "#ff600a"
-  }
+  },
+  "附件": "RiAttachment2"
 }

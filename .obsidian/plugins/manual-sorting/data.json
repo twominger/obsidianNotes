@@ -9,7 +9,7 @@
       "11.作业",
       "98.使用技巧",
       "97.temp",
-      "100.附件",
+      "附件",
       "毕设",
       "测验",
       "模板",
@@ -163,17 +163,6 @@
     "98.使用技巧": [
       "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     ],
-    "100.附件": [
-      "100.附件/addrepo",
-      "100.附件/centos8.4_openstack_victoria.sh",
-      "100.附件/book_utf8.sql",
-      "100.附件/credentials.csv",
-      "100.附件/tigera-operator-v3.28.0.yaml",
-      "100.附件/custom-resources-v3.28.0.yaml",
-      "100.附件/components.yaml",
-      "100.附件/kubens",
-      "100.附件/Kubernetes容器编排.pptx"
-    ],
     "毕设": [
       "毕设/深度学习模型.md",
       "毕设/hdc工具使用.md"
@@ -189,6 +178,18 @@
       "测验/k8s.md",
       "测验/创建自定义镜像.md",
       "测验/部署单节点ceph.md"
+    ],
+    "附件": [
+      "附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm",
+      "附件/addrepo",
+      "附件/centos8.4_openstack_victoria.sh",
+      "附件/book_utf8.sql",
+      "附件/credentials.csv",
+      "附件/tigera-operator-v3.28.0.yaml",
+      "附件/custom-resources-v3.28.0.yaml",
+      "附件/components.yaml",
+      "附件/kubens",
+      "附件/Kubernetes容器编排.pptx"
     ],
     "模板": [
       "模板/01.日记模板"
