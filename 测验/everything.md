@@ -788,6 +788,9 @@ kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
 
 ```shell
 wget https://docs.tigera.io/archive/v3.25/manifests/calico.yaml
+
+INSERT_TEXT=" - name: CALICO_IPV4POOL_CIDR value: \"10.244.0.0/16\" - name: IP_AUTODETECTION_METHOD value: \"interface=ens160\" "
+sed -i "/# no effect. This should fall within --cluster-cidr/a $INSERT_TEXT" calico.yaml
 ```
 
 # mysql部署
