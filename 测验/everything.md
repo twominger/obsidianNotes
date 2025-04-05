@@ -463,7 +463,60 @@ yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/
 # Step 3: 安装Docker
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 # Step 4: 开启Docker服务
-systemctl 
+systemctl enable docker --now
+```
+
+```shell
+#修改cgroup
+cat > /etc/docker/daemon.json << EOF
+
+  {
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "registry-mirrors": [
+    "https://docker.1panel.live",
+    "https://hub.mirrorify.net",
+    "https://docker.m.daocloud.io",
+    "https://registry.dockermirror.com",
+    "https://docker.aityp.com/",
+    "https://docker.anyhub.us.kg",
+    "https://dockerhub.icu",
+    "https://docker.awsl9527.cn"
+  ],
+ "insecure-registries":["https://harbor.flyfish.com"],
+  "max-concurrent-downloads": 10,
+  "log-driver": "json-file",
+  "log-level": "warn",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+    },
+  "data-root": "/var/lib/docker"
+}
+EOF
+
+systemctl daemon-reload && systemctl enable --now docker
+
+#安装CRI-dockerd
+curl -LO https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.15/cri-dockerd_0.3.15.3-0.ubuntu-focal_amd64.deb
+
+dpkg -i cri-dockerd_0.3.15.3-0.ubuntu-focal_amd64.deb
+
+sed -ri 's@^(.*fd://).*$@\1 --pod-infra-container-image registry.aliyuncs.com/google_containers/pause:3.7@' /lib/systemd/system/cri-docker.service
+
+systemctl daemon-reload && systemctl restart cri-docker
+
+#centos操作系统cri接口
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd-0.3.4-3.el8.x86_64.rpm
+
+# vim /usr/lib/systemd/system/cri-docker.service
+----
+修改第10行内容
+ExecStart=/usr/bin/cri-dockerd --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.9 --container-runtime-endpoint fd://
+----
+
+# systemctl start cri-docker
+# systemctl enable cri-docker
+
 ```
 
 ```shell
