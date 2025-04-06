@@ -975,6 +975,7 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 mkdir /etc/ceph
 scp root@192.168.224.111:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
 scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
+sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 rbd create mysql-data --size 10G --pool mysql-pool --id zhangmingming
