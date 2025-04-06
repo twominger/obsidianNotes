@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
@@ -15,14 +27,6 @@
     {
       "basename": "20250210-k8s环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
     },
     {
       "basename": "20250113-Docker编排和Dockerfile",
@@ -139,10 +143,6 @@
     {
       "basename": "TMP",
       "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
     },
     {
       "basename": "Hyper-V与VMware workstation冲突",
