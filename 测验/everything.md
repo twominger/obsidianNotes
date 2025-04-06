@@ -341,6 +341,8 @@ cat >/etc/docker/daemon.json <<EOF
 EOF
 
 systemctl restart docker
+
+
 docker login http://192.168.224.188
 docker pull 192.168.224.188/discuz/nginx:v1
 docker images
