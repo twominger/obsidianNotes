@@ -1018,8 +1018,11 @@ mysqladmin -u root password "yutian"
 
 # prometheus
 安装 prometheus
+![[附件/get_helm.sh]]
 ```shell
 # 安装helm工具包
+export http_proxy=192.168.224.144:7897
+export https_proxy=192.168.224.144:7897
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
