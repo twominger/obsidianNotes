@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "20250220-k8s-SVC服务的发布及ingress",
+      "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
+    },
+    {
+      "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
+      "path": "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "home",
-      "path": "01.主页/home.md"
-    },
-    {
-      "basename": "20250102-openstack架构及环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
     }
   ],
   "omittedPaths": [],
