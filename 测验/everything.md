@@ -1019,9 +1019,6 @@ grep password mysqld.log
 mysql -uroot -p'M;_vufgrG9s:
 ```
 
-# mysql对接ceph
-
-
 # prometheus
 
 
