@@ -981,13 +981,13 @@ yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 rbd create mysql-data --size 10G --pool mysql-pool --id zhangmingming
 rbd map mysql-data --pool mysql-pool --id zhangmingming
 mkfs.ext4 /dev/rbd0
-mkdir /data/mysql
+mkdir -p /data/mysql
 mount /dev/rbd0 /data/mysql
 ```
 
 ```shell
 tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
-ln -s mysql-8.0.41-linux-glibc2.28-x86_64 mysql
+ln -s /usr/local/mysql-8.0.41-linux-glibc2.28-x86_64 /usr/local/mysql
 echo "export PATH=/usr/local/mysql/bin:$PATH" >> /etc/profile
 source /etc/profile
 mkdir -p /data/mysql/{data,log}
