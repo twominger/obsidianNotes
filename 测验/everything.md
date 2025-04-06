@@ -972,6 +972,10 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 
 # mysql部署
 ```shell
+mkdir /etc/ceph
+```
+
+```shell
 tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
 ln -s mysql-8.0.41-linux-glibc2.28-x86_64 mysql
 echo "export PATH=/usr/local/mysql/bin:$PATH" >> /etc/profile
