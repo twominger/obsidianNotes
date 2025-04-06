@@ -1033,6 +1033,12 @@ helm repo update
 #创建命名空间
 kubectl create namespace monitoring
 
+"proxies": {
+    "http-proxy": "192.168.224.144:7897",
+    "https-proxy": "192.168.224.144:7897"
+  },
+
+
 #安装promethues
 helm install prometheus-stack prometheus-community/kube-prometheus-stack \
   --namespace monitoring \
