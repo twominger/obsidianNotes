@@ -1073,3 +1073,4 @@ kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath=
 ```
 
 
+
