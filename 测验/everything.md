@@ -978,9 +978,7 @@ source /etc/profile
 mkdir -p /data/mysql/{data,log}
 chown -R mysql:mysql /usr/local/mysql/
 chown -R mysql:mysql /data/mysql/
-cd /etc/
-vim my.cnf
-
+cat >/etc/my.cnf <<EOF
 [mysqld]
 basedir=/usr/local/mysql
 datadir=/data/mysql/data
@@ -989,8 +987,18 @@ socket=/tmp/mysql.sock
 symbolic-links=0
 character-set-server=utf8
 log-error=/data/mysql/log/mysqld.log
-pid-file=/usr/local/mysql/mysqld.pid #mysql的pid文件存放目录
+pid-file=/usr/local/mysql/mysqld.pid
+EOF
+mysqld --defaults-file=/etc/my.cnf --initialize --user=mysql
+cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
+chkconfig --add mysqld
+systemctl enable mysqld
+systemctl restart mysqld
+systemctl status mysqld
 
+grep password mysqld.log
+# 2025-03-25T12:44:50.981845Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: M;_vufgrG9s:
+mysql -uroot -p'M;_vufgrG9s:
 ```
 
 # mysql对接ceph
