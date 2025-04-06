@@ -800,12 +800,36 @@ vim calico.yaml
 ```
 ![[附件/calico.yaml]]
 # discuz 容器镜像制作
+- nginx. conf
 ```shell
-nginx.conf
 
 
-cat >>/etc/hosts <<EOF
-192.168.44.41 mysql
+
+
+
+```
+- Dockerfile
+```shell
+cat >Dockerfile <<EOF
+FROM php:7.2-fpm
+  
+RUN apt-get update && \
+    useradd -r -s /sbin/nologin nginx && \
+    apt-get install -y nginx libldap2-dev && \
+    docker-php-ext-install pdo pdo_mysql && \
+    docker-php-ext-install mysqli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/
+COPY upload /usr/share/nginx/html/
+RUN chmod -R 777 *
+
+EXPOSE 80
+
+CMD ["sh", "-c", "nginx -g 'daemon off;' & php-fpm -F"]
 EOF
 ```
 
