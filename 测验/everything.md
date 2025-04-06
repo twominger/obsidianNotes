@@ -968,7 +968,7 @@ docker tag [ImageId] crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/
 docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
 ```
 # k8s 对接 cephfs
-
+pod 使用 ceph 存储
 
 # mysql部署
 ```shell
