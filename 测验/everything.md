@@ -800,7 +800,10 @@ vim calico.yaml
 ```
 ![[附件/calico.yaml]]
 # discuz 容器镜像制作
+```shell
+nginx.conf
 
+```
 
 # k8s 对接 cephfs
 
