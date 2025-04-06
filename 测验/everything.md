@@ -1049,10 +1049,11 @@ helm install prometheus-stack prometheus-community/kube-prometheus-stack \
   
 #修改完成查看映射端口号登录网页测试grafana
 kubectl  get svc -n monitoring
+192.168.224.21：31001
 
 #查看默认登录用户和密码
-kubectl get secrets 
-kubectl describe  secrets promethues-grafana
+kubectl get secrets -n monitoring
+kubectl describe secrets prometheus-stack-grafana
 kubectl edit  secrets promethues-grafana
 
 data:
