@@ -1030,6 +1030,7 @@ https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
       - 使用update语句更改pre_ucenter_members表中张三用户的password字段为lisi用户password字段一致。
       - 在此尝试张三用户密码是否更改成功
 # prometheus
+[[10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍^|20250222-k8s-用户角色权限及helm介绍]]
 安装 prometheus
 ![[附件/get_helm.sh]]
 ```shell
