@@ -81,7 +81,7 @@ ceph osd getcrushmap >> crushmap.bin
 crushtool -d crushmap.bin >> crushmap.txt
 vi crushmap.txt
 
-# 将‘# rule’下第6行的`host`改为`osd`
+# 将‘# rule’下第7行的`host`改为`osd`
 rule replicated_rule {
         id 0
         type replicated
@@ -144,7 +144,7 @@ ceph orch apply rbd-mirror --placement=1 # 安装rbd-mirror
 rbd mirror pool peer bootstrap import --site-name cs02 --direction rx-only cinder-pool /opt/cs01.key # 导入cs01的集群秘钥
 rbd -p cinder-pool ls # 查看存储池卷是否同步
 ```
-### qita 
+### 其他
 2.5 随着业务的使用量增加，mysql所使用的rbd镜像需要进行扩容到20G大小
 ```shell
 rbd resize mysql-pool/mysql-data --size 20G
@@ -1017,9 +1017,17 @@ mysqladmin -u root password "yutian"
 ```
 
 - keepalived+haproxy
-- 
+- discuz k8s 部署
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
-
+- 改密码
+4.3 工程师张三在操作时丢失了Discuz平台的管理员用户admin的密码，需要将其重置为 yutian@123 。（Discuz用户存储在pre_ucenter_members表中）
+  - 解题思路：
+      - 查看pre_ucenter_members表中张三用户信息
+      - 重新创建一个lisi用户密码设置为yutian@123
+      - 再此查看pre_ucenter_members表信息
+      - 复制lisi用户password字段加密后的密码
+      - 使用update语句更改pre_ucenter_members表中张三用户的password字段为lisi用户password字段一致。
+      - 在此尝试张三用户密码是否更改成功
 # prometheus
 安装 prometheus
 ![[附件/get_helm.sh]]
