@@ -803,6 +803,10 @@ vim calico.yaml
 ```shell
 nginx.conf
 
+
+cat >>/etc/hosts <<EOF
+192.168.44.41 mysql
+EOF
 ```
 
 # k8s 对接 cephfs
