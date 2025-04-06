@@ -920,7 +920,9 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 
 
 # mysql部署
+```shell
 
+```
 
 # mysql对接ceph
 
