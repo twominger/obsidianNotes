@@ -971,6 +971,25 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 
 # mysql部署
 ```shell
+tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
+ln -s mysql-8.0.41-linux-glibc2.28-x86_64 mysql
+echo "export PATH=/usr/local/mysql/bin:$PATH" >> /etc/profile
+source /etc/profile
+mkdir -p /data/mysql/{data,log}
+chown -R mysql:mysql /usr/local/mysql/
+chown -R mysql:mysql /data/mysql/
+cd /etc/
+vim my.cnf
+
+[mysqld]
+basedir=/usr/local/mysql
+datadir=/data/mysql/data
+port=3306
+socket=/tmp/mysql.sock
+symbolic-links=0
+character-set-server=utf8
+log-error=/data/mysql/log/mysqld.log
+pid-file=/usr/local/mysql/mysqld.pid #mysql的pid文件存放目录
 
 ```
 
