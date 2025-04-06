@@ -143,6 +143,54 @@ ceph orch apply rbd-mirror --placement=1 # 安装rbd-mirror
 rbd mirror pool peer bootstrap import --site-name cs02 --direction rx-only cinder-pool /opt/cs01.key # 导入cs01的集群秘钥
 rbd -p cinder-pool ls # 查看存储池卷是否同步
 ```
+### qita 
+2.5 随着业务的使用量增加，mysql所使用的rbd镜像需要进行扩容到20G大小
+```shell
+rbd resize mysql-pool/mysql-data --size 20G
+xfs_growfs /data/mysql/data
+```
+2.6 运维工程师为了调整云硬盘中操作系统的数据，决定对cinder中的k8s-image镜像进行改造，使用rbd克隆技术得到克隆卷k8s-clone并将克隆的镜像挂载起来，删除镜像中k8s的配置文件，然后将其导出到，灾备站点的backup-pool的存储池中，命名为k8s-image-backup
+```shell
+
+# 创建快照
+rbd snap create cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01
+
+# 保护快照（必需步骤）
+rbd snap protect cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01
+
+# 创建克隆卷
+rbd clone cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01 cinder-pool/k8s-clone
+
+扁平化克隆卷（独立于源卷）
+rbd flatten cinder-pool/k8s-clone
+
+# 映射设备
+rbd map cinder-pool/k8s-clone --id zhangsan --keyring /etc/ceph/ceph.client.zhangsan.keyring
+
+# 创建挂载点并挂载（假设文件系统为 ext4）
+mkdir /mnt/k8s-clone
+mount /dev/rbd0 /mnt/k8s-clone
+
+rm -rf /mnt/k8s-clone/etc/kubernetes/*
+
+卸载并取消映射
+umount /mnt/k8s-clone
+rbd unmap /dev/rbd0
+   
+scp /etc/ceph/*  root@osp:/opt/ #将第一套集群的配置上传到osp节点
+
+rbd export  cinder-pool/k8s-clone  k8s-clone.img -c ceph.conf --keyring  ceph.client.admin.keyring #导出成为文件
+rm -rf /opt/ceph*
+scp /etc/ceph/*  root@osp:/opt/ #将第二套集群的配置上传到osp节点
+
+#容灾站点操作
+ceph osd  pool  create  backup-pool #创建备份池
+ceph osd  pool  application  enable  backup-pool rbd #打标签
+
+#镜像所在节点
+rbd import /opt/k8s-clone.img  backup-pool/k8s-image-backup  -c /opt/ceph.conf --keyring /opt/ceph.client.admin.keyring
+
+```
 # cinder对接ceph
 ## ceph节点操作
 ```shell
