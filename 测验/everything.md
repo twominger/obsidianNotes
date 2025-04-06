@@ -1026,11 +1026,11 @@ export https_proxy=192.168.224.144:7897
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
-#拉取helm仓库
+# 拉取helm仓库
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 
-#创建命名空间
+# 创建命名空间
 kubectl create namespace monitoring
 
 "proxies": {
@@ -1039,7 +1039,7 @@ kubectl create namespace monitoring
   },
 
 
-#安装promethues
+# 安装promethues
 helm install prometheus-stack prometheus-community/kube-prometheus-stack \
   --namespace monitoring \
   --set prometheus.service.type=NodePort \
@@ -1047,25 +1047,27 @@ helm install prometheus-stack prometheus-community/kube-prometheus-stack \
   --set grafana.service.type=NodePort \
   --set grafana.service.nodePort=31001
   
-#修改完成查看映射端口号登录网页测试grafana
+# 修改完成查看映射端口号登录网页测试grafana
 kubectl  get svc -n monitoring
 192.168.224.21：31001
 
-#查看默认登录用户和密码
+# 查看默认登录用户和密码
 kubectl get secrets -n monitoring
-kubectl describe secrets prometheus-stack-grafana
-kubectl edit  secrets promethues-grafana
+kubectl describe secrets prometheus-stack-grafana -n monitoring
+kubectl edit secrets prometheus-stack-grafana -n monitoring
 
 data:
   admin-password: cHJvbS1vcGVyYXRvcg==
   admin-user: YWRtaW4=
 
-#通过base64编码反推
-默认用户admin
-echo "cHJvbS1vcGVyYXRvcg==" | base64 --decode
-
-默认admin密码
+# 通过base64编码反推
+# 默认用户admin
 echo "YWRtaW4=" | base64 --decode
+admin
+
+# 默认admin密码
+echo "cHJvbS1vcGVyYXRvcg==" | base64 --decode
+prom-operator
 
 #第二种查看密码方法
 kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
