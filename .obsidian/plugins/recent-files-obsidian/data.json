@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
     },
     {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250210-k8s环境搭建",
