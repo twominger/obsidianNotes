@@ -2,6 +2,7 @@
 
 
 # 部署openstack
+[[#部署openstack]]
 网卡最好用桥接模式
 桥接无法代理问题解决
 ![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250403024236405.png)

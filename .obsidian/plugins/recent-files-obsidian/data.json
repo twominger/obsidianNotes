@@ -5,6 +5,14 @@
       "path": "测验/everything.md"
     },
     {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
       "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
     },
     {
       "basename": "rbd对接k8s",
@@ -143,10 +147,6 @@
     {
       "basename": "日记",
       "path": "模板/01.日记模板/日记.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "TMP",
