@@ -1069,11 +1069,16 @@ admin
 echo "cHJvbS1vcGVyYXRvcg==" | base64 --decode
 prom-operator
 
-#第二种查看密码方法
+#第二种查看用户、密码方法
+kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath="{.data.admin-user}" | base64 -d ; echo
 kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
-
+```
+## prometheus 监控 mysql
+```shell
 
 ```
+## prometheus 监控 ceph
 
+## prometheus 监控 openstack
 
 
