@@ -973,6 +973,14 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 # mysql部署
 ```shell
 mkdir /etc/ceph
+scp root@192.168.224.111:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
+
+yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
+rbd create mysql-data --size 10G --pool mysql-pool --id zhangsan
+rbd map mysql-data --pool mysql-pool --id zhangsan
+mkfs.ext4 /dev/rbd0
+
 ```
 
 ```shell
