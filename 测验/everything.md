@@ -969,7 +969,7 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 ```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
-
+https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 # mysql部署
 ```shell
 mkdir /etc/ceph
@@ -1016,6 +1016,10 @@ mysqladmin -u root password "yutian"
 
 ```
 
+- keepalived+haproxy
+- 
+https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
+
 # prometheus
 安装 prometheus
 ![[附件/get_helm.sh]]
@@ -1033,11 +1037,12 @@ helm repo update
 # 创建命名空间
 kubectl create namespace monitoring
 
+/etc/docker/daemon.json
 "proxies": {
     "http-proxy": "192.168.224.144:7897",
     "https-proxy": "192.168.224.144:7897"
   },
-
+systemctl restart docker
 
 # 安装promethues
 helm install prometheus-stack prometheus-community/kube-prometheus-stack \
@@ -1074,11 +1079,12 @@ kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath=
 kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
 ```
 ## prometheus 监控 mysql
+https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ```shell
 
 ```
 ## prometheus 监控 ceph
-
+https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ## prometheus 监控 openstack
-
+https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 
