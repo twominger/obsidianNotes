@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",

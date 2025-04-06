@@ -16,6 +16,23 @@ ip 规划
 
 ansible 部署
 
+1. ceph 单节点部署
+2. ceph 配置
+3. openstack cinder对接 ceph rbd
+4. openstack 基础步骤
+5. 创建卷
+
+
+
+
+
+
+
+
+
+
+
+
 
 初始化脚本 (所有主机)
 ```shell
