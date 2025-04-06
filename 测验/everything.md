@@ -802,19 +802,20 @@ vim calico.yaml
 # discuz 容器镜像制作
 测试环境:
 ```shell
+yum install -y php php-fpm
 yum -y install nginx
 # 配置/etc/nginx/nginx.conf
 git clone https://gitee.com/Discuz/DiscuzX.git
-
+cd /root/DiscuzX/upload
 sed -i '1394s/.*/PRIMARY KEY (daytime)/'  install/data/install.sql
-grep -n  -C 10 "pre_common_statuser"  install/data/install.sql 
-grep -n  -C 10 "pre_forum_onlinelist"  install/data/install.sql 
 sed -i '2691s/.*/  groupid smallint(6) unsigned NOT NULL DEFAULT '0' KEY,/'  install/data/install.sql
-grep -n  -C 10 "pre_forum_onlinelist"  install/data/install.sql
-
 sed -i '404s/.*/ PRIMARY KEY (logid)/g' install/data/install.sql
-
 sed -i "s/\$nowdaytime = dgmdate(TIMESTAMP, 'Ymd');/\$nowdaytime = dgmdate(TIMESTAMP, 'YmdHis');/" ./source/class/table/table_common_stat.php
+
+cp -a /root/Discuz/upload/* /usr/share/nginx/html/
+chmod -R 777 /usr/share/nginx/html/
+
+yum install -y php-mysqli php-xml
 ```
 - nginx. conf
 ```shell
@@ -898,7 +899,10 @@ EXPOSE 80
 CMD ["sh", "-c", "nginx -g 'daemon off;' & php-fpm -F"]
 EOF
 ```
+封装
+```shell
 
+```
 # k8s 对接 cephfs
 
 
