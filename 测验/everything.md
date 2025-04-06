@@ -990,6 +990,7 @@ tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
 ln -s /usr/local/mysql-8.0.41-linux-glibc2.28-x86_64 /usr/local/mysql
 echo "export PATH=/usr/local/mysql/bin:$PATH" >> /etc/profile
 source /etc/profile
+useradd -r -s /sbin/nologin mysql
 mkdir -p /data/mysql/{data,log}
 chown -R mysql:mysql /usr/local/mysql/
 chown -R mysql:mysql /data/mysql/
