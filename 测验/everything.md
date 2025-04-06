@@ -990,12 +990,14 @@ character-set-server=utf8
 log-error=/data/mysql/log/mysqld.log
 pid-file=/usr/local/mysql/mysqld.pid
 EOF
-mysqld --defaults-file=/etc/my.cnf --initialize --user=mysql
+mysqld --defaults-file=/etc/my.cnf --initialize-insecure --user=mysql
 cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
 chkconfig --add mysqld
 systemctl enable mysqld
 systemctl restart mysqld
 systemctl status mysqld
+
+mysqladmin -u root password "yutian"
 
 grep password mysqld.log
 # 2025-03-25T12:44:50.981845Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: M;_vufgrG9s:
