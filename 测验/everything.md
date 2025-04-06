@@ -799,15 +799,17 @@ vim calico.yaml
 
 ```
 ![[附件/calico.yaml]]
+# discuz 容器镜像制作
+
 
 # k8s 对接 cephfs
+
 
 # mysql部署
 
 
 # mysql对接ceph
 
-# discuz容器发布
 
 # prometheus
 
