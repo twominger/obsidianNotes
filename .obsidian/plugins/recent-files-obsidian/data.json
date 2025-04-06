@@ -5,12 +5,12 @@
       "path": "测验/创建自定义镜像.md"
     },
     {
-      "basename": "20250220-k8s-SVC服务的发布及ingress",
-      "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
-    },
-    {
       "basename": "everything",
       "path": "测验/everything.md"
+    },
+    {
+      "basename": "20250220-k8s-SVC服务的发布及ingress",
+      "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
     },
     {
       "basename": "部署openstack",
