@@ -906,6 +906,10 @@ docker run -d -p 80:80 --add-host mysql:192.168.44.41 nginx-discuz:v1
 ```
 推送（以阿里为例）
 ```shell
+docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
+```
+docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
+```
 
 ```
 # k8s 对接 cephfs
