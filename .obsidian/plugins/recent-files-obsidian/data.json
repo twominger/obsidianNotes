@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
     },
     {
-      "basename": "everything",
-      "path": "测验/everything.md"
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "rbd对接k8s",
@@ -15,10 +19,6 @@
     {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
