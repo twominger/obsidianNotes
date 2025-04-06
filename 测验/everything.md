@@ -1018,6 +1018,7 @@ mysqladmin -u root password "yutian"
 
 - keepalived+haproxy
 - discuz k8s 部署
+- 备份机制
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 - 改密码
 4.3 工程师张三在操作时丢失了Discuz平台的管理员用户admin的密码，需要将其重置为 yutian@123 。（Discuz用户存储在pre_ucenter_members表中）
