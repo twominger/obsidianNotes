@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
-    },
-    {
       "basename": "everything",
       "path": "测验/everything.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
@@ -35,10 +39,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "20250210-k8s环境搭建",
