@@ -1014,12 +1014,53 @@ systemctl status mysqld
 
 mysqladmin -u root password "yutian"
 
-grep password mysqld.log
-# 2025-03-25T12:44:50.981845Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: M;_vufgrG9s:
-mysql -uroot -p'M;_vufgrG9s:
 ```
 
 # prometheus
+安装 prometheus
+```shell
+# 安装helm工具包
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+#拉取helm仓库
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
 
+#创建命名空间
+kubectl create namespace monitoring
+
+#安装promethues
+helm install prometheus-stack prometheus-community/kube-prometheus-stack \
+  --namespace monitoring \
+  --set prometheus.service.type=NodePort \
+  --set prometheus.service.nodePort=31000 \
+  --set grafana.service.type=NodePort \
+  --set grafana.service.nodePort=31001
+  
+#修改完成查看映射端口号登录网页测试grafana
+kubectl  get svc -n monitoring
+
+#查看默认登录用户和密码
+kubectl get secrets 
+kubectl describe  secrets promethues-grafana
+kubectl edit  secrets promethues-grafana
+
+data:
+  admin-password: cHJvbS1vcGVyYXRvcg==
+  admin-user: YWRtaW4=
+
+#通过base64编码反推
+默认用户admin
+echo "cHJvbS1vcGVyYXRvcg==" | base64 --decode
+
+默认admin密码
+echo "YWRtaW4=" | base64 --decode
+
+#第二种查看密码方法
+kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+
+
+```
 
 
