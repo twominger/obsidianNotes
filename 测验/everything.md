@@ -152,7 +152,6 @@ xfs_growfs /data/mysql/data
 ```
 2.6 运维工程师为了调整云硬盘中操作系统的数据，决定对cinder中的k8s-image镜像进行改造，使用rbd克隆技术得到克隆卷k8s-clone并将克隆的镜像挂载起来，删除镜像中k8s的配置文件，然后将其导出到，灾备站点的backup-pool的存储池中，命名为k8s-image-backup
 ```shell
-
 # 创建快照
 rbd snap create cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01
 
