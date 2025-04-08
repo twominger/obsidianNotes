@@ -253,6 +253,7 @@
       "Docker/Docker操作.md"
     ],
     "docs": [
+      "docs/requirements.txt.md",
       "docs/source"
     ],
     "docs/source": [
