@@ -1,7 +1,6 @@
 {
   "customFileOrder": {
     "/": [
-      "docs",
       "01.主页",
       "05.笔记",
       "08.面试",
@@ -248,15 +247,6 @@
       "Docker/Cgroup.md",
       "Docker/安装Docker.md",
       "Docker/Docker操作.md"
-    ],
-    "docs": [
-      "docs/requirements.txt",
-      "docs/source"
-    ],
-    "docs/source": [
-      "docs/source/index.rst",
-      "docs/source/conf.py",
-      "docs/source/index.rst.md"
     ],
     "Excalidraw": [
       "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md",
