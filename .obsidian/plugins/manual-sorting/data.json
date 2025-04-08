@@ -253,12 +253,11 @@
       "Docker/Docker操作.md"
     ],
     "docs": [
+      "docs/conf.py.md",
+      "docs/index.rst.md",
       "docs/source"
     ],
-    "docs/source": [
-      "docs/source/index.rst.md",
-      "docs/source/conf.py.md"
-    ],
+    "docs/source": [],
     "Excalidraw": [
       "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md",
       "Excalidraw/Drawing 2025-03-26 15.42.33.excalidraw.md"
