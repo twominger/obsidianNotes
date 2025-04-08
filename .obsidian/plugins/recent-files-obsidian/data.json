@@ -2,7 +2,7 @@
   "recentFiles": [
     {
       "basename": "index.rst",
-      "path": "docs/index.rst.md"
+      "path": "docs/source/index.rst.md"
     },
     {
       "basename": "lumache.py",
@@ -18,7 +18,7 @@
     },
     {
       "basename": "conf.py",
-      "path": "docs/conf.py.md"
+      "path": "docs/source/conf.py.md"
     },
     {
       "basename": "局域网yum",
