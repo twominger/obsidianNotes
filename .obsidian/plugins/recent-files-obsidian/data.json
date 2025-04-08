@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "index.rst",
+      "path": "docs/source/index.rst.md"
+    },
+    {
+      "basename": "lumache.py",
+      "path": "lumache.py.md"
+    },
+    {
+      "basename": "pyproject.toml",
+      "path": "pyproject.toml.md"
+    },
+    {
+      "basename": "README.rst",
+      "path": "README.rst.md"
+    },
+    {
       "basename": "conf.py",
-      "path": "docs/conf.py.md"
+      "path": "docs/source/conf.py.md"
     },
     {
       "basename": "局域网yum",
@@ -183,22 +199,6 @@
     {
       "basename": "部署单节点ceph",
       "path": "测验/部署单节点ceph.md"
-    },
-    {
-      "basename": "ceph",
-      "path": "ceph/MAN/ceph.md"
-    },
-    {
-      "basename": "08-shell基础",
-      "path": "05.笔记/听课笔记/linux/08-shell基础.md"
-    },
-    {
-      "basename": "Drawing 2025-04-02 17.13.12.excalidraw",
-      "path": "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "测验/k8s.md"
     }
   ],
   "omittedPaths": [],
