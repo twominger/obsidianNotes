@@ -1,9 +1,6 @@
 {
   "customFileOrder": {
     "/": [
-      "lumache.py.md",
-      "pyproject.toml.md",
-      "README.rst.md",
       "docs",
       "01.主页",
       "05.笔记",
@@ -253,12 +250,13 @@
       "Docker/Docker操作.md"
     ],
     "docs": [
-      "docs/requirements.txt.md",
+      "docs/requirements.txt",
       "docs/source"
     ],
     "docs/source": [
-      "docs/source/index.rst.md",
-      "docs/source/conf.py.md"
+      "docs/source/index.rst",
+      "docs/source/conf.py",
+      "docs/source/index.rst.md"
     ],
     "Excalidraw": [
       "Excalidraw/Drawing 2025-04-02 17.13.12.excalidraw.md",

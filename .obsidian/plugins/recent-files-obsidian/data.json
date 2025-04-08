@@ -1,30 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "requirements.txt",
-      "path": "docs/requirements.txt.md"
-    },
-    {
-      "basename": "index.rst",
-      "path": "docs/source/index.rst.md"
-    },
-    {
-      "basename": "lumache.py",
-      "path": "lumache.py.md"
-    },
-    {
-      "basename": "pyproject.toml",
-      "path": "pyproject.toml.md"
-    },
-    {
-      "basename": "README.rst",
-      "path": "README.rst.md"
-    },
-    {
-      "basename": "conf.py",
-      "path": "docs/source/conf.py.md"
-    },
-    {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
     },
