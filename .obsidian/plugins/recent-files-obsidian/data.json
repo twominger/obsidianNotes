@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
     },
@@ -59,10 +63,6 @@
     {
       "basename": "20250111-Docker介绍与镜像管理",
       "path": "10.课件/OpenStack课堂笔记-田/20250111-Docker介绍与镜像管理.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "深度学习模型",
