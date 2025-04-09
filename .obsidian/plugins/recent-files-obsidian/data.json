@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "公有云作业",
+      "path": "05.笔记/听课笔记/公有云/公有云作业.md"
+    },
+    {
+      "basename": "2015-1-9OpenStack笔记",
+      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
+    },
+    {
+      "basename": "rabbitMQ功能、作用",
+      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
+    },
+    {
+      "basename": "消息队列中间件的横向对比",
+      "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
+    },
+    {
+      "basename": "OpenStack组件使用",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
+    },
+    {
+      "basename": "OpenStack环境搭建",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
+    },
+    {
+      "basename": "阶段三内容",
+      "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
     },
@@ -141,10 +173,6 @@
       "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     },
     {
-      "basename": "OpenStack 及Docker 综合测试",
-      "path": "11.作业/OpenStack 及Docker 综合测试.md"
-    },
-    {
       "basename": "存储池与集群配置管理",
       "path": "ceph/作业/存储池与集群配置管理.md"
     },
@@ -171,10 +199,6 @@
     {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
-    },
-    {
-      "basename": "ceph实验",
-      "path": "ceph/实验/ceph实验.md"
     }
   ],
   "omittedPaths": [],
