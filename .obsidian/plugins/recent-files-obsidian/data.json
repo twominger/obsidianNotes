@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
