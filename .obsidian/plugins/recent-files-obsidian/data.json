@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "20250222-k8s-用户角色权限及helm介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "20250222-k8s-用户角色权限及helm介绍",
-      "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
     },
     {
       "basename": "ansible使用及脚本",
