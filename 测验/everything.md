@@ -309,6 +309,7 @@ mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 docker compose version
 ```
+![[附件/docker-compose-linux-x86_64|docker-compose-linux-x86_64]]
 ### http协议搭建
 ```shell
 mkdir -p /data/harbordata/

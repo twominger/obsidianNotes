@@ -5,6 +5,10 @@
       "path": "测验/everything.md"
     },
     {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
       "basename": "第一阶段测验",
       "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
     },
@@ -47,10 +51,6 @@
     {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "discuz",
@@ -195,10 +195,6 @@
     {
       "basename": "Hyper-V与VMware workstation冲突",
       "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
-    },
-    {
-      "basename": "mysql部署-源码",
-      "path": "mysql/mysql部署-源码.md"
     }
   ],
   "omittedPaths": [],
