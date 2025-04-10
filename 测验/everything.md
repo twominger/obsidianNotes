@@ -1098,3 +1098,10 @@ https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ## prometheus 监控 openstack
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 
+
+
+discuz 镜像问题
+
+calico 经常失效问题
+
+k8s 拉取 http 镜像
