@@ -1140,6 +1140,15 @@ Events:
 
 ```
 
+
+
+```shell
+cat >>/etc/hosts <<EOF
+192.168.224.86 sql01
+192.168.224.98 sql02
+192.168.224.90 sql03
+EOF
+```
 - sql01
 ```shell
 cat >>/etc/my.cnf <<EOF
