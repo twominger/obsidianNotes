@@ -1125,3 +1125,16 @@ calico 经常失效问题
 
 k8s 拉取 http 镜像
 
+```shell
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  2m27s                default-scheduler  Successfully assigned discuz/discuz-deployment-fb7b47979-jtbc7 to n01
+  Warning  Failed     63s (x3 over 2m12s)  kubelet            Failed to pull image "hub.lab0.cn/discuz/nginx-discuz:v1": Error response from daemon: Get "https://hub.lab0.cn/v2/": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+  Warning  Failed     63s (x3 over 2m12s)  kubelet            Error: ErrImagePull
+  Normal   BackOff    26s (x5 over 2m11s)  kubelet            Back-off pulling image "hub.lab0.cn/discuz/nginx-discuz:v1"
+  Warning  Failed     26s (x5 over 2m11s)  kubelet            Error: ImagePullBackOff
+  Normal   Pulling    12s (x4 over 2m27s)  kubelet            Pulling image "hub.lab0.cn/discuz/nginx-discuz:v1"
+
+
+```
