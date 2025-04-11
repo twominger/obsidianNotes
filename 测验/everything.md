@@ -29,12 +29,29 @@ yum -y install podman
 ```
 - 配置时间同步
 ```shell
+timedatectl set-timezone Asia/Shanghai
+# osp
 cat >/etc/chrony.conf <<EOF
 pool ntp.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
-allow 172.16.1.0/24
+allow 172.18.0.0/24
+keyfile /etc/chrony.keys
+leapsectz right/UTC
+logdir /var/log/chrony
+EOF
+
+systemctl restart chronyd
+systemctl enable chronyd
+chronyc sources
+
+# cs01\cs02
+cat >/etc/chrony.conf <<EOF
+pool 192.168.10.10 iburst
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
 keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
@@ -56,8 +73,10 @@ chmod +x ./cephadm
 ```
 - 引导ceph集群
 ```shell
-# 注意--mon-ip修改为本机IP
-./cephadm bootstrap --mon-ip 192.168.224.111 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+# cs01
+./cephadm bootstrap --mon-ip 172.18.0.10 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+# cs02
+./cephadm bootstrap --mon-ip 172.18.0.20 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 ```
 >[!tip]
 >`--allow-fqdn-hostname` 允许使用主机名进行节点识别
