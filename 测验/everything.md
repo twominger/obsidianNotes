@@ -128,6 +128,8 @@ ceph osd pool application enable mysql-pool rbd
 ceph auth add client.zhangmingming mon 'allow r' osd 'allow rwx'
 # 创建mysql的rbd映像
 rbd create mysql-pool/mysql-data --size 10G
+rbd create mysql-pool/mysql-data2 --size 10G
+rbd create mysql-pool/mysql-data3 --size 10G
 ```
 ### 创建cephFS存储池并添加用户权限
 在cs01为Kubernetes配置一个名为kubernetes-pool的存储池，该存储池使用CephFS类型的存储配置一个k8s_fs的文件系统存储，使用3副本保障数据的安全性，并创建用于对接ceph存储中CephFS连接的普通用户，用户名设置为你姓名全拼的用户（例如：姓名张三，账号设置：zhangsan），对kubernetes-pool存储池的具有读写权限。
