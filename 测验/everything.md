@@ -1163,17 +1163,17 @@ EOF
 # 进入mysql
 mysql -uroot -pyutian
 
-set sql_log_bin=0
+set sql_log_bin=0;
 grant replication slave on *.* to admin@'172.17.10.%' identified by 'yutian';
 flush privileges;
-set sql_log_bin=1
+set sql_log_bin=1;
 
 #构建group replication集群
 change master to master_user='admin',master_password='yutian'  for channel 'group_replication_recovery';
 
 install plugin group_replication soname 'group_replication.so';
 
-set global group_replication_bootstrap_group=on
+set global group_replication_bootstrap_group=on;
 
 start group_replication;
 
@@ -1182,5 +1182,63 @@ set global group_replication_bootstrap_group=OFF;
 ```
 
 sql02\03
-```sh
+```shell
+# sql02
+cat >>/etc/my.cnf <<EOF
+server_id=2      #id号要唯一
+gtid_mode=ON
+enforce_gtid_consistency=ON
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+binlog_checksum=NONE
+log_slave_updates=ON
+log_bin=binlog
+binlog_format=ROW
+transaction_write_set_extraction=XXHASH64
+loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
+loose-group_replication_start_on_boot=off
+loose-group_replication_local_address='sql02:33061'
+loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_bootstrap_group=off
+#loose-group_replication_single_primary_mode = off
+#loose-group_replication_enforce_update_everywhere_checks = on
+EOF
+# sql03
+cat >>/etc/my.cnf <<EOF
+server_id=3      #id号要唯一
+gtid_mode=ON
+enforce_gtid_consistency=ON
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+binlog_checksum=NONE
+log_slave_updates=ON
+log_bin=binlog
+binlog_format=ROW
+transaction_write_set_extraction=XXHASH64
+loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
+loose-group_replication_start_on_boot=off
+loose-group_replication_local_address='sql03:33061'
+loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_bootstrap_group=off
+#loose-group_replication_single_primary_mode = off
+#loose-group_replication_enforce_update_everywhere_checks = on
+EOF
+
+set sql_log_bin=0;
+grant replication slave on *.* to admin@'172.17.10.%' identified by 'yutian';
+flush privileges;
+set sql_log_bin=0;
+
+change master to master_user='admin',master_password='yutian'  for channel 'group_replication_recovery';
+
+install plugin group_replication soname 'group_replication.so';
+
+set global group_replication_allow_local_disjoint_gtids_join=ON;
+
+start group_replication;
+```
+
+- 查看复制组状态
+```shell
+select * from performance_schema.replication_group_members;
 ```
