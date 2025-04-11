@@ -1,20 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "术语",
-      "path": "ceph/资料/术语.md"
-    },
-    {
-      "basename": "ceph实验",
-      "path": "ceph/实验/ceph实验.md"
-    },
-    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
+    },
+    {
+      "basename": "分区作为osd部署单节点ceph集群",
+      "path": "ceph/实验/分区作为osd部署单节点ceph集群.md"
+    },
+    {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "ceph-csi",
+      "path": "ceph/实验/ceph-csi.md"
+    },
+    {
+      "basename": "术语",
+      "path": "ceph/资料/术语.md"
     },
     {
       "basename": "未命名",
@@ -89,20 +101,12 @@
       "path": "测验/discuz.md"
     },
     {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
-    },
-    {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
       "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
     },
     {
       "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
       "path": "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md"
-    },
-    {
-      "basename": "ceph-csi",
-      "path": "ceph/实验/ceph-csi.md"
     },
     {
       "basename": "20250210-k8s环境搭建",
@@ -195,10 +199,6 @@
     {
       "basename": "存储池与集群配置管理",
       "path": "ceph/作业/存储池与集群配置管理.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
     }
   ],
   "omittedPaths": [],
