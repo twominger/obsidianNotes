@@ -1,28 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "everything",
-      "path": "测验/everything.md"
+      "basename": "User Management",
+      "path": "ceph/User Management.md"
     },
     {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+      "basename": "ceph",
+      "path": "ceph/MAN/ceph.md"
     },
     {
-      "basename": "ceph实验",
-      "path": "ceph/实验/ceph实验.md"
+      "basename": "rados",
+      "path": "ceph/MAN/rados.md"
     },
     {
-      "basename": "分区作为osd部署单节点ceph集群",
-      "path": "ceph/实验/分区作为osd部署单节点ceph集群.md"
+      "basename": "存储池与集群配置管理",
+      "path": "ceph/作业/存储池与集群配置管理.md"
+    },
+    {
+      "basename": "ceph-csi",
+      "path": "ceph/实验/ceph-csi.md"
     },
     {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
     {
-      "basename": "ceph-csi",
-      "path": "ceph/实验/ceph-csi.md"
+      "basename": "分区作为osd部署单节点ceph集群",
+      "path": "ceph/实验/分区作为osd部署单节点ceph集群.md"
+    },
+    {
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
+    },
+    {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
+      "basename": "部署单节点ceph",
+      "path": "测验/部署单节点ceph.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "测验/k8s.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
     },
     {
       "basename": "术语",
@@ -39,14 +83,6 @@
     {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
@@ -91,14 +127,6 @@
     {
       "basename": "OpenStack 及Docker 综合测试",
       "path": "11.作业/OpenStack 及Docker 综合测试.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
@@ -171,34 +199,6 @@
     {
       "basename": "java部署",
       "path": "SRE/java部署.md"
-    },
-    {
-      "basename": "前端",
-      "path": "SRE/前端.md"
-    },
-    {
-      "basename": "gitignore文件不起作用解决",
-      "path": "GIT/gitignore文件不起作用解决.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "SRE/未命名.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "SRE/未命名 1.md"
-    },
-    {
-      "basename": "ansible入门",
-      "path": "ansible/ansible入门.md"
-    },
-    {
-      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
-      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
-    },
-    {
-      "basename": "存储池与集群配置管理",
-      "path": "ceph/作业/存储池与集群配置管理.md"
     }
   ],
   "omittedPaths": [],
