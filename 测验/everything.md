@@ -1164,7 +1164,8 @@ EOF
 mysql -uroot -pyutian
 
 set sql_log_bin=0;
-grant replication slave on *.* to admin@'172.17.10.%' identified by 'yutian';
+CREATE USER 'admin'@'172.17.10.%' IDENTIFIED BY 'yutian';
+GRANT REPLICATION SLAVE ON *.* TO 'admin'@'172.17.10.%';
 flush privileges;
 set sql_log_bin=1;
 
@@ -1225,7 +1226,8 @@ loose-group_replication_bootstrap_group=off
 EOF
 
 set sql_log_bin=0;
-grant replication slave on *.* to admin@'172.17.10.%' identified by 'yutian';
+CREATE USER 'admin'@'172.17.10.%' IDENTIFIED BY 'yutian';
+GRANT REPLICATION SLAVE ON *.* TO 'admin'@'172.17.10.%';
 flush privileges;
 set sql_log_bin=0;
 
