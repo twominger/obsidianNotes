@@ -999,7 +999,6 @@ scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
 sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
-rbd create mysql-data --size 10G --pool mysql-pool --id zhangmingming
 rbd map mysql-data --pool mysql-pool --id zhangmingming
 mkfs.ext4 /dev/rbd0
 mkdir -p /data/mysql
@@ -1139,4 +1138,25 @@ Events:
   Normal   Pulling    12s (x4 over 2m27s)  kubelet            Pulling image "hub.lab0.cn/discuz/nginx-discuz:v1"
 
 
+```
+
+
+```shell
+cat >>/etc/my.cnf <<EOF
+server_id=1      #id号要唯一
+gtid_mode=ON
+enforce_gtid_consistency=ON
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+binlog_checksum=NONE
+log_slave_updates=ON
+log_bin=binlog
+binlog_format=ROW
+transaction_write_set_extraction=XXHASH64
+loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
+loose-group_replication_start_on_boot=off
+loose-group_replication_local_address='sql01:33061'
+loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_bootstrap_group=off
+EOF
 ```
