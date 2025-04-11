@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "术语",
+      "path": "ceph/资料/术语.md"
+    },
+    {
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "问题",
       "path": "测验/问题.md"
-    },
-    {
-      "basename": "日记",
-      "path": "模板/01.日记模板/日记.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
     }
   ],
   "omittedPaths": [],
