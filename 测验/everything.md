@@ -423,11 +423,11 @@ docker images
 
 ```shell
 cat >>/etc/hosts <<EOF
-192.168.224.21 master1
-192.168.224.22 master2
-192.168.224.23 master3
-192.168.224.24 node1
-192.168.224.25 node2
+192.168.224.21 m01
+192.168.224.22 m02
+192.168.224.23 m03
+192.168.224.24 n01
+192.168.224.25 n02
 EOF
 ```
 
@@ -452,7 +452,7 @@ chronyc sources
 # master02\master03\node01\node02
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server master1 iburst
+server m01 iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
