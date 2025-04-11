@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "everything",
-      "path": "测验/everything.md"
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
     },
     {
       "basename": "未命名",
       "path": "测验/未命名.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
     },
     {
       "basename": "创建自定义镜像",
@@ -65,24 +81,12 @@
       "path": "测验/discuz.md"
     },
     {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
-    },
-    {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
       "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
@@ -195,10 +199,6 @@
     {
       "basename": "TMP",
       "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "Hyper-V与VMware workstation冲突",
-      "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
     }
   ],
   "omittedPaths": [],
