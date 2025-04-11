@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "应用or业务运维",
       "path": "SRE/应用or业务运维.md"
-    },
-    {
-      "basename": "java部署",
-      "path": "SRE/java部署.md"
     }
   ],
   "omittedPaths": [],
