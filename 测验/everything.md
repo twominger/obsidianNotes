@@ -1160,6 +1160,8 @@ loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
 loose-group_replication_bootstrap_group=off
 EOF
 
+systemctl restart mysqld
+
 # 进入mysql
 mysql -uroot -pyutian
 
@@ -1204,6 +1206,7 @@ loose-group_replication_bootstrap_group=off
 #loose-group_replication_single_primary_mode = off
 #loose-group_replication_enforce_update_everywhere_checks = on
 EOF
+systemctl restart mysqld
 # sql03
 cat >>/etc/my.cnf <<EOF
 server_id=3      #id号要唯一
@@ -1224,6 +1227,9 @@ loose-group_replication_bootstrap_group=off
 #loose-group_replication_single_primary_mode = off
 #loose-group_replication_enforce_update_everywhere_checks = on
 EOF
+systemctl restart mysqld
+
+mysql -uroot -pyutian
 
 set sql_log_bin=0;
 CREATE USER 'admin'@'172.17.10.%' IDENTIFIED BY 'yutian';
