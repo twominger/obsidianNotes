@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "User Management",
       "path": "ceph/User Management.md"
     },
@@ -63,10 +67,6 @@
     {
       "basename": "问题",
       "path": "测验/问题.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "术语",
