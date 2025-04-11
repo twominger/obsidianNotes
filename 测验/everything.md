@@ -223,8 +223,8 @@ ceph auth get client.zhangmingming -o /etc/ceph/ceph.client.zhangmingming.keyrin
 # 创建ceph配置文件目录
 mkdir /etc/ceph/
 # 拷贝密钥和配置文件
-scp root@192.168.224.111:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
+scp root@172.18.0.10:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@172.18.0.10:/etc/ceph/ceph.conf /etc/ceph/
 ```
 ### 所有计算节点
 ```shell
