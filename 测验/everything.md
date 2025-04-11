@@ -1140,7 +1140,7 @@ Events:
 
 ```
 
-
+- sql01
 ```shell
 cat >>/etc/my.cnf <<EOF
 server_id=1      #id号要唯一
@@ -1159,4 +1159,28 @@ loose-group_replication_local_address='sql01:33061'
 loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
 loose-group_replication_bootstrap_group=off
 EOF
+
+# 进入mysql
+mysql -uroot -pyutian
+
+set sql_log_bin=0
+grant replication slave on *.* to admin@'172.17.10.%' identified by 'yutian';
+flush privileges;
+set sql_log_bin=1
+
+#构建group replication集群
+change master to master_user='admin',master_password='yutian'  for channel 'group_replication_recovery';
+
+install plugin group_replication soname 'group_replication.so';
+
+set global group_replication_bootstrap_group=on
+
+start group_replication;
+
+set global group_replication_bootstrap_group=OFF;
+
+```
+
+sql02\03
+```sh
 ```
