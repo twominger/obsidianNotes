@@ -1263,9 +1263,14 @@ select * from performance_schema.replication_group_members;
 
 
 # 问题
+## 1 创建实例失败
 ```shell
 # compute1节点的/var/log/nova/nova-compute.log报错：
 2025-04-13 20:09:45.840 1518 ERROR nova.compute.manager [req-b3215e1f-5a81-4a85-bfdf-cfc16bf573bf 95ed32b87b764d7985045937334aaa7b 663dd40ff3f24f629afa1d446450ec8b - default default] [instance: ab5be93d-d614-48ca-929f-6745f061e7d5] Failed to build and run instance: libvirt.libvirtError: Secret not found: secret '8f74262d-35b4-45b5-9344-1243357e3a42' does not have a value
 
-原因是
+# 原因是secret没有value
+# 可能是因为cinder对接ceph时忘记执行下面一条命令
+[root@compute1 ceph]# virsh secret-set-value --secret 8f74262d-35b4-45b5-9344-1243357e3a42 --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
+Secret value set
+
 ```
