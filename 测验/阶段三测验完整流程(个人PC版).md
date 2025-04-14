@@ -1798,7 +1798,7 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 
-# discuz 用户密码重置
+## discuz 用户密码重置
 4.3 工程师张三在操作时丢失了 Discuz 平台的管理员用户 admin 的密码，需要将其重置为 yutian@123 。（Discuz 用户存储在 pre_ucenter_members 表中）
   - 解题思路：
       - 查看 pre_ucenter_members 表中张三用户信息
@@ -1807,7 +1807,7 @@ https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
       - 复制 lisi 用户 password 字段加密后的密码
       - 使用 update 语句更改 pre_ucenter_members 表中张三用户的 password 字段为 lisi 用户 password 字段一致。
       - 在此尝试张三用户密码是否更改成功
-# prometheus
+# prometheus 部署
 [[10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍#helm|20250222-k8s-用户角色权限及helm介绍]]
 安装 prometheus
 ![[附件/get_helm.sh]]
@@ -1887,9 +1887,13 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 
 # 问题
 - [ ] harbor
+[harbor安装并配置https_谷歌浏览器 怎么导入harbor证书-CSDN博客](https://blog.csdn.net/networken/article/details/107502461)
+[linux - Harbor私有仓库搭建并配置https对接docker与kubernetes - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000043223828)
 - [x] k8s\mysql 高可用
 - [ ] discuz 容器镜像及发布问题
+[kubernetes-部署LNMP环境运行Discuz - 一颗小豆子 - 博客园](https://www.cnblogs.com/douyi/p/12099701.html)
 - [ ] prometheus 部署
+https://www.wolai.com/chuangxinyang/rfURASHc3GpdEY2mvAYzkN
 - [ ] calico 经常失效问题
 - [ ] k8s 拉取 http 镜像
 
@@ -1931,7 +1935,7 @@ Events:
 
 
 
-## 1 创建实例失败
+创建实例失败
 ```shell
 # compute1节点的/var/log/nova/nova-compute.log报错：
 2025-04-13 20:09:45.840 1518 ERROR nova.compute.manager [req-b3215e1f-5a81-4a85-bfdf-cfc16bf573bf 95ed32b87b764d7985045937334aaa7b 663dd40ff3f24f629afa1d446450ec8b - default default] [instance: ab5be93d-d614-48ca-929f-6745f061e7d5] Failed to build and run instance: libvirt.libvirtError: Secret not found: secret '8f74262d-35b4-45b5-9344-1243357e3a42' does not have a value
@@ -1940,5 +1944,4 @@ Events:
 # 可能是因为cinder对接ceph时忘记执行下面一条命令
 [root@compute1 ceph]# virsh secret-set-value --secret 8f74262d-35b4-45b5-9344-1243357e3a42 --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 Secret value set
-
 ```
