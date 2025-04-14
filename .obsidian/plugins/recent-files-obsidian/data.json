@@ -5,16 +5,48 @@
       "path": "测验/阶段三测验完整流程.md"
     },
     {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "测验/未命名.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
     },
     {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
-      "basename": "err",
-      "path": "测验/err.md"
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "User Management",
@@ -57,40 +89,8 @@
       "path": "测验/k8s.md"
     },
     {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
-    },
-    {
       "basename": "术语",
       "path": "ceph/资料/术语.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
