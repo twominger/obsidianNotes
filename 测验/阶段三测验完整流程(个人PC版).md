@@ -1888,10 +1888,12 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 [[#部署两台单节点 ceph#mysql 扩容（放在后面做）|mysql 扩容]]
 [[#部署两台单节点 ceph#rbd 卷改造 (放后面做)|rbd 卷改造]]
 [[#k8s 部署 discuz#discuz 用户密码重置|discuz 用户密码重置]]
+```shell
 
+```
 
 # 问题
-- [ ] harbor
+- [ ] harbor https?
 [harbor安装并配置https_谷歌浏览器 怎么导入harbor证书-CSDN博客](https://blog.csdn.net/networken/article/details/107502461)
 [linux - Harbor私有仓库搭建并配置https对接docker与kubernetes - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000043223828)
 - [x] k8s\mysql 高可用
@@ -1901,6 +1903,9 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 https://www.wolai.com/chuangxinyang/rfURASHc3GpdEY2mvAYzkN
 - [ ] calico 经常失效问题
 - [ ] k8s 拉取 http 镜像
+
+
+
 
 
 ![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250414235416364.png)
