@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "阶段三测验完整流程",
+      "path": "测验/阶段三测验完整流程.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Docker概念",
       "path": "Docker/Docker概念.md"
-    },
-    {
-      "basename": "应用or业务运维",
-      "path": "SRE/应用or业务运维.md"
     }
   ],
   "omittedPaths": [],
