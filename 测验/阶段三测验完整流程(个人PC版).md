@@ -1901,7 +1901,7 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 [kubernetes-部署LNMP环境运行Discuz - 一颗小豆子 - 博客园](https://www.cnblogs.com/douyi/p/12099701.html)
 - [ ] prometheus 部署
 https://www.wolai.com/chuangxinyang/rfURASHc3GpdEY2mvAYzkN
-- [ ] calico 经常失效问题
+- [x] calico 经常失效问题
 - [ ] k8s 拉取 http 镜像
 
 
