@@ -5,6 +5,10 @@
       "path": "测验/阶段三测验完整流程.md"
     },
     {
+      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
+      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
+    },
+    {
       "basename": "err",
       "path": "测验/err.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Docker",
       "path": "Docker/Docker.md"
-    },
-    {
-      "basename": "Docker概念",
-      "path": "Docker/Docker概念.md"
     }
   ],
   "omittedPaths": [],
