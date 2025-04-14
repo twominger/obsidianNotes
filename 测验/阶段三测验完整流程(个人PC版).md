@@ -1883,6 +1883,11 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 ```
 
 
+# 收尾（几个小实验）
+[[#部署两台单节点 ceph#云硬盘容灾（等到 openstack 创建卷之后针对卷进行备份）(cs01 && cs02)|云硬盘容灾]]
+[[#部署两台单节点 ceph#mysql 扩容（放在后面做）|mysql 扩容]]
+[[#部署两台单节点 ceph#rbd 卷改造 (放后面做)|rbd 卷改造]]
+[[#k8s 部署 discuz#discuz 用户密码重置|discuz 用户密码重置]]
 
 
 # 问题
