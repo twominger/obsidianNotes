@@ -5,6 +5,10 @@
       "path": "测验/阶段三测验完整流程.md"
     },
     {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "ceph实验",
       "path": "ceph/实验/ceph实验.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "部署单节点ceph",
