@@ -1756,6 +1756,62 @@ systemctl status cri-docker.service
 ```
 
 ```shell
+cat >/root/kubeadm-config.yaml <<EOF
+apiVersion: kubeadm.k8s.io/v1beta4
+bootstrapTokens:
+- groups:
+  - system:bootstrappers:kubeadm:default-node-token
+  token: abcdef.0123456789abcdef
+  ttl: 24h0m0s
+  usages:
+  - signing
+  - authentication
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 1.2.3.4
+  bindPort: 6443
+nodeRegistration:
+  criSocket: unix:///var/run/cri-dockerd.sock
+  imagePullPolicy: IfNotPresent
+  imagePullSerial: true
+  name: node
+  taints: null
+timeouts:
+  controlPlaneComponentHealthCheck: 30m0s
+  discovery: 5m0s
+  etcdAPICall: 2m0s
+  kubeletHealthCheck: 4m0s
+  kubernetesAPICall: 1m0s
+  tlsBootstrap: 5m0s
+  upgradeManifests: 5m0s
+---
+apiServer:
+  controlPlaneEndpoint: "192.168.224.95:16443"
+apiVersion: kubeadm.k8s.io/v1beta4
+caCertificateValidityPeriod: 87600h0m0s
+certificateValidityPeriod: 8760h0m0s
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager: {}
+dns: {}
+encryptionAlgorithm: RSA-2048
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: registry.aliyuncs.com/google_containers
+kind: ClusterConfiguration
+kubernetesVersion: v1.31.7
+networking:
+  dnsDomain: cluster.local
+  serviceSubnet: 10.96.0.0/16
+  podNetworkCidr: 10.244.0.0/16
+proxy: {}
+scheduler: {}
+EOF
+```
+
+
+```shell
 # 在master1节点操作
 kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock 
 # 初始化失败，删除
