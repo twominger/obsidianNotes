@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "discuz",
       "path": "测验/discuz.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "创建自定义镜像",
