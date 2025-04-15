@@ -5,16 +5,16 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
       "basename": "部署openstack",
       "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
