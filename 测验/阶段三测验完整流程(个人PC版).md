@@ -2358,6 +2358,7 @@ kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath=
 ```
 ## prometheus 监控 mysql
 https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
+安装部署MySQL-Export
 ```shell
 
 ```
