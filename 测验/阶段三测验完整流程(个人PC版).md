@@ -2010,3 +2010,9 @@ cp ./* /usr/local/bin/
 
 
 ```
+
+
+```shell
+2025-04-15 23:34:39.145 20758 ERROR nova.compute.manager [req-892208ec-88d8-4aa2-a365-2a85178646c2 95ed32b87b764d7985045937334aaa7b 663dd40ff3f24f629afa1d446450ec8b - default default] Instance failed network setup after 1 attempt(s): nova.exception.PortNotUsable: Port 43c7465e-64fe-4dee-bca5-f6d4e917b93d not usable for instance 4dbb358c-3ee9-47d2-8ae0-27bedf790013.
+
+```
