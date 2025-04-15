@@ -115,6 +115,6 @@ openstack flavor list
 # | 96c99187-34f3-46f1-aa13-6201bb5fea45 | centos8_4          | 2048 |   10 |         0 |     1 | True      |
 # | c64eabbf-b56b-40ac-b5c4-fd75a6cc6efc | container_flavor02 | 2048 |   10 |         0 |     2 | True      |
 # +--------------------------------------+--------------------+------+------+-----------+-------+-----------+
-openstack server resize --flavor container_flavor02 m01
+openstack server resize --flavor container_flavor02 7f6c8587-460c-4c9f-9cdb-1f7ce45775ca
 
 ```
