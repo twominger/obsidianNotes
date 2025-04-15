@@ -63,7 +63,7 @@ fi
 ```shell
 mkdir /etc/yum.repos.d/bak2
 mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/bak2/
-wget http://192.168.224.113/centos8/a.repo -o /etc/yum.repos.d/a.repo
+wget http://192.168.224.113/centos8/a.repo -O /etc/yum.repos.d/a.repo
 yum clean all
 yum makecache
 ```
