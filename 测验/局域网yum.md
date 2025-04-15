@@ -172,5 +172,5 @@ The key's randomart image is:
 cd /var/lib/nova/.ssh/
 # 做双向互信
 
-
+/etc/nova/migration/identity
 ```
