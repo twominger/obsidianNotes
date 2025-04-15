@@ -1499,9 +1499,9 @@ openstack port list
 # m02 f88fe465-9295-45f2-b559-1f1ad241a225
 # m03 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
-
-
-
+openstack port set --enable-port-security  0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+openstack port set --enable-port-security  f88fe465-9295-45f2-b559-1f1ad241a225
+openstack port set --enable-port-security  47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 绑定操作
 openstack port set --allowed-address ip-address=192.168.224.199 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
@@ -1511,6 +1511,11 @@ openstack port set --allowed-address ip-address=192.168.224.199 47a176dd-0959-41
 # 查看绑定状态
 neutron port-show 8380bf34-94c0-46bc-8fad-ef59b9268920
 ```
+
+> [!tip] 报错解决
+> [root@controller ~(keystone_admin)]# openstack port set --allowed-address ip-address=192.168.224.199 f88fe465-9295-45f2-b559-1f1ad241a225
+> ConflictException: 409: Client Error for url: http://192.168.224.100:9696/v2.0/ports/f88fe465-9295-45f2-b559-1f1ad241a225, Port Security must be enabled in order to have allowed address pairs on a port.
+> 
 ### keepalived+haproxy
 ```shell
 yum install -y keepalived haproxy 
