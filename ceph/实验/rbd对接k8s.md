@@ -110,6 +110,7 @@ data:
 metadata:
   name: ceph-csi-encryption-kms-config
 EOF
+kubectl apply -f csi-kms-config-map.yaml
 ```
 ### 4 . 生成 ceph-csi cephx 密钥
 将用于认证ceph的keyring配置为secret
