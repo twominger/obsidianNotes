@@ -2078,17 +2078,17 @@ cat >csi-rbd-sc.yaml <<EOF
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-   name: csi-rbd-sc
-provisioner: rbd.csi.ceph.com
+   name: csi-cephfs-sc
+provisioner: cephfs.csi.ceph.com
 parameters:
    clusterID: 7b7fc60e-fff8-11ef-94d3-000c29c2d345
-   pool: kubernetes
-   imageFeatures: layering
-   csi.storage.k8s.io/provisioner-secret-name: csi-rbd-secret
+   fsName: k8s_fs
+   pool: kubernetes-data
+   csi.storage.k8s.io/provisioner-secret-name: csi-cephfs-secret
    csi.storage.k8s.io/provisioner-secret-namespace: default
-   csi.storage.k8s.io/controller-expand-secret-name: csi-rbd-secret
+   csi.storage.k8s.io/controller-expand-secret-name: csi-cephfs-secret
    csi.storage.k8s.io/controller-expand-secret-namespace: default
-   csi.storage.k8s.io/node-stage-secret-name: csi-rbd-secret
+   csi.storage.k8s.io/node-stage-secret-name: csi-cephfs-secret
    csi.storage.k8s.io/node-stage-secret-namespace: default
 reclaimPolicy: Delete
 allowVolumeExpansion: true
@@ -2105,7 +2105,7 @@ kubectl apply -f csi-rbd-sc.yaml
 
 ## 创建 PersistentVolumeClaim
 PersistentVolumeClaim 是用户对抽象存储资源的请求。然后，PersistentVolumeClaim 将关联到 Pod 资源，以配置一个 PersistentVolume，该卷将由 Ceph 块镜像提供支持。可以包含可选的 volumeMode 以在挂载的文件系统之间进行选择 （默认）或基于原始块设备的卷。
-### 创建基于块的 PVC 并使用
+### 创建基于 cephfs的 PVC 并使用
 以下 YAML 可以是用于向 csi-rbd-sc StorageClass 请求原始块存储：
 ```shell
 cat <<EOF > raw-block-pvc.yaml
