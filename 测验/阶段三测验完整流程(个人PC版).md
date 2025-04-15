@@ -1746,6 +1746,11 @@ sed -ri 's/.*swap.*/#&/g' /etc/fstab
 swapoff -a
 cat /etc/fstab
 free -m
+
+systemctl restart docker
+systemctl status docker
+systemctl restart kubelet.service
+systemctl status kubelet.service
 ```
 
 ```shell
