@@ -1751,6 +1751,8 @@ systemctl restart docker
 systemctl status docker
 systemctl restart kubelet.service
 systemctl status kubelet.service
+systemctl restart cri-docker.service
+systemctl status cri-docker.service
 ```
 
 ```shell
