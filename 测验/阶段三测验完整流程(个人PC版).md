@@ -1509,7 +1509,7 @@ openstack port set --allowed-address ip-address=192.168.224.199 f88fe465-9295-45
 openstack port set --allowed-address ip-address=192.168.224.199 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 查看绑定状态
-neutron port-show 8380bf34-94c0-46bc-8fad-ef59b9268920
+neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
 ```
 
 > [!tip] 报错解决
