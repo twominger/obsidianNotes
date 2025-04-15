@@ -2092,8 +2092,6 @@ parameters:
    csi.storage.k8s.io/node-stage-secret-namespace: default
 reclaimPolicy: Delete
 allowVolumeExpansion: true
-mountOptions:
-   - discard
 EOF
 
 kubectl apply -f csi-rbd-sc.yaml
@@ -2266,11 +2264,7 @@ spec:
       target:
         type: Utilization
         averageUtilization: 80  # 当内存使用率超过 80% 时扩容
-
-
-
 ```
-
 
 ```shell
 # 删除创建的内容
