@@ -69,6 +69,8 @@ yum makecache
 ```
 
 ```shell
+mkdir /etc/yum.repos.d/bak2
+mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/bak2/
 cat >/etc/yum.repos.d/local.repo <<EOF
 [AppStream]
 name = AppStream
@@ -80,4 +82,6 @@ name = BaseOS
 baseurl = http://192.168.224.113/media/BaseOS
 gpgcheck = 0
 EOF
+yum clean all
+yum makecache
 ```
