@@ -1926,7 +1926,7 @@ kubectl delete namespace discuz
 
 ```shell
 kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
-
+kubectl edit configmap -n kube-system coredns
 
 ```
 
