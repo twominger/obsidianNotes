@@ -136,6 +136,39 @@ systemctl restart openstack-nova*
 systemctl restart openstack-nova-compute
 
 # compute节点的双向互信
+#nova:x:162:162:OpenStack Nova Daemons:/var/lib/nova:/sbin/nologin
+nova:x:162:162:OpenStack Nova Daemons:/var/lib/nova:/bin/bash
+
+su - nova
+[nova@compute1 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/lib/nova/.ssh/id_rsa): 
+/var/lib/nova/.ssh/id_rsa already exists.
+Overwrite (y/n)? 
+[nova@compute1 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/lib/nova/.ssh/id_rsa): 
+/var/lib/nova/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /var/lib/nova/.ssh/id_rsa.
+Your public key has been saved in /var/lib/nova/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:96VFCmhxomNmU5Otgy1llnDAiKyKQflOYaS9ziHwVxg nova@compute1
+The key's randomart image is:
++---[RSA 3072]----+
+| .ooEooo*+.      |
+| o=o.o.+**.      |
+|ooo.o O*o..   .  |
+|+. o.=o++  . o   |
+|oo+o.  .S.. . o  |
+|o +o.    . . +   |
+|   o        o    |
+|                 |
+|                 |
++----[SHA256]-----+
+
 
 
 
