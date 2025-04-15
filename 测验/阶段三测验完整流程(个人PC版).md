@@ -1964,3 +1964,14 @@ Events:
 [root@compute1 ceph]# virsh secret-set-value --secret 8f74262d-35b4-45b5-9344-1243357e3a42 --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 Secret value set
 ```
+
+
+
+更改实例类型失败
+```shell
+2025-04-15 20:06:28.006 1531 ERROR oslo_messaging.rpc.server [req-f604e996-1c34-4a9a-9d4c-b172af1678f3 141d99a81511437db36832d997c1610e 1e3d5b0bf3c9496db4074410c1020094 - default default] Exception during message handling: nova.exception.ResizeError: Resize error: not able to execute ssh command: Unexpected error while running command.
+Command: ssh -o BatchMode=yes 192.168.224.101 mkdir -p /var/lib/nova/instances/7f6c8587-460c-4c9f-9cdb-1f7ce45775ca
+Exit code: 255
+Stdout: ''
+Stderr: 'Load key "/etc/nova/migration/identity": invalid format\r\nnova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).\r\n'
+```
