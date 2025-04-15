@@ -169,7 +169,8 @@ The key's randomart image is:
 |                 |
 +----[SHA256]-----+
 
-
+cd /var/lib/nova/.ssh/
+# 做双向互信
 
 
 ```
