@@ -1919,6 +1919,14 @@ pod 使用 ceph 存储
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
+```shell
+# 删除创建的内容
+kubectl delete namespace discuz
+```
+
+```shell
+
+```
 
 ## discuz 用户密码重置
 4.3 工程师张三在操作时丢失了 Discuz 平台的管理员用户 admin 的密码，需要将其重置为 yutian@123 。（Discuz 用户存储在 pre_ucenter_members 表中）

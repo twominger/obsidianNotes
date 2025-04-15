@@ -5,16 +5,40 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
     },
     {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "测验/k8s.md"
     },
     {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
@@ -25,32 +49,12 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
     },
     {
-      "basename": "err",
-      "path": "测验/err.md"
-    },
-    {
       "basename": "未命名",
       "path": "测验/未命名.md"
     },
     {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
-    },
-    {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
     },
     {
       "basename": "使用cephadm部署ceph集群",
@@ -91,10 +95,6 @@
     {
       "basename": "部署单节点ceph",
       "path": "测验/部署单节点ceph.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "测验/k8s.md"
     },
     {
       "basename": "术语",
