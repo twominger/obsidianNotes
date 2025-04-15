@@ -1500,9 +1500,9 @@ openstack port list
 # m03 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 绑定操作
-openstack port set --allowed-address ip-address=192.168.224.199 8380bf34-94c0-46bc-8fad-ef59b9268920
-openstack port set --allowed-address ip-address=192.168.224.199 ae1dd780-0f66-4310-8645-f35c06894e68
-openstack port set --allowed-address ip-address=192.168.224.199 6fc5982c-d057-4262-b42f-8337d2559db6
+openstack port set --allowed-address ip-address=192.168.224.199 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+openstack port set --allowed-address ip-address=192.168.224.199 f88fe465-9295-45f2-b559-1f1ad241a225
+openstack port set --allowed-address ip-address=192.168.224.199 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 查看绑定状态
 neutron port-show 8380bf34-94c0-46bc-8fad-ef59b9268920
