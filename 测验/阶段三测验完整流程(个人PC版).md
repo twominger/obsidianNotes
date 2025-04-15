@@ -1443,11 +1443,13 @@ cat >>/etc/hosts <<EOF
 172.17.10.92 n01
 172.17.10.84 n02
 EOF
-# sudo sed -i '/m01/c\172.17.10.94 m01' /etc/hosts
-# sudo sed -i '/m02/c\172.17.10.87 m01' /etc/hosts
-# sudo sed -i '/m03/c\172.17.10.85 m01' /etc/hosts
-# sudo sed -i '/n01/c\172.17.10.92 m01' /etc/hosts
-# sudo sed -i '/n02/c\172.17.10.84 m01' /etc/hosts
+
+# 修改
+sed -i '/m01/c\172.17.10.94 m01' /etc/hosts
+sed -i '/m02/c\172.17.10.87 m01' /etc/hosts
+sed -i '/m03/c\172.17.10.85 m01' /etc/hosts
+sed -i '/n01/c\172.17.10.92 m01' /etc/hosts
+sed -i '/n02/c\172.17.10.84 m01' /etc/hosts
 
 
 ```
