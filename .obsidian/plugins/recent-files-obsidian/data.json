@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "ansible使用及脚本",
       "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "everything",
