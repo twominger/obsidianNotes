@@ -67,3 +67,17 @@ wget http://192.168.224.113/centos8/a.repo -O /etc/yum.repos.d/a.repo
 yum clean all
 yum makecache
 ```
+
+```shell
+cat >/etc/yum.repos.d/local.repo <<EOF
+[AppStream]
+name = AppStream
+baseurl = http://192.168.224.113/media/AppStream
+gpgcheck = 0
+
+[BaseOS]
+name = BaseOS
+baseurl = http://192.168.224.113/media/BaseOS
+gpgcheck = 0
+EOF
+```
