@@ -5,6 +5,10 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
       "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "container",
       "path": "Docker/container.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker/Docker.md"
     }
   ],
   "omittedPaths": [],
