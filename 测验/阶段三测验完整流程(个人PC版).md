@@ -1920,6 +1920,109 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 ```shell
+# 创建命名空间
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: discuz
+
+# 节点打标签
+---
+apiVersion: v1
+kind: Node
+metadata:
+  name: n02.novalocal
+  labels:
+    Discuz-node: "true"
+
+# 使用 deployment 创建资源
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discuz-deployment
+  namespace: discuz
+  labels:
+    app: discuz
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: discuz
+  template:
+    metadata:
+      labels:
+        app: discuz
+    spec:
+      initContainers:
+      - name: copy-and-fix-permissions
+        image: hub.lab0.cn/discuz/nginx-discuz:v1  # 使用应用镜像
+        command: ["sh", "-c", "cp -r /var/www/. /mnt/ && chmod -R 777 /mnt/"]  # 复制后修改权限
+        volumeMounts:
+        - name: discuz-storage
+          mountPath: /mnt  # 临时挂载PVC
+      containers:
+      - name: discuz
+        image: hub.lab0.cn/discuz/nginx-discuz:v1
+        volumeMounts:
+        - name: discuz-storage
+          mountPath: /var/www  # 正式挂载PVC
+      volumes:
+      - name: discuz-storage
+        persistentVolumeClaim:
+          claimName: test-pvc
+      nodeSelector:
+        Discuz-node: "true"
+
+
+# 定义资源服务暴露方式
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: discuz-service
+  namespace: discuz
+  labels:
+    app: discuz
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 32222
+  selector:
+    app: discuz
+
+# 创建 Horizontal Pod Autoscaler (HPA)
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: discuz-hpa
+  namespace: discuz
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: discuz-deployment
+  minReplicas: 3  # 最小副本数
+  maxReplicas: 5  # 最大副本数
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60  # 当 CPU 使用率超过 60% 时扩容
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80  # 当内存使用率超过 80% 时扩容
+
+
 
 ```
 
