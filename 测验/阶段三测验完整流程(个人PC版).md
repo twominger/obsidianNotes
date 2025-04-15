@@ -1923,13 +1923,8 @@ docker push hub.lib0.cn/discuz/nginx-discuz:v1
 # k8s 对接 cephfs
 pod 使用 ceph 存储
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
-![[附件/ceph-csi-3.13.0.zip]]
+## 创建一个子卷组，在 ceph-csi 3.13.0 中要求必须要创建子卷组提供给 pvc 使用 (cs01)
 ```shell
-wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
-# yum -y install unzip
-unzip ceph-csi-3.13.0.zip
-cd ceph-csi-3.13.0/
-# 创建一个子卷组，在ceph-csi 3.13.0中要求必须要创建子卷组提供给pvc使用(cs01)
 ceph fs subvolumegroup create k8s_fs k8s-storageclass-volumes
 ceph fs subvolumegroup ls k8s_fs
 ```
@@ -1939,9 +1934,10 @@ ceph fs subvolumegroup ls k8s_fs
 
 [ceph-csi的代码托管地址](https://github.com/ceph/ceph-csi)
 [ceph-csi v3.13.0.tar.gz](https://github.com/ceph/ceph-csi/archive/refs/tags/v3.13.0.tar.gz)
-
+![[附件/ceph-csi-3.13.0.zip]]
 解压并进入文件夹
 ```shell
+# wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
 [root@master kubernetes]# pwd
 /root/Download/ceph-csi-3.13.0/deploy/rbd/kubernetes
 [root@master kubernetes]# ls
@@ -1963,14 +1959,18 @@ metadata:
 data:
   config.json: |-
     [
-        {
-            "clusterID": "7b7fc60e-fff8-11ef-94d3-000c29c2d345",
-            "monitors": [
-                "172.16.1.91:6789"
-            ]
+      {
+        "clusterID": "7b7fc60e-fff8-11ef-94d3-000c29c2d345",
+        "monitors": [
+          "172.16.1.91:6789"
+        ],
+        "cephFS": {
+          "subvolumeGroup": "k8s-storageclass-volumes"
         }
+      }
     ]
 EOF
+
 ```
 其中 `clusterID` 和 `monitors` 可以通过命令 `ceph mon dump` 查看，如下：
 ```shell
