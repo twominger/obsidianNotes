@@ -2360,6 +2360,57 @@ kubectl --namespace monitoring get secrets prometheus-stack-grafana -o jsonpath=
 https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 安装部署MySQL-Export
 ```shell
+cd /usr/local/src
+wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.10.0/mysqld_exporter-0.10.0.linux-amd64.tar.gz
+tar xf mysqld_exporter-0.10.0.linux-amd64.tar.gz
+mv mysqld_exporter-0.10.0.linux-amd64 /usr/local/mysqld_exporter
+```
+Mysql授权连接
+```shell
+#要获取监控数据，需要授权程序能够连接到 MySQL。
+mysql -uroot -pyutian
+
+GRANT REPLICATION CLIENT, PROCESS ON *.* TO 'exporter'@'localhost' identified by '123456';
+GRANT SELECT ON performance_schema.* TO 'exporter'@'localhost';
+flush privileges;
+```
+启动Mysql-Export服务
+```shell
+#创建配置信息文件
+cat <<EOF>> /usr/local/mysqld_exporter/.my.cnf
+[client]
+user=exporter
+password=123456
+EOF
+
+#创建systemd 管理
+cat <<EOF>> /usr/lib/systemd/system/mysqld_exporter.service
+
+[Unit]
+Description=mysqld_exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/mysqld_exporter/mysqld_exporter --config.my-cnf=/usr/local/mysqld_exporter/.my.cnf
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+#设置开机自启动
+systemctl daemon-reload
+systemctl enable mysqld_exporter --now
+systemctl status mysqld_exporter
+```
+k8s 侧设置
+在 Kubernetes 中创建 Service & Endpoints
+```shell
+
+```
+创建 ServiceMonitor
+```shell
 
 ```
 ## prometheus 监控 ceph
