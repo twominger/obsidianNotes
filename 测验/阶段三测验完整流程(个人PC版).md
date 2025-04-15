@@ -1800,9 +1800,7 @@ kubectl apply -f calico.yaml
 
 测试环境:
 ```shell
-yum install -y php php-fpm
-yum -y install nginx
-# 配置/etc/nginx/nginx.conf
+
 git clone https://gitee.com/Discuz/DiscuzX.git
 cd /root/DiscuzX/upload
 sed -i '1394s/.*/PRIMARY KEY (daytime)/'  install/data/install.sql
@@ -1814,7 +1812,9 @@ cp -a /root/DiscuzX/upload/* /usr/share/nginx/html/
 chmod -R 777 /usr/share/nginx/html/
 
 yum install -y php-mysqli php-xml
+
 ```
+[Centos8 php7 安装php-json扩展 - 简书](https://www.jianshu.com/p/7d4b42adbe27)
 - nginx. conf
 ```shell
 cat >nginx.conf <<EOF
@@ -1911,6 +1911,11 @@ docker pull crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
 docker tag [ImageId] crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
 docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
+```
+
+推送 harbor
+```shell
+
 ```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
