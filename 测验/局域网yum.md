@@ -130,7 +130,7 @@ scheduler_default_filters=RetryFilter,AvailabilityZoneFilter,RamFilter,ComputeFi
 EOF
 
 # controller
-systemctl restart openstack-nova-api.service openstack-nova-cert.service openstack-nova-consoleauth.service openstack-nova-scheduler.service openstack-nova-conductor.service openstack-nova-novncproxy.service
+systemctl restart openstack-nova*
 
 # compute
 systemctl restart openstack-nova-compute
