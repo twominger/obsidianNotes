@@ -1754,8 +1754,9 @@ systemctl status kubelet.service
 systemctl restart cri-docker.service
 systemctl status cri-docker.service
 ```
-
+[kubeadm-config说明_kubeadm-config.yaml-CSDN博客](https://blog.csdn.net/wuxingge/article/details/117584071)
 ```shell
+# kubeadm config print init-defaults  > kubeadm-config.yaml
 cat >/root/kubeadm-config.yaml <<EOF
 apiVersion: kubeadm.k8s.io/v1beta4
 bootstrapTokens:
@@ -1768,14 +1769,17 @@ bootstrapTokens:
   - authentication
 kind: InitConfiguration
 localAPIEndpoint:
-  advertiseAddress: 1.2.3.4
+  advertiseAddress: 192.168.224.95  # 本机IP
   bindPort: 6443
 nodeRegistration:
   criSocket: unix:///var/run/cri-dockerd.sock
   imagePullPolicy: IfNotPresent
   imagePullSerial: true
-  name: node
-  taints: null
+  name: m01
+  taints:
+  - effect: NoSchedule 
+    key: node-role.kubernetes.io/master
+  # taints: null
 timeouts:
   controlPlaneComponentHealthCheck: 30m0s
   discovery: 5m0s
@@ -1808,6 +1812,9 @@ networking:
 proxy: {}
 scheduler: {}
 EOF
+kubeadm init --config kubeadm-config.yaml
+
+
 ```
 
 
