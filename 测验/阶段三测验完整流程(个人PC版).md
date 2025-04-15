@@ -1697,8 +1697,8 @@ frontend monitor-in
   monitor-uri /monitor
 
 frontend k8s-master
-  bind 0.0.0.0:8888
-  bind 127.0.0.1:8888
+  bind 0.0.0.0:16443
+  bind 127.0.0.1:16443
   mode tcp
   option tcplog
   tcp-request inspect-delay 5s
@@ -1710,12 +1710,13 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server master1  192.168.224.95:80  check
-  server master2  192.168.224.98:80  check
-  server master3  192.168.224.93:80  check
+  server master1  192.168.224.95:6443  check
+  server master2  192.168.224.98:6443  check
+  server master3  192.168.224.93:6443  check
 EOF
   
 systemctl enable --now haproxy.service
+systemctl restart haproxy.service
 
 sed -i '/#.*track_script {/ s/^#//' /etc/keepalived/keepalived.conf
 sed -i '/#.*chk_apiserver/ s/^#//' /etc/keepalived/keepalived.conf
@@ -1726,7 +1727,7 @@ systemctl restart keepalived
 ## 初始化集群
 ```shell
 # 在master1节点操作
-kubeadm init --control-plane-endpoint=192.168.224.88:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
+kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
 
 # Your Kubernetes control-plane has initialized successfully!
 
