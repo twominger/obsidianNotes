@@ -1492,17 +1492,17 @@ openstack network list
 # | 03fbf7b2-2080-41be-afb6-6f580f1f8b0a | private | 7502364f-9e2f-47f3-b26c-14201e952f3f |
 # | 68d064c1-fd0d-47b3-8aa3-5c638727f4da | public  | e7b32612-8d89-42b6-88e4-0e4e48602606 |
 # +--------------------------------------+---------+--------------------------------------+
-openstack port create --network 03fbf7b2-2080-41be-afb6-6f580f1f8b0a --fixed-ip subnet=7502364f-9e2f-47f3-b26c-14201e952f3f,ip-address=172.17.10.100 viptest
+openstack port create --network 68d064c1-fd0d-47b3-8aa3-5c638727f4da --fixed-ip subnet=e7b32612-8d89-42b6-88e4-0e4e48602606,ip-address=192.168.224.199 viptest
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
-# sql01 8380bf34-94c0-46bc-8fad-ef59b9268920
-# sql02 ae1dd780-0f66-4310-8645-f35c06894e68
-# sql03 6fc5982c-d057-4262-b42f-8337d2559db6
+# m01 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+# m02 f88fe465-9295-45f2-b559-1f1ad241a225
+# m03 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 绑定操作
-openstack port set --allowed-address ip-address=172.17.10.100 8380bf34-94c0-46bc-8fad-ef59b9268920
-openstack port set --allowed-address ip-address=172.17.10.100 ae1dd780-0f66-4310-8645-f35c06894e68
-openstack port set --allowed-address ip-address=172.17.10.100 6fc5982c-d057-4262-b42f-8337d2559db6
+openstack port set --allowed-address ip-address=192.168.224.199 8380bf34-94c0-46bc-8fad-ef59b9268920
+openstack port set --allowed-address ip-address=192.168.224.199 ae1dd780-0f66-4310-8645-f35c06894e68
+openstack port set --allowed-address ip-address=192.168.224.199 6fc5982c-d057-4262-b42f-8337d2559db6
 
 # 查看绑定状态
 neutron port-show 8380bf34-94c0-46bc-8fad-ef59b9268920
