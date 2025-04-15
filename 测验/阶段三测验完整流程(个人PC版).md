@@ -1537,8 +1537,8 @@ vrrp_script chk_apiserver {
 }
 vrrp_instance VI_1 {
     state MASTER
-    interface ens160
-    mcast_src_ip 192.168.224.21
+    interface ens3
+    mcast_src_ip 192.168.224.95
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -1546,13 +1546,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.86  # 三个节点此处填本机ip
+    unicast_src_ip 192.168.224.95  # 三个节点此处填本机ip
     unicast_peer {
-      172.17.10.98    # 另外两个节点的ip
-      172.17.10.90
+      192.168.224.98    # 另外两个节点的ip
+      192.168.224.93
     }
     virtual_ipaddress {
-        192.168.224.88
+        192.168.224.199
     }
 #    track_script {
 #       chk_apiserver
