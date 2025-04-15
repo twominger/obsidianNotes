@@ -1915,13 +1915,18 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 
 推送 harbor
 ```shell
-
+docker login hub.lib0.cn
+# admin redhat
+docker tag nginx-discuz:v1 hub.lib0.cn/discuz/nginx-discuz:v1
+docker push hub.lib0.cn/discuz/nginx-discuz:v1
 ```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 ```shell
 wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
+
+
 
 ```
 # k8s 部署 discuz
