@@ -122,13 +122,19 @@ openstack server resize --flavor container_flavor02 7f6c8587-460c-4c9f-9cdb-1f7c
 
 ```
 
+调整实例类型失败
 ```shell
-vim /etc/nova/nova.conf
-# 可以参考最原始的nova.conf
-[defaults]
-
-cat 
+cat >>/etc/nova/nova.conf <<EOF
 allow_resize_to_same_host=True
 scheduler_default_filters=RetryFilter,AvailabilityZoneFilter,RamFilter,ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter
+EOF
+
+# controller
+systemctl restart openstack-nova-api.service openstack-nova-cert.service openstack-nova-consoleauth.service openstack-nova-scheduler.service openstack-nova-conductor.service openstack-nova-novncproxy.service
+
+# compute
+systemctl restart openstack-nova-compute
+
+
 
 ```
