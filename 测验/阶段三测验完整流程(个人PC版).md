@@ -1902,7 +1902,7 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 - [ ] prometheus 部署
 https://www.wolai.com/chuangxinyang/rfURASHc3GpdEY2mvAYzkN
 - [x] calico 经常失效问题
-- [ ] k8s 拉取 http 镜像
+- [ ] k8s 拉取 http 镜
 
 
 
