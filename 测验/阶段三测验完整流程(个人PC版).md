@@ -1520,7 +1520,7 @@ neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
 ```shell
 yum install -y keepalived haproxy 
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
-# master1配置
+# m01配置
 cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
@@ -1560,7 +1560,7 @@ vrrp_instance VI_1 {
 }
 EOF
 
-# master2配置
+# m02配置
 cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
@@ -1600,7 +1600,7 @@ vrrp_instance VI_1 {
 }
 EOF
 
-# master3配置
+# m03配置
 cat >/etc/keepalived/keepalived.conf <<EOF
 ! Configuration File for keepalived
 global_defs {
