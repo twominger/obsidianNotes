@@ -1577,8 +1577,8 @@ vrrp_script chk_apiserver {
 }
 vrrp_instance VI_1 {
     state BACKUP
-    interface ens160
-    mcast_src_ip 192.168.224.22
+    interface ens3
+    mcast_src_ip 192.168.224.98
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -1586,13 +1586,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.86  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.98  # 三个节点此处填本机ip
     unicast_peer {
-      172.17.10.98    # 另外两个节点的ip
-      172.17.10.90
+      192.168.224.95    # 另外两个节点的ip
+      192.168.224.93
     }
     virtual_ipaddress {
-        192.168.224.88
+        192.168.224.199
     }
 #    track_script {
 #       chk_apiserver
@@ -1617,8 +1617,8 @@ vrrp_script chk_apiserver {
 }
 vrrp_instance VI_1 {
     state BACKUP
-    interface ens160
-    mcast_src_ip 192.168.224.23
+    interface ens3
+    mcast_src_ip 192.168.224.93
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1626,13 +1626,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.86  # 三个节点此处填本机ip
+    unicast_src_ip 192.168.224.93  # 三个节点此处填本机ip
     unicast_peer {
-      172.17.10.98    # 另外两个节点的ip
-      172.17.10.90
+      192.168.224.98    # 另外两个节点的ip
+      192.168.224.95
     }
     virtual_ipaddress {
-        192.168.224.88
+        192.168.224.199
     }
 #    track_script {
 #       chk_apiserver
