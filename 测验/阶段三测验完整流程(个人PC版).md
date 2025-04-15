@@ -1982,6 +1982,19 @@ nova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi
 
 
 
+[root@controller ~(keystone_admin)]# openstack-config --set /etc/nova/nova.conf DEFAULT allow_resize_to_same_host True
+-bash: openstack-config: command not found
+[root@controller ~(keystone_admin)]# yum provides "*/openstack-config"
+Last metadata expiration check: 0:02:54 ago on Tue 15 Apr 2025 08:28:56 PM CST.
+Error: No Matches found
+[root@controller ~(keystone_admin)]# yum install -y openstack-utils
+Last metadata expiration check: 0:03:16 ago on Tue 15 Apr 2025 08:28:56 PM CST.
+No match for argument: openstack-utils
+Error: Unable to find a match: openstack-utils
+
+
+
+
 
 
 ```
