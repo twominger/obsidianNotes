@@ -1920,6 +1920,11 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 ```shell
+
+```
+
+
+```shell
 # 删除创建的内容
 kubectl delete namespace discuz
 ```
@@ -1927,14 +1932,17 @@ kubectl delete namespace discuz
 ```shell
 # harbor仓库要公开，不公开的话需要配置secret
 kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
-vim /etc/docker/daemon
+vim /etc/docker/daemon.json
 {
   "insecure-registries":["http://192.168.224.51","hub.lib0.cn"]
 }
+systemctl restart docker
+
 cat >>/etc/hosts <<EOF
 192.168.224.51 hub.lib0.cn
 EOF
 
+kubectl apply -f aaa.yaml
 kubectl -n aaa exec my-app-deployment-6cf8585c47-57np8 -ti -- bash
 ```
 
@@ -2033,7 +2041,7 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 ```
 
 # 问题
-- [ ] harbor https?
+- [x] harbor https?
 [harbor安装并配置https_谷歌浏览器 怎么导入harbor证书-CSDN博客](https://blog.csdn.net/networken/article/details/107502461)
 [linux - Harbor私有仓库搭建并配置https对接docker与kubernetes - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000043223828)
 - [x] k8s\mysql 高可用
@@ -2042,7 +2050,7 @@ https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 - [ ] prometheus 部署
 https://www.wolai.com/chuangxinyang/rfURASHc3GpdEY2mvAYzkN
 - [x] calico 经常失效问题
-- [ ] k8s 拉取 http 镜
+- [x] k8s 拉取 http 镜
 
 
 
