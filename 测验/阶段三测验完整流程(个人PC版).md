@@ -1738,6 +1738,16 @@ sed -i '/#.*}/ s/^#//' /etc/keepalived/keepalived.conf
 systemctl restart keepalived
 ```
 ## 初始化集群
+
+- 关闭 swap
+cloud-init 会在创建实例的时候自动开启 swap
+```shell
+sed -ri 's/.*swap.*/#&/g' /etc/fstab
+swapoff -a
+cat /etc/fstab
+free -m
+```
+
 ```shell
 # 在master1节点操作
 kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
