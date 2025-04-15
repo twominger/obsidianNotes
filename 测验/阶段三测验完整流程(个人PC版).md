@@ -2041,8 +2041,36 @@ cp ./* /usr/local/bin/
 
 ```
 
-
+创建实例时不能指定接口
 ```shell
 2025-04-15 23:34:39.145 20758 ERROR nova.compute.manager [req-892208ec-88d8-4aa2-a365-2a85178646c2 95ed32b87b764d7985045937334aaa7b 663dd40ff3f24f629afa1d446450ec8b - default default] Instance failed network setup after 1 attempt(s): nova.exception.PortNotUsable: Port 43c7465e-64fe-4dee-bca5-f6d4e917b93d not usable for instance 4dbb358c-3ee9-47d2-8ae0-27bedf790013.
+
+```
+
+
+kubeadm 初始化集群超时
+```shell
+[api-check] Waiting for a healthy API server. This can take up to 4m0s
+[api-check] The API server is not healthy after 4m0.495090012s
+
+Unfortunately, an error has occurred:
+    context deadline exceeded
+
+This error is likely caused by:
+    - The kubelet is not running
+    - The kubelet is unhealthy due to a misconfiguration of the node in some way (required cgroups disabled)
+
+If you are on a systemd-powered system, you can try to troubleshoot the error with the following commands:
+    - 'systemctl status kubelet'
+    - 'journalctl -xeu kubelet'
+
+Additionally, a control plane component may have crashed or exited when started by the container runtime.
+To troubleshoot, list all containers using your preferred container runtimes CLI.
+Here is one example how you may list all running Kubernetes containers by using crictl:
+    - 'crictl --runtime-endpoint unix:///var/run/cri-dockerd.sock ps -a | grep kube | grep -v pause'
+    Once you have found the failing container, you can inspect its logs with:
+    - 'crictl --runtime-endpoint unix:///var/run/cri-dockerd.sock logs CONTAINERID'
+error execution phase wait-control-plane: could not initialize a Kubernetes cluster
+To see the stack trace of this error execute with --v=5 or higher
 
 ```
