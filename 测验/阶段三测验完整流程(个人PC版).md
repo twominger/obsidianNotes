@@ -1790,7 +1790,8 @@ timeouts:
   upgradeManifests: 5m0s
 ---
 apiServer:
-  controlPlaneEndpoint: "192.168.224.95:16443"
+timeoutForControlPlane: 30m0s
+controlPlaneEndpoint: "192.168.224.95:16443"   # 虚拟IP和haproxy端口
 apiVersion: kubeadm.k8s.io/v1beta4
 caCertificateValidityPeriod: 87600h0m0s
 certificateValidityPeriod: 8760h0m0s
