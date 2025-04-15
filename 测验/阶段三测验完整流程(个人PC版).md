@@ -1992,6 +1992,16 @@ Last metadata expiration check: 0:03:16 ago on Tue 15 Apr 2025 08:28:56 PM CST.
 No match for argument: openstack-utils
 Error: Unable to find a match: openstack-utils
 
+wget https://github.com/redhat-openstack/openstack-utils/archive/refs/tags/2017.1-1.tar.gz
+tar -zxvf 2017.1-1.tar.gz
+cd openstack-utils-2017.1-1/
+cd utils
+cp ./* /usr/local/bin/
+
+[root@controller utils(keystone_admin)]# openstack-config --set /etc/nova/nova.conf DEFAULT allow_resize_to_same_host True
+/usr/local/bin/openstack-config: line 21: exec: crudini: not found
+
+
 
 
 
