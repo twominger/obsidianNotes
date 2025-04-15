@@ -2067,8 +2067,8 @@ docker pull registry.k8s.io/sig-storage/csi-snapshotter:v8.0.1
 ```
 6. 成功配置后 `kubectl get all` 结果如下:
 
-# 使用 Cephfs设备
-## 创建 StorageClass
+## 使用 Cephfs设备
+### 创建 StorageClass
 Kubernetes StorageClass 定义了一类存储。可以创建多个 StorageClass 对象以映射到不同的服务质量级别（即 NVMe 与基于 HDD 的池）和功能。
 
 创建 storageclass 示例如下:
@@ -2103,98 +2103,57 @@ kubectl apply -f csi-rbd-sc.yaml
 > ` pool`: kubernetes
 > 这两个参数需要与 ceph 集群的 ID 和存储池名字对应
 
-## 创建 PersistentVolumeClaim
+### 创建 PersistentVolumeClaim
 PersistentVolumeClaim 是用户对抽象存储资源的请求。然后，PersistentVolumeClaim 将关联到 Pod 资源，以配置一个 PersistentVolume，该卷将由 Ceph 块镜像提供支持。可以包含可选的 volumeMode 以在挂载的文件系统之间进行选择 （默认）或基于原始块设备的卷。
-### 创建基于 cephfs的 PVC 并使用
+
 以下 YAML 可以是用于向 csi-rbd-sc StorageClass 请求原始块存储：
 ```shell
-cat <<EOF > raw-block-pvc.yaml
+cat >ceph-cephfs-pvc.yaml <<EOF
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: raw-block-pvc
+  name: test-pvc
+  namespace: discuz
 spec:
+  storageClassName: csi-cephfs-sc  # StorageClass名称
   accessModes:
     - ReadWriteOnce
-  volumeMode: Block
   resources:
     requests:
-      storage: 1Gi
-  storageClassName: csi-rbd-sc
+      storage: 2Gi
 EOF
+
 
 kubectl apply -f raw-block-pvc.yaml
 ```
 将上述 PersistentVolumeClaim 作为原始块设备绑定到 Pod 资源的演示和示例如下：
 ```shell
-cat <<EOF > raw-block-pod.yaml
----
+cat > pod.yaml << EOF 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-with-raw-block-volume
+  name: redis
+  labels:
+    name: redis
 spec:
   containers:
-    - name: fc-container
-      image: fedora:26
-      command: ["/bin/sh", "-c"]
-      args: ["tail -f /dev/null"]
-      volumeDevices:
-        - name: data
-          devicePath: /dev/xvda
+  - name: redis
+    image: redis:7
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 6379
+    volumeMounts:
+      - name: redis-data
+        mountPath: "/data"
   volumes:
-    - name: data
+    - name: redis-data
       persistentVolumeClaim:
-        claimName: raw-block-pvc
+        claimName: test-pvc
 EOF
-
-kubectl apply -f raw-block-pod.yaml
-```
-### 创建基于文件系统的 PVC 并使用
-可以使用以下 YAML 来从 csi-rbd-sc StorageClass 请求挂载的文件系统（由 RBD 镜像支持）:
-```shell
-cat <<EOF > pvc.yaml
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: rbd-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  volumeMode: Filesystem
-  resources:
-    requests:
-      storage: 1Gi
-  storageClassName: csi-rbd-sc
-EOF
-
-kubectl apply -f pvc.yaml
-```
-将上述 PersistentVolumeClaim 作为挂载的文件系统绑定到 Pod 资源的演示和示例如下：
-```shell
-cat <<EOF > pod.yaml
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: csi-rbd-demo-pod
-spec:
-  containers:
-    - name: web-server
-      image: nginx
-      volumeMounts:
-        - name: mypvc
-          mountPath: /var/lib/www/html
-  volumes:
-    - name: mypvc
-      persistentVolumeClaim:
-        claimName: rbd-pvc
-        readOnly: false
-EOF
-
-kubectl apply -f pod.yaml
 ```
 
 # k8s 部署 discuz
