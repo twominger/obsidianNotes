@@ -1499,17 +1499,30 @@ openstack port list
 # m02 f88fe465-9295-45f2-b559-1f1ad241a225
 # m03 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
-openstack port set --enable-port-security  0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
-openstack port set --enable-port-security  f88fe465-9295-45f2-b559-1f1ad241a225
-openstack port set --enable-port-security  47a176dd-0959-415c-a13e-2b6d9a8e456a
+# openstack port set --enable-port-security  0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+# openstack port set --enable-port-security  f88fe465-9295-45f2-b559-1f1ad241a225
+# openstack port set --enable-port-security  47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 绑定操作
-openstack port set --allowed-address ip-address=192.168.224.199 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
-openstack port set --allowed-address ip-address=192.168.224.199 f88fe465-9295-45f2-b559-1f1ad241a225
-openstack port set --allowed-address ip-address=192.168.224.199 47a176dd-0959-415c-a13e-2b6d9a8e456a
+openstack port set --allowed-address ip-address=192.168.224.198 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+openstack port set --allowed-address ip-address=192.168.224.198 f88fe465-9295-45f2-b559-1f1ad241a225
+openstack port set --allowed-address ip-address=192.168.224.198 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 # 查看绑定状态
 neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+neutron port-show f88fe465-9295-45f2-b559-1f1ad241a225
+neutron port-show 47a176dd-0959-415c-a13e-2b6d9a8e456a
+
+
+# unset
+# 解除绑定
+openstack port unset --allowed-address ip-address=172.17.10.239 2bdf10a9-1939-4da8-b6c0-5c4ac929da46
+openstack port unset --allowed-address ip-address=172.17.10.239 76bc6aaa-04d8-402c-9f64-d0ecdf7e3dd4
+openstack port unset --allowed-address ip-address=172.17.10.239 baea1a1a-8c27-40af-953e-75673a36f984
+
+# 删除vip
+openstack port delete viptest
+
 ```
 
 > [!tip] 报错解决
