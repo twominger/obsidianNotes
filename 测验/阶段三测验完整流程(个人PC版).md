@@ -1674,7 +1674,6 @@ systemctl restart keepalived
 #配置haproxy
 mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
 cat >/etc/haproxy/haproxy.cfg <<EOF
-
 global
   maxconn  2000
   ulimit-n  16384
@@ -1698,8 +1697,8 @@ frontend monitor-in
   monitor-uri /monitor
 
 frontend k8s-master
-  bind 0.0.0.0:16443
-  bind 127.0.0.1:16443
+  bind 0.0.0.0:8888
+  bind 127.0.0.1:8888
   mode tcp
   option tcplog
   tcp-request inspect-delay 5s
@@ -1711,9 +1710,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server master1  192.168.224.21:6443  check
-  server master2  192.168.224.22:6443  check
-  server master3  192.168.224.23:6443  check
+  server master1  192.168.224.95:80  check
+  server master2  192.168.224.98:80  check
+  server master3  192.168.224.93:80  check
 EOF
   
 systemctl enable --now haproxy.service
