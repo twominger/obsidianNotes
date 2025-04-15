@@ -1146,126 +1146,6 @@ case "$1" in
     ;;
 esac
 ```
-# discuz 容器镜像制作
-
-[kubernetes-部署LNMP环境运行Discuz - 一颗小豆子 - 博客园](https://www.cnblogs.com/douyi/p/12099701.html)
-
-测试环境:
-```shell
-yum install -y php php-fpm
-yum -y install nginx
-# 配置/etc/nginx/nginx.conf
-git clone https://gitee.com/Discuz/DiscuzX.git
-cd /root/DiscuzX/upload
-sed -i '1394s/.*/PRIMARY KEY (daytime)/'  install/data/install.sql
-sed -i '2691s/.*/  groupid smallint(6) unsigned NOT NULL DEFAULT '0' KEY,/'  install/data/install.sql
-sed -i '404s/.*/ PRIMARY KEY (logid)/g' install/data/install.sql
-sed -i "s/\$nowdaytime = dgmdate(TIMESTAMP, 'Ymd');/\$nowdaytime = dgmdate(TIMESTAMP, 'YmdHis');/" ./source/class/table/table_common_stat.php
-
-cp -a /root/DiscuzX/upload/* /usr/share/nginx/html/
-chmod -R 777 /usr/share/nginx/html/
-
-yum install -y php-mysqli php-xml
-```
-- nginx. conf
-```shell
-cat >nginx.conf <<EOF
-user nginx;
-worker_processes auto;
-error_log /var/log/nginx/error.log;
-pid /run/nginx.pid;
-
-# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
-include /usr/share/nginx/modules/*.conf;
-
-events {
-    worker_connections 1024;
-}
-
-http {
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      '$status $body_bytes_sent "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
-
-    access_log  /var/log/nginx/access.log  main;
-
-    sendfile            on;
-    tcp_nopush          on;
-    tcp_nodelay         on;
-    keepalive_timeout   65;
-    types_hash_max_size 4096;
-
-    include             /etc/nginx/mime.types;
-    default_type        application/octet-stream;
-
-    # Load modular configuration files from the /etc/nginx/conf.d directory.
-    # See http://nginx.org/en/docs/ngx_core_module.html#include
-    # for more information.
-    include /etc/nginx/conf.d/*.conf;
-
-    server {
-        listen       80;
-        listen       [::]:80;
-        server_name  _;
-        root         /usr/share/nginx/html;
-        index index.php index.html index.htm
-
-        # Load configuration files for the default server block.
-        include /etc/nginx/default.d/*.conf;
-
-        error_page 404 /404.html;
-        location ~ .php$ {
-            #fastcgi_pass unix:/var/run/php-fpm/www.sock;
-            fastcgi_pass 127.0.0.1:9000;
-            fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            include fastcgi_params;
-        }
-    }
-}
-EOF
-```
-- Dockerfile
-```shell
-cat >Dockerfile <<EOF
-FROM php:7.2-fpm
-  
-RUN apt-get update && \
-    useradd -r -s /sbin/nologin nginx && \
-    apt-get install -y nginx libldap2-dev && \
-    docker-php-ext-install pdo pdo_mysql && \
-    docker-php-ext-install mysqli && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-WORKDIR /usr/share/nginx/html
-
-COPY nginx.conf /etc/nginx/
-COPY upload /usr/share/nginx/html/
-RUN chmod -R 777 *
-
-EXPOSE 80
-
-CMD ["sh", "-c", "nginx -g 'daemon off;' & php-fpm -F"]
-EOF
-```
-封装、测试
-```shell
-docker build -t nginx-discuz:v1 .
-docker run -d -p 80:80 --add-host mysql:192.168.44.41 nginx-discuz:v1
-```
-推送（以阿里为例）
-```shell
-# 登陆
-docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
-Han@201314
-# 拉取
-docker pull crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
-# 推送
-docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
-docker tag [ImageId] crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
-docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
-```
 # k8s 集群搭建
 
 ## 公共步骤（在 m01 上操作）
@@ -1914,9 +1794,131 @@ vim calico.yaml
 kubectl apply -f calico.yaml
 ```
 ![[附件/calico.yaml]]
+# discuz 容器镜像制作
+
+[kubernetes-部署LNMP环境运行Discuz - 一颗小豆子 - 博客园](https://www.cnblogs.com/douyi/p/12099701.html)
+
+测试环境:
+```shell
+yum install -y php php-fpm
+yum -y install nginx
+# 配置/etc/nginx/nginx.conf
+git clone https://gitee.com/Discuz/DiscuzX.git
+cd /root/DiscuzX/upload
+sed -i '1394s/.*/PRIMARY KEY (daytime)/'  install/data/install.sql
+sed -i '2691s/.*/  groupid smallint(6) unsigned NOT NULL DEFAULT '0' KEY,/'  install/data/install.sql
+sed -i '404s/.*/ PRIMARY KEY (logid)/g' install/data/install.sql
+sed -i "s/\$nowdaytime = dgmdate(TIMESTAMP, 'Ymd');/\$nowdaytime = dgmdate(TIMESTAMP, 'YmdHis');/" ./source/class/table/table_common_stat.php
+
+cp -a /root/DiscuzX/upload/* /usr/share/nginx/html/
+chmod -R 777 /usr/share/nginx/html/
+
+yum install -y php-mysqli php-xml
+```
+- nginx. conf
+```shell
+cat >nginx.conf <<EOF
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 4096;
+
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+    # Load modular configuration files from the /etc/nginx/conf.d directory.
+    # See http://nginx.org/en/docs/ngx_core_module.html#include
+    # for more information.
+    include /etc/nginx/conf.d/*.conf;
+
+    server {
+        listen       80;
+        listen       [::]:80;
+        server_name  _;
+        root         /usr/share/nginx/html;
+        index index.php index.html index.htm
+
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+        error_page 404 /404.html;
+        location ~ .php$ {
+            #fastcgi_pass unix:/var/run/php-fpm/www.sock;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+}
+EOF
+```
+- Dockerfile
+```shell
+cat >Dockerfile <<EOF
+FROM php:7.2-fpm
+  
+RUN apt-get update && \
+    useradd -r -s /sbin/nologin nginx && \
+    apt-get install -y nginx libldap2-dev && \
+    docker-php-ext-install pdo pdo_mysql && \
+    docker-php-ext-install mysqli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/
+
+EXPOSE 80
+
+CMD ["sh", "-c", "nginx -g 'daemon off;' & php-fpm -F"]
+EOF
+```
+封装、测试
+```shell
+docker build -t nginx-discuz:v1 .
+docker run -d -p 80:80 --add-host mysql:192.168.44.41 nginx-discuz:v1
+```
+推送（以阿里为例）
+```shell
+# 登陆
+docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
+Han@201314
+# 拉取
+docker pull crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
+# 推送
+docker login --username=aliyun0025329374 crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com
+docker tag [ImageId] crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
+docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming/nginx-discuz:[镜像版本号]
+```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
+```shell
+wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
+
+```
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 ```shell
@@ -1965,6 +1967,13 @@ spec:
       containers:
       - name: discuz
         image: hub.lab0.cn/discuz/nginx-discuz:v1
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "600m"
+          requests:
+            memory: "512Mi"
+            cpu: "300m"
         volumeMounts:
         - name: discuz-storage
           mountPath: /var/www  # 正式挂载PVC
@@ -1974,7 +1983,6 @@ spec:
           claimName: test-pvc
       nodeSelector:
         Discuz-node: "true"
-
 
 # 定义资源服务暴露方式
 ---
