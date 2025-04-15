@@ -1927,15 +1927,12 @@ kubectl delete namespace discuz
 ```shell
 kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
 kubectl edit configmap -n kube-system coredns
-hosts {
-           192.168.224.51 hub.lib0.cn
-           fallthrough
-        }
 
 cat >>/etc/hosts <<EOF
 192.168.224.51 hub.lib0.cn
 EOF
 
+kubectl -n aaa exec my-app-deployment-6cf8585c47-57np8 -ti -- bash
 ```
 
 ## discuz 用户密码重置
