@@ -86,7 +86,10 @@ yum clean all
 yum makecache
 ```
 
+
 openstack 实例调整大小
+[OpenStack Docs： 改变主机的大小](https://docs.openstack.org/zh_CN/user-guide/cli-change-the-size-of-your-server.html)
+[OpenStack在线调整虚拟机的大小报错 - Gshelldon - 博客园](https://www.cnblogs.com/gshelldon/p/14840353.html)
 ```shell
 source keystonerc_admin
 openstack server list --all
@@ -116,5 +119,16 @@ openstack flavor list
 # | c64eabbf-b56b-40ac-b5c4-fd75a6cc6efc | container_flavor02 | 2048 |   10 |         0 |     2 | True      |
 # +--------------------------------------+--------------------+------+------+-----------+-------+-----------+
 openstack server resize --flavor container_flavor02 7f6c8587-460c-4c9f-9cdb-1f7ce45775ca
+
+```
+
+```shell
+vim /etc/nova/nova.conf
+# 可以参考最原始的nova.conf
+[defaults]
+
+cat 
+allow_resize_to_same_host=True
+scheduler_default_filters=RetryFilter,AvailabilityZoneFilter,RamFilter,ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter
 
 ```
