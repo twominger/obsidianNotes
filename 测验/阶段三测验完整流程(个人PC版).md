@@ -1437,7 +1437,7 @@ docker images
 ```shell
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
-172.17.10.96 m01
+172.17.10.94 m01
 172.17.10.87 m02
 172.17.10.85 m03
 172.17.10.92 n01
