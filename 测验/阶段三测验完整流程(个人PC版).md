@@ -1974,4 +1974,16 @@ Command: ssh -o BatchMode=yes 192.168.224.101 mkdir -p /var/lib/nova/instances/7
 Exit code: 255
 Stdout: ''
 Stderr: 'Load key "/etc/nova/migration/identity": invalid format\r\nnova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).\r\n'
+
+
+
+
+ssh -i /etc/nova/migration/identity nova_migration@192.168.224.101
+Load key "/etc/nova/migration/identity": invalid format
+nova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
+
+
+
+
 ```
