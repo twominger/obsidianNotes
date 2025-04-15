@@ -1757,7 +1757,9 @@ systemctl status cri-docker.service
 
 ```shell
 # 在master1节点操作
-kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock --timeout=30m
+kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock --kubelet-timeout=30m
+# kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
+
 
 # Your Kubernetes control-plane has initialized successfully!
 
