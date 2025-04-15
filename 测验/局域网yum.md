@@ -126,7 +126,7 @@ openstack server resize --flavor container_flavor02 7f6c8587-460c-4c9f-9cdb-1f7c
 ```shell
 cat >>/etc/nova/nova.conf <<EOF
 allow_resize_to_same_host=True
-scheduler_default_filters=RetryFilter,AvailabilityZoneFilter,RamFilter,ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter
+enabled_filters=AvailabilityZoneFilter,ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter
 EOF
 
 # controller
@@ -134,6 +134,8 @@ systemctl restart openstack-nova*
 
 # compute
 systemctl restart openstack-nova-compute
+
+# compute节点的双向互信
 
 
 
