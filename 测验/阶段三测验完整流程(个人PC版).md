@@ -2407,11 +2407,56 @@ systemctl status mysqld_exporter
 k8s 侧设置
 在 Kubernetes 中创建 Service & Endpoints
 ```shell
+cat >mysql-exporter-external.yaml <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-exporter
+  namespace: monitoring
+  labels:
+    app: mysql-exporter
+spec:
+  ports:
+  - name: http-metrics
+    port: 9104
+    targetPort: 9104
+  type: ClusterIP
 
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: mysql-exporter
+  namespace: monitoring
+subsets:
+- addresses:
+  - ip: 192.168.224.41  # MySQL 节点 IP
+  ports:
+  - name: http-metrics
+    port: 9104
+EOF
+
+#应用Service & Endpoints
+kubectl apply -f mysql-exporter-external.yaml
 ```
 创建 ServiceMonitor
 ```shell
+cat >mysql-servicemonitor.yaml <<EOF
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mysql-exporter
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: mysql-exporter
+  endpoints:
+  - port: http-metrics
+EOF
 
+#应用ServiceMonitor
+kubectl apply -f mysql-servicemonitor.yaml
 ```
 ## prometheus 监控 ceph
 https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
