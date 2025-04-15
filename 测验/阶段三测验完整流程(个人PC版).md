@@ -1923,10 +1923,15 @@ docker push hub.lib0.cn/discuz/nginx-discuz:v1
 # k8s 对接 cephfs
 pod 使用 ceph 存储
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
+![[附件/ceph-csi-3.13.0.zip]]
 ```shell
 wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
-
-
+# yum -y install unzip
+unzip ceph-csi-3.13.0.zip
+cd ceph-csi-3.13.0/
+# 创建一个子卷组，在ceph-csi 3.13.0中要求必须要创建子卷组提供给pvc使用(cs01)
+ceph fs subvolumegroup create k8s_fs k8s-storageclass-volumes
+ceph fs subvolumegroup ls k8s_fs
 
 ```
 # k8s 部署 discuz
