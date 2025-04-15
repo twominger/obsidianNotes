@@ -1925,9 +1925,12 @@ kubectl delete namespace discuz
 ```
 
 ```shell
+# harbor仓库要公开，不公开的话需要配置secret
 kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
-kubectl edit configmap -n kube-system coredns
-
+vim /etc/docker/daemon
+{
+  "insecure-registries":["http://192.168.224.51","hub.lib0.cn"]
+}
 cat >>/etc/hosts <<EOF
 192.168.224.51 hub.lib0.cn
 EOF
