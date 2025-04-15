@@ -1933,6 +1933,8 @@ cd ceph-csi-3.13.0/
 ceph fs subvolumegroup create k8s_fs k8s-storageclass-volumes
 ceph fs subvolumegroup ls k8s_fs
 
+
+
 ```
 # k8s 部署 discuz
 https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc

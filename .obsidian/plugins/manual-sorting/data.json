@@ -184,6 +184,7 @@
       "测验/部署单节点ceph.md"
     ],
     "附件": [
+      "附件/ceph-csi-3.13.0.zip",
       "附件/docker-compose-linux-x86_64",
       "附件/get_helm.sh",
       "附件/calico.yaml",

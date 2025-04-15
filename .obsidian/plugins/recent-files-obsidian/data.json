@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "everything",
       "path": "测验/everything.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "ansible使用及脚本",
@@ -79,10 +83,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "分区作为osd部署单节点ceph集群",
