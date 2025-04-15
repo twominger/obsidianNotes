@@ -2015,7 +2015,7 @@ kubectl apply -f csi-kms-config-map.yaml
 ### 4 . 生成 ceph-csi cephx 密钥
 将用于认证 ceph 的 keyring 配置为 secret
 ```shell
-cat >csi-rbd-secret.yaml <<EOF
+cat >csi-cephfs-secret.yaml <<EOF
 ---
 apiVersion: v1
 kind: Secret
@@ -2041,7 +2041,7 @@ exported keyring for client.kubernetes
 
 生成后，将新的 Secret 对象存储在 Kubernetes 中：
 ```shell
-kubectl apply -f csi-rbd-secret.yaml
+kubectl apply -f csi-cephfs-secret.yaml
 ```
 
 ### 5 . 配置 ceph-csi 插件
@@ -2052,32 +2052,26 @@ kubectl apply -f csi-nodeplugin-rbac.yaml
 ```
 最后，创建 ceph-csi 置备程序和节点插件。使用 ceph-csi 容器发行版可能例外，这些对象不会不一定需要针对您的 Kubernetes 环境进行自定义，并且因此，可以从 ceph-csi 部署 YAML 中按原样使用：
 ```shell
-kubectl apply -f csi-rbdplugin-provisioner.yaml
-kubectl apply -f csi-rbdplugin.yaml
+kubectl apply -f csidriver.yaml
+kubectl apply -f csi-cephfsplugin-provisioner.yaml
+kubectl apply -f csi-cephfsplugin.yaml
 ```
 
 安装插件用到的镜像列表如下，需要自行下载相关镜像
 ```shell
-quay.io/cephcsi/cephcsi:v3.10.1
-registry.k8s.io/sig-storage/csi-attacher:v4.4.2
-registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.9.1
-registry.k8s.io/sig-storage/csi-provisioner:v3.6.2
-registry.k8s.io/sig-storage/csi-resizer:v1.9.2
-registry.k8s.io/sig-storage/csi-snapshotter:v6.3.2
+docker pull quay.io/cephcsi/cephcsi:v3.13.0
+docker pull registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.11.1
+docker pull registry.k8s.io/sig-storage/csi-provisioner:v5.0.1
+docker pull registry.k8s.io/sig-storage/csi-resizer:v1.11.1
+docker pull registry.k8s.io/sig-storage/csi-snapshotter:v8.0.1
 ```
 6. 成功配置后 `kubectl get all` 结果如下:
-![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250416060634700.png)
 
-# 使用 Ceph 块设备
+# 使用 Cephfs设备
 ## 创建 StorageClass
 Kubernetes StorageClass 定义了一类存储。可以创建多个 StorageClass 对象以映射到不同的服务质量级别（即 NVMe 与基于 HDD 的池）和功能。
 
-在创建 storageclass 之前，还需要创建一个 csidriver：
-```shell
-kubectl apply -f csidriver.yaml
-```
-
-创建 storageclass 示例如下
+创建 storageclass 示例如下:
 ```shell
 cat >csi-rbd-sc.yaml <<EOF
 ---
