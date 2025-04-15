@@ -1932,6 +1932,10 @@ hosts {
            fallthrough
         }
 
+cat >>/etc/hosts <<EOF
+192.168.224.51 hub.lib0.cn
+EOF
+
 ```
 
 ## discuz 用户密码重置
