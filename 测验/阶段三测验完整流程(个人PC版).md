@@ -1448,7 +1448,7 @@ EOF
 ```shell
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server ntp.aliyun.com iburst
+server 192.168.224.100 iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
