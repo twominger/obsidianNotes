@@ -1479,11 +1479,11 @@ vrrp_script chk_apiserver {
     rise 1
 }
 vrrp_instance VI_1 {
-    state MASTER
+    state BACKUP
     interface ens3
     mcast_src_ip 172.17.10.99
     virtual_router_id 51
-    priority 102
+    priority 101
     advert_int 2
     authentication {
         auth_type PASS
@@ -1519,11 +1519,11 @@ vrrp_script chk_apiserver {
     rise 1
 }
 vrrp_instance VI_1 {
-    state MASTER
+    state BACKUP
     interface ens3
     mcast_src_ip 172.17.10.98
     virtual_router_id 51
-    priority 102
+    priority 100
     advert_int 2
     authentication {
         auth_type PASS
