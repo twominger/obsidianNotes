@@ -1310,6 +1310,7 @@ yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
 
 [root@m01 ~]# ls /var/lib/kubelet/
 [root@m01 ~]# cat /etc/sysconfig/kubelet 
+vim /etc/sysconfig/kubelet 
 KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"
 
 
@@ -1353,19 +1354,19 @@ docker images
 ```shell
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
-172.17.10.87 m01
-172.17.10.99 m02
-172.17.10.98 m03
-172.17.10.93 n01
-172.17.10.81 n02
+172.17.10.91 m01
+172.17.10.93 m02
+172.17.10.96 m03
+172.17.10.87 n01
+172.17.10.82 n02
 EOF
 
 # 修改
-sed -i '/m01/c\172.17.10.87 m01' /etc/hosts
-sed -i '/m02/c\172.17.10.99 m01' /etc/hosts
-sed -i '/m03/c\172.17.10.98 m01' /etc/hosts
-sed -i '/n01/c\172.17.10.93 m01' /etc/hosts
-sed -i '/n02/c\172.17.10.81 m01' /etc/hosts
+sed -i '/m01/c\172.17.10.91 m01' /etc/hosts
+sed -i '/m02/c\172.17.10.93 m01' /etc/hosts
+sed -i '/m03/c\172.17.10.96 m01' /etc/hosts
+sed -i '/n01/c\172.17.10.87 m01' /etc/hosts
+sed -i '/n02/c\172.17.10.82 m01' /etc/hosts
 
 # 互信配置
 ssh-keygen -t rsa
