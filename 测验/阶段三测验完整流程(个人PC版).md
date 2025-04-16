@@ -1154,6 +1154,10 @@ esac
 ```shell
 sed -ri 's/.*swap.*/#&/g' /etc/fstab
 swapoff -a
+# 清空iptables规则 
+iptables -F
+iptables -t nat -F
+modprobe -r ip_tables
 ```
 ### 系统优化
 ```shell
@@ -1172,15 +1176,20 @@ net.ipv6.conf.all.disable_ipv6=1
 net.netfilter.nf_conntrack_max=2310720
 EOF
 
+#开启网桥过滤模块
 modprobe br_netfilter
 modprobe ip_conntrack
 lsmod |grep conntrack
+
+vim /etc/sysctl.conf
+net.ipv4.ip_nonlocal_bind = 1
+#加载优化
+sysctl -p
 
 sysctl -p /etc/sysctl.d/k8s_better.conf
 
 cat /sys/class/dmi/id/product_uuid
 # 确保每台服务器的uuid不一致、如果是克隆机器、修改网卡配置文件删除uuid那一行
-# cloud-init在创建实例时会自动更新网卡uuid
 ```
 ### 安装 IPVS 转发支持
 ```shell
@@ -1253,6 +1262,7 @@ EOF
 ### 安装 cri-dockerd
 ```shell
 # wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.6/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd-0.3.4-3.el8.x86_64.rpm
 yum -y install cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
 
 sed -i 's|ExecStart=/usr/bin/cri-dockerd --container-runtime-endpoint fd://|ExecStart=/usr/bin/cri-dockerd --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.9 --container-runtime-endpoint fd://|' /usr/lib/systemd/system/cri-docker.service
