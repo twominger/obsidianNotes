@@ -158,7 +158,7 @@ ceph osd pool application enable mysql-pool rbd
 # 添加用户
 ceph auth add client.zhangmingming mon 'allow r' osd 'allow rwx'
 # 创建mysql的rbd映像
-rbd create mysql-pool/mysql-data --size 10G
+rbd create mysql-pool/mysql-data1 --size 10G
 rbd create mysql-pool/mysql-data2 --size 10G
 rbd create mysql-pool/mysql-data3 --size 10G
 ```
