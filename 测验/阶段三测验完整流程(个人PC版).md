@@ -1225,6 +1225,15 @@ lsmod | grep -e ip_vs -e nf_conntrack
 # nf_defrag_ipv4         12729  1 nf_conntrack_ipv4
 # nf_conntrack          139264  2 ip_vs,nf_conntrack_ipv4
 # libcrc32c              12644  3 xfs,ip_vs,nf_conntrack
+ip_vs_sh               16384  0
+ip_vs_wrr              16384  0
+ip_vs_rr               16384  0
+ip_vs                 172032  6 ip_vs_rr,ip_vs_sh,ip_vs_wrr
+nf_conntrack          172032  2 nf_nat,ip_vs
+nf_defrag_ipv6         20480  2 nf_conntrack,ip_vs
+nf_defrag_ipv4         16384  1 nf_conntrack
+libcrc32c              16384  5 nf_conntrack,nf_nat,nf_tables,xfs,ip_vs
+
 ```
 ### 安装 docker (不用 containerd)
 ```shell
@@ -1234,8 +1243,7 @@ yum install -y yum-utils
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 # Step 3: 安装Docker
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-# Step 4: 开启Docker服务
-systemctl enable docker --now
+
 ```
 
 ```shell
@@ -1265,6 +1273,9 @@ cat > /etc/docker/daemon.json << EOF
   "data-root": "/var/lib/docker"
 }
 EOF
+
+# Step 4: 开启Docker服务
+systemctl enable docker --now
 ```
 ### 安装 cri-dockerd
 ```shell
