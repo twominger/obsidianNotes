@@ -1394,9 +1394,9 @@ openstack port list
 # openstack port set --enable-port-security  6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 绑定操作
-openstack port set --allowed-address ip-address=192.168.224.198 e2d3061d-7cab-4e4d-a46f-f448168b9077
-openstack port set --allowed-address ip-address=192.168.224.198 5a622ba1-28ae-4be8-81c7-9a4b9411b597
-openstack port set --allowed-address ip-address=192.168.224.198 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
+openstack port set --allowed-address ip-address=172.17.10.188 e2d3061d-7cab-4e4d-a46f-f448168b9077
+openstack port set --allowed-address ip-address=172.17.10.188 5a622ba1-28ae-4be8-81c7-9a4b9411b597
+openstack port set --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 查看绑定状态
 neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
@@ -1441,7 +1441,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 192.168.224.95
+    mcast_src_ip 172.17.10.87
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -1449,13 +1449,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.224.95  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.87  # 三个节点此处填本机ip
     unicast_peer {
-      192.168.224.98    # 另外两个节点的ip
-      192.168.224.93
+      172.17.10.99    # 另外两个节点的ip
+      172.17.10.98
     }
     virtual_ipaddress {
-        192.168.224.199
+        172.17.10.188
     }
 #    track_script {
 #       chk_apiserver
@@ -1479,23 +1479,23 @@ vrrp_script chk_apiserver {
     rise 1
 }
 vrrp_instance VI_1 {
-    state BACKUP
+    state MASTER
     interface ens3
-    mcast_src_ip 192.168.224.98
+    mcast_src_ip 172.17.10.99
     virtual_router_id 51
-    priority 101
+    priority 102
     advert_int 2
     authentication {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.98  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.99  # 三个节点此处填本机ip
     unicast_peer {
-      192.168.224.95    # 另外两个节点的ip
-      192.168.224.93
+      172.17.10.87    # 另外两个节点的ip
+      172.17.10.98
     }
     virtual_ipaddress {
-        192.168.224.199
+        172.17.10.188
     }
 #    track_script {
 #       chk_apiserver
@@ -1519,23 +1519,23 @@ vrrp_script chk_apiserver {
     rise 1
 }
 vrrp_instance VI_1 {
-    state BACKUP
+    state MASTER
     interface ens3
-    mcast_src_ip 192.168.224.93
+    mcast_src_ip 172.17.10.98
     virtual_router_id 51
-    priority 100
+    priority 102
     advert_int 2
     authentication {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.224.93  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.98  # 三个节点此处填本机ip
     unicast_peer {
-      192.168.224.98    # 另外两个节点的ip
-      192.168.224.95
+      172.17.10.99    # 另外两个节点的ip
+      172.17.10.87
     }
     virtual_ipaddress {
-        192.168.224.199
+        172.17.10.188
     }
 #    track_script {
 #       chk_apiserver
@@ -1613,9 +1613,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server master1  192.168.224.95:6443  check
-  server master2  192.168.224.98:6443  check
-  server master3  192.168.224.93:6443  check
+  server master1  172.17.10.87:6443  check
+  server master2  172.17.10.99:6443  check
+  server master3  172.17.10.98:6443  check
 EOF
   
 systemctl enable --now haproxy.service
