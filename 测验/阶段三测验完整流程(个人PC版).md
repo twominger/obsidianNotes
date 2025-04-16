@@ -1317,19 +1317,19 @@ docker images
 ```shell
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
-172.17.10.89 m01
-172.17.10.87 m02
-172.17.10.85 m03
-172.17.10.92 n01
-172.17.10.84 n02
+172.17.10.87 m01
+172.17.10.99 m02
+172.17.10.98 m03
+172.17.10.93 n01
+172.17.10.81 n02
 EOF
 
 # 修改
-sed -i '/m01/c\172.17.10.89 m01' /etc/hosts
-sed -i '/m02/c\172.17.10.87 m01' /etc/hosts
-sed -i '/m03/c\172.17.10.85 m01' /etc/hosts
-sed -i '/n01/c\172.17.10.92 m01' /etc/hosts
-sed -i '/n02/c\172.17.10.84 m01' /etc/hosts
+sed -i '/m01/c\172.17.10.87 m01' /etc/hosts
+sed -i '/m02/c\172.17.10.99 m01' /etc/hosts
+sed -i '/m03/c\172.17.10.98 m01' /etc/hosts
+sed -i '/n01/c\172.17.10.93 m01' /etc/hosts
+sed -i '/n02/c\172.17.10.81 m01' /etc/hosts
 
 
 ```
