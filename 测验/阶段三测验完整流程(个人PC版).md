@@ -1181,9 +1181,14 @@ cat /etc/sysctl.d/k8s_better.conf
 modprobe br_netfilter
 modprobe ip_conntrack
 lsmod |grep conntrack
+# nf_conntrack          172032  1 nf_nat
+# nf_defrag_ipv6         20480  1 nf_conntrack
+# nf_defrag_ipv4         16384  1 nf_conntrack
+# libcrc32c              16384  4 nf_conntrack,nf_nat,nf_tables,xfs
 
-vim /etc/sysctl.conf
+cat >>/etc/sysctl.conf <<EOF
 net.ipv4.ip_nonlocal_bind = 1
+EOF
 #加载优化
 sysctl -p
 
