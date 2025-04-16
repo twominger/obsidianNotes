@@ -1245,7 +1245,9 @@ yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ```
-
+```
+ "registry-mirrors": [ "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com" ]
+```
 ```shell
 #修改cgroup
 cat > /etc/docker/daemon.json << EOF
@@ -1253,6 +1255,7 @@ cat > /etc/docker/daemon.json << EOF
   {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": [
+    "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com",
     "https://docker.1panel.live",
     "https://hub.mirrorify.net",
     "https://docker.m.daocloud.io",
@@ -1262,7 +1265,7 @@ cat > /etc/docker/daemon.json << EOF
     "https://dockerhub.icu",
     "https://docker.awsl9527.cn"
   ],
- "insecure-registries":["https://harbor.flyfish.com"],
+ "insecure-registries": ["http://192.168.224.188","hub.lib0.cn"],
   "max-concurrent-downloads": 10,
   "log-driver": "json-file",
   "log-level": "warn",
