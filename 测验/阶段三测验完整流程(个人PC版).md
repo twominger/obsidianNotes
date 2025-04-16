@@ -1367,6 +1367,11 @@ sed -i '/m03/c\172.17.10.98 m01' /etc/hosts
 sed -i '/n01/c\172.17.10.93 m01' /etc/hosts
 sed -i '/n02/c\172.17.10.81 m01' /etc/hosts
 
+# 互信配置
+ssh-keygen -t rsa
+
+
+
 
 ```
 - yum
