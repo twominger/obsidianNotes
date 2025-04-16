@@ -1211,6 +1211,7 @@ modprobe -- ip_vs_wrr
 modprobe -- ip_vs_sh
 modprobe -- nf_conntrack
 EOF
+cat /etc/sysconfig/modules/ipvs.modules
 
 chmod 755 /etc/sysconfig/modules/ipvs.modules 
 bash /etc/sysconfig/modules/ipvs.modules 
