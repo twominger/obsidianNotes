@@ -1186,6 +1186,7 @@ lsmod |grep conntrack
 # nf_defrag_ipv4         16384  1 nf_conntrack
 # libcrc32c              16384  4 nf_conntrack,nf_nat,nf_tables,xfs
 
+# sysctl -a | grep net.ipv4.ip_nonlocal_bind
 cat >>/etc/sysctl.conf <<EOF
 net.ipv4.ip_nonlocal_bind = 1
 EOF
@@ -1245,9 +1246,7 @@ yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ```
-```
- "registry-mirrors": [ "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com" ]
-```
+
 ```shell
 #修改cgroup
 cat > /etc/docker/daemon.json << EOF
@@ -1369,7 +1368,7 @@ sed -i '/n02/c\172.17.10.81 m01' /etc/hosts
 
 # 互信配置
 ssh-keygen -t rsa
-
+for i in m01 m02 m03 n01 n02;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
 
 
 
