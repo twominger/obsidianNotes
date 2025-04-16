@@ -1286,6 +1286,8 @@ yum -y install cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm
 
 sed -i 's|ExecStart=/usr/bin/cri-dockerd --container-runtime-endpoint fd://|ExecStart=/usr/bin/cri-dockerd --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.9 --container-runtime-endpoint fd://|' /usr/lib/systemd/system/cri-docker.service
 
+cat /usr/lib/systemd/system/cri-docker.service
+
 systemctl enable cri-docker --now
 ```
 ![[附件/cri-dockerd-0.3.6.20231018204925.877dc6a4-0.el8.x86_64.rpm]]
