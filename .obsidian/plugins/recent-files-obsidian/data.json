@@ -5,6 +5,10 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
     },
@@ -59,10 +63,6 @@
     {
       "basename": "未命名",
       "path": "测验/未命名.md"
-    },
-    {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "使用cephadm部署ceph集群",
