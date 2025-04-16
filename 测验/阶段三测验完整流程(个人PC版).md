@@ -1250,7 +1250,6 @@ yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 ```shell
 #修改cgroup
 cat > /etc/docker/daemon.json << EOF
-
   {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": [
@@ -1275,7 +1274,7 @@ cat > /etc/docker/daemon.json << EOF
   "data-root": "/var/lib/docker"
 }
 EOF
-
+cat /etc/docker/daemon.json
 # Step 4: 开启Docker服务
 systemctl enable docker --now
 ```
