@@ -1442,16 +1442,16 @@ openstack port set --allowed-address ip-address=172.17.10.188 5a622ba1-28ae-4be8
 openstack port set --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 查看绑定状态
-neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
+neutron port-show e2d3061d-7cab-4e4d-a46f-f448168b9077
 neutron port-show f88fe465-9295-45f2-b559-1f1ad241a225
 neutron port-show 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 
 # unset
 # 解除绑定
-openstack port unset --allowed-address ip-address=172.17.10.239 2bdf10a9-1939-4da8-b6c0-5c4ac929da46
-openstack port unset --allowed-address ip-address=172.17.10.239 76bc6aaa-04d8-402c-9f64-d0ecdf7e3dd4
-openstack port unset --allowed-address ip-address=172.17.10.239 baea1a1a-8c27-40af-953e-75673a36f984
+openstack port unset --allowed-address ip-address=172.17.10.188 e2d3061d-7cab-4e4d-a46f-f448168b9077
+openstack port unset --allowed-address ip-address=172.17.10.188 5a622ba1-28ae-4be8-81c7-9a4b9411b597
+openstack port unset --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 删除vip
 openstack port delete viptest
