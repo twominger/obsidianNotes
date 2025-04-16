@@ -1382,21 +1382,21 @@ openstack network list
 | 11fec470-7230-4061-99ab-09774a3216a6 | public  | 3a5563c0-4858-46ec-b457-e1c9671fbd83 |
 | 73cbc2f5-6948-4211-b92a-25274ab8ab10 | private | b50213cf-8832-42a4-aa51-be48eddbb334 |
 +--------------------------------------+---------+--------------------------------------+
-openstack port create --network 73cbc2f5-6948-4211-b92a-25274ab8ab10 --fixed-ip subnet=b50213cf-8832-42a4-aa51-be48eddbb334,ip-address=192.168.10.13 viptest1
+openstack port create --network 73cbc2f5-6948-4211-b92a-25274ab8ab10 --fixed-ip subnet=b50213cf-8832-42a4-aa51-be48eddbb334,ip-address=172.17.10.188 viptest1
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
-# m01 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
-# m02 f88fe465-9295-45f2-b559-1f1ad241a225
-# m03 47a176dd-0959-415c-a13e-2b6d9a8e456a
+# m01 e2d3061d-7cab-4e4d-a46f-f448168b9077
+# m02 5a622ba1-28ae-4be8-81c7-9a4b9411b597
+# m03 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
-# openstack port set --enable-port-security  0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
-# openstack port set --enable-port-security  f88fe465-9295-45f2-b559-1f1ad241a225
-# openstack port set --enable-port-security  47a176dd-0959-415c-a13e-2b6d9a8e456a
+# openstack port set --enable-port-security  e2d3061d-7cab-4e4d-a46f-f448168b9077
+# openstack port set --enable-port-security  5a622ba1-28ae-4be8-81c7-9a4b9411b597
+# openstack port set --enable-port-security  6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 绑定操作
-openstack port set --allowed-address ip-address=192.168.224.198 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
-openstack port set --allowed-address ip-address=192.168.224.198 f88fe465-9295-45f2-b559-1f1ad241a225
-openstack port set --allowed-address ip-address=192.168.224.198 47a176dd-0959-415c-a13e-2b6d9a8e456a
+openstack port set --allowed-address ip-address=192.168.224.198 e2d3061d-7cab-4e4d-a46f-f448168b9077
+openstack port set --allowed-address ip-address=192.168.224.198 5a622ba1-28ae-4be8-81c7-9a4b9411b597
+openstack port set --allowed-address ip-address=192.168.224.198 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 查看绑定状态
 neutron port-show 0e3e8ff2-056d-4f79-8c28-24a4e3b7ca24
