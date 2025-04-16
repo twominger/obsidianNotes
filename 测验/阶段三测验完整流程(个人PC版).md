@@ -1265,7 +1265,7 @@ cat > /etc/docker/daemon.json << EOF
     "https://dockerhub.icu",
     "https://docker.awsl9527.cn"
   ],
- "insecure-registries": ["http://192.168.224.188","hub.lib0.cn"],
+ "insecure-registries": ["hub.lib0.cn"],
   "max-concurrent-downloads": 10,
   "log-driver": "json-file",
   "log-level": "warn",
@@ -1303,7 +1303,7 @@ gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes-new/core/stable/v1.31/rpm/repodata/repomd.xml.key
 EOF
 
-yum clean all
+# yum clean all
 yum makecache
 # yum list kubelet --showduplicates | sort -r | grep 1.31
 yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
