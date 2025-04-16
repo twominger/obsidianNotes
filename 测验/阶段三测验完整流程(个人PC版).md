@@ -1175,6 +1175,7 @@ fs.nr_open=52706963
 net.ipv6.conf.all.disable_ipv6=1
 net.netfilter.nf_conntrack_max=2310720
 EOF
+cat /etc/sysctl.d/k8s_better.conf
 
 #开启网桥过滤模块
 modprobe br_netfilter
