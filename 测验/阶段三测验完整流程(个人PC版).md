@@ -1277,6 +1277,11 @@ yum makecache
 # yum list kubelet --showduplicates | sort -r | grep 1.31
 yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
 
+[root@m01 ~]# ls /var/lib/kubelet/
+[root@m01 ~]# cat /etc/sysconfig/kubelet 
+KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"
+
+
 systemctl enable kubelet --now
 # kubeadm config images list --kubernetes-version=v1.31.7
 
