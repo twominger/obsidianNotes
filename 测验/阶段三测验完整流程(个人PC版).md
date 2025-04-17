@@ -460,7 +460,8 @@ rbd ls volumes
         - 最低内存 2048
         - 镜像共享公有
 ```shell
-`glance image-create --name` `"centos7laste"` `--file CentOS-7-x86_64-GenericCloud-2009.qcow2 --disk-format qcow2 --container-format bare --visibility` `public` `--progress`
+openstack image create "centos8_4" --file /root/centos84.qcow2  --disk-format qcow2 --container-format bare --public
+# 1
 ```
 ## 密钥对
 - 可以使用主机 `ssh-keygen` 生成密钥对，在 `/root/.ssh/id_rsa` 和 `/root/.ssh/id_rsa_pub`, 拷贝 pub 公钥内容，私钥可以放在 ansible 主机中方便登陆
