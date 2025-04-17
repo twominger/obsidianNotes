@@ -1657,6 +1657,7 @@ backend k8s-master
   server m02  172.17.10.93:6443  check
   server m03  172.17.10.96:6443  check
 EOF
+cat /etc/haproxy/haproxy.cfg
   
 systemctl enable --now haproxy.service
 systemctl restart haproxy.service
@@ -1664,6 +1665,7 @@ systemctl restart haproxy.service
 sed -i '/#.*track_script {/ s/^#//' /etc/keepalived/keepalived.conf
 sed -i '/#.*chk_apiserver/ s/^#//' /etc/keepalived/keepalived.conf
 sed -i '/#.*}/ s/^#//' /etc/keepalived/keepalived.conf
+cat /etc/keepalived/keepalived.conf
 
 systemctl restart keepalived
 ```
