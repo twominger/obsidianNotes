@@ -970,6 +970,7 @@ vrrp_instance VI_1 {
 EOF
 
 # 三个master节点配置心跳检测脚本
+vim /etc/keepalived/check_apiserver.sh
 cat >/etc/keepalived/check_apiserver.sh <<EOF
 #!/bin/bash
 
