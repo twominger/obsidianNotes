@@ -252,7 +252,7 @@ rbd import /opt/k8s-clone.img  backup-pool/k8s-image-backup  -c /opt/ceph.conf -
 # 导出cinder密钥
 ceph auth get client.zhangmingming -o /etc/ceph/ceph.client.zhangmingming.keyring
 ```
-### openstack 操作
+### openstack 节点操作
 - 所有节点 (controller && compute1 && compute2)
 ```shell
 # 创建ceph配置文件目录
