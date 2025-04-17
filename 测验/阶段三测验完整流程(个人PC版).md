@@ -48,6 +48,9 @@
 ## 部署流程 (cs01 && cs02)
 ### 准备 vmware虚拟机
 - vmware 克隆两台虚拟机，除系统盘外再加 9 块硬盘，单张网卡改桥接，初始化
+```shell
+sed -i 's/8\.5\.2111/8\.4\.2105/g' /etc/yum.repos.d/CentOS-Base.repo
+```
 ### 安装必要组件
 ```shell
 yum -y install python3
@@ -65,11 +68,12 @@ pool ntp.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
-allow 192.168.224.0/24
 keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
+
+allow 192.168.224.0/24
 
 systemctl restart chronyd
 systemctl enable chronyd
