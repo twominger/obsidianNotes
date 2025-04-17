@@ -665,21 +665,21 @@ EOF
 ### mysql 对接 ceph （下）
 #### sql01 对接 ceph
 ```shell
-rbd map mysql-data --pool mysql-pool --id zhangmingming
+rbd map mysql-data1 --pool mysql-pool --id zhangmingming
 mkfs.ext4 /dev/rbd0
 mkdir -p /data/mysql
 mount /dev/rbd0 /data/mysql
 ```
 #### sql02 对接 ceph
 ```shell
-rbd map mysql-data --pool mysql-pool --id zhangmingming
+rbd map mysql-data2 --pool mysql-pool --id zhangmingming
 mkfs.ext4 /dev/rbd0
 mkdir -p /data/mysql
 mount /dev/rbd0 /data/mysql
 ```
 #### sql03 对接 ceph
 ```shell
-rbd map mysql-data --pool mysql-pool --id zhangmingming
+rbd map mysql-data3 --pool mysql-pool --id zhangmingming
 mkfs.ext4 /dev/rbd0
 mkdir -p /data/mysql
 mount /dev/rbd0 /data/mysql
