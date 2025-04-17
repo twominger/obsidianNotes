@@ -461,6 +461,7 @@ rbd ls volumes
         - 镜像共享公有
 ```shell
 openstack image create "centos8_4" --file /root/centos84.qcow2  --disk-format qcow2 --container-format bare --public
+openstack image create "cirros" --file /root/cirros-0.6.2-x86_64-disk.img  --disk-format qcow2 --container-format bare --public
 # 1
 ```
 ## 密钥对
