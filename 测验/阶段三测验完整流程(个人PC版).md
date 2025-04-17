@@ -800,11 +800,10 @@ set session sql_log_bin=0;
 CREATE USER 'admin'@'172.17.10.%' IDENTIFIED BY 'yutian';
 GRANT REPLICATION SLAVE ON *.* TO 'admin'@'172.17.10.%';
 flush privileges;
-set session sql_log_bin=0;
+set session sql_log_bin=1;
 
 # 配置MGR服务通道
 change master to master_user='admin',master_password='yutian'  for channel 'group_replication_recovery';
-# set global group_replication_allow_local_disjoint_gtids_join=ON;（8.0及以后被废弃）
 ```
 ### master 节点启动引导，进入 mysql 服务端
 ```shell
@@ -814,7 +813,7 @@ set global group_replication_bootstrap_group=OFF;
 ```
 ### slave 节点进入 mysql 服务端
 ```shell
-
+set global group_replication_allow_local_disjoint_gtids_join=ON;
 start group_replication;
 select * from performance_schema.replication_group_members;
 ```
