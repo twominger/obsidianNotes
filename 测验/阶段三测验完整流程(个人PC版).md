@@ -1445,17 +1445,17 @@ openstack port set --allowed-address ip-address=172.17.10.188 d436da9b-2114-4b5b
 # 查看绑定状态
 neutron port-show 67dadc16-6462-4527-ac67-957d4cc0a809
 neutron port-show e808e138-e777-4e4b-b88b-e463d4731c76
-neutron port-show 47a176dd-0959-415c-a13e-2b6d9a8e456a
+neutron port-show d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
 
 # unset
 # 解除绑定
 openstack port unset --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
 openstack port unset --allowed-address ip-address=172.17.10.188 e808e138-e777-4e4b-b88b-e463d4731c76
-openstack port unset --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
+openstack port unset --allowed-address ip-address=172.17.10.188 d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
 # 删除vip
-openstack port delete viptest
+openstack port delete viptest1
 
 ```
 
@@ -1485,7 +1485,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 172.17.10.87
+    mcast_src_ip 172.17.10.91
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -1493,10 +1493,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.87  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.91
     unicast_peer {
-      172.17.10.99    # 另外两个节点的ip
-      172.17.10.98
+      172.17.10.93
+      172.17.10.96
     }
     virtual_ipaddress {
         172.17.10.188
@@ -1525,7 +1525,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.99
+    mcast_src_ip 172.17.10.93
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -1533,10 +1533,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.99  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.93  # 三个节点此处填本机ip
     unicast_peer {
-      172.17.10.87    # 另外两个节点的ip
-      172.17.10.98
+      172.17.10.91    # 另外两个节点的ip
+      172.17.10.96
     }
     virtual_ipaddress {
         172.17.10.188
@@ -1565,7 +1565,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.98
+    mcast_src_ip 172.17.10.96
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1573,10 +1573,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.98  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.96  # 三个节点此处填本机ip
     unicast_peer {
-      172.17.10.99    # 另外两个节点的ip
-      172.17.10.87
+      172.17.10.91    # 另外两个节点的ip
+      172.17.10.93
     }
     virtual_ipaddress {
         172.17.10.188
