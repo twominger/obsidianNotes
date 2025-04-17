@@ -1361,6 +1361,7 @@ cat >>/etc/hosts <<EOF
 172.17.10.87 n01
 172.17.10.82 n02
 EOF
+cat /etc/hosts
 
 # 修改
 sed -i '/m01/c\172.17.10.91 m01' /etc/hosts
