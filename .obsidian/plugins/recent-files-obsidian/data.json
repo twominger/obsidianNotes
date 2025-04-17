@@ -5,6 +5,14 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "未命名 1.md"
+    },
+    {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
     },
@@ -41,20 +49,12 @@
       "path": "ansible/ansible入门.md"
     },
     {
-      "basename": "未命名 1",
-      "path": "未命名 1.md"
-    },
-    {
       "basename": "未命名",
       "path": "未命名.md"
     },
     {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
-    },
-    {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
