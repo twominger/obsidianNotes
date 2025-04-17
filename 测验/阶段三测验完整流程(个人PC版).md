@@ -289,11 +289,11 @@ virsh secret-list
 # 加入key
 # 将key值复制出来
 cat ceph.client.zhangmingming.keyring
-AQCvztRk8ssALhAAXshR1E+Y90HvIyxkhal1cQ==
+AQDVUwFoKGDzCRAAVymdFkLnJQ1ki5Gw405yEA==
 
 virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 
-virsh secret-set-value --secret 8915b264-0b88-4733-b20b-894ac6d2746a --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
+virsh secret-set-value --secret 8915b264-0b88-4733-b20b-894ac6d2746a --base64 AQDVUwFoKGDzCRAAVymdFkLnJQ1ki5Gw405yEA==
 ```
 - 计算节点 compute2
 ```shell
