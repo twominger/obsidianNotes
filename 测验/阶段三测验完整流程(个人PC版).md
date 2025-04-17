@@ -754,8 +754,7 @@ loose-group_replication_start_on_boot=off
 loose-group_replication_local_address='sql02:33061'
 loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
 loose-group_replication_bootstrap_group=off
-#loose-group_replication_single_primary_mode = off
-#loose-group_replication_enforce_update_everywhere_checks = on
+
 EOF
 ```
 - sql03
