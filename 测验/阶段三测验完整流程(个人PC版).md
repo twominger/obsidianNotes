@@ -622,8 +622,13 @@ yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 ```
 ### 安装（上）
 ```shell
-tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
-ln -s /usr/local/mysql-8.0.41-linux-glibc2.28-x86_64 /usr/local/mysql
+# tar -xvf ~/mysql-8.0.41-linux-glibc2.28-x86_64.tar.xz -C /usr/local/
+# ln -s /usr/local/mysql-8.0.41-linux-glibc2.28-x86_64 /usr/local/mysql
+tar -zxvf mysql-5.7.38-el7-x86_64.tar.gz -C /usr/local/
+ln -s /usr/local/mysql-5.7.38-el7-x86_64/ /usr/local/mysql
+yum -y install libaio perl-Data-Dumper ncurses-compat-libs
+
+
 echo "export PATH=/usr/local/mysql/bin:$PATH" >> /etc/profile
 source /etc/profile
 useradd -r -s /sbin/nologin mysql
