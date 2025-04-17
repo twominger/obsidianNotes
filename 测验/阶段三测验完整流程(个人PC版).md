@@ -441,9 +441,9 @@ rbd ls volumes
 
 | 名称                 | VCPU 数量 | 内存   | 根磁盘 |
 | ------------------ | ------- | ---- | --- |
-| mysql_flavor       | 1       | 2048 | 10  |
-| container_flavor01 | 1       | 2048 | 10  |
-| container_flavor02 | 2       | 4096 | 20  |
+| mysql_flavor       | 2       | 2048 | 10  |
+| container_flavor01 | 8       | 8192 | 10  |
+| container_flavor02 | 4       | 8192 | 20  |
 ## 镜像
 - 登陆 admin
 - 管理员/计算/实例类型
@@ -454,7 +454,9 @@ rbd ls volumes
         - 最小磁盘 10
         - 最低内存 2048
         - 镜像共享公有
-
+```shell
+`glance image-create --name` `"centos7laste"` `--file CentOS-7-x86_64-GenericCloud-2009.qcow2 --disk-format qcow2 --container-format bare --visibility` `public` `--progress`
+```
 ## 密钥对
 - 可以使用主机 `ssh-keygen` 生成密钥对，在 `/root/.ssh/id_rsa` 和 `/root/.ssh/id_rsa_pub`, 拷贝 pub 公钥内容，私钥可以放在 ansible 主机中方便登陆
 
