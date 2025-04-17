@@ -792,7 +792,7 @@ mysql -uroot -pyutian
 ### 安装插件
 ```shell
 show plugins; | grep group_replication
-install plugin group_replication soname 'group_replication.so'；
+install plugin group_replication soname 'group_replication.so';
 ```
 ### 配置账号
 ```shell
@@ -814,6 +814,7 @@ set global group_replication_bootstrap_group=OFF;
 ```
 ### slave 节点进入 mysql 服务端
 ```shell
+
 start group_replication;
 select * from performance_schema.replication_group_members;
 ```
