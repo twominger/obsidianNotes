@@ -1365,17 +1365,14 @@ cat /etc/hosts
 
 # 修改
 sed -i '/m01/c\172.17.10.91 m01' /etc/hosts
-sed -i '/m02/c\172.17.10.93 m01' /etc/hosts
-sed -i '/m03/c\172.17.10.96 m01' /etc/hosts
-sed -i '/n01/c\172.17.10.87 m01' /etc/hosts
-sed -i '/n02/c\172.17.10.82 m01' /etc/hosts
+sed -i '/m02/c\172.17.10.93 m02' /etc/hosts
+sed -i '/m03/c\172.17.10.96 m03' /etc/hosts
+sed -i '/n01/c\172.17.10.87 n01' /etc/hosts
+sed -i '/n02/c\172.17.10.82 n02' /etc/hosts
 
 # 互信配置
 ssh-keygen -t rsa
 for i in m01 m02 m03 n01 n02;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
-
-
-
 ```
 - yum
 - m01
