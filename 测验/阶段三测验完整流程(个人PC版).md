@@ -1389,6 +1389,8 @@ keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
+cat /etc/chrony.conf
+
 systemctl enable chronyd.service
 systemctl restart chronyd.service
 chronyc sources
@@ -1406,6 +1408,7 @@ keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
+cat /etc/chrony.conf
 systemctl enable chronyd.service
 systemctl restart chronyd.service
 chronyc sources
