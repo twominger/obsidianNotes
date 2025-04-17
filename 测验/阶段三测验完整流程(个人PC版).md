@@ -1427,15 +1427,12 @@ openstack network list
 | 73cbc2f5-6948-4211-b92a-25274ab8ab10 | private | b50213cf-8832-42a4-aa51-be48eddbb334 |
 +--------------------------------------+---------+--------------------------------------+
 openstack port create --network 73cbc2f5-6948-4211-b92a-25274ab8ab10 --fixed-ip subnet=b50213cf-8832-42a4-aa51-be48eddbb334,ip-address=172.17.10.188 viptest1
+
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
 # m01 67dadc16-6462-4527-ac67-957d4cc0a809
 # m02 e808e138-e777-4e4b-b88b-e463d4731c76
 # m03 d436da9b-2114-4b5b-98d9-a74be9b69fa9
-
-# openstack port set --enable-port-security  67dadc16-6462-4527-ac67-957d4cc0a809
-# openstack port set --enable-port-security  e808e138-e777-4e4b-b88b-e463d4731c76
-# openstack port set --enable-port-security  d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
 # 绑定操作
 openstack port set --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
@@ -1459,10 +1456,6 @@ openstack port delete viptest1
 
 ```
 
-> [!tip] 报错解决
-> [root@controller ~(keystone_admin)]# openstack port set --allowed-address ip-address=192.168.224.199 f88fe465-9295-45f2-b559-1f1ad241a225
-> ConflictException: 409: Client Error for url: http://192.168.224.100:9696/v2.0/ports/f88fe465-9295-45f2-b559-1f1ad241a225, Port Security must be enabled in order to have allowed address pairs on a port.
-> 
 ### keepalived+haproxy
 ```shell
 yum install -y keepalived haproxy 
@@ -1506,6 +1499,7 @@ vrrp_instance VI_1 {
 #    }
 }
 EOF
+cat /etc/keepalived/keepalived.conf
 
 # m02配置
 cat >/etc/keepalived/keepalived.conf <<EOF
@@ -1546,6 +1540,7 @@ vrrp_instance VI_1 {
 #    }
 }
 EOF
+cat /etc/keepalived/keepalived.conf
 
 # m03配置
 cat >/etc/keepalived/keepalived.conf <<EOF
@@ -1586,6 +1581,7 @@ vrrp_instance VI_1 {
 #    }
 }
 EOF
+cat /etc/keepalived/keepalived.conf
 
 # 三个master节点配置心跳检测脚本
 cat >/etc/keepalived/check_apiserver.sh <<EOF
@@ -1657,9 +1653,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server master1  172.17.10.87:6443  check
-  server master2  172.17.10.99:6443  check
-  server master3  172.17.10.98:6443  check
+  server m01  172.17.10.91:6443  check
+  server m02  172.17.10.93:6443  check
+  server m03  172.17.10.96:6443  check
 EOF
   
 systemctl enable --now haproxy.service
