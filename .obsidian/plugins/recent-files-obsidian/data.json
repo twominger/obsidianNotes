@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名 1",
+      "path": "未命名 1.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "虚拟化技术概述",
       "path": "Docker/虚拟化技术概述.md"
-    },
-    {
-      "basename": "namespace",
-      "path": "Docker/namespace.md"
     }
   ],
   "omittedPaths": [],
