@@ -76,7 +76,6 @@ EOF
 allow 192.168.224.0/24
 
 systemctl restart chronyd
-systemctl enable chronyd
 chronyc sources
 ```
 - cs01\cs02
