@@ -1527,9 +1527,9 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.93  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.93
     unicast_peer {
-      172.17.10.91    # 另外两个节点的ip
+      172.17.10.91
       172.17.10.96
     }
     virtual_ipaddress {
@@ -1568,9 +1568,9 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.96  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.96
     unicast_peer {
-      172.17.10.91    # 另外两个节点的ip
+      172.17.10.91
       172.17.10.93
     }
     virtual_ipaddress {
