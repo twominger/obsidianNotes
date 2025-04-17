@@ -73,7 +73,7 @@ leapsectz right/UTC
 logdir /var/log/chrony
 EOF
 
-allow 192.168.224.0/24
+allow 192.168.10.0/24
 
 systemctl restart chronyd
 chronyc sources
@@ -110,9 +110,9 @@ chmod +x ./cephadm
 ### 引导 ceph 集群
 ```shell
 # cs01
-./cephadm bootstrap --mon-ip 172.18.0.10 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.10.61 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 # cs02
-./cephadm bootstrap --mon-ip 172.18.0.20 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.10.62 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 ```
 ### 安装 ceph 的客户端软件
 ```shell
@@ -258,8 +258,8 @@ ceph auth get client.zhangmingming -o /etc/ceph/ceph.client.zhangmingming.keyrin
 # 创建ceph配置文件目录
 mkdir /etc/ceph/
 # 拷贝密钥和配置文件
-scp root@192.168.224.111:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
+scp root@192.168.10.61:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@192.168.10.61:/etc/ceph/ceph.conf /etc/ceph/
 ```
 - 计算节点 compute1
 ```shell
