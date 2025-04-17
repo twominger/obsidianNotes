@@ -1399,7 +1399,7 @@ chronyc sources
 ```shell
 yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server m01 iburst
+server ntp.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
@@ -1429,29 +1429,29 @@ openstack network list
 openstack port create --network 73cbc2f5-6948-4211-b92a-25274ab8ab10 --fixed-ip subnet=b50213cf-8832-42a4-aa51-be48eddbb334,ip-address=172.17.10.188 viptest1
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
-# m01 e2d3061d-7cab-4e4d-a46f-f448168b9077
-# m02 5a622ba1-28ae-4be8-81c7-9a4b9411b597
-# m03 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
+# m01 67dadc16-6462-4527-ac67-957d4cc0a809
+# m02 e808e138-e777-4e4b-b88b-e463d4731c76
+# m03 d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
-# openstack port set --enable-port-security  e2d3061d-7cab-4e4d-a46f-f448168b9077
-# openstack port set --enable-port-security  5a622ba1-28ae-4be8-81c7-9a4b9411b597
-# openstack port set --enable-port-security  6bb5c792-41be-4aa8-b5c2-2b93e82169cb
+# openstack port set --enable-port-security  67dadc16-6462-4527-ac67-957d4cc0a809
+# openstack port set --enable-port-security  e808e138-e777-4e4b-b88b-e463d4731c76
+# openstack port set --enable-port-security  d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
 # 绑定操作
-openstack port set --allowed-address ip-address=172.17.10.188 e2d3061d-7cab-4e4d-a46f-f448168b9077
-openstack port set --allowed-address ip-address=172.17.10.188 5a622ba1-28ae-4be8-81c7-9a4b9411b597
-openstack port set --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
+openstack port set --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
+openstack port set --allowed-address ip-address=172.17.10.188 e808e138-e777-4e4b-b88b-e463d4731c76
+openstack port set --allowed-address ip-address=172.17.10.188 d436da9b-2114-4b5b-98d9-a74be9b69fa9
 
 # 查看绑定状态
-neutron port-show e2d3061d-7cab-4e4d-a46f-f448168b9077
-neutron port-show f88fe465-9295-45f2-b559-1f1ad241a225
+neutron port-show 67dadc16-6462-4527-ac67-957d4cc0a809
+neutron port-show e808e138-e777-4e4b-b88b-e463d4731c76
 neutron port-show 47a176dd-0959-415c-a13e-2b6d9a8e456a
 
 
 # unset
 # 解除绑定
-openstack port unset --allowed-address ip-address=172.17.10.188 e2d3061d-7cab-4e4d-a46f-f448168b9077
-openstack port unset --allowed-address ip-address=172.17.10.188 5a622ba1-28ae-4be8-81c7-9a4b9411b597
+openstack port unset --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
+openstack port unset --allowed-address ip-address=172.17.10.188 e808e138-e777-4e4b-b88b-e463d4731c76
 openstack port unset --allowed-address ip-address=172.17.10.188 6bb5c792-41be-4aa8-b5c2-2b93e82169cb
 
 # 删除vip
