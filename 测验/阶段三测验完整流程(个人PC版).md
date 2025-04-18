@@ -638,8 +638,8 @@ docker images
 ### mysql 对接 ceph （上）
 ```shell
 mkdir /etc/ceph
-scp root@192.168.224.111:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.224.111:/etc/ceph/ceph.conf /etc/ceph/
+scp root@192.168.31.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@192.168.31.11:/etc/ceph/ceph.conf /etc/ceph/
 # sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 ```
