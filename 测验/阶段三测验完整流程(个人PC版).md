@@ -1688,9 +1688,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server m01  172.17.10.25:6443  check
-  server m02  172.17.10.18:6443  check
-  server m03  172.17.10.14:6443  check
+  server m01  172.17.10.29:6443  check
+  server m02  172.17.10.21:6443  check
+  server m03  172.17.10.25:6443  check
 EOF
 cat /etc/haproxy/haproxy.cfg
   
