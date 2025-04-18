@@ -1410,7 +1410,7 @@ logdir /var/log/chrony
 EOF
 cat /etc/chrony.conf
 
-systemctl enable chronyd.service
+# systemctl enable chronyd.service
 systemctl restart chronyd.service
 chronyc sources
 ```
