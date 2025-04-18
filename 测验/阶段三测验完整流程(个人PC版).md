@@ -588,7 +588,7 @@ EOF
 ```shell
 cat >/etc/docker/daemon.json <<EOF
 {
-    "registry-mirrors": [ "https://e9ede121ca7d4163b95042f86b165fa4.mirror.swr.myhuaweicloud.com" ],
+    "registry-mirrors": [ "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com" ],
     "insecure-registries": ["http://172.17.10.20","hub.lib0.cn"]
 }
 EOF
