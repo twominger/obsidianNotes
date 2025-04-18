@@ -61,6 +61,12 @@ yum -y install podman
 原则上 ceph 集群以及数据库不能访问外网，所以只能同步内部时间服务器，这里我们将 openstack 的控制节点作为时间服务器，其他计算节点和 ceph 都同步它。
 - controller
 ```shell
+
+cat >>/etc/hosts <<EOF
+192.168.31.11 ceph1
+192.168.31.12 ceph2
+EOF
+
 timedatectl set-timezone Asia/Shanghai
 
 cat >/etc/chrony.conf <<EOF
@@ -69,6 +75,7 @@ driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
 keyfile /etc/chrony.keys
+allow 192.168.31.0/24
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
