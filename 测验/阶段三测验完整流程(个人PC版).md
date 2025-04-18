@@ -1841,9 +1841,9 @@ cd /etc/kubernetes/pki/
 rm -rf apiserver*
 rm -rf etcd/peer.*
 rm -rf etcd/server.*
- kubeadm join 172.17.10.239:16443 --token hd6c8j.epyud7axwrih66cy \
---discovery-token-ca-cert-hash sha256:31c0d825967e7d47ed94dd73728c19ee6180d4a1a8fe2522dbd6ba3dffd7e8c0 \
---control-plane \
+kubeadm join 172.17.10.239:16443 --token ugidcg.s94bi106k5sr53b2 \
+    --discovery-token-ca-cert-hash sha256:e516ad5953e383522bf3b130d02e36eb2956b750af4ddde84e5cfb6e898193fc \
+    --control-plane \
     --cri-socket unix:///var/run/cri-dockerd.sock
 # 注意上面最后要加一行    
 mkdir -p $HOME/.kube
@@ -1870,8 +1870,8 @@ kubeadm join 172.17.10.239:16443 --token asqyd2.fgogfszkdicod191 --discovery-tok
 ```
 ### n01\n02 加入集群
 ```shell
-kubeadm join 172.17.10.239:16443 --token hd6c8j.epyud7axwrih66cy \
-    --discovery-token-ca-cert-hash sha256:31c0d825967e7d47ed94dd73728c19ee6180d4a1a8fe2522dbd6ba3dffd7e8c0 \
+kubeadm join 172.17.10.239:16443 --token ugidcg.s94bi106k5sr53b2 \
+    --discovery-token-ca-cert-hash sha256:e516ad5953e383522bf3b130d02e36eb2956b750af4ddde84e5cfb6e898193fc \
     --cri-socket unix:///var/run/cri-dockerd.sock
 # 注意上面最后要加一行    
 ```
