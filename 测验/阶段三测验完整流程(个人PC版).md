@@ -732,9 +732,9 @@ mysqladmin -u root password "yutian"
 ### 配置 hosts 解析
 ```shell
 cat >>/etc/hosts <<EOF
-172.17.10.86 sql01
-172.17.10.98 sql02
-172.17.10.90 sql03
+172.17.10.27 sql01
+172.17.10.12 sql02
+172.17.10.26 sql03
 EOF
 cat >>/etc/hosts <<EOF
 192.168.224.41 mysql01
