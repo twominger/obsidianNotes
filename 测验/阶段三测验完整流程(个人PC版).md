@@ -372,7 +372,7 @@ systemctl restart openstack-cinder-scheduler.service openstack-cinder-volume.ser
 # 创建卷测试（可选）
 openstack volume create ceph01 --type ceph --size 1
 # 查看volumes存储池是否存在卷
-rbd ls volumes
+rbd -p cinder-pool ls volumes --id zhangmingming
 ```
 
 
