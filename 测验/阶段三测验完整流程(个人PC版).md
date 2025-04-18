@@ -1857,7 +1857,7 @@ scp -rp /etc/kubernetes/admin.conf root@m03:/etc/kubernetes/
 
 ```
 ```
-kubeadm join 172.17.10.239:16443 --token 7q43vj.u3ba2wow3hel1fgq --discovery-token-ca-cert-hash sha256:636e768bab71f9aa9720c06589e34c49b68363b12c32a3a72a60392999c3abbb --control-plane --cri-socket unix:///var/run/cri-dockerd.sock
+kubeadm join 172.17.10.239:16443 --token asqyd2.fgogfszkdicod191 --discovery-token-ca-cert-hash sha256:636e768bab71f9aa9720c06589e34c49b68363b12c32a3a72a60392999c3abbb --control-plane --cri-socket unix:///var/run/cri-dockerd.sock
 
 --certificate-key c3df5829279e02489c5c7c650724b0bdbb2124130624da62bac3e5d49daf04bd --ignore-preflight-errors=Swap
 ```
