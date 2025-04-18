@@ -1403,7 +1403,6 @@ server ntp.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
-allow 172.17.10.0/24
 local stratum 10
 keyfile /etc/chrony.keys
 leapsectz right/UTC
