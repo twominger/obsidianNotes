@@ -1439,36 +1439,37 @@ https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 source keystonerc_admin
 # 查看网络ID和子网ID并记录
 openstack network list
-+--------------------------------------+---------+--------------------------------------+
-| ID                                   | Name    | Subnets                              |
-+--------------------------------------+---------+--------------------------------------+
-| 11fec470-7230-4061-99ab-09774a3216a6 | public  | 3a5563c0-4858-46ec-b457-e1c9671fbd83 |
-| 73cbc2f5-6948-4211-b92a-25274ab8ab10 | private | b50213cf-8832-42a4-aa51-be48eddbb334 |
-+--------------------------------------+---------+--------------------------------------+
-openstack port create --network 73cbc2f5-6948-4211-b92a-25274ab8ab10 --fixed-ip subnet=b50213cf-8832-42a4-aa51-be48eddbb334,ip-address=172.17.10.188 viptest1
++--------------------------------------+----------+--------------------------------------+
+| ID                                   | Name     | Subnets                              |
++--------------------------------------+----------+--------------------------------------+
+| 43741b44-77fe-4811-9aa6-2a627c17172e | public   | b1c905e0-abd4-4daa-8fa4-f5db44f1a6a0 |
+| e391dc12-5df6-460e-b18c-44b46f48125a | parivate | 746f3d9e-97a0-4753-a815-2e6da9a3a3aa |
++--------------------------------------+----------+--------------------------------------+
+
+openstack port create --network e391dc12-5df6-460e-b18c-44b46f48125a --fixed-ip subnet=746f3d9e-97a0-4753-a815-2e6da9a3a3aa,ip-address=172.17.10.239 viptest1
 
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
-# m01 67dadc16-6462-4527-ac67-957d4cc0a809
-# m02 e808e138-e777-4e4b-b88b-e463d4731c76
-# m03 d436da9b-2114-4b5b-98d9-a74be9b69fa9
+# m01 058b8365-004b-4a91-bb2f-4ae11a98e30b
+# m02 d6236245-0724-4877-8cb8-0d3e5d1869dd
+# m03 a64e408d-43ac-4587-b451-01c280af4f6c
 
 # 绑定操作
-openstack port set --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
-openstack port set --allowed-address ip-address=172.17.10.188 e808e138-e777-4e4b-b88b-e463d4731c76
-openstack port set --allowed-address ip-address=172.17.10.188 d436da9b-2114-4b5b-98d9-a74be9b69fa9
+openstack port set --allowed-address ip-address=172.17.10.239 058b8365-004b-4a91-bb2f-4ae11a98e30b
+openstack port set --allowed-address ip-address=172.17.10.239 d6236245-0724-4877-8cb8-0d3e5d1869dd
+openstack port set --allowed-address ip-address=172.17.10.239 a64e408d-43ac-4587-b451-01c280af4f6c
 
 # 查看绑定状态
-neutron port-show 67dadc16-6462-4527-ac67-957d4cc0a809
-neutron port-show e808e138-e777-4e4b-b88b-e463d4731c76
-neutron port-show d436da9b-2114-4b5b-98d9-a74be9b69fa9
+neutron port-show 058b8365-004b-4a91-bb2f-4ae11a98e30b
+neutron port-show d6236245-0724-4877-8cb8-0d3e5d1869dd
+neutron port-show a64e408d-43ac-4587-b451-01c280af4f6c
 
 
 # unset
 # 解除绑定
-openstack port unset --allowed-address ip-address=172.17.10.188 67dadc16-6462-4527-ac67-957d4cc0a809
-openstack port unset --allowed-address ip-address=172.17.10.188 e808e138-e777-4e4b-b88b-e463d4731c76
-openstack port unset --allowed-address ip-address=172.17.10.188 d436da9b-2114-4b5b-98d9-a74be9b69fa9
+openstack port unset --allowed-address ip-address=172.17.10.188 058b8365-004b-4a91-bb2f-4ae11a98e30b
+openstack port unset --allowed-address ip-address=172.17.10.188 d6236245-0724-4877-8cb8-0d3e5d1869dd
+openstack port unset --allowed-address ip-address=172.17.10.188 a64e408d-43ac-4587-b451-01c280af4f6c
 
 # 删除vip
 openstack port delete viptest1
@@ -1497,7 +1498,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 172.17.10.91
+    mcast_src_ip 172.17.10.25
     virtual_router_id 51
     priority 102
     advert_int 2
