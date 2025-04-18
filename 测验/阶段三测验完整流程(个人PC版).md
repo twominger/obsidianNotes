@@ -1835,6 +1835,12 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+```
+ kubeadm join 172.17.10.239:16443 --token qxa7xp.qpw3o4kdj11nsso7 \
+--discovery-token-ca-cert-hash sha256:636e768bab71f9aa9720c06589e34c49b68363b12c32a3a72a60392999c3abbb \
+--control-plane \
+--cri-socket unix:///var/run/cri-dockerd.sock
+```
 ### n01\n02 加入集群
 ```shell
 kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
