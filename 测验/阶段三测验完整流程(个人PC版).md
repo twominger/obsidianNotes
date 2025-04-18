@@ -1467,17 +1467,17 @@ openstack port create --network df9b2572-d204-497e-9b78-c02f7a03c147 --fixed-ip 
 openstack port list
 # m01 03345cb8-18d8-4cf7-9821-49ceff38987f
 # m02 0a167039-2ab8-4f66-9d34-03d6bb41b616
-# m03 a64e408d-43ac-4587-b451-01c280af4f6c
+# m03 507bf286-4e6b-4484-b688-b9a6b9705896
 
 # 绑定操作
-openstack port set --allowed-address ip-address=172.17.10.239 058b8365-004b-4a91-bb2f-4ae11a98e30b
-openstack port set --allowed-address ip-address=172.17.10.239 d6236245-0724-4877-8cb8-0d3e5d1869dd
-openstack port set --allowed-address ip-address=172.17.10.239 a64e408d-43ac-4587-b451-01c280af4f6c
+openstack port set --allowed-address ip-address=172.17.10.239 03345cb8-18d8-4cf7-9821-49ceff38987f
+openstack port set --allowed-address ip-address=172.17.10.239 0a167039-2ab8-4f66-9d34-03d6bb41b616
+openstack port set --allowed-address ip-address=172.17.10.239 507bf286-4e6b-4484-b688-b9a6b9705896
 
 # 查看绑定状态
-neutron port-show 058b8365-004b-4a91-bb2f-4ae11a98e30b
-neutron port-show d6236245-0724-4877-8cb8-0d3e5d1869dd
-neutron port-show a64e408d-43ac-4587-b451-01c280af4f6c
+neutron port-show 03345cb8-18d8-4cf7-9821-49ceff38987f
+neutron port-show 0a167039-2ab8-4f66-9d34-03d6bb41b616
+neutron port-show 507bf286-4e6b-4484-b688-b9a6b9705896
 
 
 # unset
