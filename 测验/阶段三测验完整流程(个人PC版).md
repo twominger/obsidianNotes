@@ -90,7 +90,7 @@ chronyc sources
 timedatectl set-timezone Asia/Shanghai
 
 cat >/etc/chrony.conf <<EOF
-pool 192.168.224.100 iburst
+pool ceph1 iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
@@ -100,7 +100,6 @@ logdir /var/log/chrony
 EOF
 
 systemctl restart chronyd
-systemctl enable chronyd
 chronyc sources
 ```
 ### 下载 cephadm 脚本并安装
@@ -117,9 +116,9 @@ chmod +x ./cephadm
 ### 引导 ceph 集群
 ```shell
 # cs01
-./cephadm bootstrap --mon-ip 192.168.10.61 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.31.11 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 # cs02
-./cephadm bootstrap --mon-ip 192.168.10.62 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.31.12 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 ```
 ### 安装 ceph 的客户端软件
 ```shell
