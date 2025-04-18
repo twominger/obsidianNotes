@@ -1848,6 +1848,12 @@ kubeadm join 192.168.224.88:16443 --token smu1nr.m5mp5c7igizdetgl \
     --cri-socket unix:///var/run/cri-dockerd.sock
 # 注意上面最后要加一行    
 ```
+```
+kubeadm join 172.17.10.239:16443 --token qxa7xp.qpw3o4kdj11nsso7 \
+    --discovery-token-ca-cert-hash sha256:636e768bab71f9aa9720c06589e34c49b68363b12c32a3a72a60392999c3abbb \
+    --cri-socket unix:///var/run/cri-dockerd.sock
+
+```
 ## 安装 calico 网络组件
 ```shell
 wget https://docs.tigera.io/archive/v3.25/manifests/calico.yaml
