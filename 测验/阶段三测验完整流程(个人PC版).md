@@ -368,6 +368,14 @@ openstack volume create ceph01 --type ceph --size 1
 # 查看volumes存储池是否存在卷
 rbd ls volumes
 ```
+
+
+```shell
+openstack volume list --project EXAM_project
+openstack server list --project EXAM_project
+rbd status -p cinder-pool volume-22c8ef28-ba85-4119-834a-0faf562b733b
+rbd -p cinder-pool ls
+```
 # openstack 基本步骤（web 界面）
 (没有提到但是有，则为默认)
 ## 身份管理
