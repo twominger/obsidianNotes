@@ -299,7 +299,7 @@ AQDVUwFoKGDzCRAAVymdFkLnJQ1ki5Gw405yEA==
 
 virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 
-virsh secret-set-value --secret 8915b264-0b88-4733-b20b-894ac6d2746a --base64 
+virsh secret-set-value --secret 109e5a71-e6c6-400b-8982-8130730d8f1e --base64 AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
 ```
 - 计算节点 compute2
 ```shell
