@@ -1506,13 +1506,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.91
+    unicast_src_ip 172.17.10.25
     unicast_peer {
-      172.17.10.93
-      172.17.10.96
+      172.17.10.18
+      172.17.10.14
     }
     virtual_ipaddress {
-        172.17.10.188
+        172.17.10.239
     }
 #    track_script {
 #       chk_apiserver
@@ -1539,7 +1539,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.93
+    mcast_src_ip 172.17.10.18
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -1547,13 +1547,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.93
+    unicast_src_ip 172.17.10.18
     unicast_peer {
-      172.17.10.91
-      172.17.10.96
+      172.17.10.25
+      172.17.10.14
     }
     virtual_ipaddress {
-        172.17.10.188
+        172.17.10.239
     }
 #    track_script {
 #       chk_apiserver
@@ -1580,7 +1580,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.96
+    mcast_src_ip 172.17.10.14
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1588,13 +1588,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.96
+    unicast_src_ip 172.17.10.14
     unicast_peer {
-      172.17.10.91
-      172.17.10.93
+      172.17.10.25
+      172.17.10.18
     }
     virtual_ipaddress {
-        172.17.10.188
+        172.17.10.239
     }
 #    track_script {
 #       chk_apiserver
@@ -1673,9 +1673,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server m01  172.17.10.91:6443  check
-  server m02  172.17.10.93:6443  check
-  server m03  172.17.10.96:6443  check
+  server m01  172.17.10.25:6443  check
+  server m02  172.17.10.18:6443  check
+  server m03  172.17.10.14:6443  check
 EOF
 cat /etc/haproxy/haproxy.cfg
   
