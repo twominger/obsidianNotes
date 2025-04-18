@@ -890,8 +890,8 @@ vrrp_script chk_apiserver {
 }
 vrrp_instance VI_1 {
     state MASTER
-    interface ens3     # 网卡名
-    mcast_src_ip 172.17.10.27   # 本机ip
+    interface ens3
+    mcast_src_ip 172.17.10.27
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -899,9 +899,9 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.27  # 三个节点此处填本机ip
+    unicast_src_ip 172.17.10.27
     unicast_peer {
-      172.17.10.12    # 另外两个节点的ip
+      172.17.10.12
       172.17.10.26
     }
     virtual_ipaddress {
@@ -1065,9 +1065,9 @@ backend sql-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server sql01  172.17.10.86:3306  check
-  server sql02  172.17.10.98:3306  check
-  server sql03  172.17.10.90:3306  check
+  server sql01  172.17.10.27:3306  check
+  server sql02  172.17.10.12:3306  check
+  server sql03  172.17.10.26:3306  check
 EOF
   
 systemctl enable --now haproxy.service
