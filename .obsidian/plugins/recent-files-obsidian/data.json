@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "毕设",
+      "path": "毕设/毕设.md"
+    },
+    {
+      "basename": "hdc工具使用",
+      "path": "毕设/hdc工具使用.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "20250210-k8s环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
-    },
-    {
-      "basename": "20250113-Docker编排和Dockerfile",
-      "path": "10.课件/OpenStack课堂笔记-田/20250113-Docker编排和Dockerfile.md"
-    },
-    {
-      "basename": "20250111-Docker介绍与镜像管理",
-      "path": "10.课件/OpenStack课堂笔记-田/20250111-Docker介绍与镜像管理.md"
     }
   ],
   "omittedPaths": [],
