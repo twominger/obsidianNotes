@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "20250107-openstack组件keystone",
+      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -25,10 +33,6 @@
       "path": "未命名 1.md"
     },
     {
-      "basename": "20250107-openstack组件keystone",
-      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
-    },
-    {
       "basename": "未命名",
       "path": "未命名.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "20250102-openstack架构及环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
     },
     {
       "basename": "局域网yum",
