@@ -2124,8 +2124,8 @@ metadata:
   name: csi-cephfs-secret
   namespace: default
 stringData:
-  userID: zhangmingming
-  userKey: AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
+  adminID: zhangmingming
+  adminKey: AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
 EOF
 ```
 可在 ceph 集群中查看
