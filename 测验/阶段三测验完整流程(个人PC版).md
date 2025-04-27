@@ -871,7 +871,7 @@ neutron port-show fd9a34b1-259b-47a3-9805-55ebd330da38
 ```
 ### keepalived+haproxy
 ```shell
-yum install -y keepalived haproxy 
+yum install -y keepalived
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
 # sql01配置
 cat >/etc/keepalived/keepalived.conf <<EOF
