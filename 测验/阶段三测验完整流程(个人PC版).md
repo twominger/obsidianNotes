@@ -732,9 +732,9 @@ mysqladmin -u root password "yutian"
 ### 配置 hosts 解析
 ```shell
 cat >>/etc/hosts <<EOF
-172.17.10.27 sql01
-172.17.10.12 sql02
-172.17.10.26 sql03
+172.17.10.20 sql01
+172.17.10.28 sql02
+172.17.10.24 sql03
 EOF
 cat >>/etc/hosts <<EOF
 192.168.224.41 mysql01
@@ -820,13 +820,13 @@ install plugin group_replication soname 'group_replication.so';
 ### 配置账号
 ```shell
 set session sql_log_bin=0;
-CREATE USER 'admin'@'172.17.10.%' IDENTIFIED BY 'yutian';
-GRANT REPLICATION SLAVE ON *.* TO 'admin'@'172.17.10.%';
+CREATE USER 'epel'@'172.17.10.%' IDENTIFIED BY 'yutian';
+GRANT REPLICATION SLAVE ON *.* TO 'epel'@'172.17.10.%';
 flush privileges;
 set session sql_log_bin=1;
 
 # 配置MGR服务通道
-change master to master_user='admin',master_password='yutian'  for channel 'group_replication_recovery';
+change master to master_user='epel',master_password='yutian'  for channel 'group_replication_recovery';
 ```
 ### master 节点启动引导，进入 mysql 服务端
 ```shell
