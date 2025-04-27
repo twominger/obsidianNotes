@@ -2239,6 +2239,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: redis
+  namespace: discuz
   labels:
     name: redis
 spec:
