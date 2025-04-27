@@ -2210,6 +2210,12 @@ PersistentVolumeClaim 是用户对抽象存储资源的请求。然后，Persis
 cat >ceph-cephfs-pvc.yaml <<EOF
 ---
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: discuz
+
+---
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: test-pvc
@@ -2224,7 +2230,7 @@ spec:
 EOF
 
 
-kubectl apply -f raw-block-pvc.yaml
+kubectl apply -f ceph-cephfs-pvc.yaml
 ```
 将上述 PersistentVolumeClaim 作为原始块设备绑定到 Pod 资源的演示和示例如下：
 ```shell
