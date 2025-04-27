@@ -2061,7 +2061,7 @@ data:
   config.json: |-
     [
       {
-        "clusterID": "7b7fc60e-fff8-11ef-94d3-000c29c2d345",
+        "clusterID": "7b1076a2-1c5c-11f0-9b2e-000c2966e671",
         "monitors": [
           "172.16.1.91:6789"
         ],
