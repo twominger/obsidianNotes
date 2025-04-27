@@ -2121,7 +2121,7 @@ cat >csi-cephfs-secret.yaml <<EOF
 apiVersion: v1
 kind: Secret
 metadata:
-  name: csi-rbd-secret
+  name: csi-cephfs-secret
   namespace: default
 stringData:
   userID: zhangmingming
