@@ -15,6 +15,12 @@ export https_proxy=192.168.31.2:7897
 ```shell
 unset http_proxy
 unset https_proxy
+
+"proxies": {
+  "http-proxy": "192.168.31.2:7897",
+  "https-proxy": "192.168.31.2:7897"
+},
+
 ```
 openstack实例需要有浮动ip
 # 部署单节点ceph(两台)
