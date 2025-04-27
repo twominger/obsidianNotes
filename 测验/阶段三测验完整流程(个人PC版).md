@@ -2221,7 +2221,7 @@ metadata:
   name: test-pvc
   namespace: discuz
 spec:
-  storageClassName: csi-cephfs-sc  # StorageClass名称
+  storageClassName: csi-cephfs-sc
   accessModes:
     - ReadWriteOnce
   resources:
