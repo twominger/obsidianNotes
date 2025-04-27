@@ -2063,7 +2063,7 @@ data:
       {
         "clusterID": "7b1076a2-1c5c-11f0-9b2e-000c2966e671",
         "monitors": [
-          "172.16.1.91:6789"
+          "192.168.31.11:6789"
         ],
         "cephFS": {
           "subvolumeGroup": "k8s-storageclass-volumes"
@@ -2124,8 +2124,8 @@ metadata:
   name: csi-rbd-secret
   namespace: default
 stringData:
-  userID: kubernetes
-  userKey: AQDJ4NtnRcjgDxAAGiK1ZsBJJIJbt/ufphubnA==
+  userID: zhangmingming
+  userKey: AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
 EOF
 ```
 可在 ceph 集群中查看
