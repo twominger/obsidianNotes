@@ -867,7 +867,7 @@ openstack port set --allowed-address ip-address=172.17.10.238 6808f53b-fa80-48da
 openstack port set --allowed-address ip-address=172.17.10.238 324a12cc-100f-4dc9-8753-cad4189f635e
 
 # 查看绑定状态
-neutron port-show 8380bf34-94c0-46bc-8fad-ef59b9268920
+neutron port-show fd9a34b1-259b-47a3-9805-55ebd330da38
 ```
 ### keepalived+haproxy
 ```shell
