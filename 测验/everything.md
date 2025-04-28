@@ -980,7 +980,7 @@ EOF
 封装、测试
 ```shell
 docker build -t nginx-discuz:v1 .
-docker run -d -p 80:80 --add-host mysql:192.168.44.41 nginx-discuz:v1
+docker run -d -p 8080:80 --add-host mysql:192.168.44.41 nginx-discuz:v1
 ```
 推送（以阿里为例）
 ```shell
