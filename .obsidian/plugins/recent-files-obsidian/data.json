@@ -5,8 +5,56 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "测验/未命名.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
       "basename": "everything",
       "path": "测验/everything.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
+      "basename": "毕设",
+      "path": "毕设/毕设.md"
+    },
+    {
+      "basename": "深度学习模型",
+      "path": "毕设/深度学习模型.md"
+    },
+    {
+      "basename": "TMP",
+      "path": "97.temp/TMP.md"
     },
     {
       "basename": "rbd对接k8s",
@@ -17,32 +65,8 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
     },
     {
-      "basename": "未命名 2",
-      "path": "未命名 2.md"
-    },
-    {
-      "basename": "毕设",
-      "path": "毕设/毕设.md"
-    },
-    {
       "basename": "hdc工具使用",
       "path": "毕设/hdc工具使用.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "未命名 1.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
-      "basename": "err",
-      "path": "测验/err.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.md"
     },
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
@@ -55,10 +79,6 @@
     {
       "basename": "20250102-openstack架构及环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
     },
     {
       "basename": "HarmonyOS概述",
@@ -93,36 +113,8 @@
       "path": "ansible/ansible入门.md"
     },
     {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
-    },
-    {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "问题",
-      "path": "测验/问题.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "测验/k8s.md"
     },
     {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
@@ -143,10 +135,6 @@
     {
       "basename": "ceph-csi",
       "path": "ceph/实验/ceph-csi.md"
-    },
-    {
-      "basename": "部署单节点ceph",
-      "path": "测验/部署单节点ceph.md"
     },
     {
       "basename": "术语",
