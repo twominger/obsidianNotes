@@ -637,10 +637,14 @@ docker push 192.168.224.188/discuz/nginx:v1
 - 拉取镜像 (其他主机)
 
 ```shell
+cat > /etc/hosts <<EOF
+192.168.200.25 hub.lib0.cn
+EOF
+
 cat >/etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": [ "https://e9ede121ca7d4163b95042f86b165fa4.mirror.swr.myhuaweicloud.com" ],
-    "insecure-registries": ["http://192.168.224.188","hub.lib0.cn"]
+    "insecure-registries": ["hub.lib0.cn"]
 }
 EOF
 
@@ -757,14 +761,9 @@ mysqladmin -u root password "yutian"
 ### 配置 hosts 解析
 ```shell
 cat >>/etc/hosts <<EOF
-172.17.10.20 sql01
-172.17.10.28 sql02
-172.17.10.24 sql03
-EOF
-cat >>/etc/hosts <<EOF
-192.168.224.41 mysql01
-192.168.224.42 mysql02
-192.168.224.43 mysql03
+172.17.10.28 sql01.lib0.cn sql01.novalocal
+172.17.10.27 sql02.lib0.cn sql02.novalocal
+172.17.10.23 sql03.lib0.cn sql03.novalocal
 EOF
 ```
 ### 修改配置文件
