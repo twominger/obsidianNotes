@@ -1421,36 +1421,28 @@ cat >>/etc/hosts <<EOF
 192.168.200.11 osp1.lib0.cn osp1
 EOF
 
-# 修改
-sed -i '/m01/c\172.17.10.91 m01' /etc/hosts
-sed -i '/m02/c\172.17.10.93 m02' /etc/hosts
-sed -i '/m03/c\172.17.10.96 m03' /etc/hosts
-sed -i '/n01/c\172.17.10.87 n01' /etc/hosts
-sed -i '/n02/c\172.17.10.82 n02' /etc/hosts
-
 # 互信配置
 ssh-keygen -t rsa
-for i in m01 m02 m03 n01 n02;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
+# for i in m01 m02 m03 n01 n02;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
 for i in k8sm1 k8sm2 k8sm3;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
 ```
 - yum
 - m01
 ```shell
-yum -y install chrony
+# yum -y install chrony
 cat >/etc/chrony.conf <<EOF
-server ntp.aliyun.com iburst
+server osp1.lab0.cn iburst
+server ntp1.aliyun.com iburst
+server ntp2.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
-local stratum 10
 keyfile /etc/chrony.keys
 leapsectz right/UTC
 logdir /var/log/chrony
 EOF
-cat /etc/chrony.conf
 
-# systemctl enable chronyd.service
-systemctl restart chronyd.service
+systemctl restart chronyd
 chronyc sources
 ```
 - m02\m03\n01\n02
