@@ -63,6 +63,10 @@ fi
 ```shell
 mkdir /etc/yum.repos.d/bak2
 mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/bak2/
+
+/root/.local/bin/repo2module -s stable . modules.yaml  
+modifyrepo_c --mdtype=modules modules.yaml repodata/
+
 wget http://192.168.200.10/centos8/a.repo -O /etc/yum.repos.d/a.repo
 yum clean all
 yum makecache
