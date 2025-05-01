@@ -895,7 +895,9 @@ openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-40
 openstack port set --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
 openstack port set --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
 
-openstack port set --port-security-enabled=True 89b50974-8365-426f-a310-8be957ddbea3
+openstack port set --enable-port-security 89b50974-8365-426f-a310-8be957ddbea3
+openstack port set --enable-port-security 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
+openstack port set --enable-port-security 9d631d54-f6bf-4c30-899b-f60c89943e54
 
 openstack port set --allowed-address ip-address=192.168.200.238 89b50974-8365-426f-a310-8be957ddbea3
 openstack port set --allowed-address ip-address=192.168.200.238 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
@@ -937,7 +939,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 172.17.10.28
+    mcast_src_ip 192.168.200.22
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -945,10 +947,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.28
+    unicast_src_ip 192.168.200.22
     unicast_peer {
-      172.17.10.27
-      172.17.10.23
+      192.168.200.23
+      192.168.200.24
     }
     virtual_ipaddress {
         192.168.200.238
@@ -977,7 +979,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.27
+    mcast_src_ip 192.168.200.23
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -985,10 +987,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.27
+    unicast_src_ip 192.168.200.23
     unicast_peer {
-      172.17.10.28
-      172.17.10.23
+      192.168.200.22
+      192.168.200.24
     }
     virtual_ipaddress {
         192.168.200.238
@@ -1017,7 +1019,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.23
+    mcast_src_ip 192.168.200.24
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1025,10 +1027,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.23
+    unicast_src_ip 192.168.200.24
     unicast_peer {
-      172.17.10.28
-      172.17.10.27
+      192.168.200.22
+      192.168.200.23
     }
     virtual_ipaddress {
         192.168.200.238
