@@ -656,9 +656,15 @@ docker images
 ## 公共步骤 (仅在 sql01 上操作)
 ### mysql 对接 ceph （上）
 ```shell
+cat >>/etc/hosts <<EOF
+192.168.200.14 cs01.lab0.cn cs01
+192.168.200.15 cs02.lib0.cn cs02
+EOF
+
+
 mkdir /etc/ceph
-scp root@192.168.200.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.200.11:/etc/ceph/ceph.conf /etc/ceph/
+scp root@cs01:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@cs01:/etc/ceph/ceph.conf /etc/ceph/
 # sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 ```
