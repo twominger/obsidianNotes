@@ -1610,13 +1610,8 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.25
-    unicast_peer {
-      172.17.10.29
-      172.17.10.21
-    }
     virtual_ipaddress {
-        172.17.10.239
+        192.168.200.239
     }
 #    track_script {
 #       chk_apiserver
@@ -1626,6 +1621,7 @@ EOF
 cat /etc/keepalived/keepalived.conf
 
 # 三个master节点配置心跳检测脚本
+vim /etc/keepalived/check_apiserver.sh
 cat >/etc/keepalived/check_apiserver.sh <<EOF
 #!/bin/bash
 
@@ -1695,9 +1691,9 @@ backend k8s-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server m01  172.17.10.29:6443  check
-  server m02  172.17.10.21:6443  check
-  server m03  172.17.10.25:6443  check
+  server k8sm1  192.168.200.16:6443  check
+  server k8sm2  192.168.200.17:6443  check
+  server k8sm3  192.168.200.18:6443  check
 EOF
 cat /etc/haproxy/haproxy.cfg
   
