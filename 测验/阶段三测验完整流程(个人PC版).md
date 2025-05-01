@@ -285,6 +285,7 @@ ceph auth get client.zhangmingming -o /etc/ceph/ceph.client.zhangmingming.keyrin
 ### openstack 节点操作
 - 所有节点 (controller && compute1 && compute2)
 ```shell
+yum install -y ceph-common
 # 创建ceph配置文件目录
 mkdir /etc/ceph/
 # 拷贝密钥和配置文件
@@ -340,10 +341,10 @@ virsh secret-set-value --secret 23ce2b21-9744-40b5-962b-9db673cd7dbb --base64 AQ
 # 主要作用是OpenStack可调用Ceph资源
 yum install -y ceph-common
 
-#配置cinder后端存储
-chown cinder.cinder /etc/ceph/ceph.client.zhangmingming.keyring
+# 配置cinder后端存储
+# chown cinder.cinder /etc/ceph/ceph.client.zhangmingming.keyring
 
-#修改cinder配置文件
+# 修改cinder配置文件
 vim /etc/cinder/cinder.conf
 
 # 注意修改rbd_user和rbd_secret_uuid字段
@@ -359,7 +360,7 @@ rbd_store_chunk_size = 4
 rados_connect_timeout = -1
 glance_api_version = 2
 rbd_user = zhangmingming
-rbd_secret_uuid = bf168fa8-8d5b-4991-ba4c-12ae622a98b1
+rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
 volume_backend_name = ceph
 
 # 创建卷类型
@@ -379,7 +380,7 @@ openstack volume type list
 | c5b71526-643d-4e9c-b0b7-3cdf8d1e926b | __DEFAULT__ | True      |
 +--------------------------------------+-------------+-----------+
 #查看到存储类型后重启服务
-systemctl restart openstack-cinder-scheduler.service openstack-cinder-volume.service
+systemctl restart openstack-cinder*
 
 # 创建卷测试（可选）
 openstack volume create ceph01 --type ceph --size 1
