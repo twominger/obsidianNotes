@@ -771,7 +771,7 @@ EOF
 ```shell
 cat >>/etc/my.cnf <<EOF
 disabled_storage_engines="MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY"
-server_id=1      #id号要唯一
+server_id=1
 gtid_mode=ON
 enforce_gtid_consistency=ON
 master_info_repository=TABLE
@@ -793,7 +793,7 @@ EOF
 ```shell
 cat >>/etc/my.cnf <<EOF
 disabled_storage_engines="MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY"
-server_id=2      #id号要唯一
+server_id=2
 gtid_mode=ON
 enforce_gtid_consistency=ON
 master_info_repository=TABLE
@@ -814,7 +814,7 @@ EOF
 ```shell
 cat >>/etc/my.cnf <<EOF
 disabled_storage_engines="MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY"
-server_id=3      #id号要唯一
+server_id=3
 gtid_mode=ON
 enforce_gtid_consistency=ON
 master_info_repository=TABLE
@@ -838,7 +838,7 @@ mysql -uroot -pyutian
 ```
 ### 安装插件
 ```shell
-show plugins; | grep group_replication
+show plugins; | grep group_replication;
 install plugin group_replication soname 'group_replication.so';
 ```
 ### 配置账号
