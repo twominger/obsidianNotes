@@ -916,6 +916,10 @@ neutron port-show 9d631d54-f6bf-4c30-899b-f60c89943e54
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:4e:19:42 9374b3e1-92ff-400b-b993-df24162123f1
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:05:86:d9 f597bdf1-0aa6-469c-9d27-c258a45118f6
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:be:0d:26 c69f9cec-902d-4062-8896-cb03871c3144
+
+# openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:dd:08:35 89b50974-8365-426f-a310-8be957ddbea3
+# openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:9b:b3:50 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
+# openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:98:eb:dc 9d631d54-f6bf-4c30-899b-f60c89943e54
 ```
 ### keepalived+haproxy
 ```shell
