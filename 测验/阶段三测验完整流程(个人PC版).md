@@ -1411,12 +1411,15 @@ docker images
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
 192.168.200.16 k8sm1.lib0.cn k8sm1
-192.168.200.17 k8sm1.lib0.cn k8sm1
-192.168.200.18 k8sm1.lib0.cn k8sm1
-192.168.200.19 k8sm1.lib0.cn k8sm1
-192.168.200.16 k8sm1.lib0.cn k8sm1
+192.168.200.17 k8sm2.lib0.cn k8sm2
+192.168.200.18 k8sm3.lib0.cn k8sm3
+192.168.200.19 k8sn1.lib0.cn k8sn1
+192.168.200.20 k8sn2.lib0.cn k8sn2
 EOF
-cat /etc/hosts
+
+cat >>/etc/hosts <<EOF
+192.168.200.11 osp1.lib0.cn osp1
+EOF
 
 # 修改
 sed -i '/m01/c\172.17.10.91 m01' /etc/hosts
@@ -1428,6 +1431,7 @@ sed -i '/n02/c\172.17.10.82 n02' /etc/hosts
 # 互信配置
 ssh-keygen -t rsa
 for i in m01 m02 m03 n01 n02;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
+for i in k8sm1 k8sm2 k8sm3;do ssh-copy-id -i .ssh/id_rsa.pub $i;done
 ```
 - yum
 - m01
