@@ -1361,14 +1361,13 @@ yum makecache
 # yum list kubelet --showduplicates | sort -r | grep 1.31
 yum install -y kubectl-1.31.7 kubelet-1.31.7 kubeadm-1.31.7
 
-[root@m01 ~]# ls /var/lib/kubelet/
-[root@m01 ~]# cat /etc/sysconfig/kubelet 
+# ls /var/lib/kubelet/
+# cat /etc/sysconfig/kubelet 
 cat >/etc/sysconfig/kubelet <<EOF
 KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"
 EOF
-cat /etc/sysconfig/kubelet
+# cat /etc/sysconfig/kubelet
 
-systemctl enable kubelet --now
 # kubeadm config images list --kubernetes-version=v1.31.7
 
 kubeadm config images pull --kubernetes-version=v1.31.7 --image-repository registry.aliyuncs.com/google_containers --cri-socket unix:///run/cri-dockerd.sock
