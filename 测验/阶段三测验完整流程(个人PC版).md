@@ -600,7 +600,7 @@ data_volume:/data/harbordata/  # 数据存储目录，推荐放在一个单独�
 添加域名解析
 ```shell
 cat > /etc/hosts <<EOF
-172.17.10.20 hub.lib0.cn
+192.168.200.25 hub.lib0.cn
 EOF
 ```
 修改 daemon. json 文件
@@ -608,7 +608,7 @@ EOF
 cat >/etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": [ "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com" ],
-    "insecure-registries": ["http://172.17.10.20","hub.lib0.cn"]
+    "insecure-registries": ["http://192.168.200.25","hub.lib0.cn"]
 }
 EOF
 ```
