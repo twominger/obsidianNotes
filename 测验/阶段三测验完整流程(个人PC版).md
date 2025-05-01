@@ -871,24 +871,25 @@ https://www.wolai.com/chuangxinyang/wGgUnf6udDBbCqkHTBBvVc
 source keystonerc_admin
 # 查看网络ID和子网ID并记录
 openstack network list
-+--------------------------------------+---------+--------------------------------------+
-| ID                                   | Name    | Subnets                              |
-+--------------------------------------+---------+--------------------------------------+
-| 54338e64-4aa1-4f1a-8aad-773134def700 | public  | 6396e669-dbf3-4f62-b6a4-e270a5e1a0a9 |
-| df9b2572-d204-497e-9b78-c02f7a03c147 | private | bc2d4461-69a4-4cef-a459-0de3bfbb0225 |
-+--------------------------------------+---------+--------------------------------------+
+# +--------------------------------------+---------+--------------------------------------+
+# | ID                                   | Name    | Subnets                              |
+# +--------------------------------------+---------+--------------------------------------+
+# | 240f172c-427f-47e7-ad1a-5b9d488227e7 | private | a7109a80-d261-4767-b6d9-765ca752f3a0 |
+# | 9c015f29-15bc-480c-b200-cbc7417f7901 | public  | 0ff23c98-cd76-4708-beec-72de61f7bf0f |
+# +--------------------------------------+---------+--------------------------------------+
 
-openstack port create --network df9b2572-d204-497e-9b78-c02f7a03c147 --fixed-ip subnet=bc2d4461-69a4-4cef-a459-0de3bfbb0225,ip-address=172.17.10.238 viptest2
+
+openstack port create --network 9c015f29-15bc-480c-b200-cbc7417f7901 --fixed-ip subnet=0ff23c98-cd76-4708-beec-72de61f7bf0f,ip-address=192.168.200.238 viptest
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
-# sql01 fd9a34b1-259b-47a3-9805-55ebd330da38
-# sql02 6808f53b-fa80-48da-8a6f-0437ea250b57
-# sql03 324a12cc-100f-4dc9-8753-cad4189f635e
+# sql01 172.17.10.28 9374b3e1-92ff-400b-b993-df24162123f1
+# sql02 172.17.10.27 f597bdf1-0aa6-469c-9d27-c258a45118f6
+# sql03 172.17.10.23 c69f9cec-902d-4062-8896-cb03871c3144
 
 # 绑定操作
-openstack port set --allowed-address ip-address=172.17.10.238 fd9a34b1-259b-47a3-9805-55ebd330da38
-openstack port set --allowed-address ip-address=172.17.10.238 6808f53b-fa80-48da-8a6f-0437ea250b57
-openstack port set --allowed-address ip-address=172.17.10.238 324a12cc-100f-4dc9-8753-cad4189f635e
+openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-400b-b993-df24162123f1
+openstack port set --allowed-address ip-address=172.17.10.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
+openstack port set --allowed-address ip-address=172.17.10.238 c69f9cec-902d-4062-8896-cb03871c3144
 
 # 查看绑定状态
 neutron port-show fd9a34b1-259b-47a3-9805-55ebd330da38
