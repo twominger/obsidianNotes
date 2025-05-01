@@ -58,7 +58,8 @@ sed -i 's/8\.5\.2111/8\.4\.2105/g' /etc/yum.repos.d/CentOS-Base.repo
 ```shell
 yum -y install python3
 yum -y install lvm2
-yum -y install podman
+# yum -y install podman # 已经安装了docker,只需要启动即可
+systemctl enable docker.service --now
 ```
 ### 配置时间同步
 原则上 ceph 集群以及数据库不能访问外网，所以只能同步内部时间服务器，这里我们将 openstack 的控制节点作为时间服务器，其他计算节点和 ceph 都同步它。
@@ -66,8 +67,8 @@ yum -y install podman
 ```shell
 
 cat >>/etc/hosts <<EOF
-192.168.31.11 ceph1
-192.168.31.12 ceph2
+192.168.200.14 cs01.lab0.cn cs01
+192.168.200.15 cs02.lib0.cn cs02
 EOF
 
 timedatectl set-timezone Asia/Shanghai
