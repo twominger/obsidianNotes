@@ -139,9 +139,9 @@ chmod +x ./cephadm
 ### 引导 ceph 集群
 ```shell
 # cs01
-./cephadm bootstrap --mon-ip 192.168.31.11 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.200.14 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 # cs02
-./cephadm bootstrap --mon-ip 192.168.31.12 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
+./cephadm bootstrap --mon-ip 192.168.200.15 --allow-fqdn-hostname --skip-monitoring-stack --skip-dashboard
 ```
 ### 安装 ceph 的客户端软件
 ```shell
@@ -287,8 +287,8 @@ ceph auth get client.zhangmingming -o /etc/ceph/ceph.client.zhangmingming.keyrin
 # 创建ceph配置文件目录
 mkdir /etc/ceph/
 # 拷贝密钥和配置文件
-scp root@192.168.31.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.31.11:/etc/ceph/ceph.conf /etc/ceph/
+scp root@192.168.200.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@192.168.200.11:/etc/ceph/ceph.conf /etc/ceph/
 ```
 - 计算节点 compute1
 ```shell
@@ -661,8 +661,8 @@ docker images
 ### mysql 对接 ceph （上）
 ```shell
 mkdir /etc/ceph
-scp root@192.168.31.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
-scp root@192.168.31.11:/etc/ceph/ceph.conf /etc/ceph/
+scp root@192.168.200.11:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
+scp root@192.168.200.11:/etc/ceph/ceph.conf /etc/ceph/
 # sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 ```
@@ -2087,7 +2087,7 @@ data:
       {
         "clusterID": "7b1076a2-1c5c-11f0-9b2e-000c2966e671",
         "monitors": [
-          "192.168.31.11:6789"
+          "192.168.200.11:6789"
         ],
         "cephFS": {
           "subvolumeGroup": "k8s-storageclass-volumes"
