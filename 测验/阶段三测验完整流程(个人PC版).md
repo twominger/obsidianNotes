@@ -71,18 +71,28 @@ cat >>/etc/hosts <<EOF
 192.168.200.15 cs02.lib0.cn cs02
 EOF
 
+cat >>/etc/hosts <<EOF
+192.168.200.11 osp1.lab0.cn osp1
+192.168.200.12 osp2.lab0.cn osp2
+192.168.200.13 osp3.lab0.cn osp3
+EOF
+
 timedatectl set-timezone Asia/Shanghai
 
 cat >/etc/chrony.conf <<EOF
-pool ntp.aliyun.com iburst
+server ntp1.aliyun.com iburst
+server ntp2.aliyun.com iburst
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
 keyfile /etc/chrony.keys
-allow 192.168.31.0/24
 leapsectz right/UTC
 logdir /var/log/chrony
+allow 0.0.0.0/0
+local stratum 10
 EOF
+
+
 
 allow 192.168.10.0/24
 
