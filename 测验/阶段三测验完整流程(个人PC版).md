@@ -387,7 +387,19 @@ openstack volume create ceph01 --type ceph --size 1
 # 查看volumes存储池是否存在卷
 rbd -p cinder-pool ls volumes --id zhangmingming
 ```
+- 计算节点 osp2\osp3
+```shell
+vim /etc/nova/nova.conf
+# 在 libvirt 标签下配置用户及 uuid
 
+[libvirt]
+...
+rbd_user = zhangmingming
+
+rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
+
+systemctl restart openstack-nova-compute.service
+```
 
 ```shell
 openstack volume list --project EXAM_project
