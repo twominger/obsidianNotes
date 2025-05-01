@@ -176,6 +176,7 @@ rule replicated_rule {
 rm -f crushmap.bin
 crushtool -c crushmap.txt -o crushmap.bin
 ceph osd setcrushmap -i crushmap.bin
+exit
 ```
 ## ceph使用前准备
 ### 创建 rbd 存储池及用户（仅 cs01）
