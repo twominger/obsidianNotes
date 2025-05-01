@@ -1211,6 +1211,9 @@ esac
 ### 关闭 swap
 
 ```shell
+
+
+
 sed -ri 's/.*swap.*/#&/g' /etc/fstab
 swapoff -a
 # 清空iptables规则 

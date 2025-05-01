@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "阶段三测验完整流程(个人PC版)",
-      "path": "测验/阶段三测验完整流程(个人PC版).md"
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "everything",
       "path": "测验/everything.md"
     },
     {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+      "basename": "阶段三测验完整流程(个人PC版)",
+      "path": "测验/阶段三测验完整流程(个人PC版).md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
     },
     {
       "basename": "ceph实验",
