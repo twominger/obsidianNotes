@@ -918,7 +918,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 172.17.10.27
+    mcast_src_ip 192.168.200.22
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -926,10 +926,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.27
+    unicast_src_ip 192.168.200.22
     unicast_peer {
-      172.17.10.12
-      172.17.10.26
+      172.17.10.27
+      172.17.10.23
     }
     virtual_ipaddress {
         172.17.10.238
@@ -958,7 +958,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.12
+    mcast_src_ip 172.17.10.27
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -966,10 +966,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.12
+    unicast_src_ip 172.17.10.27
     unicast_peer {
-      172.17.10.27
-      172.17.10.26
+      172.17.10.28
+      172.17.10.23
     }
     virtual_ipaddress {
         172.17.10.238
@@ -998,7 +998,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.26
+    mcast_src_ip 172.17.10.23
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1006,10 +1006,10 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.26
+    unicast_src_ip 172.17.10.23
     unicast_peer {
+      172.17.10.28
       172.17.10.27
-      172.17.10.12
     }
     virtual_ipaddress {
         172.17.10.238
