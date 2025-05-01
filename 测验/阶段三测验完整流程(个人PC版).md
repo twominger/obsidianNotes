@@ -1113,9 +1113,9 @@ backend sql-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server sql01.novalocal  172.17.10.28:3306  check
-  server sql02.novalocal  172.17.10.27:3306  check
-  server sql03.novalocal  172.17.10.23:3306  check
+  server sql01.novalocal  192.168.200.22:3306  check
+  server sql02.novalocal  192.168.200.23:3306  check
+  server sql03.novalocal  192.168.200.24:3306  check
 EOF
   
 systemctl enable --now haproxy.service
