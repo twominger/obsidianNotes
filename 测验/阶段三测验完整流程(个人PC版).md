@@ -891,6 +891,10 @@ openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-40
 openstack port set --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
 openstack port set --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
 
+openstack port unset --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-400b-b993-df24162123f1
+openstack port unset --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
+openstack port unset --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
+
 # 查看绑定状态
 neutron port-show 9374b3e1-92ff-400b-b993-df24162123f1
 neutron port-show f597bdf1-0aa6-469c-9d27-c258a45118f6
