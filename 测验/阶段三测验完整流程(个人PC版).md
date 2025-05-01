@@ -783,8 +783,8 @@ binlog_format=ROW
 transaction_write_set_extraction=XXHASH64
 loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
 loose-group_replication_start_on_boot=off
-loose-group_replication_local_address='sql01:33061'
-loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_local_address='sql01.novalocal:33061'
+loose-group_replication_group_seeds='sql01.novalocal:33061,sql02.novalocal:33061,sql03.novalocal:33061'
 loose-group_replication_bootstrap_group=off
 EOF
 ```
@@ -805,8 +805,8 @@ binlog_format=ROW
 transaction_write_set_extraction=XXHASH64
 loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
 loose-group_replication_start_on_boot=off
-loose-group_replication_local_address='sql02:33061'
-loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_local_address='sql02.novalocal:33061'
+loose-group_replication_group_seeds='sql01.novalocal:33061,sql02.novalocal:33061,sql03.novalocal:33061'
 loose-group_replication_bootstrap_group=off
 EOF
 ```
@@ -826,8 +826,8 @@ binlog_format=ROW
 transaction_write_set_extraction=XXHASH64
 loose-group_replication_group_name='ce9be252-2b71-11e6-b8f4-00212844f856'
 loose-group_replication_start_on_boot=off
-loose-group_replication_local_address='sql03:33061'
-loose-group_replication_group_seeds='sql01:33061,sql02:33061,sql03:33061'
+loose-group_replication_local_address='sql03.novalocal:33061'
+loose-group_replication_group_seeds='sql01.novalocal:33061,sql02.novalocal:33061,sql03.novalocal:33061'
 loose-group_replication_bootstrap_group=off
 EOF
 ```
@@ -838,7 +838,7 @@ mysql -uroot -pyutian
 ```
 ### 安装插件
 ```shell
-show plugins; | grep group_replication;
+# show plugins; | grep group_replication
 install plugin group_replication soname 'group_replication.so';
 ```
 ### 配置账号
