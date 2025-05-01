@@ -1287,6 +1287,9 @@ lsmod | grep -e ip_vs -e nf_conntrack
 ```
 ### 安装 docker (不用 containerd)
 ```shell
+yum remove -y podman
+yum remove -y buildah
+
 # step 1: 安装必要的一些系统工具
 yum install -y yum-utils
 # Step 2: 添加软件源信息
