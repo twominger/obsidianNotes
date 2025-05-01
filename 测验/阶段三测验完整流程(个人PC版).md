@@ -1877,7 +1877,7 @@ vim calico.yaml
             - name: CALICO_IPV4POOL_CIDR
               value: "10.244.0.0/16"
             - name: IP_AUTODETECTION_METHOD
-              value: "interface=ens3"
+              value: "interface=ens160"
 
 kubectl apply -f calico.yaml
 ```
