@@ -895,6 +895,8 @@ openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-40
 openstack port set --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
 openstack port set --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
 
+openstack port set --port-security-enabled=True 89b50974-8365-426f-a310-8be957ddbea3
+
 openstack port set --allowed-address ip-address=192.168.200.238 89b50974-8365-426f-a310-8be957ddbea3
 openstack port set --allowed-address ip-address=192.168.200.238 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
 openstack port set --allowed-address ip-address=192.168.200.238 9d631d54-f6bf-4c30-899b-f60c89943e54
