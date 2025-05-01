@@ -888,15 +888,17 @@ openstack port list
 
 # 绑定操作
 openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-400b-b993-df24162123f1
-openstack port set --allowed-address ip-address=172.17.10.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
-openstack port set --allowed-address ip-address=172.17.10.238 c69f9cec-902d-4062-8896-cb03871c3144
+openstack port set --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
+openstack port set --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
 
 # 查看绑定状态
-neutron port-show fd9a34b1-259b-47a3-9805-55ebd330da38
+neutron port-show 9374b3e1-92ff-400b-b993-df24162123f1
+neutron port-show f597bdf1-0aa6-469c-9d27-c258a45118f6
+neutron port-show c69f9cec-902d-4062-8896-cb03871c3144
 ```
 ### keepalived+haproxy
 ```shell
-yum install -y keepalived
+yum install -y keepalived haproxy
 mv /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bak
 # sql01配置
 cat >/etc/keepalived/keepalived.conf <<EOF
