@@ -309,6 +309,8 @@ EOF
 ```shell
 scp root@osp1:/etc/ceph/secret.xml /etc/ceph/
 
+cd /etc/ceph/
+
 # 执行命令写入secret
 virsh secret-define --file secret.xml
 
@@ -320,36 +322,20 @@ virsh secret-list
 
 # 加入key
 # 将key值复制出来
-cat ceph.client.zhangmingming.keyring
-AQDVUwFoKGDzCRAAVymdFkLnJQ1ki5Gw405yEA==
+cat ceph.client.zhangmingming.keyring 
+# [client.zhangmingming]
+#     key = AQDvrhNoHnRcIxAAovJP2/c0vd+NsauIdGm/9A==
+#     caps mds = "allow rw"
+#     caps mgr = "allow rw"
+#     caps mon = "allow r"
+#     caps osd = "allow rwx"
 
-virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 
-virsh secret-set-value --secret 23ce2b21-9744-40b5-962b-9db673cd7dbb --base64 AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
+# virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
+
+virsh secret-set-value --secret 23ce2b21-9744-40b5-962b-9db673cd7dbb --base64 AQDvrhNoHnRcIxAAovJP2/c0vd+NsauIdGm/9A==
 ```
-- 计算节点 compute2
-```shell
-scp root@192.168.224.111:/etc/ceph/secret.xml /etc/ceph/
-cd /etc/ceph
-
-# 执行命令写入secret
-virsh secret-define --file secret.xml
-
-# 查看添加后端密钥(记录下来)
-virsh secret-list
- UUID                                   Usage
--------------------------------------------------------------------
- bf168fa8-8d5b-4991-ba4c-12ae622a98b1   ceph client.zhangmingming secret
-
-# 加入key
-# 将key值复制出来
-cat ceph.client.zhangmingming.keyring
-AQCvztRk8ssALhAAXshR1E+Y90HvIyxkhal1cQ==
-
-# 下面的$(UUID)需要替换
-virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
-```
-- 控制节点 controller
+- 控制节点 osp1
 ```shell
 # 主要作用是OpenStack可调用Ceph资源
 yum install -y ceph-common
