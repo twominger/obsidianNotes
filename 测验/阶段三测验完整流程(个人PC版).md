@@ -1410,11 +1410,11 @@ docker images
 ```shell
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
-172.17.10.29 m01
-172.17.10.21 m02
-172.17.10.25 m03
-172.17.10.11 n01
-172.17.10.14 n02
+192.168.200.16 k8sm1.lib0.cn k8sm1
+192.168.200.17 k8sm1.lib0.cn k8sm1
+192.168.200.18 k8sm1.lib0.cn k8sm1
+192.168.200.19 k8sm1.lib0.cn k8sm1
+192.168.200.16 k8sm1.lib0.cn k8sm1
 EOF
 cat /etc/hosts
 
