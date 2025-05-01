@@ -363,29 +363,6 @@ rbd_user = zhangmingming
 rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
 volume_backend_name = ceph
 
-# 创建卷类型
-source ~/keystonerc_admin
-openstack volume type create ceph
-
-# 设置卷类型元数据
-cinder --os-username admin --os-tenant-name admin type-key ceph set volume_backend_name=ceph
-
-# 查看存储类型
-openstack volume type list
-+--------------------------------------+-------------+-----------+
-| ID                                   | Name        | Is Public |
-+--------------------------------------+-------------+-----------+
-| ccb0cd1e-562a-42e0-b0d0-3818d6910528 | ceph        | True      |
-| 5ffdbebe-4f37-4690-8b40-36c6e6c63233 | lvm         | True      |
-| c5b71526-643d-4e9c-b0b7-3cdf8d1e926b | __DEFAULT__ | True      |
-+--------------------------------------+-------------+-----------+
-#查看到存储类型后重启服务
-systemctl restart openstack-cinder*
-
-# 创建卷测试（可选）
-openstack volume create ceph01 --type ceph --size 1
-# 查看volumes存储池是否存在卷
-rbd -p cinder-pool ls volumes --id zhangmingming
 ```
 - 计算节点 osp2\osp3
 ```shell
@@ -400,12 +377,29 @@ rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
 
 systemctl restart openstack-nova-compute.service
 ```
-
+- 控制节点 osp1
 ```shell
-openstack volume list --project EXAM_project
-openstack server list --project EXAM_project
-rbd status -p cinder-pool volume-22c8ef28-ba85-4119-834a-0faf562b733b
-rbd -p cinder-pool ls
+# 创建卷类型
+source ~/keystonerc_admin
+openstack volume type create ceph
+
+# 设置卷类型元数据
+cinder --os-username admin --os-tenant-name admin type-key ceph set volume_backend_name=ceph
+
+# 查看存储类型
+openstack volume type list
+# +--------------------------------------+-------------+-----------+
+# | ID                                   | Name        | Is Public |
+# +--------------------------------------+-------------+-----------+
+# | f200824f-f202-4a88-b8af-fd4b23896eaf | ceph        | True      |
+# | c72bab83-155c-4708-a011-7ed06d1338ec | iscsi       | True      |
+# | 29f9cfa2-2f9a-4c2b-8c58-8c29be6c5da7 | __DEFAULT__ | True      |
+# +--------------------------------------+-------------+-----------+
+
+# 创建卷测试（可选）
+openstack volume create ceph01 --type ceph --size 1
+# 查看volumes存储池是否存在卷
+rbd -p cinder-pool ls volumes --id zhangmingming
 ```
 # openstack 基本步骤（web 界面）
 (没有提到但是有，则为默认)
