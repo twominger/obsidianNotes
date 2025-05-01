@@ -5,6 +5,14 @@
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "20250222-k8s-用户角色权限及helm介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
+    },
+    {
       "basename": "局域网yum",
       "path": "测验/局域网yum.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "ceph实验",
@@ -111,10 +115,6 @@
     {
       "basename": "ansible入门",
       "path": "ansible/ansible入门.md"
-    },
-    {
-      "basename": "20250222-k8s-用户角色权限及helm介绍",
-      "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
     },
     {
       "basename": "MarkDown超级教程+Obsidian版+2022.1.12",

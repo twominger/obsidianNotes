@@ -918,7 +918,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 192.168.200.22
+    mcast_src_ip 172.17.10.28
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -926,13 +926,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.200.22
+    unicast_src_ip 172.17.10.28
     unicast_peer {
       172.17.10.27
       172.17.10.23
     }
     virtual_ipaddress {
-        172.17.10.238
+        192.168.200.238
     }
 #    track_script {
 #       chk_apiserver
@@ -972,7 +972,7 @@ vrrp_instance VI_1 {
       172.17.10.23
     }
     virtual_ipaddress {
-        172.17.10.238
+        192.168.200.238
     }
 #    track_script {
 #       chk_apiserver
@@ -1012,7 +1012,7 @@ vrrp_instance VI_1 {
       172.17.10.27
     }
     virtual_ipaddress {
-        172.17.10.238
+        192.168.200.238
     }
 #    track_script {
 #       chk_apiserver
