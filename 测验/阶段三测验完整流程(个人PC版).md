@@ -291,10 +291,8 @@ mkdir /etc/ceph/
 scp root@cs01:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
 scp root@cs01:/etc/ceph/ceph.conf /etc/ceph/
 ```
-- 计算节点 compute1
+- 控制节点 osp1
 ```shell
-# 添加libvirt密钥
-# 生成密钥（PS：注意，如果有多个计算节点，它们的UUID必须一致）
 cd /etc/ceph/
 
 UUID=$(uuidgen)
@@ -306,15 +304,19 @@ cat >> secret.xml << EOF
   </usage>
 </secret>
 EOF
+```
+- 计算节点 osp2\osp3
+```shell
+scp root@osp1:/etc/ceph/secret.xml /etc/ceph/
 
 # 执行命令写入secret
 virsh secret-define --file secret.xml
 
-# 查看添加后端密钥(记录下来)
+# 查看添加后端密钥
 virsh secret-list
- UUID                                   Usage
--------------------------------------------------------------------
- bf168fa8-8d5b-4991-ba4c-12ae622a98b1   ceph client.zhangmingming secret
+#  UUID                                   Usage
+# --------------------------------------------------------------------------
+#  23ce2b21-9744-40b5-962b-9db673cd7dbb   ceph client.zhangmingming secret
 
 # 加入key
 # 将key值复制出来
@@ -323,7 +325,7 @@ AQDVUwFoKGDzCRAAVymdFkLnJQ1ki5Gw405yEA==
 
 virsh secret-set-value --secret ${UUID} --base64 $(cat ceph.client.zhangmingming.keyring | grep key | awk -F ' ' '{print $3}')
 
-virsh secret-set-value --secret 109e5a71-e6c6-400b-8982-8130730d8f1e --base64 AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
+virsh secret-set-value --secret 23ce2b21-9744-40b5-962b-9db673cd7dbb --base64 AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
 ```
 - 计算节点 compute2
 ```shell
