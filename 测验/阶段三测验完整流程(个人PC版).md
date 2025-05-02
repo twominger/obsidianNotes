@@ -2071,10 +2071,8 @@ unzip ceph-csi-3.13.0.zip
 
 [root@k8sm1 kubernetes]# pwd
 /root/ceph-csi-3.13.0/deploy/cephfs/kubernetes
-[root@master kubernetes]# ls
-csi-config-map.yaml      csi-nodeplugin-rbac.yaml        csi-rbdplugin.yaml   rbd.md
-csidriver.yaml           csi-provisioner-rbac.yaml       csi-rbd-sc.yaml
-csi-kms-config-map.yaml  csi-rbdplugin-provisioner.yaml  csi-rbd-secret.yaml
+[root@k8sm1 kubernetes]# ls
+cephfs.md  csi-cephfsplugin-provisioner.yaml  csi-cephfsplugin.yaml  csi-config-map.yaml  csidriver.yaml  csi-nodeplugin-rbac.yaml  csi-provisioner-rbac.yaml
 ```
 
 ## ceph-csi 插件安装
@@ -2091,9 +2089,9 @@ data:
   config.json: |-
     [
       {
-        "clusterID": "7b1076a2-1c5c-11f0-9b2e-000c2966e671",
+        "clusterID": "b83e321e-26af-11f0-b243-000c2942c461",
         "monitors": [
-          "192.168.200.11:6789"
+          "192.168.200.14:6789"
         ],
         "cephFS": {
           "subvolumeGroup": "k8s-storageclass-volumes"
@@ -2155,7 +2153,7 @@ metadata:
   namespace: default
 stringData:
   adminID: zhangmingming
-  adminKey: AQCVYwJoIMTTAhAAQJnqmdEGZsuK8LAcII7yGg==
+  adminKey: AQDvrhNoHnRcIxAAovJP2/c0vd+NsauIdGm/9A==
 EOF
 ```
 可在 ceph 集群中查看
