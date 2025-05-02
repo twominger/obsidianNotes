@@ -2835,6 +2835,48 @@ subsets:
   ports:
   - name: metrics
     port: 9104
+    
+vim servicemonitoring.yaml
+# mysql-servicemonitor.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mysql-monitor
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: mysql-exporter
+  endpoints:
+  - port: metrics
+    targetPort: 9104
+    scheme: http
+    interval: 30s
+    
+
+vim mysql-alerts.yaml
+# mysql-alerts.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: mysql-alerts
+  namespace: monitoring
+  labels:
+    app: mysql-exporter
+    release: prometheus
+spec:
+  groups:
+  - name: mysql
+    rules:
+    - alert: MySQLConnectionsHigh
+      expr: mysql_global_status_threads_connected / mysql_global_variables_max_connections * 100 > 80
+      for: 10m
+      labels:
+        severity: critical
+      annotations:
+        summary: "MySQL 连接数超过 80% (当前值: {{ $value }}%)"
 ```
 
 # 收尾（几个小实验）
