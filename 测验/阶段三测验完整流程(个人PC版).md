@@ -2462,6 +2462,12 @@ kubectl edit -n kube-system pod kube-apiserver-k8sm3.lab0.cn
 
 cd /opt
 
+mkdir helm
+
+cd helm
+
+
+
 
 
 ```
