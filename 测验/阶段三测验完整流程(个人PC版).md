@@ -3072,6 +3072,10 @@ kubectl get servicemonitors.monitoring.coreos.com -n monitoring
 http://192.168.200.16:39000/
 admin yutian
 
+Dashboards/New/import
+
+
+
 
 ```
 
