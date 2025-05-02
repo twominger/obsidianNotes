@@ -2725,16 +2725,28 @@ docker run \
   --restart=unless-stopped \
   moghaddas/prom-openstack-exporter:latest 
 ```
-## prometheus 监控 mysql
-```shell
-
-
-```
 ## prometheus 监控 ceph
 https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ```shell
+ceph mgr module enable prometheus
+
+netstat -tulnp |grep ceph-mgr
+# tcp        0      0 0.0.0.0:6800            0.0.0.0:*               LISTEN      5480/ceph-mgr       
+# tcp        0      0 0.0.0.0:6801            0.0.0.0:*               LISTEN      5480/ceph-mgr       
+# tcp6       0      0 :::9283                 :::*                    LISTEN      5480/ceph-mgr       
+
+http://192.168.200.14:9283/metrics
+```
+## prometheus 监控 mysql
+```shell
+cd /opt
+mkdir export
+cd export/
+
+
 
 ```
+
 
 
 
