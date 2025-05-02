@@ -2631,10 +2631,39 @@ helm upgrade prometheus ./kube-prometheus-stack-70.8.0.tgz \
 
 
 kubectl get pods -n monitoring -o wide
+# NAME                                                     READY   STATUS    RESTARTS   AGE     IP               NODE            NOMINATED NODE   READINESS GATES
+# alertmanager-prometheus-kube-prometheus-alertmanager-0   2/2     Running   0          23m     10.244.207.14    k8sn2.lab0.cn   <none>           <none>
+# prometheus-grafana-8557dc6868-gwcvt                      3/3     Running   0          4m48s   10.244.252.6     k8sn1.lab0.cn   <none>           <none>
+# prometheus-kube-prometheus-operator-76bf7879fb-wkqgl     1/1     Running   0          23m     10.244.207.11    k8sn2.lab0.cn   <none>           <none>
+# prometheus-kube-state-metrics-f5fb9cdf-4ftvl             1/1     Running   0          23m     10.244.207.12    k8sn2.lab0.cn   <none>           <none>
+# prometheus-prometheus-kube-prometheus-prometheus-0       2/2     Running   0          4m47s   10.244.252.7     k8sn1.lab0.cn   <none>           <none>
+# prometheus-prometheus-node-exporter-lpr9z                1/1     Running   0          23m     192.168.200.16   k8sm1.lab0.cn   <none>           <none>
+# prometheus-prometheus-node-exporter-qfrgd                1/1     Running   0          23m     192.168.200.18   k8sm3.lab0.cn   <none>           <none>
+# prometheus-prometheus-node-exporter-qrwdr                1/1     Running   0          23m     192.168.200.19   k8sn1.lab0.cn   <none>           <none>
+# prometheus-prometheus-node-exporter-r8jzf                1/1     Running   0          23m     192.168.200.20   k8sn2.lab0.cn   <none>           <none>
+# prometheus-prometheus-node-exporter-sf84h                1/1     Running   0          23m     192.168.200.17   k8sm2.lab0.cn   <none>           <none>
+
+```
+## prometheus 监控 k8s
+```shell
+vim /etc/kubernetes/manifests/kube-controller-manager.yaml
+......
+--bind-address=127.0.0.1修改为：--bind-address=0.0.0.0
+......
 
 
+vim /etc/kubernetes/manifests/kube-scheduler.yaml
+......
+--bind-address=127.0.0.1修改为：--bind-address=0.0.0.0
+......
 
 
+netstat -antp | grep proxy 
+kube-proxy$kubectl -n kube-system edit cm kube-proxy
+......
+metricsBindAddress: "0.0.0.0:10249"
+......
+kubectl -n kube-system delete pod `kubectl get pod -n kube-system | grep proxy | awk'{print $1}'`#重启kube-proxy容器
 ```
 ## prometheus 监控 mysql
 ```shell
