@@ -2210,7 +2210,7 @@ metadata:
    name: csi-cephfs-sc
 provisioner: cephfs.csi.ceph.com
 parameters:
-   clusterID: 7b1076a2-1c5c-11f0-9b2e-000c2966e671
+   clusterID: b83e321e-26af-11f0-b243-000c2942c461
    fsName: k8s_fs
    pool: kubernetes-data
    csi.storage.k8s.io/provisioner-secret-name: csi-cephfs-secret
