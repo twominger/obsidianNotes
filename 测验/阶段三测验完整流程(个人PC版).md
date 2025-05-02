@@ -2801,6 +2801,7 @@ cd /opt/helm/
 mkdir mysql openstack ceph
 ```
 
+### mysql
 ```shell
 cd /opt/helm/mysql/
 vim service.yaml
@@ -2877,7 +2878,54 @@ spec:
         severity: critical
       annotations:
         summary: "MySQL 连接数超过 80% (当前值: {{ $value }}%)"
+        
+        
+kubectl apply -f service.yaml -f servicemonitoring.yaml -f mysql-alerts.yaml
 ```
+### openstack
+
+```shell
+cd ../openstack/
+vim service.yaml
+# openstack-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nova-exporter
+  namespace: monitoring
+  labels:
+    app: nova-exporter
+    release: prometheus
+spec:
+  type: ClusterIP
+  ports:
+  - name: metrics
+    port: 9183
+    targetPort: 9183
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: nova-exporter
+  namespace: monitoring
+  labels:
+    app: nova-exporter
+    release: prometheus
+subsets:
+- addresses:
+  - ip: 192.168.10.120  # OpenStack 节点的 IP
+  ports:
+  - name: metrics
+    port: 9183
+
+
+```
+
+
+
+
+
+
 
 # 收尾（几个小实验）
 [[#部署两台单节点 ceph#云硬盘容灾（等到 openstack 创建卷之后针对卷进行备份）(cs01 && cs02)|云硬盘容灾]]
