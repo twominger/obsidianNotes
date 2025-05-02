@@ -9,6 +9,10 @@
       "path": "测验/局域网yum.md"
     },
     {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
       "basename": "未命名",
       "path": "未命名.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "ceph实验",
