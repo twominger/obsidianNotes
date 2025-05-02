@@ -3044,6 +3044,33 @@ spec:
 kubectl apply -f service.yaml -f servicemonitoring.yaml -f ceph-alerts.yaml
 ```
 
+```shell
+kubectl get servicemonitors.monitoring.coreos.com -n monitoring
+# NAME                                                 AGE
+# ceph-monitor                                         66s
+# mysql-monitor                                        15m
+# openstack-monitor                                    7m13s
+# prometheus-grafana                                   120m
+# prometheus-kube-prometheus-alertmanager              120m
+# prometheus-kube-prometheus-apiserver                 120m
+# prometheus-kube-prometheus-coredns                   120m
+# prometheus-kube-prometheus-kube-controller-manager   120m
+# prometheus-kube-prometheus-kube-etcd                 120m
+# prometheus-kube-prometheus-kube-proxy                120m
+# prometheus-kube-prometheus-kube-scheduler            120m
+# prometheus-kube-prometheus-kubelet                   120m
+# prometheus-kube-prometheus-operator                  120m
+# prometheus-kube-prometheus-prometheus                120m
+# prometheus-kube-state-metrics                        120m
+# prometheus-prometheus-node-exporter                  120m
+
+192.168.200.16:39090
+```
+
+### grafana
+```shell
+
+```
 
 
 
