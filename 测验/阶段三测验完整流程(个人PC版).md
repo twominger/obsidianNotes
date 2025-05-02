@@ -2460,6 +2460,10 @@ kubectl edit -n kube-system pod kube-apiserver-k8sm1.lab0.cn
 kubectl edit -n kube-system pod kube-apiserver-k8sm2.lab0.cn
 kubectl edit -n kube-system pod kube-apiserver-k8sm3.lab0.cn
 
+cd /opt
+
+
+
 ```
 ## prometheus 监控 mysql
 ```shell
