@@ -2067,8 +2067,10 @@ ceph fs subvolumegroup ls k8s_fs
 解压并进入文件夹
 ```shell
 # wget -O ceph-csi-3.13.0.zip https://codeload.github.com/ceph/ceph-csi/zip/refs/tags/v3.13.0
-[root@master kubernetes]# pwd
-/root/Download/ceph-csi-3.13.0/deploy/rbd/kubernetes
+unzip ceph-csi-3.13.0.zip
+
+[root@k8sm1 kubernetes]# pwd
+/root/ceph-csi-3.13.0/deploy/cephfs/kubernetes
 [root@master kubernetes]# ls
 csi-config-map.yaml      csi-nodeplugin-rbac.yaml        csi-rbdplugin.yaml   rbd.md
 csidriver.yaml           csi-provisioner-rbac.yaml       csi-rbd-sc.yaml
