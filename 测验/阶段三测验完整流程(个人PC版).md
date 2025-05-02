@@ -2666,14 +2666,42 @@ vim /etc/kubernetes/manifests/kube-scheduler.yaml
 ......
 
 
-netstat -antp | grep proxy 
+netstat -antp | grep kube-proxy
 # kube-proxy
 
 kubectl -n kube-system edit cm kube-proxy
 ......
 metricsBindAddress: "0.0.0.0:10249"
 ......
-kubectl -n kube-system delete pod `kubectl get pod -n kube-system | grep proxy | awk'{print $1}'`#重启kube-proxy容器
+kubectl -n kube-system delete pod `kubectl get pod -n kube-system | grep proxy | awk '{print $1}'`#重启kube-proxy容器
+
+netstat -antp | grep kube-proxy
+# tcp        0      0 192.168.200.239:52984   192.168.200.239:16443   ESTABLISHED 326255/kube-proxy   
+# tcp6       0      0 :::10256                :::*                    LISTEN      326255/kube-proxy   
+# tcp6       0      0 :::10249                :::*                    LISTEN      326255/kube-proxy   
+# tcp6       0      0 192.168.200.16:10249    192.168.200.19:4767     ESTABLISHED 326255/kube-proxy 
+
+
+
+```
+
+## prometheus 监控 openstack
+https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
+```shell
+# step 1: 安装必要的一些系统工具
+sudo yum install -y yum-utils
+
+# Step 2: 添加软件源信息
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+# Step 3: 安装Docker
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --allowerasing
+
+# Step 4: 开启Docker服务
+systemctl enable --now docker
+
+
+
 ```
 ## prometheus 监控 mysql
 ```shell
@@ -2685,11 +2713,7 @@ https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ```shell
 
 ```
-## prometheus 监控 openstack
-https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
-```shell
 
-```
 
 
 # 收尾（几个小实验）
