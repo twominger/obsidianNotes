@@ -2466,6 +2466,62 @@ mkdir helm
 
 cd helm
 
+vim values.yaml
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelector: {}
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: csi-cephfs-sc
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 2Gi
+  service:
+    type: NodePort
+    nodePort: 39090
+
+grafana:
+  persistence:
+    enabled: true
+    storageClassName: csi-cephfs-sc
+    accessModes:
+      - ReadWriteOnce
+    size: 2Gi
+  adminPassword: "yutian"
+  service:
+    type: NodePort
+    nodePort: 39000
+
+ls
+# kube-prometheus-stack-70.8.0.tgz  values.yaml
+
+helm install prometheus ./kube-prometheus-stack-70.8.0.tgz \
+-f values.yaml \
+-n monitoring --create-namespace
+
+# NAME: prometheus
+# LAST DEPLOYED: Fri May  2 14:25:05 2025
+# NAMESPACE: monitoring
+# STATUS: deployed
+# REVISION: 1
+# NOTES:
+# kube-prometheus-stack has been installed. Check its status by running:
+#   kubectl --namespace monitoring get pods -l "release=prometheus"
+# 
+# Get Grafana 'admin' user password by running:
+# 
+#   kubectl --namespace monitoring get secrets prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+# 
+# Access Grafana local instance:
+# 
+#   export POD_NAME=$(kubectl --namespace monitoring get pod -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=prometheus" -oname)
+#   kubectl --namespace monitoring port-forward $POD_NAME 3000
+
+# Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
 
 
 
