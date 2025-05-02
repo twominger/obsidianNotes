@@ -2695,11 +2695,14 @@ sudo yum install -y yum-utils
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
 # Step 3: 安装Docker
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --allowerasing
+sudo yum -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --allowerasing
 
 # Step 4: 开启Docker服务
 systemctl enable --now docker
 
+cd /opt/
+mkdir docker-export
+cd docker-export/
 
 
 ```
