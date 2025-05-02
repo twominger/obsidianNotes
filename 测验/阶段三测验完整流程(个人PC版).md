@@ -2447,6 +2447,17 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 
 
+# 三个master节点
+cd /etc/kubernetes/manifests/
+
+vim kube-apiserver.yaml
+- command:
+  - kube-apiserver
+  - --service-node-port-range=30000-40000
+
+
+
+
 
 ```
 ## prometheus 监控 mysql
