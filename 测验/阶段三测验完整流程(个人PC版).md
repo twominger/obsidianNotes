@@ -1008,10 +1008,10 @@ vrrp_instance VI_1 {
     unicast_src_ip 172.17.10.27
     unicast_peer {
       172.17.10.28
-      172.17.10.28
+      172.17.10.23
     }
     virtual_ipaddress {
-        172.17.10.28
+        172.17.10.238
     }
 #    track_script {
 #       chk_apiserver
@@ -1037,7 +1037,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 172.17.10.28
+    mcast_src_ip 172.17.10.23
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1045,13 +1045,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 172.17.10.28
+    unicast_src_ip 172.17.10.23
     unicast_peer {
       172.17.10.28
-      172.17.10.28
+      172.17.10.27
     }
     virtual_ipaddress {
-        172.17.10.28
+        172.17.10.238
     }
 #    track_script {
 #       chk_apiserver
@@ -1131,9 +1131,9 @@ backend sql-master
   option tcp-check
   balance roundrobin
   default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
-  server sql01.novalocal  192.168.200.22:3306  check
-  server sql02.novalocal  192.168.200.23:3306  check
-  server sql03.novalocal  192.168.200.24:3306  check
+  server sql01.novalocal  172.17.10.28:3306  check
+  server sql02.novalocal  172.17.10.27:3306  check
+  server sql03.novalocal  172.17.10.23:3306  check
 EOF
   
 systemctl enable --now haproxy.service
