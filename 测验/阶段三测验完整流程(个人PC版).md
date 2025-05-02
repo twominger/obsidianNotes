@@ -2048,6 +2048,8 @@ docker login hub.lib0.cn
 # admin redhat
 docker tag nginx-discuz:v1 hub.lib0.cn/discuz/nginx-discuz:v1
 docker push hub.lib0.cn/discuz/nginx-discuz:v1
+
+docker logout hub.lib0.cn
 ```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
