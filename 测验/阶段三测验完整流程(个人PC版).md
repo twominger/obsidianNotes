@@ -2306,7 +2306,7 @@ metadata:
 apiVersion: v1
 kind: Node
 metadata:
-  name: n02.novalocal
+  name: k8sn2.lab0.cn
   labels:
     Discuz-node: "true"
 
