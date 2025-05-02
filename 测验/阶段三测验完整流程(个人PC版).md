@@ -2667,7 +2667,9 @@ vim /etc/kubernetes/manifests/kube-scheduler.yaml
 
 
 netstat -antp | grep proxy 
-kube-proxy$kubectl -n kube-system edit cm kube-proxy
+# kube-proxy
+
+kubectl -n kube-system edit cm kube-proxy
 ......
 metricsBindAddress: "0.0.0.0:10249"
 ......
