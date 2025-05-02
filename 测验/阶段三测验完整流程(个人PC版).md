@@ -2965,7 +2965,84 @@ spec:
 kubectl apply -f service.yaml -f servicemonitoring.yaml -f openstack-alerts.yaml
 ```
 
+### ceph
+```shell
+cd ../ceph/
 
+vim service.yaml
+# ceph-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ceph-exporter
+  namespace: monitoring
+  labels:
+    release: prometheus
+    app: ceph-exporter
+spec:
+  type: ClusterIP
+  ports:
+  - name: metrics
+    port: 9283
+    targetPort: 9283
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: ceph-exporter
+  namespace: monitoring
+  labels:
+    release: prometheus
+subsets:
+- addresses:
+  - ip: 192.168.200.14
+  ports:
+  - name: metrics
+    port: 9283
+
+
+vim servicemonitoring.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ceph-monitor
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: ceph-exporter
+  endpoints:
+  - port: metrics
+    targetPort: 9283
+    scheme: http
+    interval: 30s
+    
+vim ceph-alerts.yaml
+# ceph-alerts.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: ceph-alerts
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  groups:
+  - name: ceph
+    rules:
+    - alert: CephOSDUtilizationHigh
+      expr: ceph_osd_utilization > 80
+      for: 10m
+      labels:
+        severity: critical
+      annotations:
+        summary: "Ceph OSD 使用率超过 80% (当前值: {{ $value }}%)"
+
+
+kubectl apply -f service.yaml -f servicemonitoring.yaml -f ceph-alerts.yaml
+```
 
 
 
