@@ -3069,6 +3069,9 @@ kubectl get servicemonitors.monitoring.coreos.com -n monitoring
 
 ### grafana
 ```shell
+http://192.168.200.16:39000/
+admin yutian
+
 
 ```
 
