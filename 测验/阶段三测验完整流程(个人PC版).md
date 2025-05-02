@@ -3168,6 +3168,10 @@ kubectl delete -n monitoring pod prometheus-grafana-6597bdc64-8rcbr
 
 # grafana
 
+Alerting/Contact Points/Create contact point
+
+name: yutian
+Addresses: 277996165@qq.com
 
 ```
 
