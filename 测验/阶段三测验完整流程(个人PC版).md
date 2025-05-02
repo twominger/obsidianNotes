@@ -2704,7 +2704,18 @@ cd /opt/
 mkdir docker-export
 cd docker-export/
 
+docker load -i openstack-exportar.tar.gz 
 
+vim admin_openrc.sh
+
+OS_PROJECT_DOMAIN_NAME=Default
+OS_USER_DOMAIN_NAME=Default
+OS_PROJECT_NAME=admin
+OS_USERNAME=admin
+OS_PASSWORD=yutian
+OS_AUTH_URL=http://192.168.200.11:5000/v3
+OS_IDENTITY_API_VERSION=3
+OS_IMAGE_API_VERSION=2
 ```
 ## prometheus 监控 mysql
 ```shell
