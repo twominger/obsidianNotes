@@ -2751,7 +2751,8 @@ mv mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter /usr/local/bin/
 
 mysql -uroot -pyutian
 
-
+grant REPLICATION CLIENT, PROCESS ON *.* TO 'exporter_mysql'@'localhost' identified by 'yutian';
+grant SELECT ON performance_schema.* TO 'exporter_mysql'@'localhost' identified by 'yutian';
 
 
 vim .my.cnf
