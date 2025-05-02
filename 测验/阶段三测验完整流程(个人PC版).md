@@ -2257,7 +2257,6 @@ spec:
       storage: 2Gi
 EOF
 
-
 kubectl apply -f ceph-cephfs-pvc.yaml
 ```
 将上述 PersistentVolumeClaim 作为原始块设备绑定到 Pod 资源的演示和示例如下：
@@ -2417,7 +2416,7 @@ vim /etc/docker/daemon.json
 systemctl restart docker
 
 cat >>/etc/hosts <<EOF
-192.168.224.51 hub.lib0.cn
+192.168.200.25 hub.lib0.cn
 EOF
 
 kubectl apply -f aaa.yaml
