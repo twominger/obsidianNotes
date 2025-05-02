@@ -924,6 +924,10 @@ neutron port-show 9d631d54-f6bf-4c30-899b-f60c89943e54
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:9b:b3:50 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:98:eb:dc 9d631d54-f6bf-4c30-899b-f60c89943e54
 
+neutron port-update 9374b3e1-92ff-400b-b993-df24162123f1 --allowed_address_pairs list=true type=dict ip_address=172.17.10.238
+neutron port-update f597bdf1-0aa6-469c-9d27-c258a45118f6 --allowed_address_pairs list=true type=dict ip_address=172.17.10.238
+neutron port-update c69f9cec-902d-4062-8896-cb03871c3144 --allowed_address_pairs list=true type=dict ip_address=172.17.10.238
+
 # 最后分配一个浮动ip绑定到viptest
 openstack port create --network 9c015f29-15bc-480c-b200-cbc7417f7901 --fixed-ip subnet=0ff23c98-cd76-4708-beec-72de61f7bf0f,ip-address=192.168.200.238 viptest
 
