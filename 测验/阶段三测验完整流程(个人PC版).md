@@ -3076,6 +3076,36 @@ Dashboards/New/import
 
 
 
+  smtp:
+enabled: true
+host: "smtp.qq.com:587"        # SMTP 服务器地址和端口
+user: "845439365@qq.com"          # SMTP 登录用户名
+password: "eardaszmnxkybbah"      # SMTP 登录密码
+from_address: "13477408924@163.com" # 发件人地址
+from_name: "Grafana"                # 发件人名称
+skip_verify: false                  # 是否跳过 SSL/TLS 证书验证
+ehlo_identity: "grafana"            # EHLO 命令的身份（一般不需要修改）
+starttls_policy: "REQUIRED"        # 是否强制使用 TLS
+
+
+kubectl edit configmaps -n monitoring prometheus-grafana
+    [server]
+    domain = ''
+    [smtp]
+    enabled: true
+    host: "smtp.qq.com:587"
+    user: "845439365@qq.com"
+    password: "eardaszmnxkybbah"
+    from_address: "13477408924@163.com"
+    from_name: "Grafana"
+    skip_verify: false
+    ehlo_identity: "grafana"
+    starttls_policy: "REQUIRED"
+kind: ConfigMap
+
+
+kubectl get pod -n monitoring
+kubectl delete pod -n monitoring prometheus-grafana-8557dc6868-gwcvt
 
 ```
 
