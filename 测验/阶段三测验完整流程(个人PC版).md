@@ -2455,9 +2455,10 @@ vim kube-apiserver.yaml
   - kube-apiserver
   - --service-node-port-range=30000-40000
 
-
-
-
+# 检查是否成功修改
+kubectl edit -n kube-system pod kube-apiserver-k8sm1.lab0.cn
+kubectl edit -n kube-system pod kube-apiserver-k8sm2.lab0.cn
+kubectl edit -n kube-system pod kube-apiserver-k8sm3.lab0.cn
 
 ```
 ## prometheus 监控 mysql
