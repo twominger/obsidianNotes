@@ -2548,6 +2548,89 @@ kubectl get svc -n monitoring
 # prometheus-operated                       ClusterIP   None            <none>        9090/TCP                        5m25s
 # prometheus-prometheus-node-exporter       ClusterIP   10.96.50.224    <none>        9100/TCP                        5m49s
 
+kubectl taint nodes k8sn1.lab0.cn dedicated=monitoring:NoSchedule
+
+
+vim values-2.yaml
+
+prometheus:
+  prometheusSpec:
+    # 节点亲和性配置 - 强制调度到 N01 节点
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values: [k8sn1.lab0.cn]
+    # 污点容忍配置
+    tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "monitoring"
+        effect: "NoSchedule"
+    
+    serviceMonitorSelector: {}
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: csi-cephfs-sc
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 2Gi
+  service:
+    type: NodePort
+    nodePort: 39090
+
+grafana:
+  # 节点亲和性配置 - 强制调度到 N01 节点
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values: [k8sn1.lab0.cn]
+  # 污点容忍配置
+  tolerations:
+    - key: "dedicated"
+      operator: "Equal"
+      value: "monitoring"
+      effect: "NoSchedule"
+      
+  persistence:
+    enabled: true
+    storageClassName: csi-cephfs-sc
+    accessModes:
+      - ReadWriteOnce
+    size: 2Gi
+  adminPassword: "yutian"
+  service:
+    type: NodePort
+    nodePort: 39000
+    
+     smtp:
+   enabled: true
+   host: "smtp.qq.com:587"        # SMTP 服务器地址和端口
+   user: "845439365@qq.com"          # SMTP 登录用户名
+   password: "eardaszmnxkybbah"      # SMTP 登录密码
+   from_address: "13477408924@163.com" # 发件人地址
+   from_name: "Grafana"                # 发件人名称
+   skip_verify: false                  # 是否跳过 SSL/TLS 证书验证
+   ehlo_identity: "grafana"            # EHLO 命令的身份（一般不需要修改）
+   starttls_policy: "REQUIRED"        # 是否强制使用 TLS
+
+
+helm upgrade prometheus ./kube-prometheus-stack-70.8.0.tgz \
+  -f values-2.yaml \
+  -n monitoring
+
+
+kubectl get pods -n monitoring -o wide
 
 
 
