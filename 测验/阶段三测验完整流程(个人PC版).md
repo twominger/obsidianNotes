@@ -2438,10 +2438,11 @@ kubectl -n aaa exec my-app-deployment-6cf8585c47-57np8 -ti -- bash
 [[10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍#helm|20250222-k8s-用户角色权限及helm介绍]]
 安装 prometheus
 ![[附件/get_helm.sh]]
+![[附件/kube-prometheus-stack-70.8.0.tgz]]
 ```shell
 # 安装helm工具包
-export http_proxy=192.168.224.144:7897
-export https_proxy=192.168.224.144:7897
+# export http_proxy=192.168.224.144:7897
+# export https_proxy=192.168.224.144:7897
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
@@ -2522,6 +2523,31 @@ helm install prometheus ./kube-prometheus-stack-70.8.0.tgz \
 #   kubectl --namespace monitoring port-forward $POD_NAME 3000
 
 # Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+kubectl get pod -n monitoring
+# NAME                                                     READY   STATUS    RESTARTS   AGE
+# alertmanager-prometheus-kube-prometheus-alertmanager-0   2/2     Running   0          4m21s
+# prometheus-grafana-69d794cf88-72j9v                      3/3     Running   0          4m45s
+# prometheus-kube-prometheus-operator-76bf7879fb-wkqgl     1/1     Running   0          4m45s
+# prometheus-kube-state-metrics-f5fb9cdf-4ftvl             1/1     Running   0          4m45s
+# prometheus-prometheus-kube-prometheus-prometheus-0       2/2     Running   0          4m21s
+# prometheus-prometheus-node-exporter-lpr9z                1/1     Running   0          4m45s
+# prometheus-prometheus-node-exporter-qfrgd                1/1     Running   0          4m45s
+# prometheus-prometheus-node-exporter-qrwdr                1/1     Running   0          4m45s
+# prometheus-prometheus-node-exporter-r8jzf                1/1     Running   0          4m45s
+# prometheus-prometheus-node-exporter-sf84h                1/1     Running   0          4m45s
+
+kubectl get svc -n monitoring
+# NAME                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+# alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP      5m25s
+# prometheus-grafana                        NodePort    10.96.247.208   <none>        80:39000/TCP                    5m49s
+# prometheus-kube-prometheus-alertmanager   ClusterIP   10.96.108.165   <none>        9093/TCP,8080/TCP               5m49s
+# prometheus-kube-prometheus-operator       ClusterIP   10.96.127.206   <none>        443/TCP                         5m49s
+# prometheus-kube-prometheus-prometheus     NodePort    10.96.11.73     <none>        9090:39090/TCP,8080:32008/TCP   5m49s
+# prometheus-kube-state-metrics             ClusterIP   10.96.24.80     <none>        8080/TCP                        5m49s
+# prometheus-operated                       ClusterIP   None            <none>        9090/TCP                        5m25s
+# prometheus-prometheus-node-exporter       ClusterIP   10.96.50.224    <none>        9100/TCP                        5m49s
+
 
 
 
