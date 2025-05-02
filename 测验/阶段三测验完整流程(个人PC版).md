@@ -3152,17 +3152,21 @@ prometheus-grafana-8557dc6868-qgpnp:/etc/grafana$
 
 # 这里如果ping 邮箱服务器不成功则进行以下步骤
 kubectl edit -n monitoring deployments.apps prometheus-grafana
-····
-      hostAliases:
-      - hostnames:
-        - smtp.qq.com
-        ip: 183.47.101.192
-····
+
+enableServiceLinks: true
+hostAliases:
+- hostnames:
+  - smtp.qq.com
+  ip: 183.47.101.192
+initContainers:
+
 
 #重构Grafana的pod
-kubectl delete -n monitoring pod prometheus-grafana-85679bfb66-4x6kf
+kubectl delete -n monitoring pod prometheus-grafana-6597bdc64-8rcbr
 
 
+
+# grafana
 
 
 ```
