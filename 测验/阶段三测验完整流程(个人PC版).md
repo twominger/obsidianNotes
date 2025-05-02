@@ -219,7 +219,15 @@ ceph orch apply mds k8s_fs --placement=1
 rbd mirror pool enable cinder-pool pool # 开启存储池同步，同步模式为池模式
 rbd mirror pool peer bootstrap create --site-name cs01 cinder-pool > /opt/cs01.key # 创建集群秘钥并导出
 scp /opt/cs01.key root@cs02:/opt/ # 发送key到cs02的灾备集群
-rbd feature enable cinder-pool/volume-27147c92-e11b-4c52-8bba-af82088ada58 journaling # 开启目标RBD同步特性
+rbd -p cinder-pool ls
+# volume-081e7a58-a26f-4e49-b265-cc17aad805b8
+# volume-08f039cf-e39b-4bf4-b8dd-01df74e4102b
+# volume-0b75ba15-bb6b-40fe-adb9-24dbfd188348
+# volume-39ec872b-979e-40e1-bbe8-a2f564c011a2
+# volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20
+# volume-ca258813-94ed-435b-9456-49442b40470b
+
+rbd feature enable cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8 journaling # 开启目标RBD同步特性
 
 # CS02集群操作:
 ceph osd pool create cinder-pool # 创建存储池和主集群相同
@@ -227,6 +235,7 @@ ceph osd pool application enable cinder-pool rbd # 为存储池创建标签
 ceph orch apply rbd-mirror --placement=1 # 安装rbd-mirror
 rbd mirror pool peer bootstrap import --site-name cs02 --direction rx-only cinder-pool /opt/cs01.key # 导入cs01的集群秘钥
 rbd -p cinder-pool ls # 查看存储池卷是否同步
+# volume-081e7a58-a26f-4e49-b265-cc17aad805b8
 ```
 ### mysql 扩容（放在后面做）
 随着业务的使用量增加，mysql 所使用的 rbd 镜像需要进行扩容到 20G 大小
@@ -3074,6 +3083,8 @@ admin yutian
 
 Dashboards/New/import
 
+openstack cloudcs
+# 手动下载json
 
 
   smtp:
@@ -3165,7 +3176,6 @@ initContainers:
 kubectl delete -n monitoring pod prometheus-grafana-6597bdc64-8rcbr
 
 
-
 # grafana
 
 Alerting/Contact Points/Create contact point
@@ -3174,6 +3184,8 @@ name: yutian
 Addresses: 277996165@qq.com
 
 ```
+
+
 
 
 
