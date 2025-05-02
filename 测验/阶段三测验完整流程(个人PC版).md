@@ -2763,6 +2763,25 @@ password=yutian
 
 mysqld_exporter --config.my-cnf=".my.cnf"
 
+# openstack 安全组放行端口
+http://192.168.200.22:9104/metrics
+
+ctrl + c
+
+vim /usr/lib/systemd/system/mysqld_exporter.service
+
+[Unit]
+Description=mysqld_exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mysqld_exporter --config.my-cnf=/opt/export/.my.cnf
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
 
 ```
 
