@@ -2646,6 +2646,14 @@ kubectl get pods -n monitoring -o wide
 ```
 ## prometheus 监控 k8s
 ```shell
+vim /etc/kubernetes/manifests/etcd.yaml
+.......
+--listen-metrics-urls=http://0.0.0.0:2381
+.......
+
+```
+
+```shell
 vim /etc/kubernetes/manifests/kube-controller-manager.yaml
 ......
 --bind-address=127.0.0.1修改为：--bind-address=0.0.0.0
