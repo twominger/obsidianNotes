@@ -2716,6 +2716,14 @@ OS_PASSWORD=yutian
 OS_AUTH_URL=http://192.168.200.11:5000/v3
 OS_IDENTITY_API_VERSION=3
 OS_IMAGE_API_VERSION=2
+
+docker run \
+  -itd \
+  --name prom_openstack_exporter \
+  -p 9183:9183 \
+  --env-file=$(pwd)/admin_openrc.sh \
+  --restart=unless-stopped \
+  moghaddas/prom-openstack-exporter:latest 
 ```
 ## prometheus 监控 mysql
 ```shell
