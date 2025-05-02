@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
       "basename": "阶段三测验完整流程(个人PC版)",
       "path": "测验/阶段三测验完整流程(个人PC版).md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "未命名",
       "path": "未命名.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
