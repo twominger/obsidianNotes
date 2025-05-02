@@ -2798,9 +2798,44 @@ netstat -tulnp |grep mysqld_export
 ```shell
 # k8sm1
 cd /opt/helm/
-mkdir m
+mkdir mysql openstack ceph
 ```
 
+```shell
+cd /opt/helm/mysql/
+vim service.yaml
+
+# mysql-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-exporter
+  namespace: monitoring
+  labels:
+    app: mysql-exporter
+    release: prometheus
+spec:
+  type: ClusterIP
+  ports:
+  - name: metrics
+    port: 9104
+    targetPort: 9104
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: mysql-exporter
+  namespace: monitoring
+  labels:
+    app: mysql-exporter
+    release: prometheus
+subsets:
+- addresses:
+  - ip: 192.168.200.22
+  ports:
+  - name: metrics
+    port: 9104
+```
 
 # 收尾（几个小实验）
 [[#部署两台单节点 ceph#云硬盘容灾（等到 openstack 创建卷之后针对卷进行备份）(cs01 && cs02)|云硬盘容灾]]
