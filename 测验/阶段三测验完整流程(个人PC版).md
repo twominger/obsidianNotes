@@ -2746,7 +2746,19 @@ cd export/
 # wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.10.0/mysqld_exporter-0.10.0.linux-amd64.tar.gz
 wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.0/mysqld_exporter-0.15.0.linux-amd64.tar.gz
 tar -zxvf mysqld_exporter-0.15.0.linux-amd64.tar.gz 
-mv mysqld_exporter-0.10.0.linux-amd64 /usr/local/mysqld_exporter
+mv mysqld_exporter-0.15.0.linux-amd64 /usr/local/mysqld_exporter
+mv mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter /usr/local/bin/
+
+mysql -uroot -pyutian
+
+
+
+
+vim .my.cnf
+[client]
+user=exporter
+password=123456
+
 
 ```
 
