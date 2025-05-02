@@ -929,8 +929,10 @@ neutron port-update f597bdf1-0aa6-469c-9d27-c258a45118f6 --allowed_address_pairs
 neutron port-update c69f9cec-902d-4062-8896-cb03871c3144 --allowed_address_pairs list=true type=dict ip_address=172.17.10.238
 
 # 最后分配一个浮动ip绑定到viptest
+
 openstack port create --network 9c015f29-15bc-480c-b200-cbc7417f7901 --fixed-ip subnet=0ff23c98-cd76-4708-beec-72de61f7bf0f,ip-address=192.168.200.238 viptest
 
+openstack floating ip set --port 88266b89-d3be-4892-88d6-03d05a7edc2b 192.168.200.29
 
 ```
 ### keepalived+haproxy
@@ -955,7 +957,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state MASTER
     interface ens3
-    mcast_src_ip 192.168.200.22
+    mcast_src_ip 172.17.10.28
     virtual_router_id 51
     priority 102
     advert_int 2
@@ -963,13 +965,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.200.22
+    unicast_src_ip 172.17.10.28
     unicast_peer {
-      192.168.200.23
-      192.168.200.24
+      172.17.10.27
+      172.17.10.23
     }
     virtual_ipaddress {
-        192.168.200.238
+        172.17.10.238
     }
 #    track_script {
 #       chk_apiserver
@@ -995,7 +997,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 192.168.200.23
+    mcast_src_ip 172.17.10.27
     virtual_router_id 51
     priority 101
     advert_int 2
@@ -1003,13 +1005,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.200.23
+    unicast_src_ip 172.17.10.27
     unicast_peer {
-      192.168.200.22
-      192.168.200.24
+      172.17.10.28
+      172.17.10.28
     }
     virtual_ipaddress {
-        192.168.200.238
+        172.17.10.28
     }
 #    track_script {
 #       chk_apiserver
@@ -1035,7 +1037,7 @@ vrrp_script chk_apiserver {
 vrrp_instance VI_1 {
     state BACKUP
     interface ens3
-    mcast_src_ip 192.168.200.24
+    mcast_src_ip 172.17.10.28
     virtual_router_id 51
     priority 100
     advert_int 2
@@ -1043,13 +1045,13 @@ vrrp_instance VI_1 {
         auth_type PASS
         auth_pass 1111
     }
-    unicast_src_ip 192.168.200.24
+    unicast_src_ip 172.17.10.28
     unicast_peer {
-      192.168.200.22
-      192.168.200.23
+      172.17.10.28
+      172.17.10.28
     }
     virtual_ipaddress {
-        192.168.200.238
+        172.17.10.28
     }
 #    track_script {
 #       chk_apiserver
