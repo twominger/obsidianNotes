@@ -2913,12 +2913,56 @@ metadata:
     release: prometheus
 subsets:
 - addresses:
-  - ip: 192.168.10.120  # OpenStack 节点的 IP
+  - ip: 192.168.200.11
   ports:
   - name: metrics
     port: 9183
 
 
+vim servicemonitoring.yaml
+# openstack-servicemonitor.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: openstack-monitor
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: nova-exporter
+  endpoints:
+  - port: metrics
+    targetPort: 9183
+    scheme: http
+    interval: 30s
+
+
+vim openstack-alerts.yaml
+# openstack-alerts.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: openstack-alerts
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  groups:
+  - name: openstack
+    rules:
+    - alert: OpenStackInstanceUsageHigh
+      expr: sum(nova_instances) / sum(nova_quota_instances) * 100 > 80
+      for: 10m
+      labels:
+        release: prometheus-stack
+        severity: critical
+      annotations:
+        summary: "OpenStack 实例使用率超过 80% (当前值: {{ $value }}%)"
+        
+
+kubectl apply -f service.yaml -f servicemonitoring.yaml -f openstack-alerts.yaml
 ```
 
 
