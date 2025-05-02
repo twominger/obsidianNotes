@@ -2440,6 +2440,7 @@ kubectl -n aaa exec my-app-deployment-6cf8585c47-57np8 -ti -- bash
 ![[附件/get_helm.sh]]
 ![[附件/kube-prometheus-stack-70.8.0.tgz]]
 ```shell
+# k8sm1
 # 安装helm工具包
 # export http_proxy=192.168.224.144:7897
 # export https_proxy=192.168.224.144:7897
@@ -2646,6 +2647,7 @@ kubectl get pods -n monitoring -o wide
 ```
 ## prometheus 监控 k8s
 ```shell
+# k8sm1
 vim /etc/kubernetes/manifests/etcd.yaml
 .......
 --listen-metrics-urls=http://0.0.0.0:2381
@@ -2688,6 +2690,7 @@ netstat -antp | grep kube-proxy
 ## prometheus 监控 openstack
 https://www.wolai.com/chuangxinyang/2yQcF1mDBJ3GYMzZrEy58L
 ```shell
+# osp1
 # step 1: 安装必要的一些系统工具
 sudo yum install -y yum-utils
 
@@ -2728,6 +2731,7 @@ docker run \
 ## prometheus 监控 ceph
 https://www.wolai.com/chuangxinyang/37Ub1yhJ85vPMZCSwxpBm7
 ```shell
+# cs01
 ceph mgr module enable prometheus
 
 netstat -tulnp |grep ceph-mgr
@@ -2739,6 +2743,7 @@ http://192.168.200.14:9283/metrics
 ```
 ## prometheus 监控 mysql
 ```shell
+# sql01
 cd /opt
 mkdir export
 cd export/
@@ -2782,10 +2787,19 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 
+systemctl daemon-reload
+systemctl start mysqld_exporter.service
 
+netstat -tulnp |grep mysqld_export
+# tcp6       0      0 :::9104                 :::*                    LISTEN      40490/mysqld_export 
 ```
 
-
+## 对接
+```shell
+# k8sm1
+cd /opt/helm/
+mkdir m
+```
 
 
 # 收尾（几个小实验）
