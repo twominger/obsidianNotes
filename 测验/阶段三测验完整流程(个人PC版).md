@@ -244,20 +244,25 @@ rbd resize mysql-pool/mysql-data1 --size 20G --id zhangmingming
 # Resizing image: 100% complete...done.
 # xfs_growfs /data/mysql
 resize2fs /data/mysql
-
-
 ```
 ### rbd 卷改造 (放后面做)
 运维工程师为了调整云硬盘中操作系统的数据，决定对 cinder 中的 k8s-image 镜像进行改造，使用 rbd 克隆技术得到克隆卷 k8s-clone 并将克隆的镜像挂载起来，删除镜像中 k8s 的配置文件，然后将其导出到，灾备站点的 backup-pool 的存储池中，命名为 k8s-image-backup
 ```shell
+rbd -p cinder-pool ls
+# volume-081e7a58-a26f-4e49-b265-cc17aad805b8
+# volume-08f039cf-e39b-4bf4-b8dd-01df74e4102b
+# volume-0b75ba15-bb6b-40fe-adb9-24dbfd188348
+# volume-39ec872b-979e-40e1-bbe8-a2f564c011a2
+# volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20
+# volume-ca258813-94ed-435b-9456-49442b40470b
 # 创建快照
-rbd snap create cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01
+rbd snap create cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8 snap01
 
 # 保护快照（必需步骤）
-rbd snap protect cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01
+rbd snap protect cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8@snap01
 
 # 创建克隆卷
-rbd clone cinder-pool/volume-6ce9b8a7-b78f-4429-96f0-0fd4303fba5d@snap01 cinder-pool/k8s-clone
+rbd clone cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8@snap01 cinder-pool/k8s-clone
 
 # 扁平化克隆卷（独立于源卷）
 rbd flatten cinder-pool/k8s-clone
