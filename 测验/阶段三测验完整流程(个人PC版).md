@@ -879,7 +879,10 @@ openstack network list
 # +--------------------------------------+---------+--------------------------------------+
 
 
-openstack port create --network 9c015f29-15bc-480c-b200-cbc7417f7901 --fixed-ip subnet=0ff23c98-cd76-4708-beec-72de61f7bf0f,ip-address=192.168.200.238 viptest
+openstack port create --network 240f172c-427f-47e7-ad1a-5b9d488227e7 --fixed-ip subnet=a7109a80-d261-4767-b6d9-765ca752f3a0,ip-address=172.17.10.238 viptest
+
+# openstack port delete 808ad194-e4bf-4740-bb8a-c77eb97aed1a
+
 # 查看需要使用vip节点的端口，并记录ID
 openstack port list
 # sql01 172.17.10.28 9374b3e1-92ff-400b-b993-df24162123f1
@@ -891,9 +894,9 @@ openstack port list
 # sql03 192.168.200.24 9d631d54-f6bf-4c30-899b-f60c89943e54
 
 # 绑定操作
-openstack port set --allowed-address ip-address=192.168.200.238 9374b3e1-92ff-400b-b993-df24162123f1
-openstack port set --allowed-address ip-address=192.168.200.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
-openstack port set --allowed-address ip-address=192.168.200.238 c69f9cec-902d-4062-8896-cb03871c3144
+openstack port set --allowed-address ip-address=172.17.10.238 9374b3e1-92ff-400b-b993-df24162123f1
+openstack port set --allowed-address ip-address=172.17.10.238 f597bdf1-0aa6-469c-9d27-c258a45118f6
+openstack port set --allowed-address ip-address=172.17.10.238 c69f9cec-902d-4062-8896-cb03871c3144
 
 openstack port set --enable-port-security 89b50974-8365-426f-a310-8be957ddbea3
 openstack port set --enable-port-security 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
@@ -920,6 +923,10 @@ neutron port-show 9d631d54-f6bf-4c30-899b-f60c89943e54
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:dd:08:35 89b50974-8365-426f-a310-8be957ddbea3
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:9b:b3:50 6a1c96cc-6ef3-41ad-a88a-04f9a68f3198
 # openstack port unset --allowed-address ip-address=192.168.200.238,mac-address=fa:16:3e:98:eb:dc 9d631d54-f6bf-4c30-899b-f60c89943e54
+
+
+
+
 ```
 ### keepalived+haproxy
 ```shell
