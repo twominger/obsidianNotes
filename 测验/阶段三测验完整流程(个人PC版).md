@@ -3109,6 +3109,64 @@ kubectl delete pod -n monitoring prometheus-grafana-8557dc6868-gwcvt
 
 ```
 
+```shell
+[root@k8sm1 ~]# kubectl exec -ti -n monitoring pods/prometheus-grafana-8557dc6868-qgpnp -- /bin/bash
+prometheus-grafana-8557dc6868-qgpnp:/usr/share/grafana$ cd /etc/grafana/
+prometheus-grafana-8557dc6868-qgpnp:/etc/grafana$ ls
+grafana.ini   ldap.toml     provisioning
+prometheus-grafana-8557dc6868-qgpnp:/etc/grafana$ cat grafana.ini 
+[analytics]
+check_for_updates = true
+[grafana_net]
+url = https://grafana.net
+[log]
+mode = console
+[paths]
+data = /var/lib/grafana/
+logs = /var/log/grafana
+plugins = /var/lib/grafana/plugins
+provisioning = /etc/grafana/provisioning
+[server]
+domain = ''
+[smtp]
+enabled: true
+host: "smtp.qq.com:587"
+user: "845439365@qq.com"
+password: "eardaszmnxkybbah"
+from_address: "13477408924@163.com"
+from_name: "Grafana"
+skip_verify: false
+ehlo_identity: "grafana"
+starttls_policy: "REQUIRED"
+prometheus-grafana-8557dc6868-qgpnp:/etc/grafana$ ping smtp.qq.com
+PING smtp.qq.com (198.18.1.81): 56 data bytes
+64 bytes from 198.18.1.81: seq=0 ttl=42 time=0.974 ms
+64 bytes from 198.18.1.81: seq=1 ttl=42 time=2.048 ms
+64 bytes from 198.18.1.81: seq=2 ttl=42 time=1.280 ms
+^C
+--- smtp.qq.com ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.974/1.434/2.048 ms
+prometheus-grafana-8557dc6868-qgpnp:/etc/grafana$ 
+
+
+# 这里如果ping 邮箱服务器不成功则进行以下步骤
+kubectl edit -n monitoring deployments.apps prometheus-grafana
+····
+      hostAliases:
+      - hostnames:
+        - smtp.qq.com
+        ip: 183.47.101.192
+····
+
+#重构Grafana的pod
+kubectl delete -n monitoring pod prometheus-grafana-85679bfb66-4x6kf
+
+
+
+
+```
+
 
 
 
