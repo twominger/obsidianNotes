@@ -880,7 +880,6 @@ openstack network list
 
 
 openstack port create --network 240f172c-427f-47e7-ad1a-5b9d488227e7 --fixed-ip subnet=a7109a80-d261-4767-b6d9-765ca752f3a0,ip-address=172.17.10.238 viptest
-neutron port-create --fixed-ip ip_address=172.17.10.237 240f172c-427f-47e7-ad1a-5b9d488227e7
 # openstack port delete 808ad194-e4bf-4740-bb8a-c77eb97aed1a
 
 # 查看需要使用vip节点的端口，并记录ID
