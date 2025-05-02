@@ -256,7 +256,7 @@ rbd -p cinder-pool ls
 # volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20
 # volume-ca258813-94ed-435b-9456-49442b40470b
 # 创建快照
-rbd snap create cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8 snap01
+rbd snap create cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8@snap01
 
 # 保护快照（必需步骤）
 rbd snap protect cinder-pool/volume-081e7a58-a26f-4e49-b265-cc17aad805b8@snap01
