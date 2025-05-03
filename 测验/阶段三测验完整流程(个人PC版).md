@@ -256,13 +256,13 @@ rbd -p cinder-pool ls
 # volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20
 # volume-ca258813-94ed-435b-9456-49442b40470b
 # 创建快照
-rbd snap create cinder-pool/volume-08f039cf-e39b-4bf4-b8dd-01df74e4102b@snap01
+rbd snap create cinder-pool/volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20@snap01
 
 # 保护快照（必需步骤）
-rbd snap protect cinder-pool/volume-08f039cf-e39b-4bf4-b8dd-01df74e4102b@snap01
+rbd snap protect cinder-pool/volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20@snap01
 
 # 创建克隆卷
-rbd clone cinder-pool/volume-08f039cf-e39b-4bf4-b8dd-01df74e4102b@snap01 cinder-pool/k8s-clone
+rbd clone cinder-pool/volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20@snap01 cinder-pool/k8s-clone
 
 # 扁平化克隆卷（独立于源卷）
 rbd flatten cinder-pool/k8s-clone
