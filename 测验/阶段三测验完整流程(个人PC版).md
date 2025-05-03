@@ -282,6 +282,7 @@ rbd unmap /dev/rbd0
    
 scp /etc/ceph/*  root@osp:/opt/ #将第一套集群的配置上传到osp节点
 
+cd /opt/
 rbd export  cinder-pool/k8s-clone  k8s-clone.img -c ceph.conf --keyring  ceph.client.admin.keyring #导出成为文件
 rm -rf /opt/ceph*
 scp /etc/ceph/*  root@osp:/opt/ #将第二套集群的配置上传到osp节点
