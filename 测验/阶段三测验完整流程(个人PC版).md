@@ -272,7 +272,7 @@ rbd map cinder-pool/k8s-clone --id zhangmingming --keyring /etc/ceph/ceph.client
 
 # 创建挂载点并挂载（假设文件系统为 ext4）
 mkdir /mnt/k8s-clone
-mount /dev/rbd0 /mnt/k8s-clone
+mount /dev/rbd0p1 /mnt/k8s-clone
 
 rm -rf /mnt/k8s-clone/etc/kubernetes/*
 
