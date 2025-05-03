@@ -183,6 +183,7 @@
       "测验/创建自定义镜像.md"
     ],
     "附件": [
+      "附件/kube-prometheus-stack-70.8.0.tgz",
       "附件/字体霞鹜文楷.zip",
       "附件/ceph-csi-3.13.0.zip",
       "附件/docker-compose-linux-x86_64",
