@@ -239,7 +239,7 @@ cd /opt/
 rbd export cinder-pool/k8s-clone k8s-clone.img --id zhangmingming
 
 mkdir /opt/ceph
-scp /etc/ceph/*  root@osp:/opt/ #将第二套集群的配置上传到osp节点
+scp root@192.168.200.15:/etc/ceph/* /opt/ceph/  #将第二套集群的配置上传到osp节点
 
 #容灾站点操作
 ceph osd pool create backup-pool #创建备份池
