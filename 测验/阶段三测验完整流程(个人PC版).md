@@ -22,7 +22,7 @@ systemctl enable docker.service --now
 
 cat >>/etc/hosts <<EOF
 192.168.200.14 cs01.lab0.cn cs01
-192.168.200.15 cs02.lib0.cn cs02
+192.168.200.15 cs02.lab0.cn cs02
 EOF
 
 cat >>/etc/hosts <<EOF
@@ -53,7 +53,7 @@ chronyc sources
 ```shell
 cat >>/etc/hosts <<EOF
 192.168.200.14 cs01.lab0.cn cs01
-192.168.200.15 cs02.lib0.cn cs02
+192.168.200.15 cs02.lab0.cn cs02
 EOF
 
 cat >>/etc/hosts <<EOF
@@ -547,7 +547,7 @@ cp harbor.yml.tmpl harbor.yml
 #编辑harbor.yml配置文件
 vim harbor.yml
 
-hostname: hub.lib0.cn # 此处的主机名换成本机的ip地址、如果使用域名要与ip地址进行绑定(/etc/hosts)
+hostname: hub.lab0.cn # 此处的主机名换成本机的ip地址、如果使用域名要与ip地址进行绑定(/etc/hosts)
 http:
   port: 80  # 默认监听80端口
 
@@ -568,7 +568,7 @@ data_volume:/data/harbordata/  # 数据存储目录，推荐放在一个单独�
 添加域名解析
 ```shell
 cat > /etc/hosts <<EOF
-192.168.200.25 hub.lib0.cn
+192.168.200.25 hub.lab0.cn
 EOF
 ```
 修改 daemon. json 文件
@@ -576,7 +576,7 @@ EOF
 cat >/etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": [ "https://59037eca482c4f14b12dcacc3caffd91.mirror.swr.myhuaweicloud.com" ],
-    "insecure-registries": ["http://192.168.200.25","hub.lib0.cn"]
+    "insecure-registries": ["http://192.168.200.25","hub.lab0.cn"]
 }
 EOF
 ```
@@ -606,13 +606,13 @@ docker push 192.168.200.188/discuz/nginx:v1
 
 ```shell
 cat > /etc/hosts <<EOF
-192.168.200.25 hub.lib0.cn
+192.168.200.25 hub.lab0.cn
 EOF
 
 cat >/etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": [ "https://e9ede121ca7d4163b95042f86b165fa4.mirror.swr.myhuaweicloud.com" ],
-    "insecure-registries": ["hub.lib0.cn"]
+    "insecure-registries": ["hub.lab0.cn"]
 }
 EOF
 
@@ -630,7 +630,7 @@ docker images
 ```shell
 cat >>/etc/hosts <<EOF
 192.168.200.14 cs01.lab0.cn cs01
-192.168.200.15 cs02.lib0.cn cs02
+192.168.200.15 cs02.lab0.cn cs02
 EOF
 
 
@@ -729,9 +729,9 @@ mysqladmin -u root password "yutian"
 ### 配置 hosts 解析
 ```shell
 cat >>/etc/hosts <<EOF
-172.17.10.28 sql01.lib0.cn sql01.novalocal
-172.17.10.27 sql02.lib0.cn sql02.novalocal
-172.17.10.23 sql03.lib0.cn sql03.novalocal
+172.17.10.28 sql01.lab0.cn sql01.novalocal
+172.17.10.27 sql02.lab0.cn sql02.novalocal
+172.17.10.23 sql03.lab0.cn sql03.novalocal
 EOF
 ```
 ### 修改配置文件
@@ -1326,7 +1326,7 @@ cat > /etc/docker/daemon.json << EOF
     "https://dockerhub.icu",
     "https://docker.awsl9527.cn"
   ],
- "insecure-registries": ["hub.lib0.cn"],
+ "insecure-registries": ["hub.lab0.cn"],
   "max-concurrent-downloads": 10,
   "log-driver": "json-file",
   "log-level": "warn",
@@ -1418,15 +1418,15 @@ docker images
 ```shell
 # ip视情况而定，private子网IP
 cat >>/etc/hosts <<EOF
-192.168.200.16 k8sm1.lib0.cn k8sm1
-192.168.200.17 k8sm2.lib0.cn k8sm2
-192.168.200.18 k8sm3.lib0.cn k8sm3
-192.168.200.19 k8sn1.lib0.cn k8sn1
-192.168.200.20 k8sn2.lib0.cn k8sn2
+192.168.200.16 k8sm1.lab0.cn k8sm1
+192.168.200.17 k8sm2.lab0.cn k8sm2
+192.168.200.18 k8sm3.lab0.cn k8sm3
+192.168.200.19 k8sn1.lab0.cn k8sn1
+192.168.200.20 k8sn2.lab0.cn k8sn2
 EOF
 
 cat >>/etc/hosts <<EOF
-192.168.200.11 osp1.lib0.cn osp1
+192.168.200.11 osp1.lab0.cn osp1
 EOF
 
 # 互信配置
@@ -2012,12 +2012,12 @@ docker push crpi-on4n8clbhol74dg8.cn-hangzhou.personal.cr.aliyuncs.com/superming
 
 推送 harbor
 ```shell
-docker login hub.lib0.cn
+docker login hub.lab0.cn
 # admin redhat
-docker tag nginx-discuz:v1 hub.lib0.cn/discuz/nginx-discuz:v1
-docker push hub.lib0.cn/discuz/nginx-discuz:v1
+docker tag nginx-discuz:v1 hub.lab0.cn/discuz/nginx-discuz:v1
+docker push hub.lab0.cn/discuz/nginx-discuz:v1
 
-docker logout hub.lib0.cn
+docker logout hub.lab0.cn
 ```
 # k8s 对接 cephfs
 pod 使用 ceph 存储
@@ -2378,15 +2378,15 @@ kubectl delete namespace discuz
 
 ```shell
 # harbor仓库要公开，不公开的话需要配置secret
-kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
+kubectl create secret docker-registry  registrysecret --docker-server=hub.lab0.cn  --docker-username=admin --docker-password=redhat -n aaa
 vim /etc/docker/daemon.json
 {
-  "insecure-registries":["http://192.168.200.51","hub.lib0.cn"]
+  "insecure-registries":["http://192.168.200.51","hub.lab0.cn"]
 }
 systemctl restart docker
 
 cat >>/etc/hosts <<EOF
-192.168.200.25 hub.lib0.cn
+192.168.200.25 hub.lab0.cn
 EOF
 
 kubectl apply -f aaa.yaml
