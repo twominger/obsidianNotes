@@ -429,12 +429,13 @@ rbd -p cinder-pool ls volumes --id zhangmingming
     - 创建三个安全组
 - 可以先全部放行 SSH 等配置好之后再关闭
 
-| 名称         | 入口放行                    | 用途     |
-| ---------- | ----------------------- | ------ |
-| security01 | MYSQL、SSH               | mysql  |
-| security02 | HTTP、HTTPS、ALL ICMP、SSH | harbor |
-| secutity03 | TCP 8888、SSH            | k8s 业务 |
-|            |                         |        |
+| 名称         | 入口放行                    | 用途               |
+| ---------- | ----------------------- | ---------------- |
+| default    | SSH                     | 测试阶段用于远程连接，完成后可以 |
+| security01 | MYSQL、SSH               | mysql            |
+| security02 | HTTP、HTTPS、ALL ICMP、SSH | harbor           |
+| secutity03 | TCP 8888、SSH            | k8s 业务           |
+
 ### 浮动 IP
 - 登陆用户 zhangmingming
 - 项目/网络/浮动 IP
