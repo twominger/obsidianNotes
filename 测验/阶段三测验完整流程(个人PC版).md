@@ -5,7 +5,7 @@
 # 部署两台单节点 ceph 
 ## 部署流程 (cs01 && cs02)
 ### 准备 vmware虚拟机
-- vmware 克隆两台虚拟机，除系统盘外再加 9 块硬盘，单张网卡改桥接，初始化
+- yum 源修改（原 8.5.2111）
 ```shell
 sed -i 's/8\.5\.2111/8\.4\.2105/g' /etc/yum.repos.d/CentOS-Base.repo
 ```
@@ -17,7 +17,6 @@ yum -y install lvm2
 systemctl enable docker.service --now
 ```
 ### 配置时间同步
-原则上 ceph 集群以及数据库不能访问外网，所以只能同步内部时间服务器，这里我们将 openstack 的控制节点作为时间服务器，其他计算节点和 ceph 都同步它。
 - controller
 ```shell
 
@@ -198,7 +197,7 @@ rbd -p cinder-pool ls # 查看存储池卷是否同步
 rbd resize mysql-pool/mysql-data1 --size 20G --id zhangmingming
 # Resizing image: 100% complete...done.
 # xfs_growfs /data/mysql
-resize2fs /data/mysql
+resize2fs /data/mysql   # ext4文件系统
 ```
 ### rbd 卷改造 (放后面做)
 运维工程师为了调整云硬盘中操作系统的数据，决定对 cinder 中的 k8s-image 镜像进行改造，使用 rbd 克隆技术得到克隆卷 k8s-clone 并将克隆的镜像挂载起来，删除镜像中 k8s 的配置文件，然后将其导出到，灾备站点的 backup-pool 的存储池中，命名为 k8s-image-backup
@@ -210,6 +209,7 @@ rbd -p cinder-pool ls
 # volume-39ec872b-979e-40e1-bbe8-a2f564c011a2
 # volume-7b03efa4-8b00-4ce8-bcc5-c2192d40da20
 # volume-ca258813-94ed-435b-9456-49442b40470b
+
 # 创建快照
 rbd snap create cinder-pool/volume-0b75ba15-bb6b-40fe-adb9-24dbfd188348@snap01
 
@@ -223,7 +223,7 @@ rbd clone cinder-pool/volume-0b75ba15-bb6b-40fe-adb9-24dbfd188348@snap01 cinder-
 rbd flatten cinder-pool/k8s-clone
 
 # 映射设备
-rbd map cinder-pool/k8s-clone --id zhangmingming --keyring /etc/ceph/ceph.client.zhangmingming.keyring
+rbd map cinder-pool/k8s-clone --id zhangmingming
 
 # 创建挂载点并挂载（假设文件系统为 ext4）
 mkdir /mnt/k8s-clone
@@ -234,12 +234,11 @@ rm -rf /mnt/k8s-clone/etc/kubernetes/*
 # 卸载并取消映射
 umount /mnt/k8s-clone
 rbd unmap /dev/rbd0
-   
-scp /etc/ceph/*  root@osp:/opt/ #将第一套集群的配置上传到osp节点
 
 cd /opt/
-rbd export  cinder-pool/k8s-clone  k8s-clone.img -c ceph.conf --keyring  ceph.client.admin.keyring #导出成为文件
-rm -rf /opt/ceph*
+rbd export cinder-pool/k8s-clone k8s-clone.img --id zhangmingming
+
+mkdir /opt/ceph
 scp /etc/ceph/*  root@osp:/opt/ #将第二套集群的配置上传到osp节点
 
 #容灾站点操作
