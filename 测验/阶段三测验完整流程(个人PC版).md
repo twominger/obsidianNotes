@@ -330,6 +330,7 @@ rbd_user = zhangmingming
 rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
 volume_backend_name = ceph
 
+systemctl restart openstack-cinder*
 ```
 - 计算节点 osp2\osp3
 ```shell
@@ -339,7 +340,7 @@ vim /etc/nova/nova.conf
 [libvirt]
 ...
 rbd_user = zhangmingming
-
+...
 rbd_secret_uuid = 23ce2b21-9744-40b5-962b-9db673cd7dbb
 
 systemctl restart openstack-nova-compute.service
@@ -377,7 +378,7 @@ rbd -p cinder-pool ls volumes --id zhangmingming
         - 计算
             - 实例 10
         - 卷
-            - 卷 10（10 个不够，最好多给两个）
+            - 卷 10
         - 网络
             - 浮动 IP 10
             - 安全组 3
@@ -395,10 +396,10 @@ rbd -p cinder-pool ls volumes --id zhangmingming
             - 共享的、外部网络
         - 子网
             - 子网名称 subnet0
-            - 网络地址 192.168.224.0/24（宿主机外部网络地址）
-            - 网关 IP 192.168.224.8（宿主机外部网络的网关，这里使用的是小米手机热点）
+            - 网络地址 192.168.200.0/24
+            - 网关 IP 192.168.200.254 (使用软路由提供的网关，需要关闭 vmware 仅主机的 dhcp 功能)
         - 子网详情
-            - 分配地址池 192.168.224.80,192.168.224.99（随意）
+            - 分配地址池 192.168.200.80,192.168.200.99（随意）
             - dns 服务器 114.114.114.114
 ### private
 - 登陆用户 zhangmingming
@@ -595,11 +596,11 @@ systemctl restart docker
 - 推送镜像
 ```shell
 # 登陆镜像仓库
-docker login http://192.168.224.188
+docker login http://192.168.200.188
 # 提交镜像到镜像仓库
 docker images
-docker tag nginx 192.168.224.188/discuz/nginx:v1
-docker push 192.168.224.188/discuz/nginx:v1
+docker tag nginx 192.168.200.188/discuz/nginx:v1
+docker push 192.168.200.188/discuz/nginx:v1
 ```
 - 拉取镜像 (其他主机)
 
@@ -618,8 +619,8 @@ EOF
 systemctl restart docker
 
 
-docker login http://192.168.224.188
-docker pull 192.168.224.188/discuz/nginx:v1
+docker login http://192.168.200.188
+docker pull 192.168.200.188/discuz/nginx:v1
 docker images
 ```
 
@@ -636,7 +637,7 @@ EOF
 mkdir /etc/ceph
 scp root@cs01:/etc/ceph/ceph.client.zhangmingming.keyring /etc/ceph/
 scp root@cs01:/etc/ceph/ceph.conf /etc/ceph/
-# sshpass -p 'redhat' scp root@192.168.224.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
+# sshpass -p 'redhat' scp root@192.168.200.111:/etc/ceph/ceph.client.admin.keyring /etc/ceph/
 yum install ceph ceph-common librados2 librgw-devel librados-devel.x86_64 -y
 ```
 ### 安装（上）
@@ -1746,7 +1747,7 @@ bootstrapTokens:
   - authentication
 kind: InitConfiguration
 localAPIEndpoint:
-  advertiseAddress: 192.168.224.95  # 本机IP
+  advertiseAddress: 192.168.200.95  # 本机IP
   bindPort: 6443
 nodeRegistration:
   criSocket: unix:///var/run/cri-dockerd.sock
@@ -1768,7 +1769,7 @@ timeouts:
 ---
 apiServer:
 timeoutForControlPlane: 30m0s
-controlPlaneEndpoint: "192.168.224.95:16443"   # 虚拟IP和haproxy端口
+controlPlaneEndpoint: "192.168.200.95:16443"   # 虚拟IP和haproxy端口
 apiVersion: kubeadm.k8s.io/v1beta4
 caCertificateValidityPeriod: 87600h0m0s
 certificateValidityPeriod: 8760h0m0s
@@ -2380,7 +2381,7 @@ kubectl delete namespace discuz
 kubectl create secret docker-registry  registrysecret --docker-server=hub.lib0.cn  --docker-username=admin --docker-password=redhat -n aaa
 vim /etc/docker/daemon.json
 {
-  "insecure-registries":["http://192.168.224.51","hub.lib0.cn"]
+  "insecure-registries":["http://192.168.200.51","hub.lib0.cn"]
 }
 systemctl restart docker
 
@@ -2409,8 +2410,8 @@ kubectl -n aaa exec my-app-deployment-6cf8585c47-57np8 -ti -- bash
 ```shell
 # k8sm1
 # 安装helm工具包
-# export http_proxy=192.168.224.144:7897
-# export https_proxy=192.168.224.144:7897
+# export http_proxy=192.168.200.144:7897
+# export https_proxy=192.168.200.144:7897
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
@@ -3226,15 +3227,15 @@ Secret value set
 更改实例类型失败
 ```shell
 2025-04-15 20:06:28.006 1531 ERROR oslo_messaging.rpc.server [req-f604e996-1c34-4a9a-9d4c-b172af1678f3 141d99a81511437db36832d997c1610e 1e3d5b0bf3c9496db4074410c1020094 - default default] Exception during message handling: nova.exception.ResizeError: Resize error: not able to execute ssh command: Unexpected error while running command.
-Command: ssh -o BatchMode=yes 192.168.224.101 mkdir -p /var/lib/nova/instances/7f6c8587-460c-4c9f-9cdb-1f7ce45775ca
+Command: ssh -o BatchMode=yes 192.168.200.101 mkdir -p /var/lib/nova/instances/7f6c8587-460c-4c9f-9cdb-1f7ce45775ca
 Exit code: 255
 Stdout: ''
-Stderr: 'Load key "/etc/nova/migration/identity": invalid format\r\nnova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).\r\n'
+Stderr: 'Load key "/etc/nova/migration/identity": invalid format\r\nnova_migration@192.168.200.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).\r\n'
 
 # ssh密钥连接失败
-ssh -i /etc/nova/migration/identity nova_migration@192.168.224.101
+ssh -i /etc/nova/migration/identity nova_migration@192.168.200.101
 Load key "/etc/nova/migration/identity": invalid format
-nova_migration@192.168.224.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+nova_migration@192.168.200.101: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 
 
 
@@ -3302,7 +3303,7 @@ To see the stack trace of this error execute with --v=5 or higher
 ```
 
 ```shell
-[root@m01 ~]# kubeadm init --control-plane-endpoint=192.168.224.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
+[root@m01 ~]# kubeadm init --control-plane-endpoint=192.168.200.95:16443 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.31.7 --service-cidr=10.96.0.0/16 --pod-network-cidr=10.244.0.0/16 --cri-socket unix:///var/run/cri-dockerd.sock
 [init] Using Kubernetes version: v1.31.7
 [preflight] Running pre-flight checks
     [WARNING FileExisting-tc]: tc not found in system path
@@ -3313,7 +3314,7 @@ W0416 00:54:20.259957    9357 checks.go:846] detected that the sandbox image "re
 [certs] Using certificateDir folder "/etc/kubernetes/pki"
 [certs] Generating "ca" certificate and key
 [certs] Generating "apiserver" certificate and key
-[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local m01.novalocal] and IPs [10.96.0.1 172.17.10.97 192.168.224.95]
+[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local m01.novalocal] and IPs [10.96.0.1 172.17.10.97 192.168.200.95]
 [certs] Generating "apiserver-kubelet-client" certificate and key
 [certs] Generating "front-proxy-ca" certificate and key
 [certs] Generating "front-proxy-client" certificate and key
