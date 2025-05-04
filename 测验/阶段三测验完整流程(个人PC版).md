@@ -246,7 +246,7 @@ ceph osd pool create backup-pool #创建备份池
 ceph osd pool application enable backup-pool rbd #打标签
 
 #镜像所在节点
-rbd import /opt/k8s-clone.img  backup-pool/k8s-image-backup  -c /opt/ceph.conf --keyring /opt/ceph.client.admin.keyring
+rbd import /opt/k8s-clone.img  backup-pool/k8s-image-backup  -c /opt/ceph/ceph.conf --keyring /opt/ceph/ceph.client.admin.keyring
 
 ```
 ## cinder 对接 ceph
@@ -311,12 +311,6 @@ virsh secret-set-value --secret 23ce2b21-9744-40b5-962b-9db673cd7dbb --base64 AQ
 ```
 - 控制节点 osp1
 ```shell
-# 主要作用是OpenStack可调用Ceph资源
-yum install -y ceph-common
-
-# 配置cinder后端存储
-# chown cinder.cinder /etc/ceph/ceph.client.zhangmingming.keyring
-
 # 修改cinder配置文件
 vim /etc/cinder/cinder.conf
 
