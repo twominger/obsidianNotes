@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "阶段三测验完整流程(个人PC版)",
-      "path": "测验/阶段三测验完整流程(个人PC版).md"
+      "basename": "传统社交论坛的容器化改造1",
+      "path": "测验/传统社交论坛的容器化改造1.md"
+    },
+    {
+      "basename": "毕设",
+      "path": "毕设/毕设.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造0",
+      "path": "测验/传统社交论坛的容器化改造0.md"
     },
     {
       "basename": "创建自定义镜像",
@@ -63,14 +71,6 @@
     {
       "basename": "ansible使用及脚本",
       "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "毕设",
-      "path": "毕设/毕设.md"
     },
     {
       "basename": "深度学习模型",
