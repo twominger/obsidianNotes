@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "毕设/未命名.md"
+    },
+    {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
       "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
-    },
-    {
-      "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
-      "path": "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md"
     }
   ],
   "omittedPaths": [],
