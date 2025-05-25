@@ -183,6 +183,7 @@
       "测验/创建自定义镜像.md"
     ],
     "附件": [
+      "附件/ER图.drawio",
       "附件/kube-prometheus-stack-70.8.0.tgz",
       "附件/字体霞鹜文楷.zip",
       "附件/ceph-csi-3.13.0.zip",
@@ -262,7 +263,6 @@
       "HarmonyOS/ArcTS基础语法.md"
     ],
     "IT行业了解": [
-      "IT行业了解/Drawing 2025-05-25 23.03.41.excalidraw.md",
       "IT行业了解/IT行业了解.md"
     ],
     "k8s": [],
