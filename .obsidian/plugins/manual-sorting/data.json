@@ -290,5 +290,7 @@
       "SRE/未命名.md",
       "SRE/未命名 1.md"
     ]
-  }
+  },
+  "draggingEnabled": true,
+  "selectedSortOrder": "manual-sorting"
 }
