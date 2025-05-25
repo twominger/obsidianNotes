@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "IT行业了解",
+      "path": "IT行业了解/IT行业了解.md"
+    },
+    {
+      "basename": "home",
+      "path": "01.主页/home.md"
+    },
+    {
+      "basename": "毕设",
+      "path": "毕设/毕设.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "毕设/未命名.md"
+    },
+    {
+      "basename": "TMP",
+      "path": "97.temp/TMP.md"
+    },
+    {
+      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
+      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
+    },
+    {
       "basename": "ceph实验",
       "path": "ceph/实验/ceph实验.md"
     },
@@ -21,20 +45,12 @@
       "path": "测验/传统社交论坛的容器化改造1.md"
     },
     {
-      "basename": "未命名",
-      "path": "毕设/未命名.md"
-    },
-    {
       "basename": "创建自定义镜像",
       "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "第一阶段测验",
       "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
-    },
-    {
-      "basename": "毕设",
-      "path": "毕设/毕设.md"
     },
     {
       "basename": "传统社交论坛的容器化改造0",
@@ -75,10 +91,6 @@
     {
       "basename": "深度学习模型",
       "path": "毕设/深度学习模型.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
     },
     {
       "basename": "20250107-openstack组件keystone",
@@ -123,10 +135,6 @@
     {
       "basename": "ansible入门",
       "path": "ansible/ansible入门.md"
-    },
-    {
-      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
-      "path": "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     },
     {
       "basename": "User Management",

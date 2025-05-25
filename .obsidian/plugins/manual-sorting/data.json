@@ -1,6 +1,7 @@
 {
   "customFileOrder": {
     "/": [
+      "IT行业了解",
       "01.主页",
       "05.笔记",
       "08.面试",
@@ -12,7 +13,6 @@
       "附件",
       "毕设",
       "测验",
-      "模板",
       "GIT",
       "SRE",
       "ansible",
@@ -200,12 +200,6 @@
       "附件/kubens",
       "附件/Kubernetes容器编排.pptx"
     ],
-    "模板": [
-      "模板/01.日记模板"
-    ],
-    "模板/01.日记模板": [
-      "模板/01.日记模板/日记.md"
-    ],
     "ansible": [
       "ansible/ansible入门.md"
     ],
@@ -266,6 +260,9 @@
       "HarmonyOS/HarmonyOS概述.md",
       "HarmonyOS/HarmonyOS赋能套件.md",
       "HarmonyOS/ArcTS基础语法.md"
+    ],
+    "IT行业了解": [
+      "IT行业了解/IT行业了解.md"
     ],
     "k8s": [],
     "kvm": [],
