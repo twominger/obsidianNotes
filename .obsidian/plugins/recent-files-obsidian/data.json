@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Drawing 2025-05-25 23.03.41.excalidraw",
+      "path": "IT行业了解/Drawing 2025-05-25 23.03.41.excalidraw.md"
+    },
+    {
       "basename": "IT行业了解",
       "path": "IT行业了解/IT行业了解.md"
     },
@@ -191,10 +195,6 @@
     {
       "basename": "OpenStack 及Docker 综合测试",
       "path": "11.作业/OpenStack 及Docker 综合测试.md"
-    },
-    {
-      "basename": "20250220-k8s-SVC服务的发布及ingress",
-      "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
     }
   ],
   "omittedPaths": [],
