@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "毕设/未命名.md"
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
     },
     {
-      "basename": "创建自定义镜像",
-      "path": "测验/创建自定义镜像.md"
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
     },
     {
       "basename": "传统社交论坛的容器化改造（测试环境版）",
@@ -17,24 +21,16 @@
       "path": "测验/传统社交论坛的容器化改造1.md"
     },
     {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
+      "basename": "未命名",
+      "path": "毕设/未命名.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
     },
     {
       "basename": "第一阶段测验",
       "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "ceph实验",
-      "path": "ceph/实验/ceph实验.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "未命名 1.md"
     },
     {
       "basename": "毕设",
@@ -49,20 +45,12 @@
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
       "basename": "部署openstack",
       "path": "测验/部署openstack.md"
     },
     {
       "basename": "rbd对接k8s",
       "path": "ceph/实验/rbd对接k8s.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.md"
     },
     {
       "basename": "问题",
