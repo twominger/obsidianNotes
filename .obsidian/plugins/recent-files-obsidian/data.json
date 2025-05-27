@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
       "basename": "Docker",
       "path": "Docker/Docker.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "传统社交论坛的容器化改造0",
       "path": "测验/传统社交论坛的容器化改造0.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
     {
       "basename": "部署openstack",
