@@ -8,15 +8,15 @@
       "09.输出",
       "10.课件",
       "11.作业",
-      "98.使用技巧",
+      "MarkDown使用技巧",
       "97.temp",
       "附件",
       "毕设",
       "测验",
       "GIT",
       "SRE",
-      "ansible",
       "ceph",
+      "ansible",
       "Docker",
       "Excalidraw",
       "HarmonyOS",
@@ -160,12 +160,8 @@
     "97.temp": [
       "97.temp/TMP.md"
     ],
-    "98.使用技巧": [
-      "98.使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
-    ],
     "毕设": [
       "毕设/未命名.md",
-      "毕设/毕设.md",
       "毕设/深度学习模型.md",
       "毕设/hdc工具使用.md"
     ],
@@ -277,6 +273,9 @@
       "linux/未命名.md"
     ],
     "linux/ubuntu": [],
+    "MarkDown使用技巧": [
+      "MarkDown使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
+    ],
     "mysql": [
       "mysql/mysql部署-源码.md"
     ],
