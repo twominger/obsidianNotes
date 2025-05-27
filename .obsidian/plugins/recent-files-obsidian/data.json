@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "yum源",
+      "path": "linux/yum源.md"
+    },
+    {
+      "basename": "SELinux",
+      "path": "linux/SELinux.md"
+    },
+    {
+      "basename": "安装虚拟机",
+      "path": "linux/安装虚拟机.md"
+    },
+    {
+      "basename": "Linux重启提示“A stop job is running for ...“",
+      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
+    },
+    {
+      "basename": "User Management",
+      "path": "ceph/User Management.md"
+    },
+    {
       "basename": "使用cephadm部署ceph集群",
       "path": "ceph/实验/使用cephadm部署ceph集群.md"
     },
@@ -117,10 +137,6 @@
       "path": "HarmonyOS/HarmonyOS概述.md"
     },
     {
-      "basename": "yum源",
-      "path": "linux/yum源.md"
-    },
-    {
       "basename": "制作虚拟机模板",
       "path": "linux/制作虚拟机模板.md"
     },
@@ -135,10 +151,6 @@
     {
       "basename": "ansible入门",
       "path": "ansible/ansible入门.md"
-    },
-    {
-      "basename": "User Management",
-      "path": "ceph/User Management.md"
     },
     {
       "basename": "ceph",
@@ -187,10 +199,6 @@
     {
       "basename": "阶段三内容",
       "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
-    },
-    {
-      "basename": "OpenStack 及Docker 综合测试",
-      "path": "11.作业/OpenStack 及Docker 综合测试.md"
     }
   ],
   "omittedPaths": [],

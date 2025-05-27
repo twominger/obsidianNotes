@@ -5,7 +5,14 @@
       "主页",
       "linux",
       "Docker",
+      "k8s",
       "ansible",
+      "ceph",
+      "GIT",
+      "mysql",
+      "OpenStack",
+      "HarmonyOS",
+      "SRE",
       "05.笔记",
       "08.面试",
       "09.输出",
@@ -13,18 +20,10 @@
       "11.作业",
       "MarkDown使用技巧",
       "97.temp",
-      "ceph",
       "附件",
       "毕设",
       "测验",
-      "GIT",
-      "SRE",
-      "Excalidraw",
-      "HarmonyOS",
-      "k8s",
-      "kvm",
-      "mysql",
-      "OpenStack"
+      "Excalidraw"
     ],
     "05.笔记": [
       "05.笔记/听课笔记",
@@ -246,10 +245,7 @@
       "Docker/安装Docker.md",
       "Docker/Docker操作.md"
     ],
-    "Excalidraw": [
-      "Excalidraw/1 _4-02 17.13.12.excalidraw.md",
-      "Excalidraw/2 _3-26 15.42.33.excalidraw.md"
-    ],
+    "Excalidraw": [],
     "GIT": [
       "GIT/gitignore文件不起作用解决.md"
     ],
@@ -261,18 +257,21 @@
     "IT行业了解": [
       "IT行业了解/IT行业了解.md"
     ],
-    "k8s": [],
-    "kvm": [],
+    "k8s": [
+      "k8s/kvm"
+    ],
+    "k8s/kvm": [],
     "linux": [
-      "linux/ubuntu",
+      "linux/CentOS",
+      "linux/Ubuntu",
       "linux/制作虚拟机模板.md",
       "linux/yum源.md",
       "linux/SELinux.md",
       "linux/安装虚拟机.md",
-      "linux/Linux重启提示“A stop job is running for ...“.md",
-      "linux/未命名.md"
+      "linux/Linux重启提示“A stop job is running for ...“.md"
     ],
-    "linux/ubuntu": [],
+    "linux/CentOS": [],
+    "linux/Ubuntu": [],
     "MarkDown使用技巧": [
       "MarkDown使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     ],
