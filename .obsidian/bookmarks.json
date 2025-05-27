@@ -7,14 +7,7 @@
         {
           "type": "group",
           "ctime": 1748362589814,
-          "items": [
-            {
-              "type": "group",
-              "ctime": 1748362589814,
-              "items": [],
-              "title": "08.面试"
-            }
-          ],
+          "items": [],
           "title": "IT行业了解"
         },
         {
@@ -34,6 +27,12 @@
           "ctime": 1748362589814,
           "items": [],
           "title": "10.课件"
+        },
+        {
+          "type": "group",
+          "ctime": 1748362589814,
+          "items": [],
+          "title": "08.面试"
         },
         {
           "type": "group",
