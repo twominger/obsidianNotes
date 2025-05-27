@@ -50,10 +50,6 @@
     "iconName": "SiHarmonyos",
     "iconColor": "#000000"
   },
-  "linux": {
-    "iconName": "SiLinux",
-    "iconColor": "#000000"
-  },
   "mysql": {
     "iconName": "SiMysql",
     "iconColor": "#1896af"
@@ -71,5 +67,9 @@
     "iconName": "SiGit",
     "iconColor": "#ff600a"
   },
-  "附件": "RiAttachment2"
+  "附件": "RiAttachment2",
+  "linux": {
+    "iconName": "SiLinux",
+    "iconColor": "#000000"
+  }
 }

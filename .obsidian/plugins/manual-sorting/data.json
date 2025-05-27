@@ -2,7 +2,8 @@
   "customFileOrder": {
     "/": [
       "IT行业了解",
-      "01.主页",
+      "linux",
+      "主页",
       "05.笔记",
       "08.面试",
       "09.输出",
@@ -10,6 +11,7 @@
       "11.作业",
       "MarkDown使用技巧",
       "97.temp",
+      "IT行业了解/linux",
       "附件",
       "毕设",
       "测验",
@@ -22,12 +24,8 @@
       "HarmonyOS",
       "k8s",
       "kvm",
-      "linux",
       "mysql",
       "OpenStack"
-    ],
-    "01.主页": [
-      "01.主页/home.md"
     ],
     "05.笔记": [
       "05.笔记/听课笔记",
@@ -263,16 +261,6 @@
     ],
     "k8s": [],
     "kvm": [],
-    "linux": [
-      "linux/ubuntu",
-      "linux/制作虚拟机模板.md",
-      "linux/yum源.md",
-      "linux/SELinux.md",
-      "linux/安装虚拟机.md",
-      "linux/Linux重启提示“A stop job is running for ...“.md",
-      "linux/未命名.md"
-    ],
-    "linux/ubuntu": [],
     "MarkDown使用技巧": [
       "MarkDown使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
     ],
@@ -288,7 +276,20 @@
       "SRE/应用or业务运维.md",
       "SRE/未命名.md",
       "SRE/未命名 1.md"
-    ]
+    ],
+    "主页": [
+      "主页/home.md"
+    ],
+    "linux": [
+      "linux/ubuntu",
+      "linux/制作虚拟机模板.md",
+      "linux/yum源.md",
+      "linux/SELinux.md",
+      "linux/安装虚拟机.md",
+      "linux/Linux重启提示“A stop job is running for ...“.md",
+      "linux/未命名.md"
+    ],
+    "linux/ubuntu": []
   },
   "draggingEnabled": true,
   "selectedSortOrder": "manual-sorting"
