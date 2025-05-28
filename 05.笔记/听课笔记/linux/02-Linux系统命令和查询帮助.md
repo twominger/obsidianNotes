@@ -11,10 +11,6 @@ root管理员，唯一，其他均为普通用户
 **设置计算机名**
 
 hostnamectl set-hostname web01  ##修改主机名为web01(需要管理员权限)  
-gggg
-jjj
-jnjkbjbkb  
-hiuhih
 
 exit ##退出终端/注销用户
 
