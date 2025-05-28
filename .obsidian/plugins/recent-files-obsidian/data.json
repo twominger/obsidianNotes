@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "03-Linux系统目录结构和管理命令",
+      "path": "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md"
+    },
+    {
+      "basename": "04-用户管理和权限管理",
+      "path": "05.笔记/听课笔记/linux/04-用户管理和权限管理.md"
+    },
+    {
+      "basename": "06-vim编辑器高级特性",
+      "path": "05.笔记/听课笔记/linux/06-vim编辑器高级特性.md"
+    },
+    {
+      "basename": "07-文本处理工具",
+      "path": "05.笔记/听课笔记/linux/07-文本处理工具.md"
+    },
+    {
+      "basename": "08-shell基础",
+      "path": "05.笔记/听课笔记/linux/08-shell基础.md"
+    },
+    {
+      "basename": "09-shell进阶和脚本实战",
+      "path": "05.笔记/听课笔记/linux/09-shell进阶和脚本实战.md"
+    },
+    {
       "basename": "10-进程管理",
       "path": "05.笔记/听课笔记/linux/10-进程管理.md"
     },
@@ -43,10 +67,6 @@
     {
       "basename": "17-磁盘管理",
       "path": "05.笔记/听课笔记/linux/17-磁盘管理.md"
-    },
-    {
-      "basename": "03-Linux系统目录结构和管理命令",
-      "path": "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md"
     },
     {
       "basename": "02-Linux系统命令和查询帮助",
@@ -179,26 +199,6 @@
     {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
-    },
-    {
-      "basename": "20250105-openstack组件cinder-glance-nova-heat",
-      "path": "10.课件/OpenStack课堂笔记-田/20250105-openstack组件cinder-glance-nova-heat.md"
-    },
-    {
-      "basename": "20250102-openstack架构及环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
-    },
-    {
-      "basename": "HarmonyOS概述",
-      "path": "HarmonyOS/HarmonyOS概述.md"
-    },
-    {
-      "basename": "制作虚拟机模板",
-      "path": "linux/制作虚拟机模板.md"
-    },
-    {
-      "basename": "rados",
-      "path": "ceph/MAN/rados.md"
     }
   ],
   "omittedPaths": [],
