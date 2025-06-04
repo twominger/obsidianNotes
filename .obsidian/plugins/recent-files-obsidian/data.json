@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "传统社交论坛的容器化改造（测试环境版）",
+      "path": "测验/传统社交论坛的容器化改造（测试环境版）.md"
+    },
+    {
+      "basename": "深度学习模型",
+      "path": "毕设/深度学习模型.md"
+    },
+    {
       "basename": "未命名",
       "path": "毕设/未命名.md"
+    },
+    {
+      "basename": "hdc工具使用",
+      "path": "毕设/hdc工具使用.md"
     },
     {
       "basename": "02-Linux系统命令和查询帮助",
@@ -145,10 +157,6 @@
       "path": "测验/everything.md"
     },
     {
-      "basename": "传统社交论坛的容器化改造（测试环境版）",
-      "path": "测验/传统社交论坛的容器化改造（测试环境版）.md"
-    },
-    {
       "basename": "传统社交论坛的容器化改造1",
       "path": "测验/传统社交论坛的容器化改造1.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "ansible使用及脚本",
       "path": "测验/ansible使用及脚本.md"
-    },
-    {
-      "basename": "深度学习模型",
-      "path": "毕设/深度学习模型.md"
-    },
-    {
-      "basename": "20250107-openstack组件keystone",
-      "path": "10.课件/OpenStack课堂笔记-田/20250107-openstack组件keystone.md"
     }
   ],
   "omittedPaths": [],
