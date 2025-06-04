@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "未命名.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造（测试环境版）",
       "path": "测验/传统社交论坛的容器化改造（测试环境版）.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "err",
       "path": "测验/err.md"
-    },
-    {
-      "basename": "ansible使用及脚本",
-      "path": "测验/ansible使用及脚本.md"
     }
   ],
   "omittedPaths": [],
