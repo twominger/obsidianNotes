@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "未命名.md"
+      "basename": "20250210-k8s环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     },
     {
       "basename": "传统社交论坛的容器化改造（测试环境版）",
       "path": "测验/传统社交论坛的容器化改造（测试环境版）.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "未命名.md"
     },
     {
       "basename": "深度学习模型",
@@ -195,10 +199,6 @@
     {
       "basename": "20250222-k8s-用户角色权限及helm介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250222-k8s-用户角色权限及helm介绍.md"
-    },
-    {
-      "basename": "err",
-      "path": "测验/err.md"
     }
   ],
   "omittedPaths": [],
