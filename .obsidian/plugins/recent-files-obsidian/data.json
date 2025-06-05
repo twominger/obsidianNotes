@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "20250211-k8s对象pod1",
+      "path": "10.课件/OpenStack课堂笔记-田/20250211-k8s对象pod1.md"
+    },
+    {
+      "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
+      "path": "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md"
+    },
+    {
+      "basename": "20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度",
+      "path": "10.课件/OpenStack课堂笔记-田/20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度.md"
+    },
+    {
       "basename": "未命名",
       "path": "未命名.md"
     },
     {
       "basename": "传统社交论坛的容器化改造（测试环境版）",
       "path": "测验/传统社交论坛的容器化改造（测试环境版）.md"
-    },
-    {
-      "basename": "20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度",
-      "path": "10.课件/OpenStack课堂笔记-田/20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度.md"
     },
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
@@ -191,14 +199,6 @@
     {
       "basename": "传统社交论坛的容器化改造0",
       "path": "测验/传统社交论坛的容器化改造0.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "rbd对接k8s",
-      "path": "ceph/实验/rbd对接k8s.md"
     }
   ],
   "omittedPaths": [],
