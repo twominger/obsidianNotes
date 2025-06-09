@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "nginx健康检查",
+      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
+    },
+    {
+      "basename": "LVM",
+      "path": "05.笔记/整理笔记/Linux1/LVM.md"
+    },
+    {
+      "basename": "centos linux版本及区别，常用版本",
+      "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
+    },
+    {
+      "basename": "OpenStack组件使用",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
+    },
+    {
+      "basename": "rabbitMQ功能、作用",
+      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
+    },
+    {
+      "basename": "OpenStack环境搭建",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
+    },
+    {
+      "basename": "第一阶段测验",
+      "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "Docker",
       "path": "Docker/Docker.md"
-    },
-    {
-      "basename": "IT行业了解",
-      "path": "IT行业了解/IT行业了解.md"
-    },
-    {
-      "basename": "home",
-      "path": "主页/home.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "MarkDown超级教程+Obsidian版+2022.1.12",
-      "path": "MarkDown使用技巧/MarkDown超级教程+Obsidian版+2022.1.12.md"
-    },
-    {
-      "basename": "ceph实验",
-      "path": "ceph/实验/ceph实验.md"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     }
   ],
   "omittedPaths": [],
