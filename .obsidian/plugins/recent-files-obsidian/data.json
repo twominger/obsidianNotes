@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "基于OpenHarmony的智能运动助理",
+      "path": "毕设/基于OpenHarmony的智能运动助理.md"
+    },
+    {
       "basename": "nginx健康检查",
       "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "未命名",
       "path": "未命名.md"
-    },
-    {
-      "basename": "基于OpenHarmony的智能运动助理",
-      "path": "毕设/基于OpenHarmony的智能运动助理.md"
     },
     {
       "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
