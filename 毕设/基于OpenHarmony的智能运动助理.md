@@ -165,3 +165,18 @@ hdc file recv /storage/media/100/local/files/Photo/8/IMG_1747917181_024.jpg C:\U
 hdc file recv /storage/media/100/local/files/Photo/9/IMG_1747915836_009.jpg C:\Users\27799\Desktop\aaa\
 hdc file recv /storage/media/100/local/files/Photo/9/IMG_1747917182_025.jpg C:\Users\27799\Desktop\aaa\
 ```
+
+
+```shell
+hdc file recv /storage/media/100/local/files/Photo/2/IMG_1749746472_034.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/3/IMG_1749746499_035.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/4/IMG_1749746531_036.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/5/IMG_1749746540_037.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/6/IMG_1749746605_038.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/7/IMG_1749746676_039.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/8/IMG_1749746704_040.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/9/IMG_1749746711_041.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/10/IMG_1749746748_042.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/11/IMG_1749746757_043.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/12/IMG_1749746817_044.jpg C:\Users\27799\Desktop\pic\
+```
