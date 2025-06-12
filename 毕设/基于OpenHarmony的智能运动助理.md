@@ -179,4 +179,6 @@ hdc file recv /storage/media/100/local/files/Photo/9/IMG_1749746711_041.jpg C:\U
 hdc file recv /storage/media/100/local/files/Photo/10/IMG_1749746748_042.jpg C:\Users\27799\Desktop\pic\
 hdc file recv /storage/media/100/local/files/Photo/11/IMG_1749746757_043.jpg C:\Users\27799\Desktop\pic\
 hdc file recv /storage/media/100/local/files/Photo/12/IMG_1749746817_044.jpg C:\Users\27799\Desktop\pic\
+hdc file recv /storage/media/100/local/files/Photo/13/IMG_1749748927_045.jpg C:\Users\27799\Desktop\pic\
+
 ```
