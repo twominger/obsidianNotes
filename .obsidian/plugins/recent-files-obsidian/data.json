@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "虚拟化技术概述",
+      "path": "Docker/虚拟化技术概述.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker/Docker.md"
+    },
+    {
       "basename": "基于OpenHarmony的智能运动助理",
       "path": "毕设/基于OpenHarmony的智能运动助理.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Linux重启提示“A stop job is running for ...“",
       "path": "linux/Linux重启提示“A stop job is running for ...“.md"
-    },
-    {
-      "basename": "User Management",
-      "path": "ceph/User Management.md"
-    },
-    {
-      "basename": "使用cephadm部署ceph集群",
-      "path": "ceph/实验/使用cephadm部署ceph集群.md"
     }
   ],
   "omittedPaths": [],
