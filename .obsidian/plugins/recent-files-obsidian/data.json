@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "安装Docker",
+      "path": "Docker/安装Docker.md"
+    },
+    {
       "basename": "虚拟化技术概述",
       "path": "Docker/虚拟化技术概述.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "安装虚拟机",
       "path": "linux/安装虚拟机.md"
-    },
-    {
-      "basename": "Linux重启提示“A stop job is running for ...“",
-      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
     }
   ],
   "omittedPaths": [],
