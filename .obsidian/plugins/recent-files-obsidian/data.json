@@ -5,6 +5,62 @@
       "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
     },
     {
+      "basename": "03-MySQL知识点",
+      "path": "05.笔记/听课笔记/MySQL/03-MySQL知识点.md"
+    },
+    {
+      "basename": "04-MySQL表数据",
+      "path": "05.笔记/听课笔记/MySQL/04-MySQL表数据.md"
+    },
+    {
+      "basename": "05-杂项",
+      "path": "05.笔记/听课笔记/MySQL/05-杂项.md"
+    },
+    {
+      "basename": "2015-1-9OpenStack笔记",
+      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
+    },
+    {
+      "basename": "阶段三内容",
+      "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
+    },
+    {
+      "basename": "消息队列中间件的横向对比",
+      "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
+    },
+    {
+      "basename": "OpenStack环境搭建",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
+    },
+    {
+      "basename": "OpenStack组件使用",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
+    },
+    {
+      "basename": "rabbitMQ功能、作用",
+      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
+    },
+    {
+      "basename": "MySQL存储引擎InnoDB与Myisam的六大区别",
+      "path": "05.笔记/听课笔记/MySQL/MySQL存储引擎InnoDB与Myisam的六大区别.md"
+    },
+    {
+      "basename": "MySQL 服务管理",
+      "path": "05.笔记/听课笔记/MySQL/MySQL 服务管理.md"
+    },
+    {
+      "basename": "key和index区别",
+      "path": "05.笔记/听课笔记/MySQL/key和index区别.md"
+    },
+    {
+      "basename": "02-MySQL管理",
+      "path": "05.笔记/听课笔记/MySQL/02-MySQL管理.md"
+    },
+    {
+      "basename": "01-MySQL安装",
+      "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
+    },
+    {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
       "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
     },
@@ -59,18 +115,6 @@
     {
       "basename": "centos linux版本及区别，常用版本",
       "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
-    },
-    {
-      "basename": "OpenStack组件使用",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
-    },
-    {
-      "basename": "rabbitMQ功能、作用",
-      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
-    },
-    {
-      "basename": "OpenStack环境搭建",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
     },
     {
       "basename": "第一阶段测验",
@@ -155,50 +199,6 @@
     {
       "basename": "08-shell基础",
       "path": "05.笔记/听课笔记/linux/08-shell基础.md"
-    },
-    {
-      "basename": "09-shell进阶和脚本实战",
-      "path": "05.笔记/听课笔记/linux/09-shell进阶和脚本实战.md"
-    },
-    {
-      "basename": "10-进程管理",
-      "path": "05.笔记/听课笔记/linux/10-进程管理.md"
-    },
-    {
-      "basename": "11-网络管理",
-      "path": "05.笔记/听课笔记/linux/11-网络管理.md"
-    },
-    {
-      "basename": "27-网络",
-      "path": "05.笔记/听课笔记/linux/27-网络.md"
-    },
-    {
-      "basename": "28-web",
-      "path": "05.笔记/听课笔记/linux/28-web.md"
-    },
-    {
-      "basename": "25-存储",
-      "path": "05.笔记/听课笔记/linux/25-存储.md"
-    },
-    {
-      "basename": "24-FTP服务",
-      "path": "05.笔记/听课笔记/linux/24-FTP服务.md"
-    },
-    {
-      "basename": "23-DNS域名解析服务",
-      "path": "05.笔记/听课笔记/linux/23-DNS域名解析服务.md"
-    },
-    {
-      "basename": "22-KVM虚拟化",
-      "path": "05.笔记/听课笔记/linux/22-KVM虚拟化.md"
-    },
-    {
-      "basename": "21-pxe批量安装和kickstart自动化安装",
-      "path": "05.笔记/听课笔记/linux/21-pxe批量安装和kickstart自动化安装.md"
-    },
-    {
-      "basename": "19-深入RAID技术和管理",
-      "path": "05.笔记/听课笔记/linux/19-深入RAID技术和管理.md"
     }
   ],
   "omittedPaths": [],
