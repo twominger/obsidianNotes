@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造1",
+      "path": "测验/传统社交论坛的容器化改造1.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造0",
+      "path": "测验/传统社交论坛的容器化改造0.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "01-MySQL安装",
+      "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
+    },
+    {
+      "basename": "02-MySQL管理",
+      "path": "05.笔记/听课笔记/MySQL/02-MySQL管理.md"
+    },
+    {
       "basename": "01-Linux系统介绍和安装",
       "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
     },
@@ -51,14 +79,6 @@
     {
       "basename": "key和index区别",
       "path": "05.笔记/听课笔记/MySQL/key和index区别.md"
-    },
-    {
-      "basename": "02-MySQL管理",
-      "path": "05.笔记/听课笔记/MySQL/02-MySQL管理.md"
-    },
-    {
-      "basename": "01-MySQL安装",
-      "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
     },
     {
       "basename": "20250112-Docker容器管理及网络存储Harbor",
@@ -121,24 +141,12 @@
       "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
     },
     {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造0",
-      "path": "测验/传统社交论坛的容器化改造0.md"
-    },
-    {
       "basename": "公有云实战项目",
       "path": "05.笔记/听课笔记/公有云/公有云实战项目.md"
     },
     {
       "basename": "公有云",
       "path": "05.笔记/听课笔记/公有云/公有云.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造1",
-      "path": "测验/传统社交论坛的容器化改造1.md"
     },
     {
       "basename": "20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度",
@@ -191,14 +199,6 @@
     {
       "basename": "06-vim编辑器高级特性",
       "path": "05.笔记/听课笔记/linux/06-vim编辑器高级特性.md"
-    },
-    {
-      "basename": "07-文本处理工具",
-      "path": "05.笔记/听课笔记/linux/07-文本处理工具.md"
-    },
-    {
-      "basename": "08-shell基础",
-      "path": "05.笔记/听课笔记/linux/08-shell基础.md"
     }
   ],
   "omittedPaths": [],
