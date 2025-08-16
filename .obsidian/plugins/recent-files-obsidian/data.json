@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Docker",
+      "path": "Docker/Docker.md"
+    },
+    {
       "basename": "Cgroup",
       "path": "Docker/Cgroup.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "Docker操作",
       "path": "Docker/Docker操作.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker/Docker.md"
     },
     {
       "basename": "我来 wolai - 不仅仅是未来的云端协作平台与个人笔记 1",
