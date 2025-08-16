@@ -6,3 +6,9 @@ Docker Engine 是一种开源容器化技术，用于构建和容器化您的应
 
 CLI 使用 Docker API 通过脚本或直接使用 CLI 命令来控制 Dockerd 或与之交互。许多其他 Docker 应用程序使用底层 API 和 CLI。守护程序创建和管理 Docker 对象，例如镜像、容器、网络和卷。
 
+Docker 使用客户端-服务器架构。Docker 客户端与 Docker 守护进程通信，后者负责构建、运行和分发 Docker 容器的繁重工作。Docker 客户端和守护程序可以在同一系统上运行，也可以将 Docker 客户端连接到远程 Docker 守护程序。Docker 客户端和守护进程使用 REST API、UNIX 套接字或网络接口进行通信。另一个 Docker 客户端是 Docker Compose，它允许您使用由一组容器组成的应用程序。
+
+![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250816161625689.png)
+
+## The Docker Daemon
+
