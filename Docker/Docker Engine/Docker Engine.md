@@ -10,5 +10,10 @@ Docker 使用客户端-服务器架构。Docker 客户端与 Docker 守护进程
 
 ![image.png](https://notes-ming.oss-cn-beijing.aliyuncs.com/images/20250816161625689.png)
 
-## The Docker Daemon
+## The Docker daemon
+Docker 守护程序 （`dockerd`） 侦听 Docker API 请求并管理 Docker 对象，例如映像、容器、网络和卷。守护进程还可以与其他守护进程通信来管理 Docker 服务。
+
+## The Docker client
+Docker 客户端 （`docker`） 是许多 Docker 用户与 Docker 交互的主要方式。当您使用 `docker run` 等命令时，客户端会将这些命令发送到 `dockerd，由 dockerd` 执行它们。`docker` 命令使用 Docker API。Docker 客户端可以与多个守护进程通信。
+
 
