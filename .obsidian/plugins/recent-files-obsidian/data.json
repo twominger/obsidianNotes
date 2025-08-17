@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Linux重启提示“A stop job is running for ...“",
+      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
+    },
+    {
       "basename": "制作虚拟机模板",
       "path": "linux/制作虚拟机模板.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "深度学习模型",
       "path": "毕设/深度学习模型.md"
-    },
-    {
-      "basename": "hdc工具使用",
-      "path": "毕设/hdc工具使用.md"
     }
   ],
   "omittedPaths": [],
