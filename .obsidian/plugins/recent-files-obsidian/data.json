@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "毕设/未命名.base"
+    },
+    {
       "basename": "修改",
       "path": "毕设/修改.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20250210-k8s环境搭建",
       "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
-    },
-    {
-      "basename": "深度学习模型",
-      "path": "毕设/深度学习模型.md"
     }
   ],
   "omittedPaths": [],
