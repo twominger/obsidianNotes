@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "11-网络管理",
+      "path": "05.笔记/听课笔记/linux/11-网络管理.md"
+    },
+    {
       "basename": "03-MySQL知识点",
       "path": "05.笔记/听课笔记/MySQL/03-MySQL知识点.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
       "path": "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md"
-    },
-    {
-      "basename": "20250210-k8s环境搭建",
-      "path": "10.课件/OpenStack课堂笔记-田/20250210-k8s环境搭建.md"
     }
   ],
   "omittedPaths": [],
