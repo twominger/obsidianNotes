@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "02-Linux系统命令和查询帮助",
+      "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
+    },
+    {
+      "basename": "01-Linux系统介绍和安装",
+      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
+    },
+    {
+      "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
+      "path": "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md"
+    },
+    {
       "basename": "11-网络管理",
       "path": "05.笔记/听课笔记/linux/11-网络管理.md"
     },
@@ -101,10 +113,6 @@
       "path": "05.笔记/听课笔记/MySQL/02-MySQL管理.md"
     },
     {
-      "basename": "01-Linux系统介绍和安装",
-      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
-    },
-    {
       "basename": "04-MySQL表数据",
       "path": "05.笔记/听课笔记/MySQL/04-MySQL表数据.md"
     },
@@ -149,10 +157,6 @@
       "path": "05.笔记/听课笔记/MySQL/key和index区别.md"
     },
     {
-      "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
-      "path": "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md"
-    },
-    {
       "basename": "基于OpenHarmony的智能运动助理",
       "path": "毕设/基于OpenHarmony的智能运动助理.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20250220-k8s-SVC服务的发布及ingress",
       "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
-    },
-    {
-      "basename": "20250218-k8s服务SVC介绍及服务的发现3种方式",
-      "path": "10.课件/OpenStack课堂笔记-田/20250218-k8s服务SVC介绍及服务的发现3种方式.md"
     }
   ],
   "omittedPaths": [],
