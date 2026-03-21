@@ -1,6 +1,86 @@
 {
   "recentFiles": [
     {
+      "basename": "02-Linux系统命令和查询帮助",
+      "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
+    },
+    {
+      "basename": "03-Linux系统目录结构和管理命令",
+      "path": "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md"
+    },
+    {
+      "basename": "04-用户管理和权限管理",
+      "path": "05.笔记/听课笔记/linux/04-用户管理和权限管理.md"
+    },
+    {
+      "basename": "01-Linux系统介绍和安装",
+      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
+    },
+    {
+      "basename": "ansible入门",
+      "path": "ansible/ansible入门.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
+      "basename": "k8s关键知识点",
+      "path": "11.作业/k8s关键知识点.md"
+    },
+    {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
+      "basename": "20250102-openstack架构及环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
+    },
+    {
+      "basename": "NULL",
+      "path": "09.输出/周一晚/NULL.md"
+    },
+    {
+      "basename": "索引和主键外键",
+      "path": "09.输出/周一晚/索引和主键外键.md"
+    },
+    {
+      "basename": "一期面试",
+      "path": "08.面试/一期面试.md"
+    },
+    {
+      "basename": "nginx健康检查",
+      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
+    },
+    {
+      "basename": "LVM",
+      "path": "05.笔记/整理笔记/Linux1/LVM.md"
+    },
+    {
+      "basename": "centos linux版本及区别，常用版本",
+      "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
+    },
+    {
+      "basename": "rabbitMQ功能、作用",
+      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
+    },
+    {
+      "basename": "OpenStack组件使用",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
+    },
+    {
+      "basename": "OpenStack环境搭建",
+      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
+    },
+    {
       "basename": "MySQL存储引擎InnoDB与Myisam的六大区别",
       "path": "05.笔记/听课笔记/MySQL/MySQL存储引擎InnoDB与Myisam的六大区别.md"
     },
@@ -31,14 +111,6 @@
     {
       "basename": "01-MySQL安装",
       "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
-    },
-    {
-      "basename": "02-Linux系统命令和查询帮助",
-      "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
-    },
-    {
-      "basename": "01-Linux系统介绍和安装",
-      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
     },
     {
       "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
@@ -127,78 +199,6 @@
     {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
-    },
-    {
-      "basename": "2015-1-9OpenStack笔记",
-      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
-    },
-    {
-      "basename": "阶段三内容",
-      "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
-    },
-    {
-      "basename": "消息队列中间件的横向对比",
-      "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
-    },
-    {
-      "basename": "OpenStack环境搭建",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
-    },
-    {
-      "basename": "OpenStack组件使用",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
-    },
-    {
-      "basename": "rabbitMQ功能、作用",
-      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
-    },
-    {
-      "basename": "基于OpenHarmony的智能运动助理",
-      "path": "毕设/基于OpenHarmony的智能运动助理.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
-      "basename": "nginx健康检查",
-      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
-    },
-    {
-      "basename": "LVM",
-      "path": "05.笔记/整理笔记/Linux1/LVM.md"
-    },
-    {
-      "basename": "centos linux版本及区别，常用版本",
-      "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
-    },
-    {
-      "basename": "第一阶段测验",
-      "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
-    },
-    {
-      "basename": "公有云实战项目",
-      "path": "05.笔记/听课笔记/公有云/公有云实战项目.md"
-    },
-    {
-      "basename": "公有云",
-      "path": "05.笔记/听课笔记/公有云/公有云.md"
-    },
-    {
-      "basename": "20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度",
-      "path": "10.课件/OpenStack课堂笔记-田/20250215-k8s对象pod3-任务-dns-卷挂载-探针-钩子-调度.md"
-    },
-    {
-      "basename": "20250211-k8s对象pod1",
-      "path": "10.课件/OpenStack课堂笔记-田/20250211-k8s对象pod1.md"
-    },
-    {
-      "basename": "20250220-k8s-SVC服务的发布及ingress",
-      "path": "10.课件/OpenStack课堂笔记-田/20250220-k8s-SVC服务的发布及ingress.md"
     }
   ],
   "omittedPaths": [],
