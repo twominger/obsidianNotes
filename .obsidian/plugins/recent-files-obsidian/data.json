@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "20-内核监控和系统服务管理及故障修复",
+      "path": "05.笔记/听课笔记/linux/20-内核监控和系统服务管理及故障修复.md"
+    },
+    {
+      "basename": "21-pxe批量安装和kickstart自动化安装",
+      "path": "05.笔记/听课笔记/linux/21-pxe批量安装和kickstart自动化安装.md"
+    },
+    {
+      "basename": "16-软件包管理",
+      "path": "05.笔记/听课笔记/linux/16-软件包管理.md"
+    },
+    {
+      "basename": "15-文件系统和打包压缩",
+      "path": "05.笔记/听课笔记/linux/15-文件系统和打包压缩.md"
+    },
+    {
+      "basename": "14-网络客户端",
+      "path": "05.笔记/听课笔记/linux/14-网络客户端.md"
+    },
+    {
+      "basename": "13-文件查找工具",
+      "path": "05.笔记/听课笔记/linux/13-文件查找工具.md"
+    },
+    {
+      "basename": "12-计划任务",
+      "path": "05.笔记/听课笔记/linux/12-计划任务.md"
+    },
+    {
+      "basename": "11-网络管理",
+      "path": "05.笔记/听课笔记/linux/11-网络管理.md"
+    },
+    {
+      "basename": "10-进程管理",
+      "path": "05.笔记/听课笔记/linux/10-进程管理.md"
+    },
+    {
       "basename": "02-Linux系统命令和查询帮助",
       "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
     },
@@ -117,10 +153,6 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md"
     },
     {
-      "basename": "11-网络管理",
-      "path": "05.笔记/听课笔记/linux/11-网络管理.md"
-    },
-    {
       "basename": "未命名",
       "path": "毕设/未命名.base"
     },
@@ -167,38 +199,6 @@
     {
       "basename": "Hypervisor",
       "path": "Docker/Hypervisor.md"
-    },
-    {
-      "basename": "Docker概念",
-      "path": "Docker/Docker概念.md"
-    },
-    {
-      "basename": "Docker操作",
-      "path": "Docker/Docker操作.md"
-    },
-    {
-      "basename": "我来 wolai - 不仅仅是未来的云端协作平台与个人笔记 1",
-      "path": "Clippings/我来 wolai - 不仅仅是未来的云端协作平台与个人笔记 1.md"
-    },
-    {
-      "basename": "我来 wolai - 不仅仅是未来的云端协作平台与个人笔记",
-      "path": "Clippings/我来 wolai - 不仅仅是未来的云端协作平台与个人笔记.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造1",
-      "path": "测验/传统社交论坛的容器化改造1.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造0",
-      "path": "测验/传统社交论坛的容器化改造0.md"
-    },
-    {
-      "basename": "传统社交论坛的容器化改造",
-      "path": "测验/传统社交论坛的容器化改造.md"
     }
   ],
   "omittedPaths": [],
