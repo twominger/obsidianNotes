@@ -40,7 +40,7 @@ var CopyInlineCodePluginTab = class extends import_obsidian.PluginSettingTab {
     containerEl.empty();
     containerEl.createEl("p", {
       cls: "tasks-setting-important",
-      text: "Changing any settings requires a restart of obsidian."
+      text: "Changing any settings requires a restart of obsidian or use of the 'Reload app without saving' command."
     });
     new import_obsidian.Setting(containerEl).setName("Show on hover").setDesc(
       "Copy icon only visible on hover (restart obsidian after change)"
@@ -60,6 +60,84 @@ var CopyInlineCodePluginTab = class extends import_obsidian.PluginSettingTab {
       button.setButtonText("Add Exclusion Pattern").onClick(() => {
         this.plugin.settings.regexFilters.push(["", ""]);
         this.renderRegexList(regexListContainer);
+      });
+    });
+    containerEl.createEl("h3", { text: "Icon Settings" });
+    if (!this.plugin.settings.useLegacyIcon) {
+      const iconDesc = containerEl.createDiv();
+      iconDesc.createEl("p", {
+        text: "Choose a Lucide icon for the copy button. You can browse available icons at: "
+      });
+      const iconLink = iconDesc.createEl("a", {
+        text: "https://lucide.dev/icons/",
+        href: "https://lucide.dev/icons/"
+      });
+      iconLink.setAttribute("target", "_blank");
+      iconDesc.createEl("p", {
+        text: "Copy the icon name (e.g., 'copy', 'clipboard', ...) and paste it below."
+      });
+      const iconSetting = new import_obsidian.Setting(containerEl).setName("Icon name").setDesc(
+        "Lucide icon name"
+      );
+      const inputContainer = iconSetting.controlEl.createDiv({
+        cls: "icon-input-container"
+      });
+      const iconPreview = inputContainer.createSpan();
+      const updateIconPreview = (iconName) => {
+        iconPreview.empty();
+        let lucideIcon = null;
+        let isInvalid = false;
+        if (!iconName) {
+          isInvalid = true;
+          lucideIcon = (0, import_obsidian.getIcon)("lucide-x");
+        } else {
+          lucideIcon = (0, import_obsidian.getIcon)(iconName);
+          if (!lucideIcon) {
+            isInvalid = true;
+            lucideIcon = (0, import_obsidian.getIcon)("lucide-x");
+          }
+        }
+        if (lucideIcon) {
+          lucideIcon.classList.add("preview-icon");
+          if (isInvalid) {
+            lucideIcon.classList.add("invalid-preview-icon");
+          }
+          iconPreview.appendChild(lucideIcon);
+        }
+      };
+      const textInput = inputContainer.createEl("input", {
+        type: "text",
+        cls: "text-input"
+      });
+      textInput.style.flex = "1";
+      textInput.placeholder = "copy";
+      const baseIconName = this.plugin.settings.iconName.startsWith(
+        "lucide-"
+      ) ? this.plugin.settings.iconName.substring(7) : this.plugin.settings.iconName;
+      textInput.value = baseIconName;
+      updateIconPreview(this.plugin.settings.iconName);
+      textInput.addEventListener("input", async (event) => {
+        const target = event.target;
+        const value = target.value;
+        const trimmedValue = `lucide-${value.trim()}`;
+        const availableIcons = (0, import_obsidian.getIconIds)();
+        updateIconPreview(trimmedValue);
+        if (trimmedValue && !availableIcons.includes(trimmedValue)) {
+          textInput.classList.add("regex-input-error");
+          return;
+        }
+        textInput.classList.remove("regex-input-error");
+        this.plugin.settings.iconName = trimmedValue;
+        await this.plugin.saveSettings();
+      });
+    }
+    new import_obsidian.Setting(containerEl).setName("Use legacy icon").setDesc(
+      "Use the original clipboard emoji (\u{1F4CB}) instead of Lucide icons"
+    ).addToggle((component) => {
+      component.setValue(this.plugin.settings.useLegacyIcon).onChange(async (value) => {
+        this.plugin.settings.useLegacyIcon = value;
+        await this.plugin.saveSettings();
+        this.display();
       });
     });
   }
@@ -124,12 +202,24 @@ var import_view2 = require("@codemirror/view");
 var import_view = require("@codemirror/view");
 var import_obsidian2 = require("obsidian");
 var CopyWidget = class extends import_view.WidgetType {
-  constructor(showOnHover) {
+  constructor(showOnHover, iconName, useLegacyIcon) {
     super();
     this.showOnHover = showOnHover;
+    this.iconName = iconName;
+    this.useLegacyIcon = useLegacyIcon;
   }
   toDOM(view) {
-    const icon = createSpan({ cls: "copy-to-clipboard-icon", text: "\xA0\u{1F4CB}" });
+    const icon = createSpan({ cls: "copy-to-clipboard-icon" });
+    if (this.useLegacyIcon) {
+      icon.setText("\xA0\u{1F4CB}");
+    } else {
+      const lucideIcon = (0, import_obsidian2.getIcon)(this.iconName);
+      if (lucideIcon) {
+        icon.appendChild(lucideIcon);
+      } else {
+        icon.setText("\xA0\u{1F4CB}");
+      }
+    }
     icon.toggleClass("show-on-hover", this.showOnHover);
     icon.onclick = (event) => {
       const element = event.target;
@@ -162,9 +252,11 @@ function shouldExclude(text, regexFilters) {
 
 // src/copy-inline-code-view-plugin.ts
 var CopyInlineCodeViewPlugin = class {
-  constructor(view, showOnHover, filters) {
+  constructor(view, showOnHover, filters, iconName, useLegacyIcon) {
     this.showOnHover = showOnHover;
     this.filters = filters;
+    this.iconName = iconName;
+    this.useLegacyIcon = useLegacyIcon;
     this.decorations = this.buildDecorations(view);
   }
   update(update) {
@@ -178,6 +270,8 @@ var CopyInlineCodeViewPlugin = class {
     const builder = new import_state.RangeSetBuilder();
     const showOnHover = this.showOnHover;
     const filters = this.filters;
+    const iconName = this.iconName;
+    const useLegacyIcon = this.useLegacyIcon;
     for (const { from, to } of view.visibleRanges) {
       (0, import_language.syntaxTree)(view.state).iterate({
         from,
@@ -195,7 +289,11 @@ var CopyInlineCodeViewPlugin = class {
               node.to + 1,
               node.to + 1,
               import_view2.Decoration.widget({
-                widget: new CopyWidget(showOnHover)
+                widget: new CopyWidget(
+                  showOnHover,
+                  iconName,
+                  useLegacyIcon
+                )
               })
             );
           }
@@ -205,9 +303,15 @@ var CopyInlineCodeViewPlugin = class {
     return builder.finish();
   }
 };
-var createCopyPlugin = (showOnHover, filters) => {
+var createCopyPlugin = (showOnHover, filters, iconName, useLegacyIcon) => {
   return import_view2.ViewPlugin.define(
-    (view) => new CopyInlineCodeViewPlugin(view, showOnHover, filters),
+    (view) => new CopyInlineCodeViewPlugin(
+      view,
+      showOnHover,
+      filters,
+      iconName,
+      useLegacyIcon
+    ),
     {
       decorations: (p) => p.decorations
     }
@@ -217,7 +321,9 @@ var createCopyPlugin = (showOnHover, filters) => {
 // src/main.ts
 var DEFAULT_SETTINGS = {
   showOnHover: false,
-  regexFilters: []
+  regexFilters: [],
+  iconName: "lucide-copy",
+  useLegacyIcon: false
 };
 var CopyInlineCodePlugin = class extends import_obsidian3.Plugin {
   async onload() {
@@ -239,7 +345,9 @@ var CopyInlineCodePlugin = class extends import_obsidian3.Plugin {
     this.registerEditorExtension([
       createCopyPlugin(
         this.settings.showOnHover,
-        this.settings.regexFilters
+        this.settings.regexFilters,
+        this.settings.iconName,
+        this.settings.useLegacyIcon
       )
     ]);
     this.registerMarkdownPostProcessor((element, context) => {
@@ -256,9 +364,18 @@ var CopyInlineCodePlugin = class extends import_obsidian3.Plugin {
           return;
         }
         const icon = createSpan({
-          cls: "copy-to-clipboard-icon",
-          text: "\xA0\u{1F4CB}"
+          cls: "copy-to-clipboard-icon icon-margin-left"
         });
+        if (this.settings.useLegacyIcon) {
+          icon.setText("\xA0\u{1F4CB}");
+        } else {
+          const lucideIcon = (0, import_obsidian3.getIcon)(this.settings.iconName);
+          if (lucideIcon) {
+            icon.appendChild(lucideIcon);
+          } else {
+            icon.setText("\xA0\u{1F4CB}");
+          }
+        }
         icon.toggleClass("show-on-hover", this.settings.showOnHover);
         icon.onclick = (event) => {
           if (textToCopy) {
