@@ -31,12 +31,12 @@
     "scroll": 0,
     "cursor": {
       "from": {
-        "line": 0,
-        "ch": 0
+        "line": 5,
+        "ch": 3
       },
       "to": {
-        "line": 0,
-        "ch": 0
+        "line": 5,
+        "ch": 3
       }
     },
     "expandedKeys": []
@@ -141,6 +141,34 @@
   },
   "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md": {
     "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "未命名 1.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 3
+      },
+      "to": {
+        "line": 0,
+        "ch": 3
+      }
+    },
+    "expandedKeys": []
+  },
+  "未命名.md": {
+    "scroll": 8.672681070963542,
     "cursor": {
       "from": {
         "line": 0,
