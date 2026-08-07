@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "08-shell基础",
+      "path": "05.笔记/听课笔记/linux/08-shell基础.md"
+    },
+    {
+      "basename": "05-IO重定向和管道",
+      "path": "05.笔记/听课笔记/linux/05-IO重定向和管道.md"
+    },
+    {
+      "basename": "04-用户管理和权限管理",
+      "path": "05.笔记/听课笔记/linux/04-用户管理和权限管理.md"
+    },
+    {
+      "basename": "02-Linux系统命令和查询帮助",
+      "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
+    },
+    {
+      "basename": "01-Linux系统介绍和安装",
+      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
       "basename": "未命名",
       "path": "未命名.md"
     },
@@ -77,20 +101,8 @@
       "path": "05.笔记/听课笔记/linux/10-进程管理.md"
     },
     {
-      "basename": "02-Linux系统命令和查询帮助",
-      "path": "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md"
-    },
-    {
       "basename": "03-Linux系统目录结构和管理命令",
       "path": "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md"
-    },
-    {
-      "basename": "04-用户管理和权限管理",
-      "path": "05.笔记/听课笔记/linux/04-用户管理和权限管理.md"
-    },
-    {
-      "basename": "01-Linux系统介绍和安装",
-      "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
     },
     {
       "basename": "ansible入门",
@@ -187,18 +199,6 @@
     {
       "basename": "01-MySQL安装",
       "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
-    },
-    {
-      "basename": "20250213-k8s对象pod2-下载重启默认策略及端口环境变量",
-      "path": "10.课件/OpenStack课堂笔记-田/20250213-k8s对象pod2-下载重启默认策略及端口环境变量.md"
-    },
-    {
-      "basename": "20250112-Docker容器管理及网络存储Harbor",
-      "path": "10.课件/OpenStack课堂笔记-田/20250112-Docker容器管理及网络存储Harbor.md"
-    },
-    {
-      "basename": "Linux重启提示“A stop job is running for ...“",
-      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
     }
   ],
   "omittedPaths": [],
