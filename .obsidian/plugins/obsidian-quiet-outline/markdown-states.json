@@ -84,7 +84,7 @@
     "expandedKeys": []
   },
   "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md": {
-    "scroll": 0,
+    "scroll": 51.47858650453629,
     "cursor": {
       "from": {
         "line": 0,
@@ -98,7 +98,7 @@
     "expandedKeys": []
   },
   "05.笔记/听课笔记/linux/02-Linux系统命令和查询帮助.md": {
-    "scroll": 0,
+    "scroll": 190.05179268973214,
     "cursor": {
       "from": {
         "line": 0,
@@ -169,6 +169,34 @@
   },
   "未命名.md": {
     "scroll": 8.672681070963542,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/MySQL/01-MySQL安装.md": {
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 0,
