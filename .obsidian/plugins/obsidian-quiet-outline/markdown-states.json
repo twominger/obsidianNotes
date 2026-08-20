@@ -208,5 +208,33 @@
       }
     },
     "expandedKeys": []
+  },
+  "05.笔记/听课笔记/MySQL/02-MySQL管理.md": {
+    "scroll": 140.91588712993422,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/MySQL/03-MySQL知识点.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
   }
 }
