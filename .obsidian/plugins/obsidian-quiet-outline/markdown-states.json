@@ -252,7 +252,7 @@
     "expandedKeys": []
   },
   "09.输出/周一晚/索引和主键外键.md": {
-    "scroll": 139.2499064993351,
+    "scroll": 127.86343544407895,
     "cursor": {
       "from": {
         "line": 0,
@@ -266,6 +266,76 @@
     "expandedKeys": []
   },
   "09.输出/周一晚/NULL.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/linux/26-时间管理.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/linux/14-网络客户端.md": {
+    "scroll": 262.0521673387097,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/linux/作业11.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "11.作业/k8s关键知识点.md": {
+    "scroll": 49.614828670726105,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "11.作业/OpenStack 及Docker 综合测试.md": {
     "scroll": 0,
     "cursor": {
       "from": {

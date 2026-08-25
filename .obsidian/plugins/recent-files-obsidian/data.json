@@ -1,6 +1,78 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "未命名.base"
+    },
+    {
+      "basename": "未命名",
+      "path": "未命名.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "未命名 1.md"
+    },
+    {
+      "basename": "Hypervisor",
+      "path": "Docker/Hypervisor.md"
+    },
+    {
+      "basename": "namespace",
+      "path": "Docker/namespace.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "测验/未命名.base"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
+      "basename": "k8s关键知识点",
+      "path": "11.作业/k8s关键知识点.md"
+    },
+    {
+      "basename": "TMP",
+      "path": "97.temp/TMP.md"
+    },
+    {
+      "basename": "第一阶段测验",
+      "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
+    },
+    {
+      "basename": "作业11",
+      "path": "05.笔记/听课笔记/linux/作业11.md"
+    },
+    {
+      "basename": "14-网络客户端",
+      "path": "05.笔记/听课笔记/linux/14-网络客户端.md"
+    },
+    {
+      "basename": "28-web",
+      "path": "05.笔记/听课笔记/linux/28-web.md"
+    },
+    {
+      "basename": "27-网络",
+      "path": "05.笔记/听课笔记/linux/27-网络.md"
+    },
+    {
+      "basename": "26-时间管理",
+      "path": "05.笔记/听课笔记/linux/26-时间管理.md"
+    },
+    {
       "basename": "索引和主键外键",
       "path": "09.输出/周一晚/索引和主键外键.md"
     },
@@ -97,26 +169,6 @@
       "path": "05.笔记/听课笔记/linux/01-Linux系统介绍和安装.md"
     },
     {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.base"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.base"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "未命名 1.md"
-    },
-    {
-      "basename": "err",
-      "path": "测验/err.md"
-    },
-    {
       "basename": "03-Linux系统目录结构和管理命令",
       "path": "05.笔记/听课笔记/linux/03-Linux系统目录结构和管理命令.md"
     },
@@ -147,58 +199,6 @@
     {
       "basename": "我来 wolai - 不仅仅是未来的云端协作平台与个人笔记",
       "path": "Clippings/我来 wolai - 不仅仅是未来的云端协作平台与个人笔记.md"
-    },
-    {
-      "basename": "discuz",
-      "path": "测验/discuz.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "01.Ceph原理与架构",
-      "path": "ceph/资料/01.Ceph原理与架构.pdf"
-    },
-    {
-      "basename": "未命名",
-      "path": "毕设/未命名.base"
-    },
-    {
-      "basename": "修改",
-      "path": "毕设/修改.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "20-内核监控和系统服务管理及故障修复",
-      "path": "05.笔记/听课笔记/linux/20-内核监控和系统服务管理及故障修复.md"
-    },
-    {
-      "basename": "21-pxe批量安装和kickstart自动化安装",
-      "path": "05.笔记/听课笔记/linux/21-pxe批量安装和kickstart自动化安装.md"
-    },
-    {
-      "basename": "16-软件包管理",
-      "path": "05.笔记/听课笔记/linux/16-软件包管理.md"
-    },
-    {
-      "basename": "15-文件系统和打包压缩",
-      "path": "05.笔记/听课笔记/linux/15-文件系统和打包压缩.md"
-    },
-    {
-      "basename": "14-网络客户端",
-      "path": "05.笔记/听课笔记/linux/14-网络客户端.md"
-    },
-    {
-      "basename": "13-文件查找工具",
-      "path": "05.笔记/听课笔记/linux/13-文件查找工具.md"
-    },
-    {
-      "basename": "12-计划任务",
-      "path": "05.笔记/听课笔记/linux/12-计划任务.md"
     }
   ],
   "omittedPaths": [],
