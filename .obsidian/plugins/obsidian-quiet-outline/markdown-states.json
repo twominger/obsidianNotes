@@ -14,7 +14,7 @@
     "expandedKeys": []
   },
   "测验/everything.md": {
-    "scroll": 1.7986937346281828,
+    "scroll": 12.744104964009832,
     "cursor": {
       "from": {
         "line": 0,
@@ -336,7 +336,7 @@
     "expandedKeys": []
   },
   "11.作业/OpenStack 及Docker 综合测试.md": {
-    "scroll": 32.23210867226271,
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 0,
@@ -547,6 +547,104 @@
   },
   "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md": {
     "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/传统社交论坛的容器化改造1.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/discuz.md": {
+    "scroll": 12.848605329090304,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/ansible使用及脚本.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/问题.md": {
+    "scroll": 13.547311636117788,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/局域网yum.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/创建自定义镜像.md": {
+    "scroll": 108.52066534786316,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "测验/传统社交论坛的容器化改造.md": {
+    "scroll": 3254.783745485554,
     "cursor": {
       "from": {
         "line": 0,

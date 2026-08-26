@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "传统社交论坛的容器化改造",
+      "path": "测验/传统社交论坛的容器化改造.md"
+    },
+    {
+      "basename": "创建自定义镜像",
+      "path": "测验/创建自定义镜像.md"
+    },
+    {
+      "basename": "局域网yum",
+      "path": "测验/局域网yum.md"
+    },
+    {
+      "basename": "问题",
+      "path": "测验/问题.md"
+    },
+    {
+      "basename": "ansible使用及脚本",
+      "path": "测验/ansible使用及脚本.md"
+    },
+    {
+      "basename": "discuz",
+      "path": "测验/discuz.md"
+    },
+    {
+      "basename": "err",
+      "path": "测验/err.md"
+    },
+    {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造1",
+      "path": "测验/传统社交论坛的容器化改造1.md"
+    },
+    {
+      "basename": "传统社交论坛的容器化改造0",
+      "path": "测验/传统社交论坛的容器化改造0.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
       "basename": "20250104-openstack发放云主机及rabbitmq介绍",
       "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
     },
@@ -9,16 +57,8 @@
       "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
     },
     {
-      "basename": "OpenStack 及Docker 综合测试",
-      "path": "11.作业/OpenStack 及Docker 综合测试.md"
-    },
-    {
       "basename": "hdc工具使用",
       "path": "毕设/hdc工具使用.md"
-    },
-    {
-      "basename": "部署openstack",
-      "path": "测验/部署openstack.md"
     },
     {
       "basename": "rbd对接k8s",
@@ -159,46 +199,6 @@
     {
       "basename": "未命名",
       "path": "测验/未命名.base"
-    },
-    {
-      "basename": "局域网yum",
-      "path": "测验/局域网yum.md"
-    },
-    {
-      "basename": "err",
-      "path": "测验/err.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
-    },
-    {
-      "basename": "k8s关键知识点",
-      "path": "11.作业/k8s关键知识点.md"
-    },
-    {
-      "basename": "TMP",
-      "path": "97.temp/TMP.md"
-    },
-    {
-      "basename": "第一阶段测验",
-      "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
-    },
-    {
-      "basename": "作业11",
-      "path": "05.笔记/听课笔记/linux/作业11.md"
-    },
-    {
-      "basename": "14-网络客户端",
-      "path": "05.笔记/听课笔记/linux/14-网络客户端.md"
-    },
-    {
-      "basename": "28-web",
-      "path": "05.笔记/听课笔记/linux/28-web.md"
-    },
-    {
-      "basename": "27-网络",
-      "path": "05.笔记/听课笔记/linux/27-网络.md"
     }
   ],
   "omittedPaths": [],
