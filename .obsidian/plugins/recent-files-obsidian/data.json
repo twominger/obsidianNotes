@@ -1,6 +1,138 @@
 {
   "recentFiles": [
     {
+      "basename": "20250104-openstack发放云主机及rabbitmq介绍",
+      "path": "10.课件/OpenStack课堂笔记-田/20250104-openstack发放云主机及rabbitmq介绍.md"
+    },
+    {
+      "basename": "20250102-openstack架构及环境搭建",
+      "path": "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md"
+    },
+    {
+      "basename": "OpenStack 及Docker 综合测试",
+      "path": "11.作业/OpenStack 及Docker 综合测试.md"
+    },
+    {
+      "basename": "hdc工具使用",
+      "path": "毕设/hdc工具使用.md"
+    },
+    {
+      "basename": "部署openstack",
+      "path": "测验/部署openstack.md"
+    },
+    {
+      "basename": "rbd对接k8s",
+      "path": "ceph/实验/rbd对接k8s.md"
+    },
+    {
+      "basename": "ceph实验",
+      "path": "ceph/实验/ceph实验.md"
+    },
+    {
+      "basename": "ceph-csi",
+      "path": "ceph/实验/ceph-csi.md"
+    },
+    {
+      "basename": "使用cephadm部署ceph集群",
+      "path": "ceph/实验/使用cephadm部署ceph集群.md"
+    },
+    {
+      "basename": "分区作为osd部署单节点ceph集群",
+      "path": "ceph/实验/分区作为osd部署单节点ceph集群.md"
+    },
+    {
+      "basename": "User Management",
+      "path": "ceph/User Management.md"
+    },
+    {
+      "basename": "安装Docker",
+      "path": "Docker/安装Docker.md"
+    },
+    {
+      "basename": "虚拟化技术概述",
+      "path": "Docker/虚拟化技术概述.md"
+    },
+    {
+      "basename": "Cgroup",
+      "path": "Docker/Cgroup.md"
+    },
+    {
+      "basename": "container",
+      "path": "Docker/container.md"
+    },
+    {
+      "basename": "Docker操作",
+      "path": "Docker/Docker操作.md"
+    },
+    {
+      "basename": "Docker概念",
+      "path": "Docker/Docker概念.md"
+    },
+    {
+      "basename": "Hypervisor",
+      "path": "Docker/Hypervisor.md"
+    },
+    {
+      "basename": "namespace",
+      "path": "Docker/namespace.md"
+    },
+    {
+      "basename": "gitignore文件不起作用解决",
+      "path": "GIT/gitignore文件不起作用解决.md"
+    },
+    {
+      "basename": "ArcTS基础语法",
+      "path": "HarmonyOS/ArcTS基础语法.md"
+    },
+    {
+      "basename": "HarmonyOS赋能套件",
+      "path": "HarmonyOS/HarmonyOS赋能套件.md"
+    },
+    {
+      "basename": "HarmonyOS概述",
+      "path": "HarmonyOS/HarmonyOS概述.md"
+    },
+    {
+      "basename": "SELinux",
+      "path": "linux/SELinux.md"
+    },
+    {
+      "basename": "Linux重启提示“A stop job is running for ...“",
+      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
+    },
+    {
+      "basename": "制作虚拟机模板",
+      "path": "linux/制作虚拟机模板.md"
+    },
+    {
+      "basename": "安装虚拟机",
+      "path": "linux/安装虚拟机.md"
+    },
+    {
+      "basename": "yum源",
+      "path": "linux/yum源.md"
+    },
+    {
+      "basename": "mysql部署-源码",
+      "path": "mysql/mysql部署-源码.md"
+    },
+    {
+      "basename": "Hyper-V与VMware workstation冲突",
+      "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
+    },
+    {
+      "basename": "未命名 1",
+      "path": "未命名 1.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "未命名.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "未命名.base"
+    },
+    {
       "basename": "java部署",
       "path": "SRE/java部署.md"
     },
@@ -21,56 +153,8 @@
       "path": "SRE/前端.md"
     },
     {
-      "basename": "Hyper-V与VMware workstation冲突",
-      "path": "OpenStack/Hyper-V与VMware workstation冲突.md"
-    },
-    {
-      "basename": "yum源",
-      "path": "linux/yum源.md"
-    },
-    {
-      "basename": "SELinux",
-      "path": "linux/SELinux.md"
-    },
-    {
-      "basename": "Linux重启提示“A stop job is running for ...“",
-      "path": "linux/Linux重启提示“A stop job is running for ...“.md"
-    },
-    {
-      "basename": "制作虚拟机模板",
-      "path": "linux/制作虚拟机模板.md"
-    },
-    {
-      "basename": "安装虚拟机",
-      "path": "linux/安装虚拟机.md"
-    },
-    {
       "basename": "IT行业了解",
       "path": "IT行业了解/IT行业了解.md"
-    },
-    {
-      "basename": "gitignore文件不起作用解决",
-      "path": "GIT/gitignore文件不起作用解决.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.base"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "未命名 1.md"
-    },
-    {
-      "basename": "Hypervisor",
-      "path": "Docker/Hypervisor.md"
-    },
-    {
-      "basename": "namespace",
-      "path": "Docker/namespace.md"
     },
     {
       "basename": "未命名",
@@ -87,10 +171,6 @@
     {
       "basename": "everything",
       "path": "测验/everything.md"
-    },
-    {
-      "basename": "OpenStack 及Docker 综合测试",
-      "path": "11.作业/OpenStack 及Docker 综合测试.md"
     },
     {
       "basename": "k8s关键知识点",
@@ -119,86 +199,6 @@
     {
       "basename": "27-网络",
       "path": "05.笔记/听课笔记/linux/27-网络.md"
-    },
-    {
-      "basename": "26-时间管理",
-      "path": "05.笔记/听课笔记/linux/26-时间管理.md"
-    },
-    {
-      "basename": "索引和主键外键",
-      "path": "09.输出/周一晚/索引和主键外键.md"
-    },
-    {
-      "basename": "NULL",
-      "path": "09.输出/周一晚/NULL.md"
-    },
-    {
-      "basename": "17-磁盘管理",
-      "path": "05.笔记/听课笔记/linux/17-磁盘管理.md"
-    },
-    {
-      "basename": "01-MySQL安装",
-      "path": "05.笔记/听课笔记/MySQL/01-MySQL安装.md"
-    },
-    {
-      "basename": "key和index区别",
-      "path": "05.笔记/听课笔记/MySQL/key和index区别.md"
-    },
-    {
-      "basename": "誉天Linux云计算架构师-面试宝典-20250108",
-      "path": "08.面试/誉天Linux云计算架构师-面试宝典-20250108.pdf"
-    },
-    {
-      "basename": "一期面试",
-      "path": "08.面试/一期面试.md"
-    },
-    {
-      "basename": "LVM",
-      "path": "05.笔记/整理笔记/Linux1/LVM.md"
-    },
-    {
-      "basename": "nginx健康检查",
-      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
-    },
-    {
-      "basename": "centos linux版本及区别，常用版本",
-      "path": "05.笔记/整理笔记/Linux1/centos linux版本及区别，常用版本.md"
-    },
-    {
-      "basename": "2015-1-9OpenStack笔记",
-      "path": "05.笔记/听课笔记/OpenStack/2015-1-9OpenStack笔记.md"
-    },
-    {
-      "basename": "阶段三内容",
-      "path": "05.笔记/听课笔记/OpenStack/阶段三内容.md"
-    },
-    {
-      "basename": "消息队列中间件的横向对比",
-      "path": "05.笔记/听课笔记/OpenStack/消息队列中间件的横向对比.md"
-    },
-    {
-      "basename": "OpenStack环境搭建",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack环境搭建.md"
-    },
-    {
-      "basename": "OpenStack组件使用",
-      "path": "05.笔记/听课笔记/OpenStack/OpenStack组件使用.md"
-    },
-    {
-      "basename": "rabbitMQ功能、作用",
-      "path": "05.笔记/听课笔记/OpenStack/rabbitMQ功能、作用.md"
-    },
-    {
-      "basename": "MySQL存储引擎InnoDB与Myisam的六大区别",
-      "path": "05.笔记/听课笔记/MySQL/MySQL存储引擎InnoDB与Myisam的六大区别.md"
-    },
-    {
-      "basename": "MySQL 服务管理",
-      "path": "05.笔记/听课笔记/MySQL/MySQL 服务管理.md"
-    },
-    {
-      "basename": "05-杂项",
-      "path": "05.笔记/听课笔记/MySQL/05-杂项.md"
     }
   ],
   "omittedPaths": [],

@@ -168,7 +168,7 @@
     "expandedKeys": []
   },
   "未命名.md": {
-    "scroll": 8.672681070963542,
+    "scroll": 138.76878107244318,
     "cursor": {
       "from": {
         "line": 0,
@@ -336,7 +336,7 @@
     "expandedKeys": []
   },
   "11.作业/OpenStack 及Docker 综合测试.md": {
-    "scroll": 0,
+    "scroll": 32.23210867226271,
     "cursor": {
       "from": {
         "line": 0,
@@ -350,7 +350,7 @@
     "expandedKeys": []
   },
   "linux/安装虚拟机.md": {
-    "scroll": 0.8927636503648128,
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 0,
@@ -392,7 +392,7 @@
     "expandedKeys": []
   },
   "OpenStack/Hyper-V与VMware workstation冲突.md": {
-    "scroll": 19.627246959124932,
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 0,
@@ -448,6 +448,104 @@
     "expandedKeys": []
   },
   "SRE/应用or业务运维.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "linux/SELinux.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "HarmonyOS/HarmonyOS赋能套件.md": {
+    "scroll": 3.8002507236100054,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "HarmonyOS/ArcTS基础语法.md": {
+    "scroll": 8.253420622452445,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "GIT/gitignore文件不起作用解决.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "Docker/安装Docker.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "ceph/实验/rbd对接k8s.md": {
+    "scroll": 4.174450378417969,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "10.课件/OpenStack课堂笔记-田/20250102-openstack架构及环境搭建.md": {
     "scroll": 0,
     "cursor": {
       "from": {
