@@ -10,6 +10,9 @@
 export http_proxy=192.168.31.2:7897
 export https_proxy=192.168.31.2:7897
 # 依然无法ping通外网，但是其他一切正常，可以拉取外网镜像
+1. openstack 发放的实例无法与外网建立 tcp 连接  
+    解决：搭建内网 yum 源  
+    这个问题在我自己电脑上也出现过，就是如果 vmware 上的 openstack 节点使用 NAT 网络的话，在 openstacck 创建的实例都不能与外网建立 tcp 连接，虽然可以 ping 通。搜索发现有两种可能的原因，一个是 mtu 的问题，需要将 openstack 实例的 mtu 比 openstack 节点少 50 以上，但是尝试了依然无法解决问题。另一种原因是 vmware 的问题，具体情况见[如何在VMWare的NAT模式下使用traceroute(解析vmnat的行为) - KimBing_Ng - 博客园](https://www.cnblogs.com/Kimbing-Ng/p/12457073.html)
 ```
 取消：
 ```shell

@@ -14,15 +14,15 @@
     "expandedKeys": []
   },
   "测验/everything.md": {
-    "scroll": 12.744104964009832,
+    "scroll": 204.6240348075679,
     "cursor": {
       "from": {
-        "line": 0,
-        "ch": 0
+        "line": 14,
+        "ch": 324
       },
       "to": {
-        "line": 0,
-        "ch": 0
+        "line": 14,
+        "ch": 324
       }
     },
     "expandedKeys": []
@@ -645,6 +645,20 @@
   },
   "测验/传统社交论坛的容器化改造.md": {
     "scroll": 3254.783745485554,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": []
+  },
+  "05.笔记/听课笔记/linux/第一阶段测验.md": {
+    "scroll": 0,
     "cursor": {
       "from": {
         "line": 0,

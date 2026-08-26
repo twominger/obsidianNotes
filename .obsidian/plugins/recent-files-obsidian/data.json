@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "everything",
+      "path": "测验/everything.md"
+    },
+    {
+      "basename": "nginx健康检查",
+      "path": "05.笔记/整理笔记/Linux1/nginx健康检查.md"
+    },
+    {
+      "basename": "第一阶段测验",
+      "path": "05.笔记/听课笔记/linux/第一阶段测验.md"
+    },
+    {
       "basename": "传统社交论坛的容器化改造",
       "path": "测验/传统社交论坛的容器化改造.md"
     },
@@ -27,10 +39,6 @@
     {
       "basename": "err",
       "path": "测验/err.md"
-    },
-    {
-      "basename": "everything",
-      "path": "测验/everything.md"
     },
     {
       "basename": "传统社交论坛的容器化改造1",
@@ -191,14 +199,6 @@
     {
       "basename": "前端",
       "path": "SRE/前端.md"
-    },
-    {
-      "basename": "IT行业了解",
-      "path": "IT行业了解/IT行业了解.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "测验/未命名.base"
     }
   ],
   "omittedPaths": [],
